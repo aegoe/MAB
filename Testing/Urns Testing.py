@@ -12,14 +12,16 @@ Urn_3 = [('White', 1), ('Yellow', 5), ('Black', 3), ('Green', 1)]
 
 Draw_1 = [val for val, cnt in Urn_1 for i in range(cnt)]
 
-random.choices(Draw_1, k=10)
+draws_1 = random.choices(Draw_1, k=10)
 
 #Draw_1 = random.choices(Urn_1, k = 10)
 #Draw_2 = random.choices(Urn_2, k = 10)
 #Draw_3 = random.choices(Urn_3, k = 10)
 
 print(Draw_1)
-count_1 = Counter(Draw_1)
+print(draws_1)
+
+count_1 = Counter(draws_1)
 print(count_1)
 
 for k, v in count_1.items():
@@ -31,7 +33,8 @@ for k, v in count_1.items():
         count_1[k] = v * 1
     elif k == 'Green':
         count_1[k] = v * 2
-
+    elif k == 'White':
+        count_1[k] = v * -2
 print(count_1)
 
 payoff = 0
