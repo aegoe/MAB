@@ -119,7 +119,25 @@ for i in data_counts.keys():
     for values in data_counts[i].values():
         payoff += values
 
+
+payoff_1 = 0
+payoff_2 = 0
+payoff_3 = 0
+
+for i in data_counts.keys():
+    for v in data_counts[i].values():
+        if i == 'count_1':
+            payoff_1 += v
+        if i == 'count_2':
+            payoff_2 += v
+        if i == 'count_3':
+            payoff_3 += v
+
 #for values in count_1.values():
 #    payoff += values
 
-print('You total payoff for this round is: ', payoff)
+print('Your total payoff for this round is: ', payoff)
+print('Your payoff from Option 1 using', Urn_1_input_val, 'draws is: ', payoff_1)
+print('Your payoff from Option 2 using', Urn_2_input_val, 'draws is: ', payoff_2)
+print('Your payoff from Option 3 using', Urn_3_input_val, 'draws is: ', payoff_3)
+
