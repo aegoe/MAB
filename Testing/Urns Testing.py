@@ -10,6 +10,13 @@ Urn_2 = [('Black', 1), ('Yellow', 3), ('Blue', 5), ('Green', 1)]
 
 Urn_3 = [('White', 1), ('Yellow', 5), ('Black', 3), ('Green', 1)]
 
+points = 10
+black = -1
+yellow = 0
+blue = 1
+green = 2
+white = -2
+
 while True:
     while True:
         try:
@@ -36,38 +43,17 @@ while True:
             print('You can only choose a number between 0 and 10')
 
     Urn_input_overall = Urn_1_input_val + Urn_2_input_val + Urn_3_input_val
-    if Urn_input_overall == 10:
+    if Urn_input_overall == points:
         break
-    elif Urn_input_overall < 10:
+    elif Urn_input_overall < points:
         print('You need to spend all 10 points')
-    elif Urn_input_overall > 10:
+    elif Urn_input_overall > points:
         print('You can only spend 10 points')
 
 
 print(Urn_1_input_val)
 print(Urn_2_input_val)
 print(Urn_3_input_val)
-
-# data_inputs = {}
-# data_inputs['Urn_1_input'] = Urn_1_input
-# data_inputs['Urn_2_input'] = Urn_2_input
-# data_inputs['Urn_3_input'] = Urn_3_input
-
-#print(data_inputs)
-
-    # for k, v in data_inputs.items():
-    #     try:
-    #         data_inputs[k] = int(v)
-    #         break
-    #     except ValueError:
-    #         print('You can only choose a number between 0 and 10')
-
-
-# print(data_inputs)
-
-
-
-
 
 Draw_1 = [val for val, cnt in Urn_1 for i in range(cnt)]
 Draw_2 = [val for val, cnt in Urn_2 for i in range(cnt)]
@@ -100,15 +86,15 @@ print(data_counts)
 for i in data_counts.keys():
     for k, v in data_counts[i].items():
         if k == 'Black':
-            data_counts[i][k] = v * -1
+            data_counts[i][k] = v * black
         elif k == 'Yellow':
-            data_counts[i][k] = v * 0
+            data_counts[i][k] = v * yellow
         elif k == 'Blue':
-            data_counts[i][k] = v * 1
+            data_counts[i][k] = v * blue
         elif k == 'Green':
-            data_counts[i][k] = v * 2
+            data_counts[i][k] = v * green
         elif k == 'White':
-            data_counts[i][k] = v * -2
+            data_counts[i][k] = v * white
 
 
 print(data_counts)
