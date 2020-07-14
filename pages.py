@@ -61,8 +61,31 @@ class InstruStart(Page):
         return {'participation_fee': self.session.config['participation_fee']}
 
 
-class MyPage(Page):
-    pass
+class Decision(Page):
+    form_model = 'player'
+    form_fields = []
+
+    def vars_for_template(self):
+        return{'choice': self.participant.vars['choice'],
+               'option_1': self.participant.vars['option_1'],
+               'option_2': self.participant.vars['option_2'],
+               'option_3': self.participant.vars['option_3'],
+               'endowment': self.participant.vars['endowment'],
+               'safe_option': Constants.safe_option,
+               'endowment_choice': Constants.endowment_choice,
+               'endowment_points': Constants.endowment_points,
+
+
+
+               }
+
+    def before_next_page(self):
+        if self.participant.vars['choice']:
+            xyz
+        else:
+            adsd
+
+
 
 
 class ResultsWaitPage(WaitPage):
