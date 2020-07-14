@@ -63,7 +63,7 @@ class InstruStart(Page):
 
 class Decision(Page):
     form_model = 'player'
-    form_fields = []
+    form_fields = ['option_1', 'option_2', 'option_3']
 
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
