@@ -2,7 +2,7 @@ from otree.api import (
     Currency as c, currency_range, BasePlayer
 )
 
-from ._builtin import Page, WaitPage
+from _builtin import Page, WaitPage
 from .models import Constants
 import random
 from numpy.random import choice

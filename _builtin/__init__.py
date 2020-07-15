@@ -1,5 +1,5 @@
 # Don't change anything in this file.
-from .. import models
+from Pilot import models
 import otree.api
 
 

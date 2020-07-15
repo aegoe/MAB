@@ -12,7 +12,8 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'MAB'
+    name_in_url = 'Pilot'
+    num_rounds = 210
     num_rounds_choice = 210
     num_rounds_points = 70
     players_per_group = None
