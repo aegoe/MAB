@@ -61,13 +61,16 @@ class InstruStart(Page):
     def vars_for_template(self):
         return {'participation_fee': self.session.config['participation_fee']}
 
+    def before_next_page(self):
+        self.player.choice = self.participant.vars['choice'] = self.session.config['choice']
+
 
 class Decision(Page):
     form_model = 'player'
     form_fields = ['option_1', 'option_2', 'option_3']
 
     def error_message(self, values):
-            if self.participant.vars['choice']:
+            if self.session.config['choice']:
                 self.player.options_overall = self.player.in_round(self.round_number).option_1 + self.player.in_round(self.round_number).option_2 + self.player.in_round(self.round_number).option_3
                 if self.player.options_overall > Constants.endowment_choice:
                     return 'You can only choose one option one time per round.'
@@ -81,10 +84,10 @@ class Decision(Page):
 
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
-               'option_1': self.participant.vars['option_1'],
-               'option_2': self.participant.vars['option_2'],
-               'option_3': self.participant.vars['option_3'],
-               'endowment': self.participant.vars['endowment'],
+               #'option_1': self.participant.vars['option_1'],
+               #'option_2': self.participant.vars['option_2'],
+               #'option_3': self.participant.vars['option_3'],
+               #'endowment': self.participant.vars['endowment'],
                'safe_option': Constants.safe_option,
                'endowment_choice': Constants.endowment_choice,
                'endowment_points': Constants.endowment_points,

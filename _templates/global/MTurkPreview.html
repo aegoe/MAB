@@ -1,0 +1,22 @@
+{% extends "otree/MTurkPreview.html" %}
+{% load otree %}
+
+{% block title %}Please read this before clicking <q>Accept</q>{% endblock %}
+
+{% block content %}
+    <div class="card bg-light instructions">
+        <div class="card-body">
+            <p>We are researchers from the University of Göttingen and study human decision-making.
+            </p>
+            <div class="card-header text-white bg-secondary"><b>ATTENTION</b></div>
+            <div class="card-body">
+                Please accept this HIT only if you can commit to completing it right away and without interruption.
+            </div>
+            <p>
+                After completing this HIT, you will receive your reward plus a bonus payment
+                that is based on your decisions during this HIT. Detailed instructions will be given to you once you accept
+                this HIT.
+            </p>
+        </div>
+    </div>
+{% endblock %}

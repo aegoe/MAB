@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "global/Page.html" %}
+{% load otree %}
 
-</body>
-</html>
+{% block title %}
+    Pick an option.
+{% endblock %}
+
+
+{% block content %}
+
+<div class="card">
+
+    <div class="card-body">
+        <div class="box" >
+            1
+        </div>
+        {% formfield player.option_1 %}
+ </div>
+ </div>
+
+{% endblock %}
+
+
+{% block styles %}
+    <style type="text/css">
+        {% include 'Pilot/css/bandit_env.css' %}
+        .page-header {
+            margin-bottom: 0px;
+        }
+    </style>
+{% endblock %}

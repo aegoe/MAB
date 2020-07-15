@@ -1,0 +1,10 @@
+.box{
+    position: relative;
+    width: 60px;
+    line-height: 60px;
+    height: 60px;
+    border-radius: 2px;
+    text-align: center;
+    background: #F0F8FF;
+
+}
