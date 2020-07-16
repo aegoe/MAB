@@ -3,15 +3,26 @@
     width: 100px;
     line-height: 90px;
     height: 90px;
+    /*
     border: 1px solid #000000;
+    */
     text-align: center;
+    /*
     background: #F0F8FF;
+    */
     /*
     display: inline-block;
     */
 /*  margin-right: auto;
     margin-left: auto;*/
     font-size: 16px;
+
+}
+
+.imageholder{
+    position: relative;
+    width:100px;
+    height: 90px;
 
 }
 
@@ -84,6 +95,16 @@
     display: none;
                    }
 
-
 */
 
+.show_trial_count {
+    float: left;
+    width: 300px;
+    text-align: right;
+}
+
+.show_time_trial {
+    float: right;
+    width: 300px;
+    text-align: left;
+}

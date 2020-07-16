@@ -42,9 +42,9 @@ class Player(BasePlayer):
 
     choice = models.BooleanField()
     endowment = models.IntegerField()
-    option_1 = models.IntegerField(initial=None)
-    option_2 = models.IntegerField(initial=None)
-    option_3 = models.IntegerField(initial=None)
+    option_1 = models.IntegerField(initial=None, label="Option X")
+    option_2 = models.IntegerField(initial=None, label="Option Y")
+    option_3 = models.IntegerField(initial=None, label="Option Z")
     option_safe = models.IntegerField(initial=None)
     #draws_1 = models.IntegerField()
     #draws_2 = models.IntegerField()
