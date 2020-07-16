@@ -3,6 +3,7 @@ from otree.api import (
     Currency as c, currency_range
 )
 
+from django import forms
 
 author = 'Your name here'
 
@@ -45,6 +46,19 @@ class Player(BasePlayer):
     option_2 = models.IntegerField(initial=None)
     option_3 = models.IntegerField(initial=None)
     option_safe = models.IntegerField(initial=None)
+    #draws_1 = models.IntegerField()
+    #draws_2 = models.IntegerField()
+    #draws_3 = models.IntegerField()
+    #count_1 = {}
+    #count_2 = {}
+    #count_3 = {}
+    #data_counts = {}
+    payoff = models.CurrencyField()
+    payoff_1 = models.CurrencyField()
+    payoff_2 = models.CurrencyField()
+    payoff_3 = models.CurrencyField()
+
+
     access_device = models.IntegerField(
         choices=[
             [0, 'Smartphone'],
@@ -74,3 +88,27 @@ class Player(BasePlayer):
     )
 
     attention_check_2 = models.StringField(blank=True)
+
+    def option_1_max(self):
+        if self.session.config['choice']:
+            return Constants.endowment_choice
+        else:
+            return Constants.endowment_points
+
+    def option_2_max(self):
+        if self.session.config['choice']:
+            return Constants.endowment_choice
+        else:
+            return Constants.endowment_points
+
+    def option_3_max(self):
+        if self.session.config['choice']:
+            return Constants.endowment_choice
+        else:
+            return Constants.endowment_points
+
+    def option_safe_max(self):
+        if self.session.config['choice']:
+            return Constants.endowment_choice
+        else:
+            return Constants.endowment_points

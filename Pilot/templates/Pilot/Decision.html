@@ -2,23 +2,65 @@
 {% load otree %}
 
 {% block title %}
-    Pick an option.
+<div class="page-header">
+    <p>Your Decision</p>
+</div>
 {% endblock %}
 
 
 {% block content %}
 
-<div class="card">
+<!--{% if form.errors and choice %}
+<div class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">
+    You have to use exactly one point each round
+    </h4>
+</div>
+{% endif %}
 
-    <div class="card-body">
+{% if form.errors and not choice %}
+<div class="alert alert-danger" role="alert">
+    <h6 class="alert-heading">
+    You have to use exactly three point each round
+    </h6>
+</div>
+{% endif %}-->
+
+<div class="background">
+
         <div class="box" >
             1
         </div>
+
+        <div class="box" >
+            2
+        </div>
+
+        <div class="box" >
+            3
+        </div>
+
         {% formfield player.option_1 %}
- </div>
+        {% formfield player.option_2 %}
+        {% formfield player.option_3%}
+
+
  </div>
 
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{ Constants.endowment_choice }}} point in order to draw from one option
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw {% endif %}. The option's name and position are not related with the number of coins you get from each option.
+
+        </div>
+
+
+    {% next_button %}
+
 {% endblock %}
+
+
 
 
 {% block styles %}

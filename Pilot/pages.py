@@ -20,6 +20,9 @@ from collections import Counter
 ########################################################################################################################
 
 class Device(Page):
+    def is_displayed(self):
+        return self.round_number == 1
+
     form_model = 'player'
     form_fields = ['access_device']
 
@@ -31,7 +34,7 @@ class Device(Page):
 
 class AttentionCheck(Page):
     def is_displayed(self):
-        return self.player.access_device != 0
+        return self.player.access_device != 0 and self.round_number == 1
 
     form_model = 'player'
     form_fields = ['attention_check_1', 'attention_check_2']
@@ -48,7 +51,7 @@ class DeadEnd(Page):
     # this page is only displayed to people with mobile devices
     # which we do not want to partake and that are "trapped" on this page due to the missing {% next_button %}
     def is_displayed(self):
-        return self.player.access_device == 0 or self.player.attention_check_1 == 0 or self.player.attention_check_2 != "chair"
+        return self.player.access_device == 0 or self.player.attention_check_1 == 0 or self.player.attention_check_2 != "chair" and self.round_number == 1
 
 
 ########################################################################################################################
@@ -57,6 +60,9 @@ class DeadEnd(Page):
 
 
 class InstruStart(Page):
+
+    def is_displayed(self):
+        return self.round_number == 1
 
     def vars_for_template(self):
         return {'participation_fee': self.session.config['participation_fee']}
@@ -70,17 +76,13 @@ class Decision(Page):
     form_fields = ['option_1', 'option_2', 'option_3']
 
     def error_message(self, values):
-            if self.session.config['choice']:
-                self.player.options_overall = self.player.in_round(self.round_number).option_1 + self.player.in_round(self.round_number).option_2 + self.player.in_round(self.round_number).option_3
-                if self.player.options_overall > Constants.endowment_choice:
-                    return 'You can only choose one option one time per round.'
-            else:
-                self.player.options_overall = self.player.in_round(self.round_number).option_1 + self.player.in_round(self.round_number).option_2 + self.player.in_round(self.round_number).option_3
-                if self.player.options_overall > Constants.endowment_points:
-                    return 'You can only use ' + Constants.endowment_points + 'points per round.'
-
-
-
+        if self.participant.vars['choice']:
+            pass
+        else:
+            if values['option_1'] + values['option_2'] + values['option_3'] < 3:
+                return 'You have to use all three points'
+            elif values['option_1'] + values['option_2'] + values['option_3'] > 3:
+                return 'You can only use three points per round'
 
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
@@ -101,18 +103,18 @@ class Decision(Page):
         if self.participant.vars['choice']:
             pass
         else:
-            self.player.draws_1 = random.choices(Constants.Urn_1, k = self.player.option_1)
-            self.player.draws_2 = random.choices(Constants.Urn_2, k = self.player.option_2)
-            self.player.draws_3 = random.choices(Constants.Urn_3, k = self.player.option_3)
+            draws_1 = random.choices(Constants.Urn_1, k = self.player.option_1)
+            draws_2 = random.choices(Constants.Urn_2, k = self.player.option_2)
+            draws_3 = random.choices(Constants.Urn_3, k = self.player.option_3)
 
-            self.player.count_1 = Counter(self.player.draws_1)
-            self.player.count_2 = Counter(self.player.draws_2)
-            self.player.count_3 = Counter(self.player.draws_3)
+            count_1 = Counter(draws_1)
+            count_2 = Counter(draws_2)
+            count_3 = Counter(draws_3)
 
             data_counts = {}
-            data_counts['count_1'] = self.player.count_1
-            data_counts['count_2'] = self.player.count_2
-            data_counts['count_3'] = self.player.count_3
+            data_counts['count_1'] = count_1
+            data_counts['count_2'] = count_2
+            data_counts['count_3'] = count_3
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
@@ -156,7 +158,12 @@ class Decision(Page):
 
 
 class Results(Page):
-    pass
+    def is_displayed(self):
+        if self.session.config['choice']:
+            return self.round_number == Constants.num_rounds_choice
+        else:
+            return self.round_number == Constants.num_rounds_points
+
 
 
 page_sequence = [
