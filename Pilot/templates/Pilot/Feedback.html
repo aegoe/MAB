@@ -1,0 +1,28 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+<div class="page-header">
+    <p>Payoff</p>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="feedback">
+Feedback Screen
+
+</div>
+{% endblock %}
+
+
+
+
+{% block styles %}
+    <style type="text/css">
+        {% include 'Pilot/css/feedback.css' %}
+        .page-header {
+            margin-bottom: 0px;
+        }
+    </style>
+{% endblock %}

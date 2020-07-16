@@ -93,9 +93,9 @@ class Decision(Page):
                'safe_option': Constants.safe_option,
                'endowment_choice': Constants.endowment_choice,
                'endowment_points': Constants.endowment_points,
-               'Urn_1': Constants.Urn_1,
-               'Urn_2': Constants.Urn_2,
-               'Urn_3': Constants.Urn_3,
+               # 'Urn_1': Constants.Urn_1,
+               # 'Urn_2': Constants.Urn_2,
+               # 'Urn_3': Constants.Urn_3,
 
                }
 
@@ -103,13 +103,32 @@ class Decision(Page):
         if self.participant.vars['choice']:
             pass
         else:
-            draws_1 = random.choices(Constants.Urn_1, k = self.player.option_1)
-            draws_2 = random.choices(Constants.Urn_2, k = self.player.option_2)
-            draws_3 = random.choices(Constants.Urn_3, k = self.player.option_3)
+
+            Urn_1 = ['Black', 'Yellow', 'Blue', 'Green']
+            Urn_2 = ['Black', 'Yellow', 'Blue', 'Green']
+            Urn_3 = ['White', 'Yellow', 'Black', 'Green']
+
+            weights_1 = [1, 5, 3, 1]
+            weights_2 = [1, 3, 5, 1]
+            weights_3 = [1, 5, 3, 1]
+
+            draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
+            draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
+            draws_3 = random.choices(Urn_3, weights=weights_3, k = self.player.option_3)
+
+            print(draws_1)
+            print(draws_2)
+            print(draws_3)
 
             count_1 = Counter(draws_1)
             count_2 = Counter(draws_2)
             count_3 = Counter(draws_3)
+
+            print(count_1)
+            print(count_2)
+            print(count_3)
+
+
 
             data_counts = {}
             data_counts['count_1'] = count_1
@@ -147,14 +166,25 @@ class Decision(Page):
                     if i == 'count_3':
                         self.player.payoff_3 += v
 
+        print('Your total payoff for this round is: ', self.player.payoff)
+        print('Your payoff from Option 1 using', self.player.option_1, 'draws is: ', self.player.payoff_1)
+        print('Your payoff from Option 2 using', self.player.option_2, 'draws is: ', self.player.payoff_2)
+        print('Your payoff from Option 3 using', self.player.option_3, 'draws is: ', self.player.payoff_3)
 
 
 
-#class ResultsWaitPage(WaitPage):
+class Feedback(Page):
+    form_model = 'player'
+    form_fields = ['option_1', 'option_2', 'option_3']
 
+    def vars_for_template(self):
+        return {'payoff': self.player.payoff,
+                'payoff_1': self.player.payoff_1,
+                'payoff_2': self.player.payoff_2,
+                'payoff_3': self.player.payoff_3,
 
-#   def after_all_players_arrive(self):
-#      pass
+                }
+
 
 
 class Results(Page):
@@ -172,5 +202,6 @@ page_sequence = [
     DeadEnd,
     InstruStart,
     Decision,
+    Feedback,
     Results
 ]

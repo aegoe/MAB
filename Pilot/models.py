@@ -25,9 +25,9 @@ class Constants(BaseConstants):
     blue = 1
     green = 2
     white = -2
-    Urn_1 = [('Black', 1), ('Yellow', 5), ('Blue', 3), ('Green', 1)]
-    Urn_2 = [('Black', 1), ('Yellow', 3), ('Blue', 5), ('Green', 1)]
-    Urn_3 = [('White', 1), ('Yellow', 5), ('Black', 3), ('Green', 1)]
+    # Urn_1 = [('Black', 1), ('Yellow', 5), ('Blue', 3), ('Green', 1)]
+    # Urn_2 = [('Black', 1), ('Yellow', 3), ('Blue', 5), ('Green', 1)]
+    # Urn_3 = [('White', 1), ('Yellow', 5), ('Black', 3), ('Green', 1)]
     safe_option = 0.1
 
 class Subsession(BaseSubsession):
