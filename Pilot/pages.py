@@ -175,7 +175,7 @@ class Decision(Page):
 
 class Feedback(Page):
     form_model = 'player'
-    form_fields = ['option_1', 'option_2', 'option_3']
+    #form_fields = ['option_1', 'option_2', 'option_3']
 
     def vars_for_template(self):
         return {'payoff': self.player.payoff,

@@ -10,9 +10,17 @@
 
 {% block content %}
 <div class="feedback">
-Feedback Screen
+    <p> Your total payoff for this round is {{player.payoff}}. </p>
+    <p> Your payoff from Option 1 using {{player.option_1}} draws is {{player.payoff_1}} </p>
+    <p> Your payoff from Option 2 using {{player.option_2}} draws is {{player.payoff_2}} </p>
+    <p> Your payoff from Option 3 using {{player.option_3}} draws is {{player.payoff_3}} </p>
 
 </div>
+
+
+
+{% next_button %}
+
 {% endblock %}
 
 
