@@ -53,6 +53,9 @@ class Player(BasePlayer):
     #count_2 = {}
     #count_3 = {}
     #data_counts = {}
+    urn_draws_1 = models.StringField()
+    urn_draws_2 = models.StringField()
+    urn_draws_3 = models.StringField()
     payoff = models.CurrencyField()
     payoff_1 = models.CurrencyField()
     payoff_2 = models.CurrencyField()

@@ -1,9 +1,20 @@
 .page-header {
-    margin-bottom: 6px;
-    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 16px;
 
 }
 .feedback {
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.table {
+    font-size: 20px;
+    margin-top: 60px;
+    /*
+    background-color: #FFF5EE;
+    */
+    padding:0 50px 0 0; /* Only right padding*/
+    margin-bottom: 60px;
+
+
 }

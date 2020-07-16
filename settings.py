@@ -70,7 +70,7 @@ SESSION_CONFIG_DEFAULTS = {
 SESSION_CONFIGS = [
     {
        'name': 'MAB_Pilot_Testing',
-        'display_name': "Pilot Pilot Testing",
+        'display_name': "Pilot Testing",
         'num_demo_participants': 1,
         'app_sequence': ['Pilot'],
         'choice': False

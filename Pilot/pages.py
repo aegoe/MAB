@@ -116,6 +116,15 @@ class Decision(Page):
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
             draws_3 = random.choices(Urn_3, weights=weights_3, k = self.player.option_3)
 
+            draws_1_str = str(draws_1)[1:-1]
+            draws_2_str = str(draws_2)[1:-1]
+            draws_3_str = str(draws_3)[1:-1]
+
+            self.player.urn_draws_1 = draws_1_str
+            self.player.urn_draws_2 = draws_2_str
+            self.player.urn_draws_3 = draws_3_str
+
+            print(self.player.urn_draws_1)
             print(draws_1)
             print(draws_2)
             print(draws_3)
@@ -182,6 +191,10 @@ class Feedback(Page):
                 'payoff_1': self.player.payoff_1,
                 'payoff_2': self.player.payoff_2,
                 'payoff_3': self.player.payoff_3,
+                'choice': self.participant.vars['choice'],
+                'urn_draws_1': self.player.urn_draws_1,
+                'urn_draws_2': self.player.urn_draws_2,
+                'urn_draws_3': self.player.urn_draws_3,
 
                 }
 
