@@ -2,12 +2,16 @@
 {% load otree %}
 
 {% block title %}
-    Please read these instructions carefully.
+    Instructions.
 {% endblock %}
 
 {% block content %}
-    <p>Welcome to this HIT! All your responses will be kept completely confidential and you will remain
-        anonymous.</p>
 
-    <button value="True" id="proceed" class="btn btn-primary btn-large">Proceed</button>
+{% if player.instru_page == 1 %}
+
+    {% include 'Pilot/include/instru_1.html' %}
+
+{% endif %}
+
+
 {% endblock %}

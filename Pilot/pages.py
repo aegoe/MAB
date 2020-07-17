@@ -65,11 +65,13 @@ class InstruStart(Page):
         return self.round_number == 1
 
     def vars_for_template(self):
-        return {'participation_fee': self.session.config['participation_fee']}
+        return {'participation_fee': self.session.config['participation_fee'],
+                'conversion_factor': int(self.session.config['real_world_currency_per_point'] * 1000)}
 
     def before_next_page(self):
         self.player.choice = self.participant.vars['choice'] = self.session.config['choice']
         self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
+        self.player.instru_page += 1
 
 
 class Decision(Page):
@@ -266,6 +268,9 @@ class Decision(Page):
             for i in data_counts.keys():
                 for values in data_counts[i].values():
                     self.player.payoff += values
+
+            print(data_counts)
+            print(self.player.payoff)
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0

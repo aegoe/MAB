@@ -63,6 +63,7 @@ class Player(BasePlayer):
     payoff_2 = models.CurrencyField()
     payoff_3 = models.CurrencyField()
     payoff_4 = models.CurrencyField()
+    instru_page = models.IntegerField(initial=1)
 
 
     access_device = models.IntegerField(
