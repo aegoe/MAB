@@ -26,6 +26,10 @@ class Device(Page):
     form_model = 'player'
     form_fields = ['access_device']
 
+    def before_next_page(self):
+        self.player.choice = self.participant.vars['choice'] = self.session.config['choice']
+        self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
+
 
 ########################################################################################################################
 # AttentionCheck ##########################################################################################################
@@ -38,6 +42,7 @@ class AttentionCheck(Page):
 
     form_model = 'player'
     form_fields = ['attention_check_1', 'attention_check_2']
+
 
 
 
@@ -66,11 +71,12 @@ class InstruStart(Page):
 
     def vars_for_template(self):
         return {'participation_fee': self.session.config['participation_fee'],
-                'conversion_factor': int(self.session.config['real_world_currency_per_point'] * 1000)}
+                'conversion_factor': int(self.session.config['real_world_currency_per_point'] * 1000),
+                'choice': self.participant.vars['choice'],
+                'safe': self.participant.vars['safe'],
+                }
 
     def before_next_page(self):
-        self.player.choice = self.participant.vars['choice'] = self.session.config['choice']
-        self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
         self.player.instru_page += 1
 
 
@@ -319,9 +325,11 @@ class Questionnaire(Page):
 
 
 page_sequence = [
-    #Device,
+    Device,
     #AttentionCheck,
     #DeadEnd,
+    InstruStart,
+    InstruStart,
     InstruStart,
     Decision,
     Feedback,
