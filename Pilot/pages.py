@@ -200,7 +200,7 @@ class Feedback(Page):
 
 
 
-class Results(Page):
+class Questionnaire(Page):
     def is_displayed(self):
         if self.session.config['choice']:
             return self.round_number == Constants.num_rounds_choice
@@ -216,5 +216,5 @@ page_sequence = [
     InstruStart,
     Decision,
     Feedback,
-    Results
+    Questionnaire,
 ]
