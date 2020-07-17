@@ -73,9 +73,19 @@ SESSION_CONFIGS = [
         'display_name': "Pilot Testing",
         'num_demo_participants': 1,
         'app_sequence': ['Pilot'],
-        'choice': False
-    },
+        'choice': False,
+        'safe': False
 
+    },
+    {
+        'name': 'MAB_Pilot_Testing_Safe',
+        'display_name': "Pilot Testing Safe",
+        'num_demo_participants': 1,
+        'app_sequence': ['Pilot'],
+        'choice': False,
+        'safe': True
+
+    },
 ]
 
 # ISO-639 code

@@ -48,6 +48,7 @@
     /*
     background: #FFF5EE;
     */
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -55,10 +56,28 @@
     align-self: center;
 }
 
+.backgroundsafe {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1vw;
+    margin-bottom: 36px;
+    margin-top: 36px;
+    margin-right: 16px;
+    /*
+    background: #FFF5EE;
+    */
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.backgroundsafe :first-child{
+    align-self: center;
+}
 
 .page-header {
     margin-bottom: 4px;
     border-bottom: 1px solid #eaeaea;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -88,6 +107,7 @@
     padding-top: 10px;
     /*border-bottom: 2px solid #eaeaea;*/
     font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 

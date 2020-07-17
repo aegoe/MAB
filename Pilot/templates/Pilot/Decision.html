@@ -26,6 +26,7 @@
 </div>
 {% endif %}-->
 
+{% if not safe %}
 <div class="background">
 
         <div class="box" >
@@ -57,12 +58,65 @@
 
         Each round, you have the option to {% if choice %} use your {{ Constants.endowment_choice }}} point in order to draw from one option
            {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw {% endif %}. The option's name and position are not related with the number of coins you get from each option.
+           equals one draw{% endif %}. The option's name and position are not related to the number of coins you get from each option.
 
         </div>
 
 
-    {% next_button %}
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% endif %}
+
+{% if safe %}
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.etsystatic.com/20162739/r/il/531799/1951524577/il_570xN.1951524577_h99n.jpg" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.etsystatic.com/20162739/r/il/531799/1951524577/il_570xN.1951524577_h99n.jpg" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.etsystatic.com/20162739/r/il/531799/1951524577/il_570xN.1951524577_h99n.jpg" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQLacZo78sIbbfUozWML45LGGMaJqxUAbrvvg&usqp=CAU" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_1 %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_safe %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{ Constants.endowment_choice }}} point in order to draw from one option
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw{% endif %}. The option's name and position are not related to the number of coins you get from each option.
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% endif %}
+
+
 
 {% endblock %}
 

@@ -28,7 +28,7 @@ class Constants(BaseConstants):
     # Urn_1 = [('Black', 1), ('Yellow', 5), ('Blue', 3), ('Green', 1)]
     # Urn_2 = [('Black', 1), ('Yellow', 3), ('Blue', 5), ('Green', 1)]
     # Urn_3 = [('White', 1), ('Yellow', 5), ('Black', 3), ('Green', 1)]
-    safe_option = 0.1
+    safe_option = 3
 
 class Subsession(BaseSubsession):
     pass
@@ -41,6 +41,7 @@ class Group(BaseGroup):
 class Player(BasePlayer):
 
     choice = models.BooleanField()
+    safe = models.BooleanField()
     endowment = models.IntegerField()
     option_1 = models.IntegerField(initial=None, label="Option X")
     option_2 = models.IntegerField(initial=None, label="Option Y")
@@ -56,10 +57,12 @@ class Player(BasePlayer):
     urn_draws_1 = models.StringField()
     urn_draws_2 = models.StringField()
     urn_draws_3 = models.StringField()
+    urn_draws_4 = models.StringField()
     payoff = models.CurrencyField()
     payoff_1 = models.CurrencyField()
     payoff_2 = models.CurrencyField()
     payoff_3 = models.CurrencyField()
+    payoff_4 = models.CurrencyField()
 
 
     access_device = models.IntegerField(

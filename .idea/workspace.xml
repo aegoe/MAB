@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pilot/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pilot/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/pages.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/css/bandit_env.css" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/css/bandit_env.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/css/feedback.css" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/css/feedback.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1144">
-              <caret line="57" column="38" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+            <state relative-caret-position="1039">
+              <caret line="64" column="12" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
               <folding>
                 <element signature="e#0#134#0" expanded="true" />
               </folding>
@@ -41,24 +47,54 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4356">
-              <caret line="212" column="11" selection-start-line="212" selection-start-column="11" selection-end-line="212" selection-end-column="11" />
+            <state relative-caret-position="505">
+              <caret line="302" column="17" selection-start-line="302" selection-start-column="17" selection-end-line="302" selection-end-column="17" />
               <folding>
                 <element signature="e#0#71#0" expanded="true" />
+                <element signature="e#4330#7070#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="150">
+              <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
               <folding>
+                <element signature="e#285#291#0" expanded="true" />
                 <element signature="e#324#330#0" expanded="true" />
                 <element signature="e#362#368#0" expanded="true" />
                 <element signature="e#400#406#0" expanded="true" />
+                <element signature="e#466#472#0" expanded="true" />
+                <element signature="e#520#526#0" expanded="true" />
+                <element signature="e#569#575#0" expanded="true" />
+                <element signature="e#630#636#0" expanded="true" />
+                <element signature="e#683#689#0" expanded="true" />
+                <element signature="e#740#746#0" expanded="true" />
+                <element signature="e#792#798#0" expanded="true" />
+                <element signature="e#844#850#0" expanded="true" />
+                <element signature="e#913#919#0" expanded="true" />
+                <element signature="e#967#973#0" expanded="true" />
+                <element signature="e#1016#1022#0" expanded="true" />
+                <element signature="e#1065#1071#0" expanded="true" />
+                <element signature="e#1411#1417#0" expanded="true" />
+                <element signature="e#1450#1456#0" expanded="true" />
+                <element signature="e#1488#1494#0" expanded="true" />
+                <element signature="e#1526#1532#0" expanded="true" />
+                <element signature="e#1592#1598#0" expanded="true" />
+                <element signature="e#1646#1652#0" expanded="true" />
+                <element signature="e#1695#1701#0" expanded="true" />
+                <element signature="e#1744#1750#0" expanded="true" />
+                <element signature="e#1809#1815#0" expanded="true" />
+                <element signature="e#1866#1872#0" expanded="true" />
+                <element signature="e#1918#1924#0" expanded="true" />
+                <element signature="e#1970#1976#0" expanded="true" />
+                <element signature="e#2039#2045#0" expanded="true" />
+                <element signature="e#2093#2099#0" expanded="true" />
+                <element signature="e#2142#2148#0" expanded="true" />
+                <element signature="e#2191#2197#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/css/feedback.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="572">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -85,17 +121,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1584">
-              <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+            <state relative-caret-position="508">
+              <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-942">
-              <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+            <state relative-caret-position="348">
+              <caret line="95" column="14" selection-start-line="95" selection-start-column="14" selection-end-line="95" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -103,8 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/css/bandit_env.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1958">
-              <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+            <state relative-caret-position="424">
+              <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -136,13 +172,13 @@
         <option value="$PROJECT_DIR$/templates/MAB/Decision.html" />
         <option value="$PROJECT_DIR$/pages.py" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/InstruStart.html" />
-        <option value="$PROJECT_DIR$/Pilot/models.py" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/css/feedback.css" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/css/bandit_env.css" />
-        <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html" />
-        <option value="$PROJECT_DIR$/settings.py" />
-        <option value="$PROJECT_DIR$/Pilot/pages.py" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" />
+        <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/Pilot/models.py" />
+        <option value="$PROJECT_DIR$/Pilot/pages.py" />
+        <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html" />
       </list>
     </option>
   </component>
@@ -230,7 +266,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../price-discrimination" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -304,12 +340,12 @@
       <workItem from="1594644705771" duration="6555000" />
       <workItem from="1594711230859" duration="30651000" />
       <workItem from="1594884165410" duration="22170000" />
-      <workItem from="1594969698886" duration="665000" />
+      <workItem from="1594969698886" duration="5149000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66028000" />
+    <option name="totallyTimeSpent" value="70512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -428,13 +464,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/models.py">
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/InstruStart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="57" column="38" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="242">
+          <caret line="11" column="79" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/css/feedback.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
@@ -445,73 +485,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/css/bandit_env.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="95" column="14" selection-start-line="95" selection-start-column="14" selection-end-line="95" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1039">
+          <caret line="64" column="12" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4356">
-          <caret line="212" column="11" selection-start-line="212" selection-start-column="11" selection-end-line="212" selection-end-column="11" />
+        <state relative-caret-position="505">
+          <caret line="302" column="17" selection-start-line="302" selection-start-column="17" selection-end-line="302" selection-end-column="17" />
           <folding>
             <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#4330#7070#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state relative-caret-position="150">
+          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
           <folding>
-            <element signature="e#222#228#0" expanded="true" />
+            <element signature="e#285#291#0" expanded="true" />
             <element signature="e#324#330#0" expanded="true" />
             <element signature="e#362#368#0" expanded="true" />
             <element signature="e#400#406#0" expanded="true" />
-            <element signature="e#448#454#0" expanded="true" />
-            <element signature="e#502#508#0" expanded="true" />
-            <element signature="e#551#557#0" expanded="true" />
-            <element signature="e#600#606#0" expanded="true" />
-            <element signature="e#447#453#0" expanded="true" />
-            <element signature="e#498#504#0" expanded="true" />
-            <element signature="e#550#556#0" expanded="true" />
-            <element signature="e#602#608#0" expanded="true" />
-            <element signature="e#894#900#0" expanded="true" />
-            <element signature="e#930#936#0" expanded="true" />
-            <element signature="e#979#985#0" expanded="true" />
-            <element signature="e#1028#1034#0" expanded="true" />
+            <element signature="e#466#472#0" expanded="true" />
+            <element signature="e#520#526#0" expanded="true" />
+            <element signature="e#569#575#0" expanded="true" />
+            <element signature="e#630#636#0" expanded="true" />
+            <element signature="e#683#689#0" expanded="true" />
+            <element signature="e#740#746#0" expanded="true" />
+            <element signature="e#792#798#0" expanded="true" />
+            <element signature="e#844#850#0" expanded="true" />
+            <element signature="e#913#919#0" expanded="true" />
+            <element signature="e#967#973#0" expanded="true" />
+            <element signature="e#1016#1022#0" expanded="true" />
+            <element signature="e#1065#1071#0" expanded="true" />
+            <element signature="e#1411#1417#0" expanded="true" />
+            <element signature="e#1450#1456#0" expanded="true" />
+            <element signature="e#1488#1494#0" expanded="true" />
+            <element signature="e#1526#1532#0" expanded="true" />
+            <element signature="e#1592#1598#0" expanded="true" />
+            <element signature="e#1646#1652#0" expanded="true" />
+            <element signature="e#1695#1701#0" expanded="true" />
+            <element signature="e#1744#1750#0" expanded="true" />
+            <element signature="e#1809#1815#0" expanded="true" />
+            <element signature="e#1866#1872#0" expanded="true" />
+            <element signature="e#1918#1924#0" expanded="true" />
+            <element signature="e#1970#1976#0" expanded="true" />
+            <element signature="e#2039#2045#0" expanded="true" />
+            <element signature="e#2093#2099#0" expanded="true" />
+            <element signature="e#2142#2148#0" expanded="true" />
+            <element signature="e#2191#2197#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/css/feedback.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/InstruStart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="79" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/css/bandit_env.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1958">
-          <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-942">
-          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
         </state>
       </provider>
     </entry>

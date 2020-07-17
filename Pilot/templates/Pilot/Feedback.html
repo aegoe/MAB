@@ -9,7 +9,7 @@
 
 
 {% block content %}
-{% if not choice %}
+{% if not choice and not safe %}
 
 <!--<div class="feedback">-->
 
@@ -45,9 +45,58 @@
     </div>
 <!--</div>-->
 
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Total Earnings: {{player.payoff}}</button>
+
 {% endif %}
 
-{% next_button %}
+
+{% if not choice and safe %}
+
+<!--<div class="feedback">-->
+
+    <div class="table">
+    <table>
+        <tr>
+            <th> &nbsp; </th>
+            <th> Option 1 &nbsp;</th>
+            <th> Option 2 &nbsp;</th>
+            <th> Option 3 &nbsp;</th>
+            <th> Option Safe &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td> <b>Draws: &nbsp;</b> </td>
+            <td> {{player.option_1}} &nbsp;</td>
+            <td> {{player.option_2}} &nbsp;</td>
+            <td> {{player.option_3}} &nbsp;</td>
+            <td> {{player.option_safe}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td> <b>Coins:&nbsp;</b> </td>
+            <td> {{player.urn_draws_1}} &nbsp;</td>
+            <td> {{player.urn_draws_2}} &nbsp;</td>
+            <td> {{player.urn_draws_3}} &nbsp;</td>
+            <td> {{player.urn_draws_4}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td> <b>Earnings:&nbsp;</b> </td>
+            <td> {{player.payoff_1}} &nbsp;</td>
+            <td> {{player.payoff_2}} &nbsp;</td>
+            <td> {{player.payoff_3}} &nbsp;</td>
+            <td> {{player.payoff_4}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+<!--</div>-->
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Total Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
 
 {% endblock %}
 
