@@ -104,7 +104,10 @@ class Decision(Page):
                 return 'You can only use three points per round'
 
         elif not self.participant.vars['choice'] and self.participant.vars['safe']:
-            pass
+            if values['option_1'] + values['option_2'] + values['option_3'] + values['option_safe'] < 3:
+                return 'You have to use all three points'
+            elif values['option_1'] + values['option_2'] + values['option_3'] + values['option_safe'] > 3:
+                return 'You can only use three points per round'
 
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
@@ -276,7 +279,6 @@ class Decision(Page):
                     self.player.payoff += values
 
             print(data_counts)
-            print(self.player.payoff)
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
@@ -293,6 +295,10 @@ class Decision(Page):
                         self.player.payoff_3 += v
                     if i == 'count_4':
                         self.player.payoff_4 += v
+
+            print(self.player.payoff)
+            print(self.participant.payoff)
+
 
 class Feedback(Page):
     form_model = 'player'

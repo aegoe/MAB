@@ -1,6 +1,6 @@
 .box{
     position: relative;
-    width: 100px;
+    width: 120px;
     line-height: 90px;
     height: 90px;
     /*
@@ -16,14 +16,16 @@
 /*  margin-right: auto;
     margin-left: auto;*/
     font-size: 16px;
+    margin-bottom: 10px;
 
 }
 
 .imageholder{
     position: relative;
-    width:100px;
+    width: 100px;
     height: 90px;
     margin-left: -30px;
+    margin-bottom: 100px;
 }
 
 /*.background{
