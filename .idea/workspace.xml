@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/FinalInfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/Questionnaire.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6323">
-              <caret line="349" column="14" lean-forward="true" selection-start-line="349" selection-start-column="14" selection-end-line="349" selection-end-column="14" />
+            <state relative-caret-position="468">
+              <caret line="316" column="67" selection-start-line="316" selection-start-column="67" selection-end-line="316" selection-end-column="67" />
               <folding>
                 <element signature="e#0#71#0" expanded="true" />
               </folding>
@@ -63,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/Pilot/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
-              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
               <folding>
                 <element signature="e#0#134#0" expanded="true" />
               </folding>
@@ -153,9 +146,9 @@
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/css/bandit_env.css" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" />
         <option value="$PROJECT_DIR$/Pilot/models.py" />
-        <option value="$PROJECT_DIR$/Pilot/pages.py" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/FinalInfo.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Questionnaire.html" />
+        <option value="$PROJECT_DIR$/Pilot/pages.py" />
       </list>
     </option>
   </component>
@@ -300,16 +293,15 @@
       <workItem from="1594884165410" duration="22170000" />
       <workItem from="1594969698886" duration="18386000" />
       <workItem from="1595185860447" duration="1802000" />
-      <workItem from="1595241303196" duration="4896000" />
+      <workItem from="1595241303196" duration="5147000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90447000" />
+    <option name="totallyTimeSpent" value="90698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21237993" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -511,7 +503,7 @@
     <entry file="file://$PROJECT_DIR$/Pilot/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
-          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding>
             <element signature="e#0#134#0" expanded="true" />
           </folding>
@@ -520,8 +512,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6323">
-          <caret line="349" column="14" lean-forward="true" selection-start-line="349" selection-start-column="14" selection-end-line="349" selection-end-column="14" />
+        <state relative-caret-position="468">
+          <caret line="316" column="67" selection-start-line="316" selection-start-column="67" selection-end-line="316" selection-end-column="67" />
           <folding>
             <element signature="e#0#71#0" expanded="true" />
           </folding>
