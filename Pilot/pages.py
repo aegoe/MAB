@@ -83,6 +83,12 @@ class InstruStart(Page):
 class Decision(Page):
     form_model = 'player'
 
+    def is_displayed(self):
+        if self.session.config['choice']:
+            return self.round_number <= Constants.num_rounds_choice
+        else:
+            return self.round_number <= Constants.num_rounds_points
+
     def get_form_fields(self):
         if self.participant.vars['choice'] and not self.participant.vars['safe']:
             pass
@@ -304,6 +310,12 @@ class Feedback(Page):
     form_model = 'player'
     #form_fields = ['option_1', 'option_2', 'option_3']
 
+    def is_displayed(self):
+        if self.session.config['choice']:
+            return self.round_number <= Constants.num_rounds_choice
+        else:
+            return self.round_number <= Constants.num_rounds_points
+
     def vars_for_template(self):
         return {'payoff': self.player.payoff,
                 'payoff_1': self.player.payoff_1,
@@ -329,6 +341,13 @@ class Questionnaire(Page):
             return self.round_number == Constants.num_rounds_points
 
 
+class FinalInfo(Page):
+    def is_displayed(self):
+        if self.session.config['choice']:
+            return self.round_number == Constants.num_rounds_choice
+        else:
+            return self.round_number == Constants.num_rounds_points
+
 
 page_sequence = [
     Device,
@@ -340,4 +359,5 @@ page_sequence = [
     Decision,
     Feedback,
     Questionnaire,
+    FinalInfo,
 ]
