@@ -8,7 +8,7 @@ import random
 from numpy.random import choice
 import numpy
 import time
-from numpy import random
+#from numpy import random
 #from otree_mturk_utils.views import Page, CustomMturkWaitPage
 from otree.models_concrete import PageCompletion
 from functools import reduce
