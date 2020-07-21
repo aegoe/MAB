@@ -58,7 +58,7 @@ class Player(BasePlayer):
     urn_draws_2 = models.StringField()
     urn_draws_3 = models.StringField()
     urn_draws_4 = models.StringField()
-    payoff = models.CurrencyField()
+    payoff = models.CurrencyField(initial=None)
     payoff_1 = models.CurrencyField()
     payoff_2 = models.CurrencyField()
     payoff_3 = models.CurrencyField()

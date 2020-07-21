@@ -57,35 +57,35 @@
     <div class="table">
     <table>
         <tr>
-            <th> &nbsp; </th>
-            <th> Option 1 &nbsp;</th>
-            <th> Option 2 &nbsp;</th>
-            <th> Option 3 &nbsp;</th>
-            <th> Option Safe &nbsp;</th>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Option 1 &nbsp;</th>
+            <th class="th"> Option 2 &nbsp;</th>
+            <th class="th"> Option 3 &nbsp;</th>
+            <th class="th"> Option Safe &nbsp;</th>
 
         </tr>
         <tr>
-            <td> <b>Draws: &nbsp;</b> </td>
-            <td> {{player.option_1}} &nbsp;</td>
-            <td> {{player.option_2}} &nbsp;</td>
-            <td> {{player.option_3}} &nbsp;</td>
-            <td> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
 
         </tr>
         <tr>
-            <td> <b>Coins:&nbsp;</b> </td>
-            <td> {{player.urn_draws_1}} &nbsp;</td>
-            <td> {{player.urn_draws_2}} &nbsp;</td>
-            <td> {{player.urn_draws_3}} &nbsp;</td>
-            <td> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
         </tr>
 
         <tr>
-            <td> <b>Earnings:&nbsp;</b> </td>
-            <td> {{player.payoff_1}} &nbsp;</td>
-            <td> {{player.payoff_2}} &nbsp;</td>
-            <td> {{player.payoff_3}} &nbsp;</td>
-            <td> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
 
         </tr>
 
@@ -106,8 +106,5 @@
 {% block styles %}
     <style type="text/css">
         {% include 'Pilot/css/feedback.css' %}
-        .page-header {
-            margin-bottom: 0px;
-        }
     </style>
 {% endblock %}
