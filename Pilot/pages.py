@@ -81,6 +81,9 @@ class InstruStart(Page):
     def before_next_page(self):
         self.player.instru_page += 1
 
+########################################################################################################################
+# DECISION ## ##########################################################################################################
+########################################################################################################################
 
 class Decision(Page):
     form_model = 'player'
@@ -507,6 +510,10 @@ class Feedback(Page):
                 }
 
 
+########################################################################################################################
+# Questionnaire and Final Page #########################################################################################
+########################################################################################################################
+
 
 class Questionnaire(Page):
     def is_displayed(self):
@@ -522,6 +529,12 @@ class FinalInfo(Page):
             return self.round_number == Constants.num_rounds_choice
         else:
             return self.round_number == Constants.num_rounds_points
+
+    def vars_for_template(self):
+        return {'participation_fee': self.session.config['participation_fee'],
+                'total_payoff': self.participant.payoff_plus_participation_fee(),
+                'bonus': self.participant.payoff.to_real_world_currency(self.session),
+                }
 
 
 page_sequence = [

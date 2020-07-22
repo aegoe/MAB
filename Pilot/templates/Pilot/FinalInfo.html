@@ -6,8 +6,13 @@
 {% endblock %}
 
 {% block content %}
+<p>Thank you very much for participating!</p>
+<p>Based on your decisions in the HIT, you earned a bonus of {{ participant.payoff }}, which converts
+to {{ bonus }}. Adding the {{ participation_fee }} participation fee, <b>your total payoff equals {{ total_payoff }}.</b></p>
 
-<p> Your final payoff is {{participant.payoff}}.</p>
+    <div class="alert alert-warning" role="alert">
+        To submit your work, you have to click the &#8216;Next&#8217; button below.
+    </div>
 
 <br>
 
