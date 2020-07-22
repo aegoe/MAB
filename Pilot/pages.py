@@ -131,18 +131,10 @@ class Decision(Page):
 
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
-               #'option_1': self.participant.vars['option_1'],
-               #'option_2': self.participant.vars['option_2'],
-               #'option_3': self.participant.vars['option_3'],
-               #'endowment': self.participant.vars['endowment'],
                'safe_option': Constants.safe_option,
                'endowment_choice': Constants.endowment_choice,
                'endowment_points': Constants.endowment_points,
                'safe': self.participant.vars['safe'],
-               # 'Urn_1': Constants.Urn_1,
-               # 'Urn_2': Constants.Urn_2,
-               # 'Urn_3': Constants.Urn_3,
-
                }
 
     def before_next_page(self):
