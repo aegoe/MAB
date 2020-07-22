@@ -86,6 +86,15 @@ SESSION_CONFIGS = [
         'safe': True
 
     },
+    {
+        'name': 'MAB_Pilot_Testing_Safe_Choice',
+        'display_name': "Pilot Testing Safe Choice",
+        'num_demo_participants': 1,
+        'app_sequence': ['Pilot'],
+        'choice': True,
+        'safe': True
+
+    },
 ]
 
 # ISO-639 code

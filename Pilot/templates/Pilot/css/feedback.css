@@ -36,3 +36,19 @@ line-height: 40px;
 background-color: #F5F5F5 ;
 ;
 }
+
+.td_choice {
+text-align: left;
+height: 40px;
+width: 90px;
+line-height: 40px;
+}
+
+.th{
+text-align: left;
+height: 40px;
+width: 180px;
+line-height: 40px;
+background-color: #F5F5F5 ;
+;
+}
