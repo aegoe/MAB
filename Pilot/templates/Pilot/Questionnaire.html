@@ -2,13 +2,21 @@
 {% load otree %}
 
 {% block title %}
-    Questionnaire
-
+    Questionnaire <h6>Page {{ player.questionnaire_page }}</h6>
 {% endblock %}
+
 
 {% block content %}
 
-<p>Test</p>
+{% if player.questionnaire_page == 1 %}
+        <p>You have completed part 1 of this HIT. To finish the HIT, please fill out the following questionnaire.</p>
+{% endif %}
+
+{% if player.questionnaire_page == 1 %}
+    {% include 'Pilot/include/questionnaire_1.html' %}
+
+
+{% endif %}
 
 <br>
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Proceed</button>

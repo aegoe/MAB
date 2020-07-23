@@ -64,6 +64,8 @@ class Player(BasePlayer):
     payoff_3 = models.CurrencyField()
     payoff_4 = models.CurrencyField()
     instru_page = models.IntegerField(initial=1)
+    questionnaire_page = models.IntegerField(initial=1)
+
 
 
     access_device = models.IntegerField(
@@ -95,6 +97,27 @@ class Player(BasePlayer):
     )
 
     attention_check_2 = models.StringField(blank=True)
+
+
+    q_risk = models.IntegerField(
+        choices=[
+            [1, '1'],
+            [2, '2'],
+            [3, '3'],
+            [4, '4'],
+            [5, '5'],
+            [6, '6'],
+            [7, '7'],
+            [8, '8'],
+            [9, '9'],
+            [10, '10']
+        ],
+        widget=widgets.RadioSelect,
+        label="How do you see yourself: are you generally a person who is fully prepared to take risks or do you try to avoid taking risks?",
+        blank=False
+    )
+
+    q_exploration_strategy =models.LongStringField(blank=False, label="")
 
     def option_1_max(self):
         if self.session.config['choice']:

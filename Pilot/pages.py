@@ -516,11 +516,27 @@ class Feedback(Page):
 
 
 class Questionnaire(Page):
+    form_model ='player'
+
+    def get_form_fields(self):
+        if self.session.config['choice']:
+            return ['q_risk', 'q_exploration_strategy']
+        else:
+            return ['q_risk', 'q_exploration_strategy']
+
+
     def is_displayed(self):
         if self.session.config['choice']:
             return self.round_number == Constants.num_rounds_choice
         else:
             return self.round_number == Constants.num_rounds_points
+
+    def vars_for_template(self):
+        return{'questionnaire_page': self.player.questionnaire_page,
+               }
+
+    def before_next_page(self):
+        self.player.questionnaire_page += 1
 
 
 class FinalInfo(Page):
