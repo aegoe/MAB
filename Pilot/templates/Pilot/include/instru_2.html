@@ -5,11 +5,10 @@
 represented by a money bag. Options will stay in the exact same place throughout the task and you will repeatedly choose
 between them. The task lasts for 70 rounds and you choose options by investing points.</p> 
 <p> At the beginning of each round, you receive {% if choice %} one point {% elif not choice %} three points{% endif %}. 
-You can allocate {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
+You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
 three {% elif safe %} four {% endif %} options. {% if not choice %} Points cannot be accumulated and therefore, all three 
-points must be allocated in each round {% endif %}. </p>
-<p> Once you have made your choice, you will earn a number of coins, depending on which {% if choice %} option {% elif not choice %} 
-options {% endif %} you chose. This will be shown on a separate feedback screen upon submitting your choice. </p>
+points must be invested in each round {% endif %}. </p>
+<p> Once you have made your choice, you will get feedback about your performance. This will be shown on a separate feedback screen upon submitting your choice. </p>
 
 
 <br>
