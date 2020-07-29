@@ -65,6 +65,25 @@ class Player(BasePlayer):
     payoff_4 = models.CurrencyField()
     instru_page = models.IntegerField(initial=1)
     questionnaire_page = models.IntegerField(initial=1)
+    controls = models.IntegerField(initial=None)
+
+
+    #################################
+    # Comprehension Questions #######
+    #################################
+
+    cq_Pilot_1 = models.IntegerField(
+        choices=[
+            [9, 'x'],
+            [1, 'y'],
+            [99, 'z'],
+            [999, 'l'],
+        ],
+        widget=widgets.RadioSelect,
+        blank=False,
+        label='placeholder',
+        initial=0
+    )
 
 
 
