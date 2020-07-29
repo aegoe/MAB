@@ -65,7 +65,7 @@ class Player(BasePlayer):
     payoff_4 = models.CurrencyField()
     instru_page = models.IntegerField(initial=1)
     questionnaire_page = models.IntegerField(initial=1)
-    controls = models.IntegerField(initial=None)
+    controls = models.IntegerField(initial=1)
     comprehension_page = models.IntegerField(initial=1)
 
 
@@ -81,7 +81,7 @@ class Player(BasePlayer):
             [999, 'l'],
         ],
         widget=widgets.RadioSelect,
-        blank=False,
+        blank=True,
         label='placeholder',
         initial=0
     )

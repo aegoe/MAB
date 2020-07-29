@@ -584,6 +584,7 @@ page_sequence = [
     InstruStart,
     InstruStart,
     InstruStart,
+    ComprehensionQuestions,
     Decision,
     Feedback,
     Questionnaire,
