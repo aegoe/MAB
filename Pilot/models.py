@@ -66,6 +66,7 @@ class Player(BasePlayer):
     instru_page = models.IntegerField(initial=1)
     questionnaire_page = models.IntegerField(initial=1)
     controls = models.IntegerField(initial=None)
+    comprehension_page = models.IntegerField(initial=1)
 
 
     #################################
