@@ -65,7 +65,7 @@ class Player(BasePlayer):
     payoff_4 = models.CurrencyField()
     instru_page = models.IntegerField(initial=1)
     questionnaire_page = models.IntegerField(initial=1)
-    controls = models.IntegerField(initial=1)
+    controls = models.IntegerField(initial=0)
     comprehension_page = models.IntegerField(initial=1)
 
 
@@ -75,14 +75,14 @@ class Player(BasePlayer):
 
     cq_Pilot_1 = models.IntegerField(
         choices=[
-            [9, 'x'],
-            [1, 'y'],
-            [99, 'z'],
-            [999, 'l'],
+            [9, 'I am not sure'],
+            [1, 'Yes'],
+            [99, 'Not'],
+            [999, 'Coffee'],
         ],
         widget=widgets.RadioSelect,
         blank=True,
-        label='placeholder',
+        label='In this HIT you repeatedly choose between a number of options. Do you get the same set of options in all rounds of the HIT?',
         initial=0
     )
 

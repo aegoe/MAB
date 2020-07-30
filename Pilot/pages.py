@@ -93,7 +93,13 @@ class ComprehensionQuestions(Page):
         return self.round_number == 1 and self.player.controls != 1
 
     def vars_for_template(self):
-        pass
+        return {'participation_fee': self.session.config['participation_fee'],
+                'conversion_factor': int(self.session.config['real_world_currency_per_point'] * 1000),
+                'choice': self.participant.vars['choice'],
+                'safe': self.participant.vars['safe'],
+                'endowment_choice': Constants.endowment_choice,
+                'endowment_points': Constants.endowment_points,
+                }
 
     def get_form_fields(self):
         return ['cq_Pilot_1']
@@ -103,6 +109,16 @@ class ComprehensionQuestions(Page):
             self.player.controls = 1
 
         self.player.comprehension_page += 1
+
+
+
+class DeadEnd2(Page):
+    def is_displayed(self) -> bool:
+        return self.player.in_round(1).controls !=1 and self.round_number == 1
+
+
+
+
 
 
 ########################################################################################################################
@@ -585,6 +601,8 @@ page_sequence = [
     InstruStart,
     InstruStart,
     ComprehensionQuestions,
+    ComprehensionQuestions,
+    DeadEnd2,
     Decision,
     Feedback,
     Questionnaire,
