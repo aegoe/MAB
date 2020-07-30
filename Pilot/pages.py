@@ -111,7 +111,6 @@ class ComprehensionQuestions(Page):
         self.player.comprehension_page += 1
 
 
-
 class DeadEnd2(Page):
     def is_displayed(self) -> bool:
         return self.player.in_round(1).controls !=1 and self.round_number == 1
@@ -560,10 +559,18 @@ class Questionnaire(Page):
 
     def get_form_fields(self):
         if self.session.config['choice']:
-            return ['q_risk', 'q_exploration_strategy']
-        else:
-            return ['q_risk', 'q_exploration_strategy']
+            if self.player.questionnaire_page == 1:
+                return ['q_risk', 'q_exploration_strategy']
+            elif self.player.questionnaire_page == 2:
+                return ['q_year', 'q_sex', 'q_employment', 'q_education',
+                        'q_ethnicity']
 
+        else:
+            if self.player.questionnaire_page == 1:
+                return ['q_risk', 'q_exploration_strategy']
+            elif self.player.questionnaire_page == 2:
+                return ['q_year', 'q_sex', 'q_employment', 'q_education',
+                        'q_ethnicity']
 
     def is_displayed(self):
         if self.session.config['choice']:
@@ -605,6 +612,7 @@ page_sequence = [
     DeadEnd2,
     Decision,
     Feedback,
+    Questionnaire,
     Questionnaire,
     FinalInfo,
 ]
