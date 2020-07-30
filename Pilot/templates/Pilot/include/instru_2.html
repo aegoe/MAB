@@ -1,5 +1,9 @@
 {% load otree %}
+{% block title %}
 <h5> <b>The task</b></h5>
+{% endblock %}
+
+{% block content %}
 
 <p> This HIT comprises 70 rounds. You will repeatedly choose between different options, as shown in the image below. 
 Each option is represented by a money bag. You choose options by investing points.</p> 
@@ -18,3 +22,5 @@ points {% endif %} must be invested in each round. </p>
 <br>
 
 <button value="True" id="proceed" class="btn btn-primary btn-large">Proceed</button>
+{% endblock %}
+
