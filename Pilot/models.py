@@ -99,7 +99,7 @@ class Player(BasePlayer):
         initial=0
     )
 
-        cq_Pilot_3 = models.IntegerField(
+    cq_Pilot_3 = models.IntegerField(
         choices=[
             [999, 'have the same average value'],
             [9, 'return a constant value'],
@@ -112,7 +112,7 @@ class Player(BasePlayer):
         initial=0
     )
         
-        cq_Pilot_4 = models.IntegerField(
+    cq_Pilot_4 = models.IntegerField(
         choices=[
             [999, 'need to invest all three points into one option'],
             [9, 'can not invest more than two points into one option'],

@@ -102,7 +102,10 @@ class ComprehensionQuestions(Page):
                 }
 
     def get_form_fields(self):
-        return ['cq_Pilot_1', 'cq_Pilot_2']
+        if self.participant.vars['choice']:
+            return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3']
+        else:
+            return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3', 'cq_Pilot_4']
 
     def before_next_page(self):
         if sum([self.player.cq_Pilot_1, self.player.cq_Pilot_2]) < 3:
