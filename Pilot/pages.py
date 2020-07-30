@@ -567,15 +567,19 @@ class Questionnaire(Page):
     def get_form_fields(self):
         if self.session.config['choice']:
             if self.player.questionnaire_page == 1:
-                return ['q_risk', 'q_exploration_strategy']
+                return ['q_risk']
             elif self.player.questionnaire_page == 2:
+                return ['q_exploration_strategy', 'q_maxoption']
+            elif self.player.questionnaire_page == 3:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
         else:
             if self.player.questionnaire_page == 1:
-                return ['q_risk', 'q_exploration_strategy']
+                return ['q_risk']
             elif self.player.questionnaire_page == 2:
+                return ['q_exploration_strategy', 'q_maxoption']
+            elif self.player.questionnaire_page == 3:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
@@ -619,6 +623,7 @@ page_sequence = [
     DeadEnd2,
     Decision,
     Feedback,
+    Questionnaire,
     Questionnaire,
     Questionnaire,
     FinalInfo,

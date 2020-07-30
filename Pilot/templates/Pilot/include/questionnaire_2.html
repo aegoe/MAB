@@ -1,0 +1,24 @@
+{% load otree %}
+
+
+<div class="card">
+        <div class="card-header">
+            Please describe your process of choosing different options throughout this HIT.
+        </div>
+        <div class="card-body">
+            {% formfield player.q_exploration_strategy %}
+        </div>
+    </div>
+<br>
+
+<div class="card">
+    <div class="card-header">
+        In your opinion, which option would maximize your income in the long run?
+        <br>
+        <i>Please choose one of the following answers</i>.
+    </div>
+    <div class="card-body">
+        {% formfield player.q_maxoption%}
+    </div>
+</div>
+<br>

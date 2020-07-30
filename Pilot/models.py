@@ -155,6 +155,10 @@ class Player(BasePlayer):
 
     attention_check_2 = models.StringField(blank=True)
 
+    #################################
+    # Questions #####################
+    #################################
+
 
     q_risk = models.IntegerField(
         choices=[
@@ -175,6 +179,18 @@ class Player(BasePlayer):
     )
 
     q_exploration_strategy =models.LongStringField(blank=False, label="")
+
+    q_maxoption = models.IntegerField(
+        choices = [
+            [1, 'Option 1'],
+            [2, 'Option 2'],
+            [3, 'Option 3'],
+            [4, 'Option 4'],
+        ],
+        widget=widgets.RadioSelect,
+        label="",
+        blank=False
+    )
 
 
     q_year = models.IntegerField(label="", blank=False, min=1900, max=2019)
