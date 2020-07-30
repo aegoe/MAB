@@ -1,17 +1,18 @@
 {% load otree %}
 {% block title %}
 <h5><b> Investments and earnings </b></h5>
+<br>
 {% endblock %}
 
 {% block content %}
 <p> You can think of each option as a bag of coins. The coins are put in each bag before the game starts and for every point you invest in
 an option, a coin from the respective bag is drawn. Thus, one point equals one draw. After each draw, the coin is put back into the bag. Coins in the bag usually differ in value.
     Each bag can differ in the average value of coins it contains. Some bags are better than others and you can find that out by 
-    choosing bags and observing the coins you draw. <b> Your goal in this HIT is to maximize  </p>
+    choosing bags and observing the coins you draw.</p>
 
 {% if safe %}
-Additionally, you can choose to invest points in an option that guarantees a return of {{ Constants.safe_option }}. You can think of that option as a money bag with only one type of coin.
-This option is symbolized with a hexagon.  
+<p> Additionally, you can choose to invest points in an option that guarantees a return of {{ Constants.safe_option }} Coins. You can think of that option as a money bag with only one type of coin.
+This option is symbolized with a hexagon.  </p>
 {% endif %}
 
 <p> Each round after submitting your investment, a feedback screen {% if not choice %} summarizes the number of draws per option and {% endif %} informs you about the {% if choice %} 
@@ -20,8 +21,8 @@ This option is symbolized with a hexagon.
 
 <p> Your total earnings at the end of this HIT are the accumulated earnings from each round. <b> Your goal in this HIT is to maximize your total earnings. </b> </p>
 
-<p> After filling out the questionnaire, all coins from all 70 rounds will be summed up and
-    converted into Dollars.
+<p> After filling out the questionnaire, all coins from all {% if not choice %} {{Constants.num_rounds_points}} {% elif choice %} {{Constants.num_rounds_choice}} {% endif %}
+    rounds will be summed up and their value will be converted into Dollars.
 </p>
     
 
