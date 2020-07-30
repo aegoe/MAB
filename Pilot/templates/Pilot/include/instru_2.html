@@ -6,9 +6,9 @@ Each option is represented by a money bag. Options will stay in the exact same p
 between them. You choose options by investing points.</p> 
 <p> At the beginning of each round, you receive {% if choice %} one point {% elif not choice %} three points{% endif %}. 
 You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
-three {% elif safe %} four {% endif %} options. {% if not choice %} Points cannot be accumulated and therefore, all three 
-points must be invested in each round {% endif %}. </p>
-<p> Once you have made your choice, you will get feedback about your payoff. This will be shown on a separate feedback screen upon submitting your choice. </p>
+three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three 
+points {% endif %} must be invested in each round. </p>
+<p> Once you have made your choice, you will get feedback about your payoff in Coins. This will be shown on a separate feedback screen upon submitting your choice. </p>
 
 
 <br>
