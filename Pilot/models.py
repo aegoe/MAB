@@ -77,8 +77,8 @@ class Player(BasePlayer):
         choices=[
             [9, 'I am not sure'],
             [1, 'Yes'],
-            [99, 'Not'],
-            [999, 'Coffee'],
+            [99, 'No'],
+            [999, 'Yes, but there is an additional option after 40 rounds'],
         ],
         widget=widgets.RadioSelect,
         blank=True,
@@ -88,14 +88,40 @@ class Player(BasePlayer):
 
     cq_Pilot_2 = models.IntegerField(
         choices=[
-            [1, 'are not related to the rewards you can get from an option'],
-            [9, 'give you hints about the rewards you can get from an option'],
-            [99, 'change over the course of the HIT'],
-            [999, 'are the same for all options'],
+            [1, 'each point invested, i.e. each draw '],
+            [9, 'one randomly chosen round'],
+            [99, 'my performance in comparison to other workers'],
+            [999, 'the last 20 rounds'],
         ],
         widget=widgets.RadioSelect,
         blank=True,
-        label='The position and name of an option',
+        label='My total earnings depend on',
+        initial=0
+    )
+
+        cq_Pilot_3 = models.IntegerField(
+        choices=[
+            [999, 'have the same average value'],
+            [9, 'return a constant value'],
+            [99, 'change over the course of the HIT'],
+            [1, 'can differ in their average value'],
+        ],
+        widget=widgets.RadioSelect,
+        blank=True,
+        label='All options',
+        initial=0
+    )
+        
+        cq_Pilot_4 = models.IntegerField(
+        choices=[
+            [999, 'need to invest all three points into one option'],
+            [9, 'can not invest more than two points into one option'],
+            [1, 'can choose to invest your points however you want'],
+            [99, 'can save points for later rounds'],
+        ],
+        widget=widgets.RadioSelect,
+        blank=True,
+        label='In each round, you',
         initial=0
     )
 
