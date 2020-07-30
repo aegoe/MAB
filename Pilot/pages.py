@@ -618,6 +618,7 @@ page_sequence = [
     InstruStart,
     InstruStart,
     InstruStart,
+    InstruStart,
     ComprehensionQuestions,
     ComprehensionQuestions,
     DeadEnd2,

@@ -1,15 +1,34 @@
 {% load otree %}
-<h5> The Task</h5>
 
-<p> There are 70 rounds in the game and you will repeatedly choose between different options, as shown in the image below. 
-Each option is represented by a money bag. Options will stay in the exact same place throughout the task and you will repeatedly choose
-between them. You choose options by investing points.</p> 
-<p> At the beginning of each round, you receive {% if choice %} one point {% elif not choice %} three points{% endif %}. 
+{% block title %}
+<h4>The Task</h4>
+<br>
+
+{% endblock %}
+
+{% block content %}
+
+<p> This HIT comprises {% if not choice %} {{Constants.num_rounds_points}} {% elif choice %} {{Constants.num_rounds_choice}} {% endif %} rounds. You will repeatedly choose between different options, as shown in the image below.
+Each option is represented by a money bag. You choose options by investing points.</p>
+
+<p> At the beginning of each round, you receive {% if choice %} one point {% elif not choice %} three points{% endif %}.
 You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
-three {% elif safe %} four {% endif %} options. {% if not choice %} Points cannot be accumulated and therefore, all three 
-points must be invested in each round {% endif %}. </p>
-<p> Once you have made your choice, you will get feedback about your payoff. This will be shown on a separate feedback screen upon submitting your choice. </p>
+three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three
+points {% endif %} must be invested in each round. </p>
 
+<p> Once you have made your choice, you will get feedback about the payoff from your investment. This will be shown on a separate feedback screen upon submitting your choice. </p>
+
+<div class="card">
+    <div class="card-header">Decision Screen Example</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/JPSDwGX.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+<p> The label denoting the option (e.g., a triangle on the bag) and an option's position on the screen are randomly predetermined and fixed.
+    Label and position can help you locate a particular option, but they are not related to the amount of rewards you can get from an option. </p>
 
 <br>
+
+{% endblock %}
 
