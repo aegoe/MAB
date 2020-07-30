@@ -102,10 +102,10 @@ class ComprehensionQuestions(Page):
                 }
 
     def get_form_fields(self):
-        return ['cq_Pilot_1']
+        return ['cq_Pilot_1', 'cq_Pilot_2']
 
     def before_next_page(self):
-        if self.player.cq_Pilot_1 < 2:
+        if sum([self.player.cq_Pilot_1, self.player.cq_Pilot_2]) < 3:
             self.player.controls = 1
 
         self.player.comprehension_page += 1

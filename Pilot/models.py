@@ -86,7 +86,18 @@ class Player(BasePlayer):
         initial=0
     )
 
-
+    cq_Pilot_2 = models.IntegerField(
+        choices=[
+            [1, 'are not related to the rewards you can get from an option'],
+            [9, 'give you hints about the rewards you can get from an option'],
+            [99, 'change over the course of the HIT'],
+            [999, 'are the same for all options'],
+        ],
+        widget=widgets.RadioSelect,
+        blank=True,
+        label='The position and name of an option',
+        initial=0
+    )
 
     access_device = models.IntegerField(
         choices=[
@@ -138,6 +149,64 @@ class Player(BasePlayer):
     )
 
     q_exploration_strategy =models.LongStringField(blank=False, label="")
+
+
+    q_year = models.IntegerField(label="", blank=False, min=1900, max=2019)
+
+    q_sex = models.IntegerField(
+        choices=[
+            [1, 'Male'],
+            [2, 'Female'],
+            [3, 'Prefer not to answer'],
+        ],
+        widget=widgets.RadioSelect,
+        label="",
+        blank=False
+    )
+
+    q_employment = models.IntegerField(
+        choices=[
+            [1, 'Working (paid employee)'],
+            [2, 'Working (self-employed)'],
+            [3, 'Not working (temporary layoff from a job)'],
+            [4, 'Not working (looking for work)'],
+            [5, 'Not working (retired)'],
+            [6, 'Not working (disabled)'],
+            [7, 'Not working (other)'],
+            [8, 'Prefer not to answer']
+        ],
+        widget=widgets.RadioSelect,
+        label="",
+        blank=False
+    )
+
+    q_education = models.IntegerField(
+        choices=[
+            [1, 'Less than high school degree'],
+            [2, 'High school graduate (high school diploma or equivalent including GED)'],
+            [3, 'Some college but no degree'],
+            [4, 'Associate degree in college (2-year)'],
+            [5, 'Bachelor’s degree in college(4 - year)'],
+            [6, 'Master’s degree'],
+            [7, 'Doctoral degree'],
+            [8, 'Professional degree (JD, MD)'],
+        ],
+        widget=widgets.RadioSelect,
+        label="",
+        blank=False
+    )
+
+    OPTIONS = (
+        ('AA', 'African American'),
+        ('AI', 'American Indian'),
+        ('AS', 'Asian'),
+        ('H', 'Hispanic/Latino'),
+        ('W', 'White/Caucasian'),
+        ('O', 'Other'),
+    )
+
+    q_ethnicity = models.StringField(widget=forms.CheckboxSelectMultiple(choices=OPTIONS), label='', blank=False)
+
 
     def option_1_max(self):
         if self.session.config['choice']:
