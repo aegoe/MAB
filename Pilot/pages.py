@@ -108,8 +108,12 @@ class ComprehensionQuestions(Page):
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3', 'cq_Pilot_4']
 
     def before_next_page(self):
-        if sum([self.player.cq_Pilot_1, self.player.cq_Pilot_2]) < 3:
-            self.player.controls = 1
+        if self.participant.vars['choice']:
+            if sum([self.player.cq_Pilot_1, self.player.cq_Pilot_2, self.player.cq_Pilot_3]) < 4:
+                self.player.controls = 1
+        else:
+            if sum([self.player.cq_Pilot_1, self.player.cq_Pilot_2, self.player.cq_Pilot_3, self.player.cq_Pilot_4]) < 5:
+                self.player.controls = 1
 
         self.player.comprehension_page += 1
 

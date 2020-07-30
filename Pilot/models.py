@@ -81,7 +81,7 @@ class Player(BasePlayer):
             [999, 'Yes, but there is an additional option after 40 rounds'],
         ],
         widget=widgets.RadioSelect,
-        blank=True,
+        blank=False,
         label='In this HIT you repeatedly choose between a number of options. Do you get the same set of options in all rounds of the HIT?',
         initial=0
     )
@@ -94,7 +94,7 @@ class Player(BasePlayer):
             [999, 'the last 20 rounds'],
         ],
         widget=widgets.RadioSelect,
-        blank=True,
+        blank=False,
         label='My total earnings depend on',
         initial=0
     )
@@ -107,7 +107,7 @@ class Player(BasePlayer):
             [1, 'can differ in their average value'],
         ],
         widget=widgets.RadioSelect,
-        blank=True,
+        blank=False,
         label='All options',
         initial=0
     )
@@ -120,7 +120,7 @@ class Player(BasePlayer):
             [99, 'can save points for later rounds'],
         ],
         widget=widgets.RadioSelect,
-        blank=True,
+        blank=False,
         label='In each round, you',
         initial=0
     )
