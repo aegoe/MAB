@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/ComprehensionQuestions.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/ComprehensionQuestions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/InstruStart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/InstruStart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,10 +18,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pilot/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="20" column="12" selection-start-line="20" selection-end-line="21" />
+              <folding>
+                <element signature="e#0#134#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-64">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="594">
+              <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -37,8 +41,52 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" selection-start-line="1" selection-end-line="34" />
+            <state relative-caret-position="346">
+              <caret line="19" selection-start-line="19" selection-end-line="24" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/css/bandit_env.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-436">
+              <caret line="8" column="13" selection-start-line="8" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2486">
+              <caret line="631" selection-start-line="631" selection-end-line="631" />
+              <caret line="630" column="1" selection-start-line="630" selection-start-column="1" selection-end-line="630" selection-end-column="1" />
+              <caret line="629" column="14" selection-start-line="629" selection-start-column="14" selection-end-line="629" selection-end-column="14" />
+              <caret line="628" column="18" selection-start-line="628" selection-start-column="18" selection-end-line="628" selection-end-column="18" />
+              <caret line="627" column="18" selection-start-line="627" selection-start-column="18" selection-end-line="627" selection-end-column="18" />
+              <caret line="626" column="18" selection-start-line="626" selection-start-column="18" selection-end-line="626" selection-end-column="18" />
+              <caret line="625" column="13" selection-start-line="625" selection-start-column="13" selection-end-line="625" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#71#0" expanded="true" />
+                <element signature="e#2119#2472#0" />
+                <element signature="e#2870#3477#0" />
+                <element signature="e#3884#5144#0" />
+                <element signature="e#5680#21298#0" />
+                <element signature="e#8576#21298#0" />
+                <element signature="e#21327#22262#0" />
+                <element signature="e#22661#23932#0" />
+                <element signature="e#23962#24477#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,62 +94,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/InstruStart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="198">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/ComprehensionQuestions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
+            <state relative-caret-position="713">
               <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_4.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" selection-start-column="16" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" selection-start-line="1" selection-end-line="20" />
+            <state relative-caret-position="352">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -109,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="26" />
+            <state relative-caret-position="176">
+              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -143,7 +155,6 @@
         <option value="$PROJECT_DIR$/models.py" />
         <option value="$PROJECT_DIR$/templates/MAB/Decision.html" />
         <option value="$PROJECT_DIR$/pages.py" />
-        <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_1.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/css/bandit_env.css" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/css/feedback.css" />
         <option value="$PROJECT_DIR$/settings.py" />
@@ -157,7 +168,6 @@
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_2.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_1.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Questionnaire.html" />
-        <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_3.html" />
         <option value="$PROJECT_DIR$/Pilot/pages.py" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/InstruStart.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_4.html" />
@@ -167,6 +177,8 @@
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_3.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_4.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/ComprehensionQuestions.html" />
+        <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_1.html" />
+        <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_3.html" />
       </list>
     </option>
   </component>
@@ -206,6 +218,14 @@
               <item name="Pilot" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="Pilot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="Pilot" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Pilot" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
@@ -342,18 +362,20 @@
       <workItem from="1595854512534" duration="1274000" />
       <workItem from="1595949489941" duration="615000" />
       <workItem from="1596022755028" duration="5249000" />
-      <workItem from="1596093526967" duration="12612000" />
+      <workItem from="1596093526967" duration="14547000" />
+      <workItem from="1596437213502" duration="2452000" />
+      <workItem from="1596610780597" duration="1468000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120827000" />
+    <option name="totallyTimeSpent" value="126682000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22998933" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23479189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -367,7 +389,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32949087" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50160086" side_tool="true" weight="0.26897213" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49839914" visible="true" weight="0.25950053" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49839914" visible="true" weight="0.22670509" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32853025" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -501,13 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/css/bandit_env.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="13" selection-start-line="8" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/DeadEnd.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -519,23 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="192" column="5" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="45" column="31" selection-start-line="45" selection-end-line="46" />
         </state>
       </provider>
     </entry>
@@ -567,50 +565,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="620" column="16" selection-start-line="620" selection-start-column="16" selection-end-line="620" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-            <element signature="e#7554#20276#0" />
-            <element signature="e#20305#21240#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/InstruStart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" selection-start-line="1" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_4.html">
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <caret column="13" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -621,31 +579,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_1.html">
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-end-line="1" />
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_2.html">
+    <entry file="file://$PROJECT_DIR$/Pilot/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="34" />
+        <state relative-caret-position="330">
+          <caret line="20" column="12" selection-start-line="20" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#134#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="594">
+          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2486">
+          <caret line="631" selection-start-line="631" selection-end-line="631" />
+          <caret line="630" column="1" selection-start-line="630" selection-start-column="1" selection-end-line="630" selection-end-column="1" />
+          <caret line="629" column="14" selection-start-line="629" selection-start-column="14" selection-end-line="629" selection-end-column="14" />
+          <caret line="628" column="18" selection-start-line="628" selection-start-column="18" selection-end-line="628" selection-end-column="18" />
+          <caret line="627" column="18" selection-start-line="627" selection-start-column="18" selection-end-line="627" selection-end-column="18" />
+          <caret line="626" column="18" selection-start-line="626" selection-start-column="18" selection-end-line="626" selection-end-column="18" />
+          <caret line="625" column="13" selection-start-line="625" selection-start-column="13" selection-end-line="625" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#2119#2472#0" />
+            <element signature="e#2870#3477#0" />
+            <element signature="e#3884#5144#0" />
+            <element signature="e#5680#21298#0" />
+            <element signature="e#8576#21298#0" />
+            <element signature="e#21327#22262#0" />
+            <element signature="e#22661#23932#0" />
+            <element signature="e#23962#24477#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/InstruStart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/css/bandit_env.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-436">
+          <caret line="8" column="13" selection-start-line="8" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="19" selection-start-line="19" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/ComprehensionQuestions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
+        <state relative-caret-position="713">
           <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
