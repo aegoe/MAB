@@ -43,10 +43,10 @@ class Player(BasePlayer):
     choice = models.BooleanField()
     safe = models.BooleanField()
     endowment = models.IntegerField()
-    option_1 = models.IntegerField(initial=0, label="Option X")
-    option_2 = models.IntegerField(initial=0, label="Option Y")
-    option_3 = models.IntegerField(initial=0, label="Option Z")
-    option_safe = models.IntegerField(initial=0)
+    option_1 = models.IntegerField(initial=0, label="Option Triangle")
+    option_2 = models.IntegerField(initial=0, label="Option Square")
+    option_3 = models.IntegerField(initial=0, label="Option Rectangle")
+    option_safe = models.IntegerField(initial=0, label = "Option Hexagon")
     #draws_1 = models.IntegerField()
     #draws_2 = models.IntegerField()
     #draws_3 = models.IntegerField()
@@ -180,12 +180,22 @@ class Player(BasePlayer):
 
     q_exploration_strategy =models.LongStringField(blank=False, label="")
 
+    q_firm =models.LongStringField(blank=False, label="")
+
+    q_fadein =models.LongStringField(blank=False, label="")
+
+    q_fadeout =models.LongStringField(blank=False, label="")
+
+    q_saving =models.LongStringField(blank=False, label="")
+
+    q_wealth =models.LongStringField(blank=False, label="")
+
     q_maxoption = models.IntegerField(
         choices = [
-            [1, 'Option 1'],
-            [2, 'Option 2'],
-            [3, 'Option 3'],
-            [4, 'Option 4'],
+            [1, 'Option Triangle'],
+            [2, 'Option Square'],
+            [3, 'Option Rectangle'],
+            [4, 'Option Hexagon'],
         ],
         widget=widgets.RadioSelect,
         label="",
