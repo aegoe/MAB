@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pilot/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/Questionnaire.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/Questionnaire.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-669">
-              <caret line="111" column="12" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="12" />
+            <state relative-caret-position="341">
+              <caret line="152" column="35" lean-forward="true" selection-start-line="152" selection-start-column="35" selection-end-line="152" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -44,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-950">
-              <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+            <state relative-caret-position="348">
+              <caret line="109" column="109" selection-start-line="109" selection-start-column="109" selection-end-line="109" selection-end-column="109" />
             </state>
           </provider>
         </entry>
@@ -59,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="48" column="72" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
+            <state relative-caret-position="386">
+              <caret line="48" column="58" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
               <folding>
                 <element signature="e#0#134#0" expanded="true" />
               </folding>
@@ -121,8 +116,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" selection-start-line="3" selection-end-line="11" selection-end-column="4" />
+            <state relative-caret-position="207">
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -163,7 +158,6 @@
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/ComprehensionQuestion.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/DeadEnd2.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_socio_1.html" />
-        <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/InstruStart.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_4.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_1.html" />
@@ -181,6 +175,7 @@
         <option value="$PROJECT_DIR$/Pilot/pages.py" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Questionnaire.html" />
         <option value="$PROJECT_DIR$/Pilot/models.py" />
+        <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" />
       </list>
     </option>
   </component>
@@ -358,15 +353,16 @@
       <workItem from="1596093526967" duration="14547000" />
       <workItem from="1596437213502" duration="2452000" />
       <workItem from="1596610780597" duration="3376000" />
-      <workItem from="1596783178831" duration="4014000" />
+      <workItem from="1596783178831" duration="5054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132604000" />
+    <option name="totallyTimeSpent" value="133644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23745997" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -614,24 +610,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" selection-start-line="3" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_4.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -660,27 +642,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-950">
-          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+        <state relative-caret-position="207">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html">
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-669">
-          <caret line="111" column="12" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="12" />
+        <state relative-caret-position="242">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pilot/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="48" column="72" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
+        <state relative-caret-position="386">
+          <caret line="48" column="58" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
           <folding>
             <element signature="e#0#134#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="109" column="109" selection-start-line="109" selection-start-column="109" selection-end-line="109" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="152" column="35" lean-forward="true" selection-start-line="152" selection-start-column="35" selection-end-line="152" selection-end-column="36" />
         </state>
       </provider>
     </entry>
