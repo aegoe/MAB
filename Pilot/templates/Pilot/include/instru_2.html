@@ -10,7 +10,7 @@
 <p> This HIT comprises {% if not choice %} {{Constants.num_rounds_points}} {% elif choice %} {{Constants.num_rounds_choice}} {% endif %} rounds. You will repeatedly choose between different options, as shown in the image below.
 Each option is represented by a money bag. You choose options by investing points.</p> 
 
-<p> At the beginning of each round, you receive {% if choice %} one point {% elif not choice %} three points{% endif %}. 
+<p> At the beginning of each round, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}. 
 You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
 three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three 
 points {% endif %} must be invested in each round. </p>
