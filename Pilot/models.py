@@ -116,7 +116,7 @@ class Player(BasePlayer):
         choices=[
             [999, 'need to invest all three points into one option'],
             [9, 'can not invest more than two points into one option'],
-            [1, 'can choose to invest your points however you want'],
+            [1, 'can choose to invest your three points however you want'],
             [99, 'can save points for later rounds'],
         ],
         widget=widgets.RadioSelect,
