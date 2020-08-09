@@ -30,6 +30,12 @@ class Device(Page):
         self.player.choice = self.participant.vars['choice'] = self.session.config['choice']
         self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
 
+        order =['TSRH', 'STRH', 'RTSH', 'TRSH', 'SRTH', 'RSTH', 'HSTR', 'SHTR', 'THSR', 'HTSR', 'STHR', 'TSHR', 'TRHS',
+                'RTHS', 'HTRS', 'THRS', 'RHTS', 'HRTS', 'HRST', 'RHST', 'SHRT', 'HSRT', 'RSHT', 'SRHT']
+        weights = [1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24,
+                   1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24]
+        draw =choice(order, 1, p=weights)
+        self.participant.vars['draw'] = draw[0]
 
 ########################################################################################################################
 # AttentionCheck ##########################################################################################################
@@ -76,6 +82,7 @@ class InstruStart(Page):
                 'safe': self.participant.vars['safe'],
                 'endowment_choice': Constants.endowment_choice,
                 'endowment_points': Constants.endowment_points,
+                'draw': self.participant.vars['draw']
                 }
 
     def before_next_page(self):
@@ -184,6 +191,7 @@ class Decision(Page):
                'endowment_choice': Constants.endowment_choice,
                'endowment_points': Constants.endowment_points,
                'safe': self.participant.vars['safe'],
+               'draw': self.participant.vars['draw'],
                }
 
     def before_next_page(self):
@@ -552,6 +560,7 @@ class Feedback(Page):
                 'urn_draws_4': self.player.urn_draws_4,
                 'payoff_4': self.player.payoff_4,
                 'safe': self.participant.vars['safe'],
+                'draw': self.participant.vars['draw'],
 
                 }
 
