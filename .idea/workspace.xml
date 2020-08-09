@@ -4,6 +4,7 @@
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pilot/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/pages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2266">
-              <caret line="172" column="18" selection-start-line="172" selection-start-column="18" selection-end-line="172" selection-end-column="18" />
+            <state relative-caret-position="20130">
+              <caret line="1020" lean-forward="true" selection-start-line="1020" selection-end-line="1020" />
               <folding>
                 <element signature="e#596#1306#0" />
                 <element signature="e#1315#1771#0" />
@@ -49,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="688">
@@ -174,8 +175,8 @@
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_3.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_4.html" />
-        <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" />
         <option value="$PROJECT_DIR$/Pilot/pages.py" />
+        <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" />
       </list>
     </option>
   </component>
@@ -355,16 +356,15 @@
       <workItem from="1596610780597" duration="3376000" />
       <workItem from="1596783178831" duration="5835000" />
       <workItem from="1596875265027" duration="598000" />
-      <workItem from="1596986607509" duration="3947000" />
+      <workItem from="1596986607509" duration="4287000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138970000" />
+    <option name="totallyTimeSpent" value="139310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24172892" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -657,19 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2266">
-          <caret line="172" column="18" selection-start-line="172" selection-start-column="18" selection-end-line="172" selection-end-column="18" />
-          <folding>
-            <element signature="e#596#1306#0" />
-            <element signature="e#1315#1771#0" />
-            <element signature="e#1896#2838#0" />
-            <element signature="e#2847#3309#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="688">
@@ -680,6 +667,19 @@
             <element signature="e#8576#21298#0" />
             <element signature="e#8663#11403#0" />
             <element signature="e#24449#24964#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20130">
+          <caret line="1020" lean-forward="true" selection-start-line="1020" selection-end-line="1020" />
+          <folding>
+            <element signature="e#596#1306#0" />
+            <element signature="e#1315#1771#0" />
+            <element signature="e#1896#2838#0" />
+            <element signature="e#2847#3309#0" />
           </folding>
         </state>
       </provider>
