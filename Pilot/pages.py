@@ -30,12 +30,21 @@ class Device(Page):
         self.player.choice = self.participant.vars['choice'] = self.session.config['choice']
         self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
 
-        order =['TSRH', 'STRH', 'RTSH', 'TRSH', 'SRTH', 'RSTH', 'HSTR', 'SHTR', 'THSR', 'HTSR', 'STHR', 'TSHR', 'TRHS',
+        if self.participant.vars['safe']:
+            order =['TSRH', 'STRH', 'RTSH', 'TRSH', 'SRTH', 'RSTH', 'HSTR', 'SHTR', 'THSR', 'HTSR', 'STHR', 'TSHR', 'TRHS',
                 'RTHS', 'HTRS', 'THRS', 'RHTS', 'HRTS', 'HRST', 'RHST', 'SHRT', 'HSRT', 'RSHT', 'SRHT']
-        weights = [1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24,
+            weights = [1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24,
                    1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24]
-        draw =choice(order, 1, p=weights)
-        self.participant.vars['draw'] = draw[0]
+            draw = choice(order, 1, p=weights)
+            self.participant.vars['draw'] = draw[0]
+
+        else:
+            order = ['TSR', 'STR', 'RTS', 'TRS', 'SRT', 'RST']
+            weights = [1/6, 1/6, 1/6, 1/6, 1/6, 1/6]
+            draw = choice(order, 1, p=weights)
+            self.participant.vars['draw'] = draw[0]
+
+
 
 ########################################################################################################################
 # AttentionCheck ##########################################################################################################

@@ -10,8 +10,6 @@
 
 {% block content %}
 
-{% if draw == 'TSRH' %}
-
 {% if not safe %}
 <div class="background">
 
@@ -53,7 +51,11 @@
 
 {% endif %}
 
+
 {% if safe %}
+
+{% if draw == 'TSRH' %}
+
 
 <div class="backgroundsafe">
 
@@ -99,54 +101,9 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 {% elif draw == 'STRH' %}
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_2 %}
-        {% formfield player.option_1 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -191,56 +148,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'RTSH' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -285,56 +197,10 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'TRSH' %}
 
-
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -379,56 +245,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'SRTH' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -473,56 +294,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'RSTH' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -567,56 +343,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'HSTR' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -662,55 +393,10 @@
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
 
-{% endif %}
 
 
 {% elif draw == 'SHTR' %}
 
-
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -755,56 +441,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'THSR' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -850,55 +491,10 @@
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
 
-{% endif %}
 
 
 {% elif draw == 'HTSR' %}
 
-
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -944,55 +540,11 @@
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
 
-{% endif %}
+
 
 
 {% elif draw == 'STHR' %}
 
-
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -1037,56 +589,10 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'TSHR' %}
 
-
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -1131,55 +637,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'TRHS' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
 
 <div class="backgroundsafe">
 
@@ -1225,56 +687,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'RTHS' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -1319,56 +736,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'HTRS' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -1413,55 +785,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'THRS' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
 
 <div class="backgroundsafe">
 
@@ -1507,55 +835,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'RHTS' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
 
 <div class="backgroundsafe">
 
@@ -1601,56 +885,10 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
 
 {% elif draw == 'HRTS' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -1695,55 +933,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'HRST' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
 
 <div class="backgroundsafe">
 
@@ -1789,56 +983,10 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
 
 {% elif draw == 'RHST' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -1883,55 +1031,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'SHRT' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
 
 <div class="backgroundsafe">
 
@@ -1977,56 +1081,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'HSRT' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
-
 <div class="backgroundsafe">
 
         <div class="box" >
@@ -2071,55 +1130,11 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 
 {% elif draw == 'RSHT' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
 
 <div class="backgroundsafe">
 
@@ -2166,54 +1181,11 @@
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
 
-{% endif %}
 
 
 {% elif draw == 'SRHT' %}
 
 
-{% if not safe %}
-<div class="background">
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        <div class="box" >
-            <div class="imageholder">
-                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
-            </div>
-        </div>
-
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-
-
- </div>
-
-       <div class="footer">
-
-        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %} The option's name and position yield no information about the value of coins you get from each option.
-
-        </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
-
-{% if safe %}
 
 <div class="backgroundsafe">
 
@@ -2259,8 +1231,6 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-
-{% endif %}
 
 {% endif %}
 

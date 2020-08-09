@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pilot/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/pages.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="233" column="21" selection-start-line="233" selection-start-column="21" selection-end-line="233" selection-end-column="21" />
+            <state relative-caret-position="2266">
+              <caret line="172" column="18" selection-start-line="172" selection-start-column="18" selection-end-line="172" selection-end-column="18" />
               <folding>
                 <element signature="e#596#1306#0" />
                 <element signature="e#1315#1771#0" />
@@ -48,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="32" column="37" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="37" />
+            <state relative-caret-position="688">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="e#0#71#0" expanded="true" />
                 <element signature="e#2119#2472#0" />
@@ -76,7 +77,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
+            <state relative-caret-position="205">
               <caret line="48" column="58" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
               <folding>
                 <element signature="e#0#134#0" expanded="true" />
@@ -107,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_4.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="616">
-              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -173,8 +174,8 @@
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_3.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_4.html" />
-        <option value="$PROJECT_DIR$/Pilot/pages.py" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html" />
+        <option value="$PROJECT_DIR$/Pilot/pages.py" />
       </list>
     </option>
   </component>
@@ -354,12 +355,12 @@
       <workItem from="1596610780597" duration="3376000" />
       <workItem from="1596783178831" duration="5835000" />
       <workItem from="1596875265027" duration="598000" />
-      <workItem from="1596986607509" duration="2747000" />
+      <workItem from="1596986607509" duration="3947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137770000" />
+    <option name="totallyTimeSpent" value="138970000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -635,7 +636,7 @@
     <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_4.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -648,7 +649,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pilot/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
+        <state relative-caret-position="205">
           <caret line="48" column="58" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
           <folding>
             <element signature="e#0#134#0" expanded="true" />
@@ -656,29 +657,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2266">
+          <caret line="172" column="18" selection-start-line="172" selection-start-column="18" selection-end-line="172" selection-end-column="18" />
+          <folding>
+            <element signature="e#596#1306#0" />
+            <element signature="e#1315#1771#0" />
+            <element signature="e#1896#2838#0" />
+            <element signature="e#2847#3309#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="37" />
+        <state relative-caret-position="688">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="e#0#71#0" expanded="true" />
             <element signature="e#2119#2472#0" />
             <element signature="e#8576#21298#0" />
             <element signature="e#8663#11403#0" />
             <element signature="e#24449#24964#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Decision.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="233" column="21" selection-start-line="233" selection-start-column="21" selection-end-line="233" selection-end-column="21" />
-          <folding>
-            <element signature="e#596#1306#0" />
-            <element signature="e#1315#1771#0" />
-            <element signature="e#1896#2838#0" />
-            <element signature="e#2847#3309#0" />
           </folding>
         </state>
       </provider>
