@@ -20,15 +20,25 @@ class Constants(BaseConstants):
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
-    black = -1
-    yellow = 0
-    blue = 1
-    green = 2
-    white = -2
+
+    a = -5
+    b = -6
+    c = -8
+    d = 2
+    e = 3
+    f = 4
+    g = 5
+    h = 6
+    i = 7
+
+    # yellow = 0
+    # blue = 1
+    # green = 2
+    # white = -2
     # Urn_1 = [('Black', 1), ('Yellow', 5), ('Blue', 3), ('Green', 1)]
     # Urn_2 = [('Black', 1), ('Yellow', 3), ('Blue', 5), ('Green', 1)]
     # Urn_3 = [('White', 1), ('Yellow', 5), ('Black', 3), ('Green', 1)]
-    safe_option = 0.2
+    safe_option = 3
 
 class Subsession(BaseSubsession):
     pass

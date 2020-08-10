@@ -206,13 +206,13 @@ class Decision(Page):
     def before_next_page(self):
         if self.participant.vars['choice'] and not self.participant.vars['safe']:
 
-            Urn_1 = ['Black', 'Yellow', 'Blue', 'Green']
-            Urn_2 = ['Black', 'Yellow', 'Blue', 'Green']
-            Urn_3 = ['White', 'Yellow', 'Black', 'Green']
+            Urn_1 = ['-5', '5', '6', '7']
+            Urn_2 = ['-6', '4', '5', '6']
+            Urn_3 = ['-8', '2', '3', '4']
 
-            weights_1 = [1, 5, 3, 1]
-            weights_2 = [1, 3, 5, 1]
-            weights_3 = [1, 5, 3, 1]
+            weights_1 = [15, 35, 35, 15]
+            weights_2 = [15, 35, 35, 15]
+            weights_3 = [15, 35, 35, 15]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -252,16 +252,24 @@ class Decision(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == 'Black':
-                        data_counts[i][k] = v * Constants.black
-                    elif k == 'Yellow':
-                        data_counts[i][k] = v * Constants.yellow
-                    elif k == 'Blue':
-                        data_counts[i][k] = v * Constants.blue
-                    elif k == 'Green':
-                        data_counts[i][k] = v * Constants.green
-                    elif k == 'White':
-                        data_counts[i][k] = v * Constants.white
+                    if k == '-5':
+                        data_counts[i][k] = v * Constants.a
+                    elif k == '-6':
+                        data_counts[i][k] = v * Constants.b
+                    elif k == '-8':
+                        data_counts[i][k] = v * Constants.c
+                    elif k == '2':
+                        data_counts[i][k] = v * Constants.d
+                    elif k == '3':
+                        data_counts[i][k] = v * Constants.e
+                    elif k == '4':
+                        data_counts[i][k] = v * Constants.f
+                    elif k == '5':
+                        data_counts[i][k] = v * Constants.g
+                    elif k == '6':
+                        data_counts[i][k] = v * Constants.h
+                    elif k == '7':
+                        data_counts[i][k] = v * Constants.i
 
             self.player.payoff = 0
             for i in data_counts.keys():
@@ -283,14 +291,14 @@ class Decision(Page):
 
         elif self.participant.vars['choice'] and self.participant.vars['safe']:
 
-            Urn_1 = ['Black', 'Yellow', 'Blue', 'Green']
-            Urn_2 = ['Black', 'Yellow', 'Blue', 'Green']
-            Urn_3 = ['White', 'Yellow', 'Black', 'Green']
-            Urn_safe = ['Safe']
+            Urn_1 = ['-5', '5', '6', '7']
+            Urn_2 = ['-6', '4', '5', '6']
+            Urn_3 = ['-8', '2', '3', '4']
+            Urn_safe = ['3']
 
-            weights_1 = [1, 5, 3, 1]
-            weights_2 = [1, 3, 5, 1]
-            weights_3 = [1, 5, 3, 1]
+            weights_1 = [15, 35, 35, 15]
+            weights_2 = [15, 35, 35, 15]
+            weights_3 = [15, 35, 35, 15]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -336,16 +344,24 @@ class Decision(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == 'Black':
-                        data_counts[i][k] = v * Constants.black
-                    elif k == 'Yellow':
-                        data_counts[i][k] = v * Constants.yellow
-                    elif k == 'Blue':
-                        data_counts[i][k] = v * Constants.blue
-                    elif k == 'Green':
-                        data_counts[i][k] = v * Constants.green
-                    elif k == 'White':
-                        data_counts[i][k] = v * Constants.white
+                    if k == '-5':
+                        data_counts[i][k] = v * Constants.a
+                    elif k == '-6':
+                        data_counts[i][k] = v * Constants.b
+                    elif k == '-8':
+                        data_counts[i][k] = v * Constants.c
+                    elif k == '2':
+                        data_counts[i][k] = v * Constants.d
+                    elif k == '3':
+                        data_counts[i][k] = v * Constants.e
+                    elif k == '4':
+                        data_counts[i][k] = v * Constants.f
+                    elif k == '5':
+                        data_counts[i][k] = v * Constants.g
+                    elif k == '6':
+                        data_counts[i][k] = v * Constants.h
+                    elif k == '7':
+                        data_counts[i][k] = v * Constants.i
                     elif k == 'Safe':
                         data_counts[i][k] = v * Constants.safe_option
 
@@ -377,13 +393,13 @@ class Decision(Page):
 
         elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
 
-            Urn_1 = ['Black', 'Yellow', 'Blue', 'Green']
-            Urn_2 = ['Black', 'Yellow', 'Blue', 'Green']
-            Urn_3 = ['White', 'Yellow', 'Black', 'Green']
+            Urn_1 = ['-5', '5', '6', '7']
+            Urn_2 = ['-6', '4', '5', '6']
+            Urn_3 = ['-8', '2', '3', '4']
 
-            weights_1 = [1, 5, 3, 1]
-            weights_2 = [1, 3, 5, 1]
-            weights_3 = [1, 5, 3, 1]
+            weights_1 = [15, 35, 35, 15]
+            weights_2 = [15, 35, 35, 15]
+            weights_3 = [15, 35, 35, 15]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -423,16 +439,24 @@ class Decision(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == 'Black':
-                        data_counts[i][k] = v * Constants.black
-                    elif k == 'Yellow':
-                        data_counts[i][k] = v * Constants.yellow
-                    elif k == 'Blue':
-                        data_counts[i][k] = v * Constants.blue
-                    elif k == 'Green':
-                        data_counts[i][k] = v * Constants.green
-                    elif k == 'White':
-                        data_counts[i][k] = v * Constants.white
+                    if k == '-5':
+                        data_counts[i][k] = v * Constants.a
+                    elif k == '-6':
+                        data_counts[i][k] = v * Constants.b
+                    elif k == '-8':
+                        data_counts[i][k] = v * Constants.c
+                    elif k == '2':
+                        data_counts[i][k] = v * Constants.d
+                    elif k == '3':
+                        data_counts[i][k] = v * Constants.e
+                    elif k == '4':
+                        data_counts[i][k] = v * Constants.f
+                    elif k == '5':
+                        data_counts[i][k] = v * Constants.g
+                    elif k == '6':
+                        data_counts[i][k] = v * Constants.h
+                    elif k == '7':
+                        data_counts[i][k] = v * Constants.i
 
             self.player.payoff = 0
             for i in data_counts.keys():
@@ -454,14 +478,14 @@ class Decision(Page):
 
         elif not self.participant.vars['choice'] and self.participant.vars['safe']:
 
-            Urn_1 = ['Black', 'Yellow', 'Blue', 'Green']
-            Urn_2 = ['Black', 'Yellow', 'Blue', 'Green']
-            Urn_3 = ['White', 'Yellow', 'Black', 'Green']
-            Urn_safe = ['Safe']
+            Urn_1 = ['-5', '5', '6', '7']
+            Urn_2 = ['-6', '4', '5', '6']
+            Urn_3 = ['-8', '2', '3', '4']
+            Urn_safe = ['3']
 
-            weights_1 = [1, 5, 3, 1]
-            weights_2 = [1, 3, 5, 1]
-            weights_3 = [1, 5, 3, 1]
+            weights_1 = [15, 35, 35, 15]
+            weights_2 = [15, 35, 35, 15]
+            weights_3 = [15, 35, 35, 15]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -507,16 +531,24 @@ class Decision(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == 'Black':
-                        data_counts[i][k] = v * Constants.black
-                    elif k == 'Yellow':
-                        data_counts[i][k] = v * Constants.yellow
-                    elif k == 'Blue':
-                        data_counts[i][k] = v * Constants.blue
-                    elif k == 'Green':
-                        data_counts[i][k] = v * Constants.green
-                    elif k == 'White':
-                        data_counts[i][k] = v * Constants.white
+                    if k == '-5':
+                        data_counts[i][k] = v * Constants.a
+                    elif k == '-6':
+                        data_counts[i][k] = v * Constants.b
+                    elif k == '-8':
+                        data_counts[i][k] = v * Constants.c
+                    elif k == '2':
+                        data_counts[i][k] = v * Constants.d
+                    elif k == '3':
+                        data_counts[i][k] = v * Constants.e
+                    elif k == '4':
+                        data_counts[i][k] = v * Constants.f
+                    elif k == '5':
+                        data_counts[i][k] = v * Constants.g
+                    elif k == '6':
+                        data_counts[i][k] = v * Constants.h
+                    elif k == '7':
+                        data_counts[i][k] = v * Constants.i
                     elif k == 'Safe':
                         data_counts[i][k] = v * Constants.safe_option
 
