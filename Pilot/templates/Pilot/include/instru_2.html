@@ -17,15 +17,31 @@ points {% endif %} must be invested in each round. </p>
 
 <p> Once you have made your choice, you will get feedback about the payoff from your investment. This will be shown on a separate feedback screen upon submitting your choice. </p>
 
+{% if safe %}
+
 <div class="card">
-    <div class="card-header">Decision Screen Example</div>
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
         <div class="card-body">
             <img src='https://i.imgur.com/JPSDwGX.png' alt="bla" width="800px"/>
     </div>
 </div>
 <br>
-<p> The label denoting the option (e.g., a triangle on the bag) and an option's position on the screen are randomly predetermined and fixed. 
+
+{% elif not safe %}
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/gvypgCh.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+{% endif %}
+
+<p> The label denoting the option (e.g., a triangle on the bag) and an option's position on the screen are randomly predetermined and fixed.
     Label and position can help you locate a particular option, but they yield no information about an option's potential payoff. </p>
+
 
 <br>
 
