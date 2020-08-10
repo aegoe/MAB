@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1714" column="52" selection-start-line="1714" selection-start-column="52" selection-end-line="1714" selection-end-column="52" />
+            <state relative-caret-position="1567">
+              <caret line="2616" selection-start-line="2616" selection-end-line="2616" />
             </state>
           </provider>
         </entry>
@@ -352,15 +354,16 @@
       <workItem from="1596610780597" duration="3376000" />
       <workItem from="1596783178831" duration="5835000" />
       <workItem from="1596875265027" duration="598000" />
-      <workItem from="1596986607509" duration="10060000" />
+      <workItem from="1596986607509" duration="11812000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145083000" />
+    <option name="totallyTimeSpent" value="146835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24172892" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -673,8 +676,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pilot/templates/Pilot/Feedback.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1714" column="52" selection-start-line="1714" selection-start-column="52" selection-end-line="1714" selection-end-column="52" />
+        <state relative-caret-position="1567">
+          <caret line="2616" selection-start-line="2616" selection-end-line="2616" />
         </state>
       </provider>
     </entry>
