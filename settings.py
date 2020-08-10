@@ -78,6 +78,15 @@ SESSION_CONFIGS = [
 
     },
     {
+        'name': 'MAB_Pilot_Testing_Choice',
+        'display_name': "Pilot Testing_Choice",
+        'num_demo_participants': 1,
+        'app_sequence': ['Pilot'],
+        'choice': True,
+        'safe': False
+
+    },
+    {
         'name': 'MAB_Pilot_Testing_Safe',
         'display_name': "Pilot Testing Safe",
         'num_demo_participants': 1,
