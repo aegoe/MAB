@@ -615,7 +615,7 @@ class Questionnaire(Page):
     form_model ='player'
 
     def get_form_fields(self):
-        if self.session.config['choice']:
+        if self.session.config['choice'] and self.session.config['safe']:
             if self.player.questionnaire_page == 1:
                 return ['q_risk']
             elif self.player.questionnaire_page == 2:
@@ -628,11 +628,37 @@ class Questionnaire(Page):
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
-        else:
+        elif self.session.config['choice'] and not self.session.config['safe']:
+            if self.player.questionnaire_page == 1:
+                return ['q_risk']
+            elif self.player.questionnaire_page == 2:
+                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
+            elif self.player.questionnaire_page == 3:
+                return ['q_fadein', 'q_fadeout']
+            elif self.player.questionnaire_page == 4:
+                return ['q_saving', 'q_wealth']
+            elif self.player.questionnaire_page == 5:
+                return ['q_year', 'q_sex', 'q_employment', 'q_education',
+                        'q_ethnicity']
+
+        elif not self.session.config['choice'] and self.session.config['safe']:
             if self.player.questionnaire_page == 1:
                 return ['q_risk']
             elif self.player.questionnaire_page == 2:
                 return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
+            elif self.player.questionnaire_page == 3:
+                return ['q_fadein', 'q_fadeout']
+            elif self.player.questionnaire_page == 4:
+                return ['q_saving', 'q_wealth']
+            elif self.player.questionnaire_page == 5:
+                return ['q_year', 'q_sex', 'q_employment', 'q_education',
+                        'q_ethnicity']
+
+        elif not self.session.config['choice'] and not self.session.config['safe']:
+            if self.player.questionnaire_page == 1:
+                return ['q_risk']
+            elif self.player.questionnaire_page == 2:
+                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
             elif self.player.questionnaire_page == 3:
                 return ['q_fadein', 'q_fadeout']
             elif self.player.questionnaire_page == 4:
@@ -650,6 +676,7 @@ class Questionnaire(Page):
     def vars_for_template(self):
         return{'questionnaire_page': self.player.questionnaire_page,
                'choice':self.participant.vars['choice'],
+               'safe': self.participant.vars['safe'],
                }
 
     def before_next_page(self):

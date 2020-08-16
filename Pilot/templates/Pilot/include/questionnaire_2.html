@@ -11,6 +11,7 @@
     </div>
 <br>
 
+{% if safe %}
 <div class="card">
     <div class="card-header">
         In your opinion, which option would maximize your income in the long run?
@@ -22,6 +23,23 @@
     </div>
 </div>
 <br>
+
+{% elif not safe %}
+<div class="card">
+    <div class="card-header">
+        In your opinion, which option would maximize your income in the long run?
+        <br>
+        <i>Please choose one of the following answers</i>.
+    </div>
+    <div class="card-body">
+        {% formfield player.q_maxoption_2%}
+    </div>
+</div>
+<br>
+
+{% endif %}
+
+
 
 <div class="card">
         <div class="card-header">
