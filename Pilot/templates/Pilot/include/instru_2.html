@@ -17,7 +17,7 @@ points {% endif %} must be invested in each round. </p>
 
 <p> Once you have made your choice, you will get feedback about the payoff from your investment. This will be shown on a separate feedback screen upon submitting your choice. </p>
 
-{% if safe %}
+{% if safe and not choice %}
 
 <div class="card">
     <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
@@ -27,7 +27,27 @@ points {% endif %} must be invested in each round. </p>
 </div>
 <br>
 
-{% elif not safe %}
+{% elif not safe and not choice %}
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/gvypgCh.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+{% elif safe and choice %}
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/gvypgCh.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+{% elif not safe and not choice %}
 
 <div class="card">
     <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
