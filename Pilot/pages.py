@@ -362,7 +362,7 @@ class Decision(Page):
                         data_counts[i][k] = v * Constants.h
                     elif k == '13':
                         data_counts[i][k] = v * Constants.i
-                    elif k == 'Safe':
+                    elif k == '4':
                         data_counts[i][k] = v * Constants.safe_option
 
             self.player.payoff = 0
@@ -549,7 +549,7 @@ class Decision(Page):
                         data_counts[i][k] = v * Constants.h
                     elif k == '13':
                         data_counts[i][k] = v * Constants.i
-                    elif k == 'Safe':
+                    elif k == '4':
                         data_counts[i][k] = v * Constants.safe_option
 
             self.player.payoff = 0
