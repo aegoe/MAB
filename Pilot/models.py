@@ -38,7 +38,7 @@ class Constants(BaseConstants):
     # Urn_1 = [('Black', 1), ('Yellow', 5), ('Blue', 3), ('Green', 1)]
     # Urn_2 = [('Black', 1), ('Yellow', 3), ('Blue', 5), ('Green', 1)]
     # Urn_3 = [('White', 1), ('Yellow', 5), ('Black', 3), ('Green', 1)]
-    safe_option = 4
+    safe_option = 5
 
 class Subsession(BaseSubsession):
     pass
@@ -52,6 +52,7 @@ class Player(BasePlayer):
 
     choice = models.BooleanField()
     safe = models.BooleanField()
+    test_urns = models.BooleanField()
     endowment = models.IntegerField()
     option_1 = models.IntegerField(initial=0, label="Triangle")
     option_2 = models.IntegerField(initial=0, label="Square")
