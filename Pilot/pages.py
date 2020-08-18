@@ -617,53 +617,61 @@ class Questionnaire(Page):
     def get_form_fields(self):
         if self.session.config['choice'] and self.session.config['safe']:
             if self.player.questionnaire_page == 1:
-                return ['q_risk']
+                return[]
             elif self.player.questionnaire_page == 2:
-                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
+                return ['q_risk']
             elif self.player.questionnaire_page == 3:
-                return ['q_fadein', 'q_fadeout']
+                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
             elif self.player.questionnaire_page == 4:
-                return ['q_saving', 'q_wealth']
+                return ['q_fadein', 'q_fadeout']
             elif self.player.questionnaire_page == 5:
+                return ['q_saving', 'q_wealth']
+            elif self.player.questionnaire_page == 6:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
         elif self.session.config['choice'] and not self.session.config['safe']:
             if self.player.questionnaire_page == 1:
-                return ['q_risk']
+                return[]
             elif self.player.questionnaire_page == 2:
-                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
+                return ['q_risk']
             elif self.player.questionnaire_page == 3:
-                return ['q_fadein', 'q_fadeout']
+                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
             elif self.player.questionnaire_page == 4:
-                return ['q_saving', 'q_wealth']
+                return ['q_fadein', 'q_fadeout']
             elif self.player.questionnaire_page == 5:
+                return ['q_saving', 'q_wealth']
+            elif self.player.questionnaire_page == 6:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
         elif not self.session.config['choice'] and self.session.config['safe']:
             if self.player.questionnaire_page == 1:
-                return ['q_risk']
+                return[]
             elif self.player.questionnaire_page == 2:
-                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
+                return ['q_risk']
             elif self.player.questionnaire_page == 3:
-                return ['q_fadein', 'q_fadeout']
+                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
             elif self.player.questionnaire_page == 4:
-                return ['q_saving', 'q_wealth']
+                return ['q_fadein', 'q_fadeout']
             elif self.player.questionnaire_page == 5:
+                return ['q_saving', 'q_wealth']
+            elif self.player.questionnaire_page == 6:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
         elif not self.session.config['choice'] and not self.session.config['safe']:
             if self.player.questionnaire_page == 1:
-                return ['q_risk']
+                return[]
             elif self.player.questionnaire_page == 2:
-                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
+                return ['q_risk']
             elif self.player.questionnaire_page == 3:
-                return ['q_fadein', 'q_fadeout']
+                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
             elif self.player.questionnaire_page == 4:
-                return ['q_saving', 'q_wealth']
+                return ['q_fadein', 'q_fadeout']
             elif self.player.questionnaire_page == 5:
+                return ['q_saving', 'q_wealth']
+            elif self.player.questionnaire_page == 6:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 

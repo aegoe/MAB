@@ -2,29 +2,29 @@
 {% load otree %}
 
 {% block title %}
-    Questionnaire <h6>Page {{ player.questionnaire_page }}/5</h6>
+    Questionnaire <h6>Page {{ player.questionnaire_page }}/6</h6>
 {% endblock %}
 
 
 {% block content %}
 
 {% if player.questionnaire_page == 1 %}
-        <p>You have completed part 1 of this HIT. To finish the HIT, please fill out the following questionnaire.</p>
-{% endif %}
 
-{% if player.questionnaire_page == 1 %}
-    {% include 'Pilot/include/questionnaire_1.html' %}
+{% include 'Pilot/include/questionnaire_transition.html' %}
 
 {% elif player.questionnaire_page == 2 %}
-    {% include 'Pilot/include/questionnaire_2.html' %}
+    {% include 'Pilot/include/questionnaire_1.html' %}
 
 {% elif player.questionnaire_page == 3 %}
-    {% include 'Pilot/include/questionnaire_3.html' %}
+    {% include 'Pilot/include/questionnaire_2.html' %}
 
 {% elif player.questionnaire_page == 4 %}
-    {% include 'Pilot/include/questionnaire_4.html' %}
+    {% include 'Pilot/include/questionnaire_3.html' %}
 
 {% elif player.questionnaire_page == 5 %}
+    {% include 'Pilot/include/questionnaire_4.html' %}
+
+{% elif player.questionnaire_page == 6 %}
     {% include 'Pilot/include/questionnaire_socio_1.html' %}
 
 
