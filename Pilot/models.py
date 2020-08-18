@@ -14,22 +14,22 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'Pilot'
-    num_rounds = 2
-    num_rounds_choice = 2
-    num_rounds_points = 2
+    num_rounds = 150
+    num_rounds_choice = 150
+    num_rounds_points = 50
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
 
-    a = -5
-    b = -6
-    c = -8
-    d = 2
-    e = 3
-    f = 4
-    g = 5
-    h = 6
-    i = 7
+    a = -6
+    b = -5
+    c = -3
+    d = -2
+    e = 2
+    f = 5
+    g = 10
+    h = 12
+    i = 13
 
     # yellow = 0
     # blue = 1
@@ -38,7 +38,7 @@ class Constants(BaseConstants):
     # Urn_1 = [('Black', 1), ('Yellow', 5), ('Blue', 3), ('Green', 1)]
     # Urn_2 = [('Black', 1), ('Yellow', 3), ('Blue', 5), ('Green', 1)]
     # Urn_3 = [('White', 1), ('Yellow', 5), ('Black', 3), ('Green', 1)]
-    safe_option = 3
+    safe_option = 4
 
 class Subsession(BaseSubsession):
     pass

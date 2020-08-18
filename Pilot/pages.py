@@ -206,13 +206,13 @@ class Decision(Page):
     def before_next_page(self):
         if self.participant.vars['choice'] and not self.participant.vars['safe']:
 
-            Urn_1 = ['-5', '5', '6', '7']
-            Urn_2 = ['-6', '4', '5', '6']
-            Urn_3 = ['-8', '2', '3', '4']
+            Urn_1 = ['-3', '-2', '5', '13']
+            Urn_2 = ['-3', '5', '12', '13']
+            Urn_3 = ['-6', '-5', '2', '10']
 
-            weights_1 = [15, 35, 35, 15]
-            weights_2 = [15, 35, 35, 15]
-            weights_3 = [15, 35, 35, 15]
+            weights_1 = [0.1125, 0.1125, 0.5, 0.275]
+            weights_2 = [0.275, 0.5, 0.1125, 0.1125]
+            weights_3 = [0.1125, 0.1125, 0.5, 0.275]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -252,23 +252,23 @@ class Decision(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == '-5':
+                    if k == '-6':
                         data_counts[i][k] = v * Constants.a
-                    elif k == '-6':
+                    elif k == '-5':
                         data_counts[i][k] = v * Constants.b
-                    elif k == '-8':
+                    elif k == '-3':
                         data_counts[i][k] = v * Constants.c
-                    elif k == '2':
+                    elif k == '-2':
                         data_counts[i][k] = v * Constants.d
-                    elif k == '3':
+                    elif k == '2':
                         data_counts[i][k] = v * Constants.e
-                    elif k == '4':
-                        data_counts[i][k] = v * Constants.f
                     elif k == '5':
+                        data_counts[i][k] = v * Constants.f
+                    elif k == '10':
                         data_counts[i][k] = v * Constants.g
-                    elif k == '6':
+                    elif k == '12':
                         data_counts[i][k] = v * Constants.h
-                    elif k == '7':
+                    elif k == '13':
                         data_counts[i][k] = v * Constants.i
 
             self.player.payoff = 0
@@ -291,14 +291,14 @@ class Decision(Page):
 
         elif self.participant.vars['choice'] and self.participant.vars['safe']:
 
-            Urn_1 = ['-5', '5', '6', '7']
-            Urn_2 = ['-6', '4', '5', '6']
-            Urn_3 = ['-8', '2', '3', '4']
-            Urn_safe = ['3']
+            Urn_1 = ['-3', '-2', '5', '13']
+            Urn_2 = ['-3', '5', '12', '13']
+            Urn_3 = ['-6', '-5', '2', '10']
+            Urn_safe = ['4']
 
-            weights_1 = [15, 35, 35, 15]
-            weights_2 = [15, 35, 35, 15]
-            weights_3 = [15, 35, 35, 15]
+            weights_1 = [0.1125, 0.1125, 0.5, 0.275]
+            weights_2 = [0.275, 0.5, 0.1125, 0.1125]
+            weights_3 = [0.1125, 0.1125, 0.5, 0.275]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -344,23 +344,23 @@ class Decision(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == '-5':
+                    if k == '-6':
                         data_counts[i][k] = v * Constants.a
-                    elif k == '-6':
+                    elif k == '-5':
                         data_counts[i][k] = v * Constants.b
-                    elif k == '-8':
+                    elif k == '-3':
                         data_counts[i][k] = v * Constants.c
-                    elif k == '2':
+                    elif k == '-2':
                         data_counts[i][k] = v * Constants.d
-                    elif k == '3':
+                    elif k == '2':
                         data_counts[i][k] = v * Constants.e
-                    elif k == '4':
-                        data_counts[i][k] = v * Constants.f
                     elif k == '5':
+                        data_counts[i][k] = v * Constants.f
+                    elif k == '10':
                         data_counts[i][k] = v * Constants.g
-                    elif k == '6':
+                    elif k == '12':
                         data_counts[i][k] = v * Constants.h
-                    elif k == '7':
+                    elif k == '13':
                         data_counts[i][k] = v * Constants.i
                     elif k == 'Safe':
                         data_counts[i][k] = v * Constants.safe_option
@@ -393,13 +393,13 @@ class Decision(Page):
 
         elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
 
-            Urn_1 = ['-5', '5', '6', '7']
-            Urn_2 = ['-6', '4', '5', '6']
-            Urn_3 = ['-8', '2', '3', '4']
+            Urn_1 = ['-3', '-2', '5', '13']
+            Urn_2 = ['-3', '5', '12', '13']
+            Urn_3 = ['-6', '-5', '2', '10']
 
-            weights_1 = [15, 35, 35, 15]
-            weights_2 = [15, 35, 35, 15]
-            weights_3 = [15, 35, 35, 15]
+            weights_1 = [0.1125, 0.1125, 0.5, 0.275]
+            weights_2 = [0.275, 0.5, 0.1125, 0.1125]
+            weights_3 = [0.1125, 0.1125, 0.5, 0.275]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -439,23 +439,23 @@ class Decision(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == '-5':
+                    if k == '-6':
                         data_counts[i][k] = v * Constants.a
-                    elif k == '-6':
+                    elif k == '-5':
                         data_counts[i][k] = v * Constants.b
-                    elif k == '-8':
+                    elif k == '-3':
                         data_counts[i][k] = v * Constants.c
-                    elif k == '2':
+                    elif k == '-2':
                         data_counts[i][k] = v * Constants.d
-                    elif k == '3':
+                    elif k == '2':
                         data_counts[i][k] = v * Constants.e
-                    elif k == '4':
-                        data_counts[i][k] = v * Constants.f
                     elif k == '5':
+                        data_counts[i][k] = v * Constants.f
+                    elif k == '10':
                         data_counts[i][k] = v * Constants.g
-                    elif k == '6':
+                    elif k == '12':
                         data_counts[i][k] = v * Constants.h
-                    elif k == '7':
+                    elif k == '13':
                         data_counts[i][k] = v * Constants.i
 
             self.player.payoff = 0
@@ -478,14 +478,14 @@ class Decision(Page):
 
         elif not self.participant.vars['choice'] and self.participant.vars['safe']:
 
-            Urn_1 = ['-5', '5', '6', '7']
-            Urn_2 = ['-6', '4', '5', '6']
-            Urn_3 = ['-8', '2', '3', '4']
-            Urn_safe = ['3']
+            Urn_1 = ['-3', '-2', '5', '13']
+            Urn_2 = ['-3', '5', '12', '13']
+            Urn_3 = ['-6', '-5', '2', '10']
+            Urn_safe = ['4']
 
-            weights_1 = [15, 35, 35, 15]
-            weights_2 = [15, 35, 35, 15]
-            weights_3 = [15, 35, 35, 15]
+            weights_1 = [0.1125, 0.1125, 0.5, 0.275]
+            weights_2 = [0.275, 0.5, 0.1125, 0.1125]
+            weights_3 = [0.1125, 0.1125, 0.5, 0.275]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -531,23 +531,23 @@ class Decision(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == '-5':
+                    if k == '-6':
                         data_counts[i][k] = v * Constants.a
-                    elif k == '-6':
+                    elif k == '-5':
                         data_counts[i][k] = v * Constants.b
-                    elif k == '-8':
+                    elif k == '-3':
                         data_counts[i][k] = v * Constants.c
-                    elif k == '2':
+                    elif k == '-2':
                         data_counts[i][k] = v * Constants.d
-                    elif k == '3':
+                    elif k == '2':
                         data_counts[i][k] = v * Constants.e
-                    elif k == '4':
-                        data_counts[i][k] = v * Constants.f
                     elif k == '5':
+                        data_counts[i][k] = v * Constants.f
+                    elif k == '10':
                         data_counts[i][k] = v * Constants.g
-                    elif k == '6':
+                    elif k == '12':
                         data_counts[i][k] = v * Constants.h
-                    elif k == '7':
+                    elif k == '13':
                         data_counts[i][k] = v * Constants.i
                     elif k == 'Safe':
                         data_counts[i][k] = v * Constants.safe_option
