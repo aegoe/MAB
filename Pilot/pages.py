@@ -29,6 +29,7 @@ class Device(Page):
     def before_next_page(self):
         self.player.choice = self.participant.vars['choice'] = self.session.config['choice']
         self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
+        self.player.test_urns = self.participant.vars['test_urns'] = self.session.config['test_urns']
 
         if self.participant.vars['safe']:
             order =['TSRH', 'STRH', 'RTSH', 'TRSH', 'SRTH', 'RSTH', 'HSTR', 'SHTR', 'THSR', 'HTSR', 'STHR', 'TSHR', 'TRHS',

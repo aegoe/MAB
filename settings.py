@@ -74,7 +74,8 @@ SESSION_CONFIGS = [
         'num_demo_participants': 1,
         'app_sequence': ['Pilot'],
         'choice': False,
-        'safe': False
+        'safe': False,
+        'test_urns': False
 
     },
     {
@@ -83,7 +84,8 @@ SESSION_CONFIGS = [
         'num_demo_participants': 1,
         'app_sequence': ['Pilot'],
         'choice': True,
-        'safe': False
+        'safe': False,
+        'test_urns': False
 
     },
     {
@@ -92,7 +94,8 @@ SESSION_CONFIGS = [
         'num_demo_participants': 1,
         'app_sequence': ['Pilot'],
         'choice': False,
-        'safe': True
+        'safe': True,
+        'test_urns': False
 
     },
     {
@@ -101,7 +104,27 @@ SESSION_CONFIGS = [
         'num_demo_participants': 1,
         'app_sequence': ['Pilot'],
         'choice': True,
-        'safe': True
+        'safe': True,
+        'test_urns': False
+    },
+    {
+
+        'name': 'MAB_Pilot_Testing_Safe_Choice_TEST',
+        'display_name': "Pilot Testing Safe Choice TEST",
+        'num_demo_participants': 1,
+        'app_sequence': ['Pilot'],
+        'choice': True,
+        'safe': True,
+        'test_urns': True
+    },
+    {
+        'name': 'MAB_Pilot_Testing_Safe_TEST',
+        'display_name': "Pilot Testing Safe TEST",
+        'num_demo_participants': 1,
+        'app_sequence': ['Pilot'],
+        'choice': False,
+        'safe': True,
+        'test_urns': True
 
     },
 ]
