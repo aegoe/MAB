@@ -8,32 +8,32 @@ from os import environ
 
 # https://otree.readthedocs.io/en/latest/mturk.html#session-config
 
-mturk_hit_settings_compensation = {
-    'keywords': [],
-    'title': 'Compensation HIT',
-    'description': '',
-    'frame_height': 800,
-    'minutes_allotted_per_assignment': 20,
-    'expiration_hours': 168,
-    'grant_qualification_id': '3OPOXV2R260YIB0WOK653HEZKCJI8A',
-    'qualification_requirements': [
-        {
-            'QualificationTypeId': "3NCAQQYPG45BZJYRR28GQM0BV6CNNJ",
-            'Comparator': "Exists",
-        },
-        {
-            'QualificationTypeId': "3OPOXV2R260YIB0WOK653HEZKCJI8A",
-            'Comparator': "DoesNotExist",
-        },
-    ]
-}
+# mturk_hit_settings_compensation = {
+#     'keywords': [],
+#     'title': 'Compensation HIT',
+#     'description': '',
+#     'frame_height': 800,
+#     'minutes_allotted_per_assignment': 20,
+#     'expiration_hours': 168,
+#     'grant_qualification_id': '3OPOXV2R260YIB0WOK653HEZKCJI8A',
+#     'qualification_requirements': [
+#         {
+#             'QualificationTypeId': "3NCAQQYPG45BZJYRR28GQM0BV6CNNJ",
+#             'Comparator': "Exists",
+#         },
+#         {
+#             'QualificationTypeId': "3OPOXV2R260YIB0WOK653HEZKCJI8A",
+#             'Comparator': "DoesNotExist",
+#         },
+#     ]
+# }
 
 mturk_hit_settings = {
     'keywords': ['bonus', 'short', 'academic'],
     'title': 'Task on Human Decision Making (with bonus)',
     'description': 'This HIT takes approximately 15 minutes to complete. Please accept this HIT only if you can commit to completing it right away and without interruption. You can earn a substantial bonus that exceeds the reward for this HIT.',
     'frame_height': 800,
-    'preview_template': 'global/MTurkPreview.html',
+    'preview_template': 'global/mturk_template.html',
     'minutes_allotted_per_assignment': 35,
     'expiration_hours': 168,
     'grant_qualification_id': '3TKFAEIWW949YA9UOC37ZR0HEHVBNF',
