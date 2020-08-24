@@ -10,9 +10,9 @@ import numpy
 import time
 #from numpy import random
 #from otree_mturk_utils.views import Page, CustomMturkWaitPage
-from otree.models_concrete import PageCompletion
 from functools import reduce
 from collections import Counter
+import string
 
 
 ########################################################################################################################
@@ -30,6 +30,10 @@ class Device(Page):
         self.player.choice = self.participant.vars['choice'] = self.session.config['choice']
         self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
         self.player.test_urns = self.participant.vars['test_urns'] = self.session.config['test_urns']
+        letters_and_digits = string.ascii_letters + string.digits
+        result_str = ''.join((random.choice(letters_and_digits) for i in range(7))) + str(random.randint(1, 8))
+        self.player.completion_code = result_str
+        self.participant.vars['completion_code'] = result_str
 
         if self.participant.vars['safe']:
             order =['TSRH', 'STRH', 'RTSH', 'TRSH', 'SRTH', 'RSTH', 'HSTR', 'SHTR', 'THSR', 'HTSR', 'STHR', 'TSHR', 'TRHS',
@@ -297,7 +301,7 @@ class Decision(Page):
             Urn_1 = ['-3', '-2', '5', '13']
             Urn_2 = ['-3', '5', '12', '13']
             Urn_3 = ['-6', '-5', '2', '10']
-            Urn_safe = ['4']
+            Urn_safe = ['5']
 
             weights_1 = [0.1125, 0.1125, 0.5, 0.275]
             weights_2 = [0.275, 0.5, 0.1125, 0.1125]
@@ -484,7 +488,7 @@ class Decision(Page):
             Urn_1 = ['-3', '-2', '5', '13']
             Urn_2 = ['-3', '5', '12', '13']
             Urn_3 = ['-6', '-5', '2', '10']
-            Urn_safe = ['4']
+            Urn_safe = ['5']
 
             weights_1 = [0.1125, 0.1125, 0.5, 0.275]
             weights_2 = [0.275, 0.5, 0.1125, 0.1125]
@@ -913,6 +917,7 @@ class FinalInfo(Page):
         return {'participation_fee': self.session.config['participation_fee'],
                 'total_payoff': self.participant.payoff_plus_participation_fee(),
                 'bonus': self.participant.payoff.to_real_world_currency(self.session),
+                'completion_code': self.participant.vars['completion_code'],
                 }
 
 

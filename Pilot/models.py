@@ -14,9 +14,9 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'Pilot'
-    num_rounds = 150
-    num_rounds_choice = 150
-    num_rounds_points = 50
+    num_rounds = 2
+    num_rounds_choice = 2
+    num_rounds_points = 2
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
@@ -69,7 +69,7 @@ class Player(BasePlayer):
     urn_draws_2 = models.StringField()
     urn_draws_3 = models.StringField()
     urn_draws_4 = models.StringField()
-    payoff = models.CurrencyField(initial=None)
+    #payoff = models.CurrencyField(initial=None)
     payoff_1 = models.CurrencyField()
     payoff_2 = models.CurrencyField()
     payoff_3 = models.CurrencyField()
@@ -78,6 +78,8 @@ class Player(BasePlayer):
     questionnaire_page = models.IntegerField(initial=1)
     controls = models.IntegerField(initial=0)
     comprehension_page = models.IntegerField(initial=1)
+    completion_code = models.StringField()
+
 
 
     #################################
