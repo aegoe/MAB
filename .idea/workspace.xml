@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="143" column="20" lean-forward="true" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
+            <state relative-caret-position="602">
+              <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
             </state>
           </provider>
         </entry>
@@ -1260,7 +1262,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -1463,16 +1465,15 @@
       <workItem from="1597828783169" duration="1668000" />
       <workItem from="1597999768431" duration="16000" />
       <workItem from="1598266499481" duration="581000" />
-      <workItem from="1598267090416" duration="4730000" />
+      <workItem from="1598267090416" duration="5001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169734000" />
+    <option name="totallyTimeSpent" value="170005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26040554" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -2898,8 +2899,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="143" column="20" lean-forward="true" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
+        <state relative-caret-position="602">
+          <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
         </state>
       </provider>
     </entry>
