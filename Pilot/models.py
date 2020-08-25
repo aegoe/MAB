@@ -217,9 +217,9 @@ class Player(BasePlayer):
 
     q_maxoption_2 = models.IntegerField(
         choices = [
-            [1, 'Option Triangle'],
-            [2, 'Option Square'],
-            [3, 'Option Rectangle'],
+            [1, 'Triangle'],
+            [2, 'Square'],
+            [3, 'Rectangle'],
         ],
         widget=widgets.RadioSelect,
         label="",

@@ -939,5 +939,6 @@ page_sequence = [
     Questionnaire,
     Questionnaire,
     Questionnaire,
+    Questionnaire,
     FinalInfo,
 ]
