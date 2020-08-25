@@ -36,7 +36,7 @@ mturk_hit_settings = {
     'template': 'global/mturk_template.html',
     'minutes_allotted_per_assignment': 35,
     'expiration_hours': 168,
-    'grant_qualification_id': '3TKFAEIWW949YA9UOC37ZR0HEHVBNF',
+    'grant_qualification_id': '3F4KLX19QVRYWWIPE260NYV94EYOER',
     'qualification_requirements': [
         {
             'QualificationTypeId': "00000000000000000071",
@@ -54,7 +54,7 @@ mturk_hit_settings = {
             'IntegerValues': [100],
         },
         {
-            'QualificationTypeId': "3TKFAEIWW949YA9UOC37ZR0HEHVBNF",
+            'QualificationTypeId': "3F4KLX19QVRYWWIPE260NYV94EYOER",
             'Comparator': "DoesNotExist",
         },
     ]
