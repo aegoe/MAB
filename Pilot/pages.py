@@ -27,27 +27,70 @@ class Device(Page):
     form_fields = ['access_device']
 
     def before_next_page(self):
-        self.player.choice = self.participant.vars['choice'] = self.session.config['choice']
-        self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
-        self.player.test_urns = self.participant.vars['test_urns'] = self.session.config['test_urns']
-        letters_and_digits = string.ascii_letters + string.digits
-        result_str = ''.join((random.choice(letters_and_digits) for i in range(7))) + str(random.randint(1, 8))
-        self.player.completion_code = result_str
-        self.participant.vars['completion_code'] = result_str
+        if self.session.config['testing']:
+            self.player.choice = self.participant.vars['choice'] = self.session.config['choice']
+            self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
+            self.player.test_urns = self.participant.vars['test_urns'] = self.session.config['test_urns']
+            letters_and_digits = string.ascii_letters + string.digits
+            result_str = ''.join((random.choice(letters_and_digits) for i in range(7))) + str(random.randint(1, 8))
+            self.player.completion_code = result_str
+            self.participant.vars['completion_code'] = result_str
 
-        if self.participant.vars['safe']:
-            order =['TSRH', 'STRH', 'RTSH', 'TRSH', 'SRTH', 'RSTH', 'HSTR', 'SHTR', 'THSR', 'HTSR', 'STHR', 'TSHR', 'TRHS',
-                'RTHS', 'HTRS', 'THRS', 'RHTS', 'HRTS', 'HRST', 'RHST', 'SHRT', 'HSRT', 'RSHT', 'SRHT']
-            weights = [1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24,
-                   1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24]
-            draw = choice(order, 1, p=weights)
-            self.participant.vars['draw'] = draw[0]
+            if self.participant.vars['safe']:
+                order =['TSRH', 'STRH', 'RTSH', 'TRSH', 'SRTH', 'RSTH', 'HSTR', 'SHTR', 'THSR', 'HTSR', 'STHR', 'TSHR', 'TRHS',
+                    'RTHS', 'HTRS', 'THRS', 'RHTS', 'HRTS', 'HRST', 'RHST', 'SHRT', 'HSRT', 'RSHT', 'SRHT']
+                weights = [1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24,
+                    1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24]
+                draw = choice(order, 1, p=weights)
+                self.participant.vars['draw'] = draw[0]
 
-        else:
-            order = ['TSR', 'STR', 'RTS', 'TRS', 'SRT', 'RST']
-            weights = [1/6, 1/6, 1/6, 1/6, 1/6, 1/6]
-            draw = choice(order, 1, p=weights)
-            self.participant.vars['draw'] = draw[0]
+            else:
+                order = ['TSR', 'STR', 'RTS', 'TRS', 'SRT', 'RST']
+                weights = [1/6, 1/6, 1/6, 1/6, 1/6, 1/6]
+                draw = choice(order, 1, p=weights)
+                self.participant.vars['draw'] = draw[0]
+
+        elif self.session.config['name'] == 'MAB_Pilot_Study':
+            letters_and_digits = string.ascii_letters + string.digits
+            result_str = ''.join((random.choice(letters_and_digits) for i in range(7))) + str(random.randint(1, 8))
+            self.player.completion_code = result_str
+            self.participant.vars['completion_code'] = result_str
+            self.player.test_urns = self.participant.vars['test_urns'] = self.session.config['test_urns']
+
+            treatments = ['safe_choice', 'safe_no_choice', 'choice', 'no_choice']
+            weights_2 = [0.25, 0.25, 0.25, 0.25]
+            draw_2 = choice(treatments, 1, p=weights_2)
+            self.participant.vars['draw_2'] = draw_2[0]
+            if draw_2[0] == 'safe_choice':
+                self.player.safe = self.participant.vars['safe'] = True
+                self.player.choice = self.participant.vars['choice'] = True
+            elif draw_2[0] == 'safe_no_choice':
+                self.player.safe = self.participant.vars['safe'] = True
+                self.player.choice = self.participant.vars['choice'] = False
+            elif draw_2[0] == 'choice':
+                self.player.safe = self.participant.vars['safe'] = False
+                self.player.choice = self.participant.vars['choice'] = True
+            else:
+                self.player.safe = self.participant.vars['safe'] = False
+                self.player.choice = self.participant.vars['choice'] = False
+
+            if self.participant.vars['safe']:
+                order =['TSRH', 'STRH', 'RTSH', 'TRSH', 'SRTH', 'RSTH', 'HSTR', 'SHTR', 'THSR', 'HTSR', 'STHR', 'TSHR', 'TRHS',
+                    'RTHS', 'HTRS', 'THRS', 'RHTS', 'HRTS', 'HRST', 'RHST', 'SHRT', 'HSRT', 'RSHT', 'SRHT']
+                weights = [1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24,
+                    1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24]
+                draw = choice(order, 1, p=weights)
+                self.participant.vars['draw'] = draw[0]
+
+            else:
+                order = ['TSR', 'STR', 'RTS', 'TRS', 'SRT', 'RST']
+                weights = [1/6, 1/6, 1/6, 1/6, 1/6, 1/6]
+                draw = choice(order, 1, p=weights)
+                self.participant.vars['draw'] = draw[0]
+
+
+
+
 
 
 
@@ -62,7 +105,6 @@ class AttentionCheck(Page):
 
     form_model = 'player'
     form_fields = ['attention_check_1', 'attention_check_2']
-
 
 
 

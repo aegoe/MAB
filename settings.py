@@ -34,7 +34,7 @@ mturk_hit_settings = {
     'description': 'This HIT takes approximately 15 minutes to complete. Please accept this HIT only if you can commit to completing it right away and without interruption. You can earn a substantial bonus that exceeds the reward for this HIT.',
     'frame_height': 800,
     'template': 'global/mturk_template.html',
-    'minutes_allotted_per_assignment': 35,
+    'minutes_allotted_per_assignment': 45,
     'expiration_hours': 168,
     'grant_qualification_id': '3F4KLX19QVRYWWIPE260NYV94EYOER',
     'qualification_requirements': [
@@ -61,13 +61,26 @@ mturk_hit_settings = {
 }
 
 SESSION_CONFIG_DEFAULTS = {
-    'real_world_currency_per_point': 0.003,
+    'real_world_currency_per_point': 0.004,
     'participation_fee': 1.20,
     'doc': "",
     'mturk_hit_settings': mturk_hit_settings,
 }
 
 SESSION_CONFIGS = [
+
+    {
+        'name': 'MAB_Pilot_Study',
+        'display_name': "Pilot Study",
+        'num_demo_participants': 1,
+        'app_sequence': ['Pilot'],
+        'choice': False,
+        'safe': False,
+        'test_urns': False,
+        'testing': False
+
+    },
+
     {
        'name': 'MAB_Pilot_Testing',
         'display_name': "Pilot Testing",
@@ -75,7 +88,8 @@ SESSION_CONFIGS = [
         'app_sequence': ['Pilot'],
         'choice': False,
         'safe': False,
-        'test_urns': False
+        'test_urns': False,
+        'testing': True
 
     },
     {
@@ -85,7 +99,8 @@ SESSION_CONFIGS = [
         'app_sequence': ['Pilot'],
         'choice': True,
         'safe': False,
-        'test_urns': False
+        'test_urns': False,
+        'testing': True
 
     },
     {
@@ -95,7 +110,8 @@ SESSION_CONFIGS = [
         'app_sequence': ['Pilot'],
         'choice': False,
         'safe': True,
-        'test_urns': False
+        'test_urns': False,
+        'testing': True
 
     },
     {
@@ -105,7 +121,8 @@ SESSION_CONFIGS = [
         'app_sequence': ['Pilot'],
         'choice': True,
         'safe': True,
-        'test_urns': False
+        'test_urns': False,
+        'testing': True
     },
     {
 
@@ -115,7 +132,8 @@ SESSION_CONFIGS = [
         'app_sequence': ['Pilot'],
         'choice': True,
         'safe': True,
-        'test_urns': True
+        'test_urns': True,
+        'testing': True
     },
     {
         'name': 'MAB_Pilot_Testing_Safe_TEST',
@@ -124,7 +142,8 @@ SESSION_CONFIGS = [
         'app_sequence': ['Pilot'],
         'choice': False,
         'safe': True,
-        'test_urns': True
+        'test_urns': True,
+        'testing': True
 
     },
 ]
