@@ -30,8 +30,8 @@ from os import environ
 
 mturk_hit_settings = {
     'keywords': ['bonus', 'short', 'academic'],
-    'title': 'Task on Human Decision Making (with bonus)',
-    'description': 'This HIT takes approximately 15 minutes to complete. Please accept this HIT only if you can commit to completing it right away and without interruption. You can earn a substantial bonus that exceeds the reward for this HIT.',
+    'title': 'A Study on Human Decision Making (with bonus)',
+    'description': 'This HIT takes approximately 20 minutes to complete. Please accept this HIT only if you can commit to completing it right away and without interruption. You can earn a substantial bonus that exceeds the reward for this HIT.',
     'frame_height': 800,
     'template': 'global/mturk_template.html',
     'minutes_allotted_per_assignment': 45,
@@ -155,7 +155,7 @@ LANGUAGE_CODE = 'en'
 # e.g. EUR, GBP, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'USD'
 USE_POINTS = True
-POINTS_CUSTOM_NAME = 'Coins'
+POINTS_CUSTOM_NAME = 'ECU'
 POINTS_DECIMAL_PLACES = 0
 
 ROOMS = []

@@ -55,7 +55,7 @@ class Player(BasePlayer):
     test_urns = models.BooleanField()
     endowment = models.IntegerField()
     option_1 = models.IntegerField(initial=0, label="Triangle")
-    option_2 = models.IntegerField(initial=0, label="Square")
+    option_2 = models.IntegerField(initial=0, label="Circle")
     option_3 = models.IntegerField(initial=0, label="Rectangle")
     option_safe = models.IntegerField(initial=0, label = "Hexagon")
     #draws_1 = models.IntegerField()
@@ -206,7 +206,7 @@ class Player(BasePlayer):
     q_maxoption = models.IntegerField(
         choices = [
             [1, 'Triangle'],
-            [2, 'Square'],
+            [2, 'Circle'],
             [3, 'Rectangle'],
             [4, 'Hexagon'],
         ],
@@ -218,7 +218,7 @@ class Player(BasePlayer):
     q_maxoption_2 = models.IntegerField(
         choices = [
             [1, 'Triangle'],
-            [2, 'Square'],
+            [2, 'Circle'],
             [3, 'Rectangle'],
         ],
         widget=widgets.RadioSelect,
