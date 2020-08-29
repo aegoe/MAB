@@ -878,12 +878,15 @@ class Questionnaire(Page):
             elif self.player.questionnaire_page == 2:
                 return ['q_risk']
             elif self.player.questionnaire_page == 3:
-                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
+                imi = [f'q_imi_{i}' for i in range(1, 8)]
+                return imi
             elif self.player.questionnaire_page == 4:
-                return ['q_fadein', 'q_fadeout']
+                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
             elif self.player.questionnaire_page == 5:
-                return ['q_saving', 'q_wealth']
+                return ['q_fadein', 'q_fadeout']
             elif self.player.questionnaire_page == 6:
+                return ['q_saving', 'q_wealth']
+            elif self.player.questionnaire_page == 7:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
@@ -893,12 +896,15 @@ class Questionnaire(Page):
             elif self.player.questionnaire_page == 2:
                 return ['q_risk']
             elif self.player.questionnaire_page == 3:
-                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
+                imi = [f'q_imi_{i}' for i in range(1, 8)]
+                return imi
             elif self.player.questionnaire_page == 4:
-                return ['q_fadein', 'q_fadeout']
+                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
             elif self.player.questionnaire_page == 5:
-                return ['q_saving', 'q_wealth']
+                return ['q_fadein', 'q_fadeout']
             elif self.player.questionnaire_page == 6:
+                return ['q_saving', 'q_wealth']
+            elif self.player.questionnaire_page == 7:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
@@ -908,12 +914,15 @@ class Questionnaire(Page):
             elif self.player.questionnaire_page == 2:
                 return ['q_risk']
             elif self.player.questionnaire_page == 3:
-                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
+                imi = [f'q_imi_{i}' for i in range(1, 8)]
+                return imi
             elif self.player.questionnaire_page == 4:
-                return ['q_fadein', 'q_fadeout']
+                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
             elif self.player.questionnaire_page == 5:
-                return ['q_saving', 'q_wealth']
+                return ['q_fadein', 'q_fadeout']
             elif self.player.questionnaire_page == 6:
+                return ['q_saving', 'q_wealth']
+            elif self.player.questionnaire_page == 7:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
@@ -923,12 +932,15 @@ class Questionnaire(Page):
             elif self.player.questionnaire_page == 2:
                 return ['q_risk']
             elif self.player.questionnaire_page == 3:
-                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
+                imi = [f'q_imi_{i}' for i in range(1, 8)]
+                return imi
             elif self.player.questionnaire_page == 4:
-                return ['q_fadein', 'q_fadeout']
+                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
             elif self.player.questionnaire_page == 5:
-                return ['q_saving', 'q_wealth']
+                return ['q_fadein', 'q_fadeout']
             elif self.player.questionnaire_page == 6:
+                return ['q_saving', 'q_wealth']
+            elif self.player.questionnaire_page == 7:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
@@ -976,6 +988,7 @@ page_sequence = [
     DeadEnd2,
     Decision,
     Feedback,
+    Questionnaire,
     Questionnaire,
     Questionnaire,
     Questionnaire,

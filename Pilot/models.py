@@ -14,9 +14,9 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'Pilot'
-    num_rounds = 150
-    num_rounds_choice = 150
-    num_rounds_points = 50
+    num_rounds = 2
+    num_rounds_choice = 2
+    num_rounds_points = 2
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
@@ -307,3 +307,30 @@ class Player(BasePlayer):
             return Constants.endowment_choice
         else:
             return Constants.endowment_points
+
+
+
+    def sevenitems(label):
+        return models.IntegerField(
+            choices=[
+                [1, '1'],
+                [2, '2'],
+                [3, '3'],
+                [4, '4'],
+                [5, '5'],
+                [6, '6'],
+                [7, '7'],
+            ],
+            widget=widgets.RadioSelectHorizontal,
+            blank=False,
+            label=label
+        )
+
+
+    q_imi_1 = sevenitems('I enjoyed doing this task very much.')
+    q_imi_2 = sevenitems('This task was fun to do.')
+    q_imi_3 = sevenitems('I thought this was a boring task.')
+    q_imi_4 = sevenitems('This task did not hold my attention at all.')
+    q_imi_5 = sevenitems('I would describe this task as very interesting.')
+    q_imi_6 = sevenitems('I thought this task was quite enjoyable.')
+    q_imi_7 = sevenitems('While I was doing this task, I was thinking about how much I enjoyed it.')
