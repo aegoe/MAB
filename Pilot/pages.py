@@ -200,7 +200,7 @@ class Decision(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        if self.session.config['choice']:
+        if self.participant.vars['choice']:
             return self.round_number <= Constants.num_rounds_choice
         else:
             return self.round_number <= Constants.num_rounds_points
@@ -841,7 +841,7 @@ class Feedback(Page):
     #form_fields = ['option_1', 'option_2', 'option_3']
 
     def is_displayed(self):
-        if self.session.config['choice']:
+        if self.participant.vars['choice']:
             return self.round_number <= Constants.num_rounds_choice
         else:
             return self.round_number <= Constants.num_rounds_points
@@ -872,7 +872,7 @@ class Questionnaire(Page):
     form_model ='player'
 
     def get_form_fields(self):
-        if self.session.config['choice'] and self.session.config['safe']:
+        if self.participant.vars['choice'] and self.participant.vars['safe']:
             if self.player.questionnaire_page == 1:
                 return[]
             elif self.player.questionnaire_page == 2:
@@ -890,7 +890,7 @@ class Questionnaire(Page):
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
-        elif self.session.config['choice'] and not self.session.config['safe']:
+        elif self.participant.vars['choice'] and not self.participant.vars['safe']:
             if self.player.questionnaire_page == 1:
                 return[]
             elif self.player.questionnaire_page == 2:
@@ -908,7 +908,7 @@ class Questionnaire(Page):
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
-        elif not self.session.config['choice'] and self.session.config['safe']:
+        elif not self.participant.vars['choice'] and self.participant.vars['safe']:
             if self.player.questionnaire_page == 1:
                 return[]
             elif self.player.questionnaire_page == 2:
@@ -926,7 +926,7 @@ class Questionnaire(Page):
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
-        elif not self.session.config['choice'] and not self.session.config['safe']:
+        elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
             if self.player.questionnaire_page == 1:
                 return[]
             elif self.player.questionnaire_page == 2:
@@ -945,7 +945,7 @@ class Questionnaire(Page):
                         'q_ethnicity']
 
     def is_displayed(self):
-        if self.session.config['choice']:
+        if self.participant.vars['choice']:
             return self.round_number == Constants.num_rounds_choice
         else:
             return self.round_number == Constants.num_rounds_points
@@ -962,7 +962,7 @@ class Questionnaire(Page):
 
 class FinalInfo(Page):
     def is_displayed(self):
-        if self.session.config['choice']:
+        if self.participant.vars['choice']:
             return self.round_number == Constants.num_rounds_choice
         else:
             return self.round_number == Constants.num_rounds_points
