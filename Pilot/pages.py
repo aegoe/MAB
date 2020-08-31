@@ -58,7 +58,7 @@ class Device(Page):
             self.player.test_urns = self.participant.vars['test_urns'] = self.session.config['test_urns']
 
             treatments = ['safe_choice', 'safe_no_choice', 'choice', 'no_choice']
-            weights_2 = [0.25, 0.25, 0.25, 0.25]
+            weights_2 = [0.5, 0.5, 0, 0]
             draw_2 = choice(treatments, 1, p=weights_2)
             self.participant.vars['draw_2'] = draw_2[0]
             if draw_2[0] == 'safe_choice':
