@@ -17,7 +17,6 @@ points {% endif %} must be invested in each round. </p>
 
 <p> Once you have made your choice, you will get feedback about the payoff from your investment. This will be shown on a separate feedback screen upon submitting your choice. </p>
 
-{% if not variance}
 
 {% if safe and not choice %}
 
@@ -61,11 +60,8 @@ points {% endif %} must be invested in each round. </p>
 
 {% endif %}
 
-{% elif variance and safe and choice %}
 
-{% elif variance and safe and not choice %}
 
-{% endif %}
 
 
 <!--<p> The label denoting the option (e.g., a triangle on the bag) and an option's position on the screen are randomly predetermined and fixed.-->

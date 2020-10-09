@@ -139,6 +139,19 @@ class Player(BasePlayer):
         initial=0
     )
 
+    cq_Pilot_5 = models.IntegerField(
+        choices=[
+            [999, 'contain the same coins'],
+            [9, 'return a constant value'],
+            [99, 'change over the course of the HIT'],
+            [1, 'can differ in their composition of coins'],
+        ],
+        widget=widgets.RadioSelect,
+        blank=False,
+        label='All options',
+        initial=0
+    )
+
     access_device = models.IntegerField(
         choices=[
             [0, 'Smartphone'],

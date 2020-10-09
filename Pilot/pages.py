@@ -210,10 +210,14 @@ class ComprehensionQuestions(Page):
                 }
 
     def get_form_fields(self):
-        if self.participant.vars['choice']:
+        if self.participant.vars['choice'] and not self.participant.vars['variance']:
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3']
-        else:
-            return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3', 'cq_Pilot_4']
+        elif not self.participant.vars['choice'] and not self.participant.vars['variance']:
+                return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3', 'cq_Pilot_4']
+        elif self.participant.vars['choice'] and  self.participant.vars['variance']:
+            return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_5']
+        elif not self.participant.vars['choice'] and  self.participant.vars['variance']:
+            return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_4', 'cq_Pilot_5']
 
     def before_next_page(self):
         if self.participant.vars['choice']:
