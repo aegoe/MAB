@@ -181,6 +181,7 @@ class InstruStart(Page):
                 'endowment_points': Constants.endowment_points,
                 'draw': self.participant.vars['draw'],
                 'test_urns': self.participant.vars['test_urns'],
+                'variance': self.participant.vars['variance'],
 
                 }
 
@@ -205,6 +206,7 @@ class ComprehensionQuestions(Page):
                 'safe': self.participant.vars['safe'],
                 'endowment_choice': Constants.endowment_choice,
                 'endowment_points': Constants.endowment_points,
+                'variance': self.participant.vars['variance'],
                 }
 
     def get_form_fields(self):
