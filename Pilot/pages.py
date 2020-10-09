@@ -128,6 +128,44 @@ class Device(Page):
                 draw = choice(order, 1, p=weights)
                 self.participant.vars['draw'] = draw[0]
 
+        elif self.session.config['name'] == 'MAB_Pilot_Study_Var_2':
+            letters_and_digits = string.ascii_letters + string.digits
+            result_str = ''.join((random.choice(letters_and_digits) for i in range(7))) + str(random.randint(1, 8))
+            self.player.completion_code = result_str
+            self.participant.vars['completion_code'] = result_str
+            self.player.test_urns = self.participant.vars['test_urns'] = self.session.config['test_urns']
+            self.player.variance = self.participant.vars['variance'] = self.session.config['variance']
+
+            treatments = ['safe_choice', 'safe_no_choice', 'choice', 'no_choice']
+            weights_2 = [0.5, 0.5, 0, 0]
+            draw_2 = choice(treatments, 1, p=weights_2)
+            self.participant.vars['draw_2'] = draw_2[0]
+            if draw_2[0] == 'safe_choice':
+                self.player.safe = self.participant.vars['safe'] = True
+                self.player.choice = self.participant.vars['choice'] = True
+            elif draw_2[0] == 'safe_no_choice':
+                self.player.safe = self.participant.vars['safe'] = True
+                self.player.choice = self.participant.vars['choice'] = False
+            elif draw_2[0] == 'choice':
+                self.player.safe = self.participant.vars['safe'] = False
+                self.player.choice = self.participant.vars['choice'] = True
+            else:
+                self.player.safe = self.participant.vars['safe'] = False
+                self.player.choice = self.participant.vars['choice'] = False
+
+            if self.participant.vars['safe']:
+                order =['TSRH', 'STRH', 'RTSH', 'TRSH', 'SRTH', 'RSTH', 'HSTR', 'SHTR', 'THSR', 'HTSR', 'STHR', 'TSHR', 'TRHS',
+                    'RTHS', 'HTRS', 'THRS', 'RHTS', 'HRTS', 'HRST', 'RHST', 'SHRT', 'HSRT', 'RSHT', 'SRHT']
+                weights = [1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24,
+                    1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24, 1/24]
+                draw = choice(order, 1, p=weights)
+                self.participant.vars['draw'] = draw[0]
+
+            else:
+                order = ['TSR', 'STR', 'RTS', 'TRS', 'SRT', 'RST']
+                weights = [1/6, 1/6, 1/6, 1/6, 1/6, 1/6]
+                draw = choice(order, 1, p=weights)
+                self.participant.vars['draw'] = draw[0]
 
 
 
@@ -1064,6 +1102,202 @@ class Decision(Page):
                         data_counts[i][k] = v * -4
                     elif k == '1':
                         data_counts[i][k] = v * 1
+
+            self.player.payoff = 0
+            for i in data_counts.keys():
+                for values in data_counts[i].values():
+                    self.player.payoff += values
+
+            print(data_counts)
+
+            self.player.payoff_1 = 0
+            self.player.payoff_2 = 0
+            self.player.payoff_3 = 0
+            self.player.payoff_4 = 0
+
+            for i in data_counts.keys():
+                for v in data_counts[i].values():
+                    if i == 'count_1':
+                        self.player.payoff_1 += v
+                    if i == 'count_2':
+                        self.player.payoff_2 += v
+                    if i == 'count_3':
+                        self.player.payoff_3 += v
+                    if i == 'count_4':
+                        self.player.payoff_4 += v
+
+            print(self.player.payoff)
+            print(self.participant.payoff)
+
+        elif self.participant.vars['choice'] and self.participant.vars['safe'] and self.participant.vars['test_urns'] and self.participant.vars['variance']:
+
+            Urn_1 = ['5', '3', '2', '-2']
+            Urn_2 = ['7', '3', '2', '-4']
+            Urn_3 = ['9', '3', '2', '-6']
+            Urn_safe = ['2']
+
+            weights_1 = [0.25, 0.25, 0.25, 0.25]
+            weights_2 = [0.25, 0.25, 0.25, 0.25]
+            weights_3 = [0.25, 0.25, 0.25, 0.25]
+
+            draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
+            draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
+            draws_3 = random.choices(Urn_3, weights=weights_3, k = self.player.option_3)
+            draws_4 = random.choices(Urn_safe, k = self.player.option_safe)
+
+            draws_1_str = str(draws_1)[1:-1]
+            draws_2_str = str(draws_2)[1:-1]
+            draws_3_str = str(draws_3)[1:-1]
+            draws_4_str = str(draws_4)[1:-1]
+
+            draws_1_str = draws_1_str.replace("'","")
+            draws_2_str = draws_2_str.replace("'","")
+            draws_3_str = draws_3_str.replace("'","")
+            draws_4_str = draws_4_str.replace("'","")
+
+            self.player.urn_draws_1 = draws_1_str
+            self.player.urn_draws_2 = draws_2_str
+            self.player.urn_draws_3 = draws_3_str
+            self.player.urn_draws_4 = draws_4_str
+
+            print(self.player.urn_draws_1)
+            print(draws_1)
+            print(draws_2)
+            print(draws_3)
+
+            count_1 = Counter(draws_1)
+            count_2 = Counter(draws_2)
+            count_3 = Counter(draws_3)
+            count_4 = Counter(draws_4)
+
+            print(count_1)
+            print(count_2)
+            print(count_3)
+
+
+
+            data_counts = {}
+            data_counts['count_1'] = count_1
+            data_counts['count_2'] = count_2
+            data_counts['count_3'] = count_3
+            data_counts['count_4'] = count_4
+
+            for i in data_counts.keys():
+                for k, v in data_counts[i].items():
+                    if k == '9':
+                        data_counts[i][k] = v * 9
+                    elif k == '7':
+                        data_counts[i][k] = v * 7
+                    elif k == '5':
+                        data_counts[i][k] = v * 5
+                    elif k == '3':
+                        data_counts[i][k] = v * 3
+                    elif k == '2':
+                        data_counts[i][k] = v * 2
+                    elif k == '-2':
+                        data_counts[i][k] = v * -2
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-6':
+                        data_counts[i][k] = v * -6
+
+            self.player.payoff = 0
+            for i in data_counts.keys():
+                for values in data_counts[i].values():
+                    self.player.payoff += values
+
+            print(data_counts)
+
+            self.player.payoff_1 = 0
+            self.player.payoff_2 = 0
+            self.player.payoff_3 = 0
+            self.player.payoff_4 = 0
+
+            for i in data_counts.keys():
+                for v in data_counts[i].values():
+                    if i == 'count_1':
+                        self.player.payoff_1 += v
+                    if i == 'count_2':
+                        self.player.payoff_2 += v
+                    if i == 'count_3':
+                        self.player.payoff_3 += v
+                    if i == 'count_4':
+                        self.player.payoff_4 += v
+
+            print(self.player.payoff)
+            print(self.participant.payoff)
+
+        elif not self.participant.vars['choice'] and self.participant.vars['safe'] and self.participant.vars['test_urns'] and self.participant.vars['variance']:
+
+            Urn_1 = ['5', '3', '2', '-2']
+            Urn_2 = ['7', '3', '2', '-4']
+            Urn_3 = ['9', '3', '2', '-6']
+            Urn_safe = ['2']
+
+            weights_1 = [0.25, 0.25, 0.25, 0.25]
+            weights_2 = [0.25, 0.25, 0.25, 0.25]
+            weights_3 = [0.25, 0.25, 0.25, 0.25]
+
+            draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
+            draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
+            draws_3 = random.choices(Urn_3, weights=weights_3, k = self.player.option_3)
+            draws_4 = random.choices(Urn_safe, k = self.player.option_safe)
+
+            draws_1_str = str(draws_1)[1:-1]
+            draws_2_str = str(draws_2)[1:-1]
+            draws_3_str = str(draws_3)[1:-1]
+            draws_4_str = str(draws_4)[1:-1]
+
+            draws_1_str = draws_1_str.replace("'","")
+            draws_2_str = draws_2_str.replace("'","")
+            draws_3_str = draws_3_str.replace("'","")
+            draws_4_str = draws_4_str.replace("'","")
+
+            self.player.urn_draws_1 = draws_1_str
+            self.player.urn_draws_2 = draws_2_str
+            self.player.urn_draws_3 = draws_3_str
+            self.player.urn_draws_4 = draws_4_str
+
+            print(self.player.urn_draws_1)
+            print(draws_1)
+            print(draws_2)
+            print(draws_3)
+
+            count_1 = Counter(draws_1)
+            count_2 = Counter(draws_2)
+            count_3 = Counter(draws_3)
+            count_4 = Counter(draws_4)
+
+            print(count_1)
+            print(count_2)
+            print(count_3)
+
+
+
+            data_counts = {}
+            data_counts['count_1'] = count_1
+            data_counts['count_2'] = count_2
+            data_counts['count_3'] = count_3
+            data_counts['count_4'] = count_4
+
+            for i in data_counts.keys():
+                for k, v in data_counts[i].items():
+                    if k == '9':
+                        data_counts[i][k] = v * 9
+                    elif k == '7':
+                        data_counts[i][k] = v * 7
+                    elif k == '5':
+                        data_counts[i][k] = v * 5
+                    elif k == '3':
+                        data_counts[i][k] = v * 3
+                    elif k == '2':
+                        data_counts[i][k] = v * 2
+                    elif k == '-2':
+                        data_counts[i][k] = v * -2
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-6':
+                        data_counts[i][k] = v * -6
 
             self.player.payoff = 0
             for i in data_counts.keys():
