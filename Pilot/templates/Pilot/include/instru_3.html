@@ -6,9 +6,12 @@
 
 {% block content %}
 <p> You can think of each option as a bag of coins. The coins are put in each bag before the game starts and for every point you invest in
-an option, a coin from the respective bag is drawn. Thus, one point equals one draw. After each draw, the coin is put back into the bag. Coins in the bag usually differ in value.
+an option, a coin from the respective bag is drawn. Thus, one point equals one draw. After each draw, the coin is put back into the bag.
+    {% if not variance %} Coins in the bag usually differ in value.
     Each bag can differ in the average value of coins it contains. Some bags are better than others and you can find that out by 
-    choosing bags and observing the coins you draw.</p>
+    choosing bags and observing the coins you draw.
+    {% elif variance %} Bags can differ in the composition of coins they contain. At the beginning, you have no information about the different bags, and
+    you can learn about them by choosing bags and observing the coins you draw. {% endif %}  </p>
 
 {% if safe %}
 <p> Additionally, you can choose to invest points in an option that guarantees a return of {{ Constants.safe_option }} ECU per point invested. You can think of that option as a money bag with only one type of coin.
