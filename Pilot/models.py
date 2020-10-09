@@ -53,6 +53,7 @@ class Player(BasePlayer):
     choice = models.BooleanField()
     safe = models.BooleanField()
     test_urns = models.BooleanField()
+    variance = models.BooleanField()
     endowment = models.IntegerField()
     option_1 = models.IntegerField(initial=0, label="Triangle")
     option_2 = models.IntegerField(initial=0, label="Circle")

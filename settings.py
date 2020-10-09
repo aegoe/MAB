@@ -61,7 +61,7 @@ mturk_hit_settings = {
 }
 
 SESSION_CONFIG_DEFAULTS = {
-    'real_world_currency_per_point': 0.005,
+    'real_world_currency_per_point': 0.03,
     'participation_fee': 1.20,
     'doc': "",
     'mturk_hit_settings': mturk_hit_settings,
@@ -70,6 +70,18 @@ SESSION_CONFIG_DEFAULTS = {
 SESSION_CONFIGS = [
 
     {
+        'name': 'MAB_Pilot_Study_Var',
+        'display_name': "Pilot Study Variance",
+        'num_demo_participants': 1,
+        'app_sequence': ['Pilot'],
+        'choice': False,
+        'safe': False,
+        'test_urns': False,
+        'testing': False,
+        'variance': True,
+
+    },
+    {
         'name': 'MAB_Pilot_Study',
         'display_name': "Pilot Study",
         'num_demo_participants': 1,
@@ -77,7 +89,8 @@ SESSION_CONFIGS = [
         'choice': False,
         'safe': False,
         'test_urns': False,
-        'testing': False
+        'testing': False,
+        'variance': False,
 
     },
 
@@ -89,7 +102,8 @@ SESSION_CONFIGS = [
         'choice': False,
         'safe': False,
         'test_urns': False,
-        'testing': True
+        'testing': True,
+        'variance': False,
 
     },
     {
@@ -100,7 +114,8 @@ SESSION_CONFIGS = [
         'choice': True,
         'safe': False,
         'test_urns': False,
-        'testing': True
+        'testing': True,
+        'variance': False,
 
     },
     {
@@ -111,7 +126,8 @@ SESSION_CONFIGS = [
         'choice': False,
         'safe': True,
         'test_urns': False,
-        'testing': True
+        'testing': True,
+        'variance': False,
 
     },
     {
@@ -122,7 +138,9 @@ SESSION_CONFIGS = [
         'choice': True,
         'safe': True,
         'test_urns': False,
-        'testing': True
+        'testing': True,
+        'variance': False,
+
     },
     {
 
@@ -133,7 +151,9 @@ SESSION_CONFIGS = [
         'choice': True,
         'safe': True,
         'test_urns': True,
-        'testing': True
+        'testing': True,
+        'variance': False,
+
     },
     {
         'name': 'MAB_Pilot_Testing_Safe_TEST',
@@ -143,7 +163,8 @@ SESSION_CONFIGS = [
         'choice': False,
         'safe': True,
         'test_urns': True,
-        'testing': True
+        'testing': True,
+        'variance': False,
 
     },
 ]
