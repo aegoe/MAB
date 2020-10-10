@@ -71,7 +71,7 @@ SESSION_CONFIGS = [
 
     {
         'name': 'MAB_Pilot_Study_Var_2',
-        'display_name': "Pilot Study Variance",
+        'display_name': "Pilot Study Variance 2",
         'num_demo_participants': 1,
         'app_sequence': ['Pilot'],
         'choice': False,
