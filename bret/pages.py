@@ -27,6 +27,12 @@ class Instructions(Page):
             'time_interval':        Constants.time_interval,
         }
 
+class Instructions_Transition(Page):
+    # only display instruction in round 1
+    def is_displayed(self):
+        return self.subsession.round_number == 1
+
+
 
 # ******************************************************************************************************************** #
 # *** CLASS BOMB RISK ELICITATION TASK *** #
@@ -118,8 +124,11 @@ class FinalInfo(Page):
 # ******************************************************************************************************************** #
 page_sequence = [Decision,FinalInfo]
 
+if Constants.instructions_transition:
+    page_sequence.insert(0,Instructions_Transition)
+
 if Constants.instructions:
-    page_sequence.insert(0,Instructions)
+    page_sequence.insert(1,Instructions)
 
 if Constants.results:
-    page_sequence.insert(2,Results)
+    page_sequence.insert(3,Results)

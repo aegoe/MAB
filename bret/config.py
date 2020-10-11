@@ -44,6 +44,8 @@ class Constants(BaseConstants):
     # if <instructions = False>, the task starts immediately (e.g. in case of printed instructions)
     instructions = True
 
+    instructions_transition = True
+
     # show feedback by resolving boxes, i.e. toggle boxes and show whether bomb was collected or not
     # if <feedback = True>, the button "Solve" will be rendered and active after game play ends ("Stop")
     # if <feedback = False>, the button "Solve" won't be rendered such that no feedback about game outcome is provided
