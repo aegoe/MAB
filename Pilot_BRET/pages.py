@@ -1284,7 +1284,7 @@ class Questionnaire(Page):
     form_model ='player'
 
     def get_form_fields(self):
-        if self.participant.vars['choice'] and self.participant.vars['safe']:
+        if self.participant.vars['choice'] and self.participant.vars['safe'] and not self.participant.vars['variance']:
             if self.player.questionnaire_page == 1:
                 return[]
             elif self.player.questionnaire_page == 2:
@@ -1302,7 +1302,7 @@ class Questionnaire(Page):
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
-        elif self.participant.vars['choice'] and not self.participant.vars['safe']:
+        elif self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
             if self.player.questionnaire_page == 1:
                 return[]
             elif self.player.questionnaire_page == 2:
@@ -1320,7 +1320,7 @@ class Questionnaire(Page):
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
-        elif not self.participant.vars['choice'] and self.participant.vars['safe']:
+        elif not self.participant.vars['choice'] and self.participant.vars['safe'] and not self.participant.vars['variance']:
             if self.player.questionnaire_page == 1:
                 return[]
             elif self.player.questionnaire_page == 2:
@@ -1338,7 +1338,7 @@ class Questionnaire(Page):
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
-        elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
+        elif not self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
             if self.player.questionnaire_page == 1:
                 return[]
             elif self.player.questionnaire_page == 2:
@@ -1348,6 +1348,42 @@ class Questionnaire(Page):
                 return imi
             elif self.player.questionnaire_page == 4:
                 return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
+            elif self.player.questionnaire_page == 5:
+                return ['q_fadein', 'q_fadeout']
+            elif self.player.questionnaire_page == 6:
+                return ['q_saving', 'q_wealth']
+            elif self.player.questionnaire_page == 7:
+                return ['q_year', 'q_sex', 'q_employment', 'q_education',
+                        'q_ethnicity']
+
+        elif not self.participant.vars['choice'] and self.participant.vars['safe'] and self.participant.vars['variance']:
+            if self.player.questionnaire_page == 1:
+                return[]
+            elif self.player.questionnaire_page == 2:
+                return ['q_risk']
+            elif self.player.questionnaire_page == 3:
+                imi = [f'q_imi_{i}' for i in range(1, 8)]
+                return imi
+            elif self.player.questionnaire_page == 4:
+                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
+            elif self.player.questionnaire_page == 5:
+                return ['q_fadein', 'q_fadeout']
+            elif self.player.questionnaire_page == 6:
+                return ['q_saving', 'q_wealth']
+            elif self.player.questionnaire_page == 7:
+                return ['q_year', 'q_sex', 'q_employment', 'q_education',
+                        'q_ethnicity']
+
+        elif self.participant.vars['choice'] and self.participant.vars['safe'] and self.participant.vars['variance']:
+            if self.player.questionnaire_page == 1:
+                return[]
+            elif self.player.questionnaire_page == 2:
+                return ['q_risk']
+            elif self.player.questionnaire_page == 3:
+                imi = [f'q_imi_{i}' for i in range(1, 8)]
+                return imi
+            elif self.player.questionnaire_page == 4:
+                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
             elif self.player.questionnaire_page == 5:
                 return ['q_fadein', 'q_fadeout']
             elif self.player.questionnaire_page == 6:
@@ -1366,6 +1402,8 @@ class Questionnaire(Page):
         return{'questionnaire_page': self.player.questionnaire_page,
                'choice':self.participant.vars['choice'],
                'safe': self.participant.vars['safe'],
+               'variance': self.participant.vars['variance'],
+
                }
 
     def before_next_page(self):
