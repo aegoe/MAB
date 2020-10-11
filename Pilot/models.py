@@ -13,7 +13,7 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'Pilot_BRET'
+    name_in_url = 'Pilot'
     num_rounds = 150
     num_rounds_choice = 150
     num_rounds_points = 50
