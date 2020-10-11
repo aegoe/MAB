@@ -1,0 +1,54 @@
+{% load otree %}
+
+
+<div class="card">
+        <div class="card-header">
+            Please describe how your strategy changed over the course of this HIT.
+        </div>
+        <div class="card-body">
+            {% formfield player.q_exploration_strategy %}
+        </div>
+    </div>
+<br>
+
+{% if safe %}
+<div class="card">
+    <div class="card-header">
+        In your opinion, which option would maximize your income in the long run?
+        <br>
+        <i>Please choose one of the following answers. Remember to choose by the option's name and symbol, not by position!</i>.
+    </div>
+    <div class="card-body">
+        {% formfield player.q_maxoption %}
+    </div>
+</div>
+<br>
+
+{% elif not safe %}
+<div class="card">
+    <div class="card-header">
+        In your opinion, which option would maximize your income in the long run?
+        <br>
+        <i>Please choose one of the following answers</i>.
+    </div>
+    <div class="card-body">
+        {% formfield player.q_maxoption_2 %}
+    </div>
+</div>
+<br>
+
+{% endif %}
+
+
+
+<div class="card">
+        <div class="card-header">
+            Do you think you would have made different choices if your performance in this HIT also determined the income of other workers in some related task?
+            Please explain your answer.
+        </div>
+        <div class="card-body">
+            {% formfield player.q_firm %}
+        </div>
+</div>
+
+<br>

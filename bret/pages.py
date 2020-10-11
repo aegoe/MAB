@@ -101,14 +101,25 @@ class Results(Page):
             'total_payoff':           total_payoff,
         }
 
+class FinalInfo(Page):
+    def is_displayed(self):
+        return self.subsession.round_number == Constants.num_rounds
+
+    def vars_for_template(self):
+        return {'participation_fee': self.session.config['participation_fee'],
+                'total_payoff': self.participant.payoff_plus_participation_fee(),
+                'bonus': self.participant.payoff.to_real_world_currency(self.session),
+                'completion_code': self.participant.vars['completion_code'],
+                }
+
 
 # ******************************************************************************************************************** #
 # *** PAGE SEQUENCE *** #
 # ******************************************************************************************************************** #
-page_sequence = [Decision]
+page_sequence = [Decision,FinalInfo]
 
 if Constants.instructions:
     page_sequence.insert(0,Instructions)
 
 if Constants.results:
-    page_sequence.append(Results)
+    page_sequence.insert(2,Results)

@@ -22,8 +22,8 @@ class Constants(BaseConstants):
 
     # number of rows and columns
     # i.e. the total number of boxes is determined by <num_rows> times <num_cols>
-    num_rows = 8
-    num_cols = 8
+    num_rows = 10
+    num_cols = 10
 
     # box height and box width in pixels
     # make sure that the size of the boxes fits the screen of the device
@@ -32,7 +32,7 @@ class Constants(BaseConstants):
     box_width = '50px'
 
     # number of rounds to be played
-    num_rounds = 5
+    num_rounds = 1
 
     # determines whether all rounds played are payed-off or whether one round is randomly chosen for payment
     # if <random_payoff = True>, one round is randomly determined for payment

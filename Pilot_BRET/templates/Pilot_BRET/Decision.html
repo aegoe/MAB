@@ -1,0 +1,1528 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+<div class="page-header">
+    <p> Round {{player.round_number}} of {% if choice %} 150 {% elif not choice %} 50 {% endif %}</p>
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+{% if not safe %}
+{% if draw == 'TSR' %}
+
+<div class="background">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_1 %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_3 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position yield no information about the value of coins you get from each option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% elif draw == 'STR' %}
+
+<div class="background">
+
+       <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_2 %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_3 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position yield no information about the value of coins you get from each option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% elif draw == 'RTS' %}
+
+<div class="background">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_3 %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_2 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position yield no information about the value of coins you get from each option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% elif draw == 'TRS' %}
+
+<div class="background">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_1 %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_2 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position yield no information about the value of coins you get from each option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% elif draw == 'SRT' %}
+
+<div class="background">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_2 %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_1 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position yield no information about the value of coins you get from each option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% elif draw == 'RST' %}
+
+<div class="background">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_3 %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_1 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position yield no information about the value of coins you get from each option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% endif %}
+
+
+{% endif %}
+
+
+{% if safe %}
+
+{% if draw == 'TSRH' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_1 %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_safe %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% elif draw == 'STRH' %}
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_2 %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_safe %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'RTSH' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_3 %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_safe %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'TRSH' %}
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_1 %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_safe %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'SRTH' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_2 %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_safe %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'RSTH' %}
+
+
+<div class="backgroundsafe">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_3 %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_safe %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'HSTR' %}
+
+
+<div class="backgroundsafe">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_safe %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_3 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+
+{% elif draw == 'SHTR' %}
+
+<div class="backgroundsafe">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_2 %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_3 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'THSR' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_1 %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_3 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+
+{% elif draw == 'HTSR' %}
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_safe %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_3 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+
+
+{% elif draw == 'STHR' %}
+
+<div class="backgroundsafe">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_2 %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_3 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'TSHR' %}
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+
+        {% formfield player.option_1 %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_3 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'TRHS' %}
+
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_1 %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_2 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'RTHS' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+
+
+        {% formfield player.option_3 %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_2 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'HTRS' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+
+
+        {% formfield player.option_safe %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_2 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'THRS' %}
+
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+
+
+
+        {% formfield player.option_1 %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_2 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'RHTS' %}
+
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_3 %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_2 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% elif draw == 'HRTS' %}
+
+
+<div class="backgroundsafe">
+
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_safe %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_1 %}
+        {% formfield player.option_2 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'HRST' %}
+
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+
+        {% formfield player.option_safe %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_1 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% elif draw == 'RHST' %}
+
+
+<div class="backgroundsafe">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_3 %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_1 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'SHRT' %}
+
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_2 %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_1 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'HSRT' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_safe %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_1 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'RSHT' %}
+
+
+
+<div class="backgroundsafe">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_3 %}
+        {% formfield player.option_2 %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_1 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+
+{% elif draw == 'SRHT' %}
+
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_2 %}
+        {% formfield player.option_3 %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_1 %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% endif %}
+{% endif %}
+
+
+
+{% endblock %}
+
+
+
+
+{% block styles %}
+    <style type="text/css">
+        {% include 'Pilot_BRET/css/bandit_env.css' %}
+        .page-header {
+            margin-bottom: 0px;
+        }
+    </style>
+{% endblock %}

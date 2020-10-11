@@ -14,9 +14,9 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'Pilot_BRET'
-    num_rounds = 150
-    num_rounds_choice = 150
-    num_rounds_points = 50
+    num_rounds = 5
+    num_rounds_choice = 5
+    num_rounds_points = 5
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3

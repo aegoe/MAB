@@ -85,10 +85,10 @@ class Migration(migrations.Migration):
                 ('q_employment', otree.db.models.IntegerField(choices=[[1, 'Working (paid employee)'], [2, 'Working (self-employed)'], [3, 'Not working (temporary layoff from a job)'], [4, 'Not working (looking for work)'], [5, 'Not working (retired)'], [6, 'Not working (disabled)'], [7, 'Not working (other)'], [8, 'Prefer not to answer']], null=True, verbose_name='')),
                 ('q_education', otree.db.models.IntegerField(choices=[[1, 'Less than high school degree'], [2, 'High school graduate (high school diploma or equivalent including GED)'], [3, 'Some college but no degree'], [4, 'Associate degree in college (2-year)'], [5, 'Bachelor’s degree in college(4 - year)'], [6, 'Master’s degree'], [7, 'Doctoral degree'], [8, 'Professional degree (JD, MD)']], null=True, verbose_name='')),
                 ('q_ethnicity', otree.db.models.StringField(max_length=10000, null=True, verbose_name='')),
-                ('group', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Pilot.Group')),
+                ('group', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Pilot_BRET.Group')),
                 ('participant', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='pilot_player', to='otree.Participant')),
                 ('session', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='pilot_player', to='otree.Session')),
-                ('subsession', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Pilot.Subsession')),
+                ('subsession', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Pilot_BRET.Subsession')),
             ],
             options={
                 'db_table': 'Pilot_player',
@@ -97,6 +97,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='group',
             name='subsession',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Pilot.Subsession'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Pilot_BRET.Subsession'),
         ),
     ]
