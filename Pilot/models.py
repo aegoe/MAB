@@ -240,6 +240,18 @@ class Player(BasePlayer):
         blank=False
     )
 
+    q_maxoption_3 = models.IntegerField(
+        choices = [
+            [1, 'Triangle'],
+            [2, 'Circle'],
+            [3, 'Rectangle'],
+            [4, 'Hexagon'],
+            [5, 'In the long run, they would all return the same value'],
+        ],
+        widget=widgets.RadioSelect,
+        label="",
+        blank=False
+    )
 
     q_year = models.IntegerField(label="", blank=False, min=1900, max=2019)
 
