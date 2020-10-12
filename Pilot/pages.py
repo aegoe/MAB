@@ -1443,10 +1443,6 @@ class Questionnaire(Page):
             elif self.player.questionnaire_page == 4:
                 return ['q_exploration_strategy', 'q_firm']
             elif self.player.questionnaire_page == 5:
-                return ['q_fadein', 'q_fadeout']
-            elif self.player.questionnaire_page == 6:
-                return ['q_saving', 'q_wealth']
-            elif self.player.questionnaire_page == 7:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
@@ -1461,10 +1457,6 @@ class Questionnaire(Page):
             elif self.player.questionnaire_page == 4:
                 return ['q_exploration_strategy', 'q_firm']
             elif self.player.questionnaire_page == 5:
-                return ['q_fadein', 'q_fadeout']
-            elif self.player.questionnaire_page == 6:
-                return ['q_saving', 'q_wealth']
-            elif self.player.questionnaire_page == 7:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
@@ -1500,6 +1492,7 @@ class FinalInfo(Page):
                 }
 
 
+
 page_sequence = [
     Device,
     #AttentionCheck,
@@ -1518,7 +1511,7 @@ page_sequence = [
     Questionnaire,
     Questionnaire,
     Questionnaire,
-    Questionnaire,
-    Questionnaire,
+    #Questionnaire,
+    #Questionnaire,
     FinalInfo,
 ]
