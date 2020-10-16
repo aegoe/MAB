@@ -1435,8 +1435,14 @@ class Questionnaire(Page):
                 imi = [f'q_imi_{i}' for i in range(1, 8)]
                 return imi
             elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_firm', 'q_maxoption_3',]
+                epo = [f'q_epo_{i}' for i in range(1, 14)]
+                return epo
             elif self.player.questionnaire_page == 5:
+                max = [f'q_max_scale_{i}' for i in range(1, 7)]
+                return max
+            elif self.player.questionnaire_page == 6:
+                return ['q_exploration_strategy', 'q_firm', 'q_maxoption_3',]
+            elif self.player.questionnaire_page == 7:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
@@ -1449,8 +1455,14 @@ class Questionnaire(Page):
                 imi = [f'q_imi_{i}' for i in range(1, 8)]
                 return imi
             elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_firm', 'q_maxoption_3',]
+                epo = [f'q_epo_{i}' for i in range(1, 14)]
+                return epo
             elif self.player.questionnaire_page == 5:
+                max = [f'q_max_scale_{i}' for i in range(1, 7)]
+                return max
+            elif self.player.questionnaire_page == 6:
+                return ['q_exploration_strategy', 'q_firm', 'q_maxoption_3',]
+            elif self.player.questionnaire_page == 7:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
@@ -1505,7 +1517,7 @@ page_sequence = [
     Questionnaire,
     Questionnaire,
     Questionnaire,
-    #Questionnaire,
-    #Questionnaire,
+    Questionnaire,
+    Questionnaire,
     FinalInfo,
 ]

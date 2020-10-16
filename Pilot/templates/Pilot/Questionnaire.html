@@ -47,9 +47,15 @@
 {% include 'Pilot/include/questionnaire_IMI.html' %}
 
 {% elif player.questionnaire_page == 4 %}
-{% include 'Pilot/include/questionnaire_2.html' %}
+{% include 'Pilot/include/questionnaire_epo.html' %}
 
 {% elif player.questionnaire_page == 5 %}
+{% include 'Pilot/include/questionnaire_max.html' %}
+
+{% elif player.questionnaire_page == 6 %}
+{% include 'Pilot/include/questionnaire_2.html' %}
+
+{% elif player.questionnaire_page == 7 %}
 {% include 'Pilot/include/questionnaire_socio_1.html' %}
 
 

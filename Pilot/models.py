@@ -14,9 +14,9 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'Pilot'
-    num_rounds = 150
-    num_rounds_choice = 150
-    num_rounds_points = 50
+    num_rounds = 5
+    num_rounds_choice = 5
+    num_rounds_points = 5
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
@@ -336,6 +336,21 @@ class Player(BasePlayer):
 
 
 
+    def sixitems(label):
+        return models.IntegerField(
+            choices=[
+                [1, '1'],
+                [2, '2'],
+                [3, '3'],
+                [4, '4'],
+                [5, '5'],
+                [6, '6'],
+            ],
+            widget=widgets.RadioSelectHorizontal,
+            blank=False,
+            label=label
+        )
+
     def sevenitems(label):
         return models.IntegerField(
             choices=[
@@ -352,6 +367,28 @@ class Player(BasePlayer):
             label=label
         )
 
+    def thirteenitems(label):
+        return models.IntegerField(
+            choices=[
+                [1, '1'],
+                [2, '2'],
+                [3, '3'],
+                [4, '4'],
+                [5, '5'],
+                [6, '6'],
+                [7, '7'],
+                [8, '8'],
+                [9, '9'],
+                [10, '10'],
+                [11, '11'],
+                [12, '12'],
+                [13, '13'],
+            ],
+            widget=widgets.RadioSelectHorizontal,
+            blank=False,
+            label=label
+        )
+
 
     q_imi_1 = sevenitems('I enjoyed doing this task very much.')
     q_imi_2 = sevenitems('This task was fun to do.')
@@ -360,3 +397,24 @@ class Player(BasePlayer):
     q_imi_5 = sevenitems('I would describe this task as very interesting.')
     q_imi_6 = sevenitems('I thought this task was quite enjoyable.')
     q_imi_7 = sevenitems('While I was doing this task, I was thinking about how much I enjoyed it.')
+
+    q_epo_1 = sevenitems('Before I act I consider what I will gain or lose in the future as a result of my actions.')
+    q_epo_2 = sevenitems('I try to anticipate as many consequences of my actions as I can.')
+    q_epo_3 = sevenitems('Before I make a decision I consider all possible outcomes.')
+    q_epo_4 = sevenitems('I always try to assess how important the potential consequences of my decisions might be.')
+    q_epo_5 = sevenitems('I try hard to predict how likely different consequences are.')
+    q_epo_6 = sevenitems('Usually I carefully estimate the risk of various outcomes occurring.')
+    q_epo_7 = sevenitems('I keep a positive attitude that things always turn out all right.')
+    q_epo_8 = sevenitems('I prefer to think about the good things that can happen rather than the bad.')
+    q_epo_9 = sevenitems('When thinking over my decisions I focus more on their positive end results.')
+    q_epo_10 = sevenitems('I tend to think a lot about the negative outcomes that might occur as a result of my actions.')
+    q_epo_11 = sevenitems('I am often afraid that things might turn out badly.')
+    q_epo_12 = sevenitems('When thinking over my decisions I focus more on their negative end results.')
+    q_epo_13 = sevenitems('I often worry about what could go wrong as a result of my decisions.')
+
+    q_max_scale_1 = sevenitems('No matter how satisfied I am with my job, it’s only right for me to be on the lookout for better opportunities.')
+    q_max_scale_2 = sevenitems('When I am in the car listening to the radio, I often check other stations to see if something better is playing, even if I am relatively satisfied with what I’m listening to.')
+    q_max_scale_3 = sevenitems('I often find it difficult to shop for a gift for a friend')
+    q_max_scale_4 = sevenitems('Choosing a tv show or a movie to watch is really difficult. I’m always struggling to pick the best one.')
+    q_max_scale_5 = sevenitems('I never settle for second best.')
+    q_max_scale_6 = sevenitems('No matter what I do, I have the highest standards for myself.')

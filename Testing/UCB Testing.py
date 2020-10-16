@@ -71,7 +71,7 @@ class ucb_bandit:
             (np.log(self.n)) / self.k_n))
 
         print(a)
-        reward = np.random.normal(self.mu[a], 1)
+        reward = self.mu[a]
         print(reward)
         # Update counts
         self.n += 1
