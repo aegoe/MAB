@@ -98,7 +98,7 @@ class Device(Page):
             self.player.variance = self.participant.vars['variance'] = self.session.config['variance']
 
             treatments = ['safe_choice', 'safe_no_choice', 'choice', 'no_choice']
-            weights_2 = [0.5, 0.5, 0, 0]
+            weights_2 = [1, 0, 0, 0]
             draw_2 = choice(treatments, 1, p=weights_2)
             self.participant.vars['draw_2'] = draw_2[0]
             if draw_2[0] == 'safe_choice':

@@ -127,21 +127,56 @@ from collections import Counter
 # print('Your payoff from Option 2 using', Urn_2_input_val, 'draws is: ', payoff_2)
 # print('Your payoff from Option 3 using', Urn_3_input_val, 'draws is: ', payoff_3)
 #
+#
+# Urn = [-4, -3, 4, 12]
+#
+# weights = [0.125, 0.125, 0.39063, 0.35937]
+#
+# i = 0
+# bla = 0
+#
+# for i in range(1000000):
+#     draws = random.choices(Urn, weights=weights, k=3)
+#     print(draws)
+#     sum_draws = sum(draws)
+#     print(sum_draws)
+#     if sum_draws>=12:
+#         bla +=1
+#
+# print('How often did three draws at least equal safe option?')
+# print(bla)
 
-Urn = [-4, -3, 4, 12]
+Urn_1 = ['7', '3', '2', '-4']
+weights_1 = [0.25, 0.25, 0.25, 0.25]
+draws_1 = random.choices(Urn_1, weights=weights_1, k=1000)
+draws_1_str = str(draws_1)[1:-1]
+draws_1_str = draws_1_str.replace("'", "")
+urn_draws_1 = draws_1_str
+count_1 = Counter(draws_1)
+data_counts = {}
+data_counts['count_1'] = count_1
+for i in data_counts.keys():
+    for k, v in data_counts[i].items():
+        if k == '9':
+            data_counts[i][k] = v * 9
+        elif k == '7':
+            data_counts[i][k] = v * 7
+        elif k == '5':
+            data_counts[i][k] = v * 5
+        elif k == '3':
+            data_counts[i][k] = v * 3
+        elif k == '2':
+            data_counts[i][k] = v * 2
+        elif k == '-2':
+            data_counts[i][k] = v * -2
+        elif k == '-4':
+            data_counts[i][k] = v * -4
+        elif k == '-6':
+            data_counts[i][k] = v * -6
 
-weights = [0.125, 0.125, 0.39063, 0.35937]
+payoff = 0
+for i in data_counts.keys():
+    for values in data_counts[i].values():
+        payoff += values
 
-i = 0
-bla = 0
-
-for i in range(1000000):
-    draws = random.choices(Urn, weights=weights, k=3)
-    print(draws)
-    sum_draws = sum(draws)
-    print(sum_draws)
-    if sum_draws>=12:
-        bla +=1
-
-print('How often did three draws at least equal safe option?')
-print(bla)
+print(payoff)
