@@ -34,7 +34,7 @@ mturk_hit_settings = {
     'description': 'This HIT takes approximately 20 minutes to complete. Please accept this HIT only if you can commit to completing it right away and without interruption. You can earn a substantial bonus that exceeds the reward for this HIT.',
     'frame_height': 800,
     'template': 'global/mturk_template.html',
-    'minutes_allotted_per_assignment': 60,
+    'minutes_allotted_per_assignment': 30,
     'expiration_hours': 168,
     'grant_qualification_id': '3F4KLX19QVRYWWIPE260NYV94EYOER',
     'qualification_requirements': [
@@ -61,14 +61,25 @@ mturk_hit_settings = {
 }
 
 SESSION_CONFIG_DEFAULTS = {
-    'real_world_currency_per_point': 0.01,
-    'participation_fee': 1.20,
+    'real_world_currency_per_point': 0.1,
+    'participation_fee': 0.5,
     'doc': "",
     'mturk_hit_settings': mturk_hit_settings,
 }
 
 SESSION_CONFIGS = [
+    {
+        'name': 'MAB_Pilot_Study_Priors',
+        'display_name': "Pilot Study Priors",
+        'num_demo_participants': 1,
+        'app_sequence': ['Pilot_Priors'],
+        'choice': False,
+        'safe': False,
+        'test_urns': False,
+        'testing': False,
+        'variance': False,
 
+    },
     # {
     #     'name': 'MAB_Pilot_Study_Var_2_BRET',
     #     'display_name': "Pilot_BRET Study Variance 2 BRET",
@@ -93,18 +104,18 @@ SESSION_CONFIGS = [
     #     'variance': True,
     #
     # },
-    {
-        'name': 'MAB_Pilot_Study_Var',
-        'display_name': "Pilot Study Variance",
-        'num_demo_participants': 1,
-        'app_sequence': ['Pilot'],
-        'choice': False,
-        'safe': False,
-        'test_urns': False,
-        'testing': False,
-        'variance': True,
-
-    },
+    # {
+    #     'name': 'MAB_Pilot_Study_Var',
+    #     'display_name': "Pilot Study Variance",
+    #     'num_demo_participants': 1,
+    #     'app_sequence': ['Pilot'],
+    #     'choice': False,
+    #     'safe': False,
+    #     'test_urns': False,
+    #     'testing': False,
+    #     'variance': True,
+    #
+    # },
     # {
     #     'name': 'MAB_Pilot_Study',
     #     'display_name': "Pilot Study",

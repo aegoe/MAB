@@ -1,0 +1,63 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %} Comprehension questions
+{% endblock %}
+
+{% block content %}
+    {% if player.comprehension_page == 2 %}
+        <div class="card">
+            <div class="card-body text-white bg-danger">
+                <p> Unfortunately, at least one answer is incorrect. Please adjust your answers in the
+                    form.</p>
+                <b>This is your last attempt. If you fail again, you will not be able to finish this HIT and you receive
+                    no payoff.</b>
+            </div>
+        </div>
+        <br>
+    {% endif %}
+
+
+    {% for field in form.visible_fields %}
+        <div {% if player.comprehension_page == 1 %} class="card"
+                                                     {% else %}{% if field.value != 1 %}class="card border-danger mb-3"
+                                                     {% else %}class="card"{% endif %}{% endif %}>
+            <div class="card-header">
+                {{ field.label }}
+            </div>
+            <div class="card-body questions">
+                {{ field }}
+            </div>
+            {% if player.comprehension_page == 2 %}
+                {% if field.value != 1 %}
+                    <div class="card-footer bg-transparent border-danger">
+                        <p style="color:red; display:inline">Your answer to this question is not correct. If you are
+                            uncertain, re-read the instructions at the bottom of the page.</p>
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+        <br>
+    {% endfor %}
+
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
+                 aria-expanded="true" aria-controls="collapseOne">
+                Click here to reread the instructions
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                        {% include 'Pilot_Priors/include/instru_cq/instru_1.html' %}
+                        {% include 'Pilot_Priors/include/instru_cq/instru_2.html' %}
+                        {% include 'Pilot_Priors/include/instru_cq/instru_3.html' %}
+                        {% include 'Pilot_Priors/include/instru_cq/instru_4.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+<br>
+
+<button value="True" id="proceed" class="btn btn-primary btn-large">Proceed</button>
+{% endblock %}

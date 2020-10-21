@@ -22,7 +22,7 @@ class ucb_bandit:
         values.
     '''
 
-    def __init__(self, k, c, iters, mu='Pilot'):
+    def __init__(self, k, c, iters, mu='Pilot_Priors'):
         # Number of arms
         self.k = 4
         # Exploration parameter
@@ -39,7 +39,7 @@ class ucb_bandit:
         # Mean reward for each arm
         self.k_reward = np.zeros(k)
 
-        if type(mu) == list or type(mu).__module__ == np.__name__ or mu == 'Pilot':
+        if type(mu) == list or type(mu).__module__ == np.__name__ or mu == 'Pilot_Priors':
             # User-defined averages
             urn1 = [-4, -3, 4, 12]
             urn2 = [-4, -3, 4, 12]
@@ -97,7 +97,7 @@ class ucb_bandit:
         self.mean_reward = 0
         self.reward = np.zeros(iters)
         self.k_reward = np.zeros(self.k)
-        if mu == 'Pilot':
+        if mu == 'Pilot_Priors':
             urn1 = [-4, -3, 4, 12]
             urn2 = [-4, -3, 4, 12]
             urn3 = [-7, -6, 1, 9]
@@ -125,7 +125,7 @@ ucb = ucb_bandit(k, 2, iters)
 episodes = 100
 # Run experiments
 for i in range(episodes):
-    ucb.reset('Pilot')
+    ucb.reset('Pilot_Priors')
     # Run experiments
     ucb.run()
 

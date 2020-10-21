@@ -1,0 +1,95 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+<div class="page-header">
+    <p> Learning Draws </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<br>
+<p>The table below shows summary information for {{Constants.num_priors}} prior draws from each option.</p>
+
+<p>You can use this data to inform your decisions over the next {% if choice %} six {% elif not choice %} two {% endif %} rounds. </p>
+
+<p> Note that options might be arranged in a different order on your decision screen.</p>
+
+
+<br>
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Triangle
+            <div class="imageholder"><img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Circle
+            <div class="imageholder"><img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Rectangle
+            <div class="imageholder"><img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean (10 draws): &nbsp;</b> </td>
+            <td class="td"> 3.6 &nbsp;</td>
+            <td class="td"> 1.9 &nbsp;</td>
+            <td class="td"> 2 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD (10 draws):&nbsp;</b> </td>
+            <td class="td"> 1.7 &nbsp;</td>
+            <td class="td"> 14.1 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> -1 </td>
+            <td class="td"> -9</td>
+            <td class="td"> 2 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 5 &nbsp;</td>
+            <td class="td"> 30 &nbsp;</td>
+            <td class="td"> 2 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% if choice %}
+<p>You will now complete six rounds. In each round, you will choose one of the three options above.</p>
+<p>Every three rounds, you will receive feedback on your earned income. </p>
+
+{% elif not choice %}
+<p>You will now complete two rounds. In each round, you will decide how to allocate three points between the three options above.</p>
+<p>After each round, you will receive feedback on your earned income. </p>
+
+{% endif %}
+
+
+<br>
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Proceed to the decision stage</button>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+{% block styles %}
+    <style type="text/css">
+        {% include 'Pilot_Priors/css/priors.css' %}
+    </style>
+{% endblock %}
