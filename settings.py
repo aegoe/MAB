@@ -92,18 +92,18 @@ SESSION_CONFIGS = [
     #     'variance': True,
     #
     # },
-    # {
-    #     'name': 'MAB_Pilot_Study_Var_2',
-    #     'display_name': "Pilot Study Variance 2",
-    #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot'],
-    #     'choice': False,
-    #     'safe': False,
-    #     'test_urns': True,
-    #     'testing': False,
-    #     'variance': True,
-    #
-    # },
+    {
+        'name': 'MAB_Pilot_Study_Var_2',
+        'display_name': "Pilot Study Variance 2",
+        'num_demo_participants': 1,
+        'app_sequence': ['Pilot'],
+        'choice': False,
+        'safe': False,
+        'test_urns': True,
+        'testing': False,
+        'variance': True,
+
+    },
     # {
     #     'name': 'MAB_Pilot_Study_Var',
     #     'display_name': "Pilot Study Variance",

@@ -98,7 +98,7 @@ class Device(Page):
             self.player.variance = self.participant.vars['variance'] = self.session.config['variance']
 
             treatments = ['safe_choice', 'safe_no_choice', 'choice', 'no_choice']
-            weights_2 = [0, 0, 0.5, 0.5]
+            weights_2 = [0, 0, 1, 0]
             draw_2 = choice(treatments, 1, p=weights_2)
             self.participant.vars['draw_2'] = draw_2[0]
             if draw_2[0] == 'safe_choice':
@@ -349,20 +349,21 @@ class Decision(Page):
             self.player.urn_draws_2 = draws_2_str
             self.player.urn_draws_3 = draws_3_str
 
-            print(self.player.urn_draws_1)
-            print(draws_1)
-            print(draws_2)
-            print(draws_3)
+            urn_draws_1_sum = []
+            urn_draws_1_sum.append(self.player.urn_draws_1)
+
+            urn_draws_2_sum = []
+            urn_draws_2_sum.append(self.player.urn_draws_2)
+
+            urn_draws_3_sum = []
+            urn_draws_3_sum.append(self.player.urn_draws_3)
+
+
+            print(urn_draws_1_sum)
 
             count_1 = Counter(draws_1)
             count_2 = Counter(draws_2)
             count_3 = Counter(draws_3)
-
-            print(count_1)
-            print(count_2)
-            print(count_3)
-
-
 
             data_counts = {}
             data_counts['count_1'] = count_1
@@ -407,6 +408,11 @@ class Decision(Page):
                         self.player.payoff_2 += v
                     if i == 'count_3':
                         self.player.payoff_3 += v
+
+            payoff_1_sum = 0
+            payoff_1_sum += int(self.player.payoff_1)
+
+            print(payoff_1_sum)
 
         elif not self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['test_urns'] and not self.participant.vars['variance']:
 

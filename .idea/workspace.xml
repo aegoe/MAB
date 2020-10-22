@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/css/priors.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/PriorsTransition.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing/UCB Testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/UCB Testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__temp_migrations/Pilot/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/__temp_migrations/Pilot/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__temp_migrations/auth/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/__temp_migrations/auth/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__temp_migrations/contenttypes/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/__temp_migrations/contenttypes/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__temp_migrations/otree/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/__temp_migrations/otree/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__temp_migrations/sessions/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/__temp_migrations/sessions/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pilot_Priors/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Priors/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pilot_Priors/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Priors/pages.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +26,6 @@
               <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_1.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -69,53 +56,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Feedback.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="2590" column="13" selection-start-line="2590" selection-start-column="13" selection-end-line="2590" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot_Priors/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="246" column="32" lean-forward="true" selection-start-line="246" selection-start-column="32" selection-end-line="246" selection-end-column="32" />
+            <state relative-caret-position="445">
+              <caret line="347" column="35" selection-start-line="347" selection-start-column="24" selection-end-line="347" selection-end-column="35" />
               <folding>
                 <element signature="e#0#71#0" expanded="true" />
-                <element signature="e#16502#53470#0" />
+                <element signature="e#23935#27040#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/PriorsTransition.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot_Priors/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="95" column="65" selection-start-line="95" selection-start-column="65" selection-end-line="95" selection-end-column="65" />
+            <state relative-caret-position="494">
+              <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-end-line="48" />
               <folding>
                 <element signature="e#0#134#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="79" column="38" selection-start-line="79" selection-end-line="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/css/priors.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -133,7 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>test_urn</find>
       <find>payof</find>
       <find>payoff</find>
       <find>safe</find>
@@ -163,6 +131,7 @@
       <find>const</find>
       <find>compreh</find>
       <find>prio</find>
+      <find>compre</find>
     </findStrings>
     <replaceStrings>
       <replace>Circle</replace>
@@ -174,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/questionnaire_4.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/FinalInfo.html" />
         <option value="$PROJECT_DIR$/_templates/global/mturk_template.html" />
         <option value="$PROJECT_DIR$/Pilot/templates/Pilot/include/instru_cq/instru_1.html" />
@@ -221,10 +189,11 @@
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_2.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_4.html" />
         <option value="$PROJECT_DIR$/settings.py" />
-        <option value="$PROJECT_DIR$/Pilot_Priors/models.py" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html" />
-        <option value="$PROJECT_DIR$/Pilot_Priors/pages.py" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/PriorsTransition.html" />
+        <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/PriorsTransition.html" />
+        <option value="$PROJECT_DIR$/Pilot_Priors/pages.py" />
+        <option value="$PROJECT_DIR$/Pilot_Priors/models.py" />
       </list>
     </option>
   </component>
@@ -261,17 +230,6 @@
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="_templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="_templates" type="462c0819:PsiDirectoryNode" />
-              <item name="global" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
               <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -286,22 +244,6 @@
               <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -320,16 +262,17 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Program Files\oTree\MAB\Pilot_Priors\templates\Pilot_Priors" />
       <recent name="C:\Program Files\oTree\MAB\Pilot\templates\Pilot" />
       <recent name="C:\Program Files\oTree\MAB\Pilot" />
       <recent name="C:\Program Files\oTree\MAB\_builtin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Program Files\oTree\MAB\Pilot_Priors\templates\Pilot_Priors\include" />
       <recent name="C:\Program Files\oTree\MAB\Pilot_Priors\templates\Pilot_Priors\css" />
       <recent name="C:\Program Files\oTree\MAB\bret\templates\bret" />
       <recent name="C:\Program Files\oTree\MAB\_templates\global" />
       <recent name="C:\Program Files\oTree\MAB\Pilot\templates\Pilot\include\instru_cq" />
-      <recent name="C:\Program Files\oTree\MAB\Pilot" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -459,18 +402,17 @@
       <workItem from="1603177859946" duration="23000" />
       <workItem from="1603206737341" duration="119000" />
       <workItem from="1603219018333" duration="965000" />
-      <workItem from="1603262059472" duration="12893000" />
+      <workItem from="1603262059472" duration="17762000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292465000" />
+    <option name="totallyTimeSpent" value="297334000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20971185" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20971185" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -484,7 +426,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32949087" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50160086" side_tool="true" weight="0.26897213" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49839914" visible="true" weight="0.21998079" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49839914" visible="true" weight="0.24864277" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32853025" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -797,13 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Feedback.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="2624" selection-start-line="2624" selection-end-line="2628" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Decision.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="536">
@@ -856,27 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Priors/pages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="246" column="32" lean-forward="true" selection-start-line="246" selection-start-column="32" selection-end-line="246" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-            <element signature="e#16502#53470#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Priors/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="95" column="65" selection-start-line="95" selection-start-column="65" selection-end-line="95" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -884,10 +798,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/PriorsTransition.html">
+    <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/PriorsTransition.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="374">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Feedback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="2590" column="13" selection-start-line="2590" selection-start-column="13" selection-end-line="2590" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Priors/pages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="347" column="35" selection-start-line="347" selection-start-column="24" selection-end-line="347" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#23935#27040#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Priors/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-end-line="48" />
+          <folding>
+            <element signature="e#0#134#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

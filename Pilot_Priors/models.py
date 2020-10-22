@@ -42,7 +42,11 @@ class Constants(BaseConstants):
     safe_option = 2
 
 class Subsession(BaseSubsession):
-    pass
+    def feedback_coins(self):
+        player = self.get_players()
+        if self.round_number == 3:
+            for p in player.in_previous_rounds():
+                self.urn_draws_1_sum =
 
 
 class Group(BaseGroup):
@@ -81,6 +85,12 @@ class Player(BasePlayer):
     controls = models.IntegerField(initial=0)
     comprehension_page = models.IntegerField(initial=1)
     completion_code = models.StringField()
+    urn_draws_1_sum = models.StringField()
+    urn_draws_2_sum = models.StringField()
+    urn_draws_3_sum = models.StringField()
+    payoff_1_sum = models.CurrencyField()
+    payoff_2_sum = models.CurrencyField()
+    payoff_3_sum = models.CurrencyField()
 
 
 
