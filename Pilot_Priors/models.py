@@ -42,12 +42,7 @@ class Constants(BaseConstants):
     safe_option = 2
 
 class Subsession(BaseSubsession):
-    def feedback_coins(self):
-        player = self.get_players()
-        if self.round_number == 3:
-            for p in player.in_previous_rounds():
-                self.urn_draws_1_sum =
-
+    pass
 
 class Group(BaseGroup):
     pass
