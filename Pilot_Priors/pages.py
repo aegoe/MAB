@@ -325,13 +325,13 @@ class Decision(Page):
 
         if self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['test_urns'] and not self.participant.vars['variance']:
 
-            Urn_1 = ['-4', '-3', '4', '12']
-            Urn_2 = ['-4', '4', '11', '12']
-            Urn_3 = ['-7', '-6', '1', '9']
+            Urn_1 = ['5', '4', '3', '-1']
+            Urn_2 = ['30', '-4', '-6', '-9']
+            Urn_3 = ['2', '2', '2', '2']
 
-            weights_1 = [0.125, 0.125, 0.39063, 0.35937]
-            weights_2 = [0.35937, 0.39063, 0.125, 0.125]
-            weights_3 = [0.125, 0.125, 0.39063, 0.35937]
+            weights_1 = [0.25, 0.25, 0.25, 0.25]
+            weights_2 = [0.25, 0.25, 0.25, 0.25]
+            weights_3 = [0.25, 0.25, 0.25, 0.25]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -349,17 +349,6 @@ class Decision(Page):
             self.player.urn_draws_2 = draws_2_str
             self.player.urn_draws_3 = draws_3_str
 
-            urn_draws_1_sum = []
-            urn_draws_1_sum.append(self.player.urn_draws_1)
-
-            urn_draws_2_sum = []
-            urn_draws_2_sum.append(self.player.urn_draws_2)
-
-            urn_draws_3_sum = []
-            urn_draws_3_sum.append(self.player.urn_draws_3)
-
-
-            print(urn_draws_1_sum)
 
             count_1 = Counter(draws_1)
             count_2 = Counter(draws_2)
@@ -372,57 +361,247 @@ class Decision(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == '-7':
-                        data_counts[i][k] = v * Constants.a
+                    if k == '-9':
+                        data_counts[i][k] = v * -9
                     elif k == '-6':
-                        data_counts[i][k] = v * Constants.b
+                        data_counts[i][k] = v * -6
                     elif k == '-4':
-                        data_counts[i][k] = v * Constants.c
-                    elif k == '-3':
-                        data_counts[i][k] = v * Constants.d
-                    elif k == '1':
-                        data_counts[i][k] = v * Constants.e
+                        data_counts[i][k] = v * -4
+                    elif k == '-1':
+                        data_counts[i][k] = v * -1
+                    elif k == '2':
+                        data_counts[i][k] = v * 2
+                    elif k == '3':
+                        data_counts[i][k] = v * 3
                     elif k == '4':
-                        data_counts[i][k] = v * Constants.f
-                    elif k == '9':
-                        data_counts[i][k] = v * Constants.g
-                    elif k == '11':
-                        data_counts[i][k] = v * Constants.h
-                    elif k == '12':
-                        data_counts[i][k] = v * Constants.i
+                        data_counts[i][k] = v * 4
+                    elif k == '5':
+                        data_counts[i][k] = v * 5
+                    elif k == '30':
+                        data_counts[i][k] = v * 30
 
             self.player.payoff = 0
+            payoffs = 0
             for i in data_counts.keys():
                 for values in data_counts[i].values():
-                    self.player.payoff += values
+                    payoffs += values
+
+            self.player.payoff = payoffs
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
             self.player.payoff_3 = 0
 
+            payoffs_1 = 0
+            payoffs_2 = 0
+            payoffs_3 = 0
+
             for i in data_counts.keys():
                 for v in data_counts[i].values():
                     if i == 'count_1':
-                        self.player.payoff_1 += v
+                        payoffs_1 += v
                     if i == 'count_2':
-                        self.player.payoff_2 += v
+                        payoffs_2 += v
                     if i == 'count_3':
-                        self.player.payoff_3 += v
+                        payoffs_3 += v
 
-            payoff_1_sum = 0
-            payoff_1_sum += int(self.player.payoff_1)
+            self.player.payoff_1 = payoffs_1
+            self.player.payoff_2 = payoffs_2
+            self.player.payoff_3 = payoffs_3
 
-            print(payoff_1_sum)
+            if self.player.round_number == 1:
+                self.player.participant.vars['urn_draws_1_1'] = draws_1_str
+                self.player.participant.vars['urn_draws_2_1'] = draws_2_str
+                self.player.participant.vars['urn_draws_3_1'] = draws_3_str
+
+                self.player.participant.vars['payoff_1_1'] = payoffs_1
+                self.player.participant.vars['payoff_2_1'] = payoffs_2
+                self.player.participant.vars['payoff_3_1'] = payoffs_3
+
+                payoff_sums_1 = payoffs_1 + payoffs_2 + payoffs_3
+                self.player.participant.vars['payoff_sum_1'] = payoff_sums_1
+
+                option_1_1 = self.player.option_1
+                self.player.participant.vars['option_1_1'] = option_1_1
+
+                option_2_1 = self.player.option_2
+                self.player.participant.vars['option_2_1'] = option_2_1
+
+                option_3_1 = self.player.option_3
+                self.player.participant.vars['option_3_1'] = option_3_1
+
+            if self.player.round_number == 2:
+                self.player.participant.vars['urn_draws_1_2'] = draws_1_str
+                self.player.participant.vars['urn_draws_2_2'] = draws_2_str
+                self.player.participant.vars['urn_draws_3_2'] = draws_3_str
+
+                self.player.participant.vars['payoff_1_2'] = payoffs_1
+                self.player.participant.vars['payoff_2_2'] = payoffs_2
+                self.player.participant.vars['payoff_3_2'] = payoffs_3
+
+                payoff_sums_2 = payoffs_1 + payoffs_2 + payoffs_3
+                self.player.participant.vars['payoff_sum_2'] = payoff_sums_2
+
+                option_1_2 = self.player.option_1
+                self.player.participant.vars['option_1_2'] = option_1_2
+
+                option_2_2 = self.player.option_2
+                self.player.participant.vars['option_2_2'] = option_2_2
+
+                option_3_2 = self.player.option_3
+                self.player.participant.vars['option_3_2'] = option_3_2
+
+            if self.player.round_number == 3:
+                self.player.participant.vars['urn_draws_1_3'] = draws_1_str
+                self.player.participant.vars['urn_draws_2_3'] = draws_2_str
+                self.player.participant.vars['urn_draws_3_3'] = draws_3_str
+
+                self.player.participant.vars['payoff_1_3'] = payoffs_1
+                self.player.participant.vars['payoff_2_3'] = payoffs_2
+                self.player.participant.vars['payoff_3_3'] = payoffs_3
+
+                payoff_sums_3 = payoffs_1 + payoffs_2 + payoffs_3
+                self.player.participant.vars['payoff_sum_3'] = payoff_sums_3
+
+                payoff_sums_3rounds = self.player.participant.vars['payoff_sum_1'] + self.player.participant.vars['payoff_sum_2'] + payoff_sums_3
+                self.player.participant.vars['payoff_sum_3rounds'] = payoff_sums_3rounds
+
+                payoff_sums_3rounds_1 = self.player.participant.vars['payoff_1_1'] + self.player.participant.vars['payoff_1_2'] + payoffs_1
+                self.player.participant.vars['payoff_sum_3rounds_1'] = payoff_sums_3rounds_1
+
+                payoff_sums_3rounds_2 = self.player.participant.vars['payoff_2_1'] + self.player.participant.vars['payoff_2_2'] + payoffs_2
+                self.player.participant.vars['payoff_sum_3rounds_2'] = payoff_sums_3rounds_2
+
+                payoff_sums_3rounds_3 = self.player.participant.vars['payoff_3_1'] + self.player.participant.vars['payoff_3_2'] + payoffs_3
+                self.player.participant.vars['payoff_sum_3rounds_3'] = payoff_sums_3rounds_3
+
+                urn_draws_1_sums = self.player.participant.vars['urn_draws_1_1'] + self.player.participant.vars['urn_draws_1_2'] + draws_1_str
+                print(urn_draws_1_sums)
+                self.player.participant.vars['urn_draws_1_sum'] = urn_draws_1_sums
+
+                urn_draws_2_sums = self.player.participant.vars['urn_draws_2_1'] + self.player.participant.vars['urn_draws_2_2'] + draws_2_str
+                urn_draws_2_sums = urn_draws_2_sums.replace("'","")
+                self.player.participant.vars['urn_draws_2_sum'] = urn_draws_2_sums
+
+                urn_draws_3_sums = self.player.participant.vars['urn_draws_3_1'] + self.player.participant.vars['urn_draws_3_2'] + draws_3_str
+                urn_draws_3_sums = urn_draws_3_sums.replace("'","")
+                self.player.participant.vars['urn_draws_3_sum'] = urn_draws_3_sums
+
+                option_1_3 = self.player.option_1
+                self.player.participant.vars['option_1_3'] = option_1_3
+
+                option_2_3 = self.player.option_2
+                self.player.participant.vars['option_2_3'] = option_2_3
+
+                option_3_3 = self.player.option_3
+                self.player.participant.vars['option_3_3'] = option_3_3
+
+                option_1_sum = self.player.participant.vars['option_1_1'] + self.player.participant.vars['option_1_2'] + option_1_3
+                self.player.participant.vars['option_1_sum'] = option_1_sum
+
+                option_2_sum = self.player.participant.vars['option_2_1'] + self.player.participant.vars['option_2_2'] + option_2_3
+                self.player.participant.vars['option_2_sum'] = option_2_sum
+
+                option_3_sum = self.player.participant.vars['option_3_1'] + self.player.participant.vars['option_3_2'] + option_3_3
+                self.player.participant.vars['option_3_sum'] = option_3_sum
+
+            if self.player.round_number == 4:
+                self.player.participant.vars['urn_draws_1_4'] = draws_1_str
+                self.player.participant.vars['urn_draws_2_4'] = draws_2_str
+                self.player.participant.vars['urn_draws_3_4'] = draws_3_str
+
+                self.player.participant.vars['payoff_1_4'] = payoffs_1
+                self.player.participant.vars['payoff_2_4'] = payoffs_2
+                self.player.participant.vars['payoff_3_4'] = payoffs_3
+
+                payoff_sums_4 = payoffs_1 + payoffs_2 + payoffs_3
+                self.player.participant.vars['payoff_sum_4'] = payoff_sums_4
+
+                option_1_4 = self.player.option_1
+                self.player.participant.vars['option_1_4'] = option_1_4
+
+                option_2_4 = self.player.option_2
+                self.player.participant.vars['option_2_4'] = option_2_4
+
+                option_3_4 = self.player.option_3
+                self.player.participant.vars['option_3_4'] = option_3_4
+
+            if self.player.round_number == 5:
+                self.player.participant.vars['urn_draws_1_5'] = draws_1_str
+                self.player.participant.vars['urn_draws_2_5'] = draws_2_str
+                self.player.participant.vars['urn_draws_3_5'] = draws_3_str
+
+                self.player.participant.vars['payoff_1_5'] = payoffs_1
+                self.player.participant.vars['payoff_2_5'] = payoffs_2
+                self.player.participant.vars['payoff_3_5'] = payoffs_3
+
+                payoff_sums_5 = payoffs_1 + payoffs_2 + payoffs_3
+                self.player.participant.vars['payoff_sum_5'] = payoff_sums_5
+
+                option_1_5 = self.player.option_1
+                self.player.participant.vars['option_1_5'] = option_1_5
+
+                option_2_5 = self.player.option_2
+                self.player.participant.vars['option_2_5'] = option_2_5
+
+                option_3_5 = self.player.option_3
+                self.player.participant.vars['option_3_5'] = option_3_5
+
+                print(self.player.participant.vars['option_3_5'])
+                print(self.player.participant.vars['option_2_5'])
+                print(self.player.participant.vars['option_1_5'])
+
+            if self.player.round_number == 6:
+                self.player.participant.vars['urn_draws_1_6'] = draws_1_str
+                self.player.participant.vars['urn_draws_2_6'] = draws_2_str
+                self.player.participant.vars['urn_draws_3_6'] = draws_3_str
+
+                self.player.participant.vars['payoff_1_6'] = payoffs_1
+                self.player.participant.vars['payoff_2_6'] = payoffs_2
+                self.player.participant.vars['payoff_3_6'] = payoffs_3
+
+                payoff_sums_6 = payoffs_1 + payoffs_2 + payoffs_3
+                self.player.participant.vars['payoff_sum_6'] = payoff_sums_6
+
+                payoff_sums_36rounds = self.player.participant.vars['payoff_sum_4'] + self.player.participant.vars['payoff_sum_5'] + payoff_sums_6
+                self.player.participant.vars['payoff_sum_36rounds'] = payoff_sums_36rounds
+
+                payoff_sums_3rounds_4 = self.player.participant.vars['payoff_1_4'] + self.player.participant.vars['payoff_1_5'] + payoffs_1
+                self.player.participant.vars['payoff_sum_3rounds_4'] = payoff_sums_3rounds_4
+
+                payoff_sums_3rounds_5 = self.player.participant.vars['payoff_2_4'] + self.player.participant.vars['payoff_2_5'] + payoffs_2
+                self.player.participant.vars['payoff_sum_3rounds_5'] = payoff_sums_3rounds_5
+
+                payoff_sums_3rounds_6 = self.player.participant.vars['payoff_3_4'] + self.player.participant.vars['payoff_3_5'] + payoffs_3
+                self.player.participant.vars['payoff_sum_3rounds_6'] = payoff_sums_3rounds_6
+
+                option_1_6 = self.player.option_1
+                self.player.participant.vars['option_1_6'] = option_1_6
+
+                option_2_6 = self.player.option_2
+                self.player.participant.vars['option_2_6'] = option_2_6
+
+                option_3_6 = self.player.option_3
+                self.player.participant.vars['option_3_6'] = option_3_6
+
+                option_4_sum = self.player.participant.vars['option_1_4'] + self.player.participant.vars['option_1_5'] + option_1_6
+                self.player.participant.vars['option_4_sum'] = option_4_sum
+
+                option_5_sum = self.player.participant.vars['option_2_4'] + self.player.participant.vars['option_2_5'] + option_2_6
+                self.player.participant.vars['option_5_sum'] = option_5_sum
+
+                option_6_sum = self.player.participant.vars['option_3_4'] + self.player.participant.vars['option_3_5'] + option_3_6
+                self.player.participant.vars['option_6_sum'] = option_6_sum
 
         elif not self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['test_urns'] and not self.participant.vars['variance']:
 
-            Urn_1 = ['-4', '-3', '4', '12']
-            Urn_2 = ['-4', '4', '11', '12']
-            Urn_3 = ['-7', '-6', '1', '9']
+            Urn_1 = ['5', '4', '3', '-1']
+            Urn_2 = ['30', '-4', '-6', '-9']
+            Urn_3 = ['2', '2', '2', '2']
 
-            weights_1 = [0.125, 0.125, 0.39063, 0.35937]
-            weights_2 = [0.35937, 0.39063, 0.125, 0.125]
-            weights_3 = [0.125, 0.125, 0.39063, 0.35937]
+            weights_1 = [0.25, 0.25, 0.25, 0.25]
+            weights_2 = [0.25, 0.25, 0.25, 0.25]
+            weights_3 = [0.25, 0.25, 0.25, 0.25]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -462,24 +641,24 @@ class Decision(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == '-7':
-                        data_counts[i][k] = v * Constants.a
+                    if k == '-9':
+                        data_counts[i][k] = v * -9
                     elif k == '-6':
-                        data_counts[i][k] = v * Constants.b
+                        data_counts[i][k] = v * -6
                     elif k == '-4':
-                        data_counts[i][k] = v * Constants.c
-                    elif k == '-3':
-                        data_counts[i][k] = v * Constants.d
-                    elif k == '1':
-                        data_counts[i][k] = v * Constants.e
+                        data_counts[i][k] = v * -4
+                    elif k == '-1':
+                        data_counts[i][k] = v * -1
+                    elif k == '2':
+                        data_counts[i][k] = v * 2
+                    elif k == '3':
+                        data_counts[i][k] = v * 3
                     elif k == '4':
-                        data_counts[i][k] = v * Constants.f
-                    elif k == '9':
-                        data_counts[i][k] = v * Constants.g
-                    elif k == '11':
-                        data_counts[i][k] = v * Constants.h
-                    elif k == '12':
-                        data_counts[i][k] = v * Constants.i
+                        data_counts[i][k] = v * 4
+                    elif k == '5':
+                        data_counts[i][k] = v * 5
+                    elif k == '30':
+                        data_counts[i][k] = v * 30
 
             self.player.payoff = 0
             for i in data_counts.keys():
@@ -511,20 +690,114 @@ class Feedback(Page):
             return self.round_number <= Constants.num_rounds_points
 
     def vars_for_template(self):
-        return {'payoff': self.player.payoff,
-                'payoff_1': self.player.payoff_1,
-                'payoff_2': self.player.payoff_2,
-                'payoff_3': self.player.payoff_3,
-                'choice': self.participant.vars['choice'],
-                'urn_draws_1': self.player.urn_draws_1,
-                'urn_draws_2': self.player.urn_draws_2,
-                'urn_draws_3': self.player.urn_draws_3,
-                'urn_draws_4': self.player.urn_draws_4,
-                'payoff_4': self.player.payoff_4,
-                'safe': self.participant.vars['safe'],
-                'draw': self.participant.vars['draw'],
+        if self.round_number == 3:
+            return {'payoff': self.player.payoff,
+                    'payoff_1': self.player.payoff_1,
+                    'payoff_2': self.player.payoff_2,
+                    'payoff_3': self.player.payoff_3,
+                    'choice': self.participant.vars['choice'],
+                    'urn_draws_1': self.player.urn_draws_1,
+                    'urn_draws_2': self.player.urn_draws_2,
+                    'urn_draws_3': self.player.urn_draws_3,
+                    'urn_draws_4': self.player.urn_draws_4,
+                    'payoff_4': self.player.payoff_4,
+                    'safe': self.participant.vars['safe'],
+                    'draw': self.participant.vars['draw'],
+                    'urn_draws_1_1': self.player.participant.vars['urn_draws_1_1'],
+                    'urn_draws_1_2': self.player.participant.vars['urn_draws_1_2'],
+                    'urn_draws_1_3': self.player.participant.vars['urn_draws_1_3'],
+                    'urn_draws_2_1': self.player.participant.vars['urn_draws_2_1'],
+                    'urn_draws_2_2': self.player.participant.vars['urn_draws_2_2'],
+                    'urn_draws_2_3': self.player.participant.vars['urn_draws_2_3'],
+                    'urn_draws_3_1': self.player.participant.vars['urn_draws_3_1'],
+                    'urn_draws_3_2': self.player.participant.vars['urn_draws_3_2'],
+                    'urn_draws_3_3': self.player.participant.vars['urn_draws_3_3'],
+                    'payoff_1_1': self.player.participant.vars['payoff_1_1'],
+                    'payoff_1_2': self.player.participant.vars['payoff_1_2'],
+                    'payoff_1_3': self.player.participant.vars['payoff_1_3'],
+                    'payoff_2_1': self.player.participant.vars['payoff_2_1'],
+                    'payoff_2_2': self.player.participant.vars['payoff_2_2'],
+                    'payoff_2_3': self.player.participant.vars['payoff_2_3'],
+                    'payoff_3_1': self.player.participant.vars['payoff_3_1'],
+                    'payoff_3_2': self.player.participant.vars['payoff_3_2'],
+                    'payoff_3_3': self.player.participant.vars['payoff_3_3'],
+                    'payoff_sum_3rounds': self.player.participant.vars['payoff_sum_3rounds'],
+                    'payoff_sum_3rounds_1': self.player.participant.vars['payoff_sum_3rounds_1'],
+                    'payoff_sum_3rounds_2': self.player.participant.vars['payoff_sum_3rounds_2'],
+                    'payoff_sum_3rounds_3': self.player.participant.vars['payoff_sum_3rounds_3'],
+                    'urn_draws_1_sum': self.player.participant.vars['urn_draws_1_sum'],
+                    'urn_draws_2_sum': self.player.participant.vars['urn_draws_2_sum'],
+                    'urn_draws_3_sum': self.player.participant.vars['urn_draws_3_sum'],
+                    'option_1_sum': self.player.participant.vars['option_1_sum'],
+                    'option_2_sum': self.player.participant.vars['option_2_sum'],
+                    'option_3_sum': self.player.participant.vars['option_3_sum'],
+                    }
 
-                }
+        elif self.round_number == 6:
+            return {'payoff': self.player.payoff,
+                    'payoff_1': self.player.payoff_1,
+                    'payoff_2': self.player.payoff_2,
+                    'payoff_3': self.player.payoff_3,
+                    'choice': self.participant.vars['choice'],
+                    'urn_draws_1': self.player.urn_draws_1,
+                    'urn_draws_2': self.player.urn_draws_2,
+                    'urn_draws_3': self.player.urn_draws_3,
+                    'urn_draws_4': self.player.urn_draws_4,
+                    'payoff_4': self.player.payoff_4,
+                    'safe': self.participant.vars['safe'],
+                    'draw': self.participant.vars['draw'],
+                    'urn_draws_1_1': self.player.participant.vars['urn_draws_1_1'],
+                    'urn_draws_1_2': self.player.participant.vars['urn_draws_1_2'],
+                    'urn_draws_1_3': self.player.participant.vars['urn_draws_1_3'],
+                    'urn_draws_1_4': self.player.participant.vars['urn_draws_1_4'],
+                    'urn_draws_1_5': self.player.participant.vars['urn_draws_1_5'],
+                    'urn_draws_1_6': self.player.participant.vars['urn_draws_1_6'],
+                    'urn_draws_2_1': self.player.participant.vars['urn_draws_2_1'],
+                    'urn_draws_2_2': self.player.participant.vars['urn_draws_2_2'],
+                    'urn_draws_2_3': self.player.participant.vars['urn_draws_2_3'],
+                    'urn_draws_2_4': self.player.participant.vars['urn_draws_2_4'],
+                    'urn_draws_2_5': self.player.participant.vars['urn_draws_2_5'],
+                    'urn_draws_2_6': self.player.participant.vars['urn_draws_2_6'],
+                    'urn_draws_3_1': self.player.participant.vars['urn_draws_3_1'],
+                    'urn_draws_3_2': self.player.participant.vars['urn_draws_3_2'],
+                    'urn_draws_3_3': self.player.participant.vars['urn_draws_3_3'],
+                    'urn_draws_3_4': self.player.participant.vars['urn_draws_3_4'],
+                    'urn_draws_3_5': self.player.participant.vars['urn_draws_3_5'],
+                    'urn_draws_3_6': self.player.participant.vars['urn_draws_3_6'],
+                    'payoff_1_1': self.player.participant.vars['payoff_1_1'],
+                    'payoff_1_2': self.player.participant.vars['payoff_1_2'],
+                    'payoff_1_3': self.player.participant.vars['payoff_1_3'],
+                    'payoff_1_4': self.player.participant.vars['payoff_1_4'],
+                    'payoff_1_5': self.player.participant.vars['payoff_1_5'],
+                    'payoff_1_6': self.player.participant.vars['payoff_1_6'],
+                    'payoff_2_1': self.player.participant.vars['payoff_2_1'],
+                    'payoff_2_2': self.player.participant.vars['payoff_2_2'],
+                    'payoff_2_3': self.player.participant.vars['payoff_2_3'],
+                    'payoff_2_4': self.player.participant.vars['payoff_2_4'],
+                    'payoff_2_5': self.player.participant.vars['payoff_2_5'],
+                    'payoff_2_6': self.player.participant.vars['payoff_2_6'],
+                    'payoff_3_1': self.player.participant.vars['payoff_3_1'],
+                    'payoff_3_2': self.player.participant.vars['payoff_3_2'],
+                    'payoff_3_3': self.player.participant.vars['payoff_3_3'],
+                    'payoff_3_4': self.player.participant.vars['payoff_3_4'],
+                    'payoff_3_5': self.player.participant.vars['payoff_3_5'],
+                    'payoff_3_6': self.player.participant.vars['payoff_3_6'],
+                    'payoff_sum_3rounds': self.player.participant.vars['payoff_sum_3rounds'],
+                    'payoff_sum_3rounds_1': self.player.participant.vars['payoff_sum_3rounds_1'],
+                    'payoff_sum_3rounds_2': self.player.participant.vars['payoff_sum_3rounds_2'],
+                    'payoff_sum_3rounds_3': self.player.participant.vars['payoff_sum_3rounds_3'],
+                    'payoff_sum_3rounds_4': self.player.participant.vars['payoff_sum_3rounds_4'],
+                    'payoff_sum_3rounds_5': self.player.participant.vars['payoff_sum_3rounds_5'],
+                    'payoff_sum_3rounds_6': self.player.participant.vars['payoff_sum_3rounds_6'],
+                    'payoff_sum_36rounds': self.player.participant.vars['payoff_sum_36rounds'],
+                    'option_1_sum': self.player.participant.vars['option_1_sum'],
+                    'option_2_sum': self.player.participant.vars['option_2_sum'],
+                    'option_3_sum': self.player.participant.vars['option_3_sum'],
+                    'option_4_sum': self.player.participant.vars['option_3_sum'],
+                    'option_5_sum': self.player.participant.vars['option_3_sum'],
+                    'option_6_sum': self.player.participant.vars['option_3_sum'],
+
+                    }
 
 
 ########################################################################################################################
@@ -536,121 +809,17 @@ class Questionnaire(Page):
     form_model ='player'
 
     def get_form_fields(self):
-        if self.participant.vars['choice'] and self.participant.vars['safe'] and not self.participant.vars['variance']:
-            if self.player.questionnaire_page == 1:
-                return []
-            elif self.player.questionnaire_page == 2:
-                return ['q_risk']
-            elif self.player.questionnaire_page == 3:
-                imi = [f'q_imi_{i}' for i in range(1, 8)]
-                return imi
-            elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
-            elif self.player.questionnaire_page == 5:
-                return ['q_fadein', 'q_fadeout']
-            elif self.player.questionnaire_page == 6:
-                return ['q_saving', 'q_wealth']
-            elif self.player.questionnaire_page == 7:
-                return ['q_year', 'q_sex', 'q_employment', 'q_education',
-                        'q_ethnicity']
+        if self.player.questionnaire_page == 1:
+            return []
+        elif self.player.questionnaire_page == 2:
+            return ['q_risk']
+        elif self.player.questionnaire_page == 3:
+            imi = [f'q_imi_{i}' for i in range(1, 8)]
+            return imi
+        elif self.player.questionnaire_page == 4:
+            return ['q_year', 'q_sex', 'q_employment', 'q_education',
+                    'q_ethnicity']
 
-        elif self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars[
-            'variance']:
-            if self.player.questionnaire_page == 1:
-                return []
-            elif self.player.questionnaire_page == 2:
-                return ['q_risk']
-            elif self.player.questionnaire_page == 3:
-                imi = [f'q_imi_{i}' for i in range(1, 8)]
-                return imi
-            elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
-            elif self.player.questionnaire_page == 5:
-                return ['q_fadein', 'q_fadeout']
-            elif self.player.questionnaire_page == 6:
-                return ['q_saving', 'q_wealth']
-            elif self.player.questionnaire_page == 7:
-                return ['q_year', 'q_sex', 'q_employment', 'q_education',
-                        'q_ethnicity']
-
-        elif not self.participant.vars['choice'] and self.participant.vars['safe'] and not self.participant.vars[
-            'variance']:
-            if self.player.questionnaire_page == 1:
-                return []
-            elif self.player.questionnaire_page == 2:
-                return ['q_risk']
-            elif self.player.questionnaire_page == 3:
-                imi = [f'q_imi_{i}' for i in range(1, 8)]
-                return imi
-            elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
-            elif self.player.questionnaire_page == 5:
-                return ['q_fadein', 'q_fadeout']
-            elif self.player.questionnaire_page == 6:
-                return ['q_saving', 'q_wealth']
-            elif self.player.questionnaire_page == 7:
-                return ['q_year', 'q_sex', 'q_employment', 'q_education',
-                        'q_ethnicity']
-
-        elif not self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars[
-            'variance']:
-            if self.player.questionnaire_page == 1:
-                return []
-            elif self.player.questionnaire_page == 2:
-                return ['q_risk']
-            elif self.player.questionnaire_page == 3:
-                imi = [f'q_imi_{i}' for i in range(1, 8)]
-                return imi
-            elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
-            elif self.player.questionnaire_page == 5:
-                return ['q_fadein', 'q_fadeout']
-            elif self.player.questionnaire_page == 6:
-                return ['q_saving', 'q_wealth']
-            elif self.player.questionnaire_page == 7:
-                return ['q_year', 'q_sex', 'q_employment', 'q_education',
-                        'q_ethnicity']
-
-        elif not self.participant.vars['choice'] and self.participant.vars['safe'] and self.participant.vars[
-            'variance']:
-            if self.player.questionnaire_page == 1:
-                return []
-            elif self.player.questionnaire_page == 2:
-                return ['q_risk']
-            elif self.player.questionnaire_page == 3:
-                imi = [f'q_imi_{i}' for i in range(1, 8)]
-                return imi
-            elif self.player.questionnaire_page == 4:
-                epo = [f'q_epo_{i}' for i in range(1, 14)]
-                return epo
-            elif self.player.questionnaire_page == 5:
-                max = [f'q_max_scale_{i}' for i in range(1, 7)]
-                return max
-            elif self.player.questionnaire_page == 6:
-                return ['q_exploration_strategy', 'q_firm', 'q_maxoption_3',]
-            elif self.player.questionnaire_page == 7:
-                return ['q_year', 'q_sex', 'q_employment', 'q_education',
-                        'q_ethnicity']
-
-        elif self.participant.vars['choice'] and self.participant.vars['safe'] and self.participant.vars['variance']:
-            if self.player.questionnaire_page == 1:
-                return []
-            elif self.player.questionnaire_page == 2:
-                return ['q_risk']
-            elif self.player.questionnaire_page == 3:
-                imi = [f'q_imi_{i}' for i in range(1, 8)]
-                return imi
-            elif self.player.questionnaire_page == 4:
-                epo = [f'q_epo_{i}' for i in range(1, 14)]
-                return epo
-            elif self.player.questionnaire_page == 5:
-                max = [f'q_max_scale_{i}' for i in range(1, 7)]
-                return max
-            elif self.player.questionnaire_page == 6:
-                return ['q_exploration_strategy', 'q_firm', 'q_maxoption_3',]
-            elif self.player.questionnaire_page == 7:
-                return ['q_year', 'q_sex', 'q_employment', 'q_education',
-                        'q_ethnicity']
 
     def is_displayed(self):
         if self.participant.vars['choice']:
@@ -700,9 +869,6 @@ page_sequence = [
     Priors,
     Decision,
     Feedback,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
     Questionnaire,
     Questionnaire,
     Questionnaire,

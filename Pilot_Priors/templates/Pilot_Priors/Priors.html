@@ -9,11 +9,16 @@
 
 {% block content %}
 <br>
-<p>The table below shows summary information for {{Constants.num_priors}} prior draws from each option.</p>
 
-<p>You can use this data to inform your decisions over the next {% if choice %} six {% elif not choice %} two {% endif %} rounds. </p>
 
-<p> Note that options might be arranged in a different order on your decision screen.</p>
+<p>The table below shows summary information for <b> {{Constants.num_priors}} prior draws </b> from each option. <b> You can use this data to inform your decisions over the next {% if choice %} six {% elif not choice %} two {% endif %} rounds. </p></b>
+
+<p>"Mean" refers to an option's average payoff per draw.</p>
+<p>"SD" refers to an option's standard deviation. The standard deviation
+    is a measure of how spread out the draws are in relation to the option's average. A low standard deviation means that most numbers are
+close to the average. A high standard deviation means that numbers are more widely dispersed.</p>
+<b><p>Note that options might be arranged in a different order on your decision screen.</p></b>
+
 
 
 <br>

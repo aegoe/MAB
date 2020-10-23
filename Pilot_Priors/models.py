@@ -80,14 +80,54 @@ class Player(BasePlayer):
     controls = models.IntegerField(initial=0)
     comprehension_page = models.IntegerField(initial=1)
     completion_code = models.StringField()
-    urn_draws_1_sum = models.StringField()
-    urn_draws_2_sum = models.StringField()
-    urn_draws_3_sum = models.StringField()
-    payoff_1_sum = models.CurrencyField()
-    payoff_2_sum = models.CurrencyField()
-    payoff_3_sum = models.CurrencyField()
 
+    urn_draws_1_1 = models.StringField()
+    urn_draws_2_1 = models.StringField()
+    urn_draws_3_1 = models.StringField()
 
+    urn_draws_1_2 = models.StringField()
+    urn_draws_2_2 = models.StringField()
+    urn_draws_3_2 = models.StringField()
+
+    urn_draws_1_3 = models.StringField()
+    urn_draws_2_3 = models.StringField()
+    urn_draws_3_3 = models.StringField()
+
+    urn_draws_1_4 = models.StringField()
+    urn_draws_2_4 = models.StringField()
+    urn_draws_3_4 = models.StringField()
+
+    urn_draws_1_5 = models.StringField()
+    urn_draws_2_5 = models.StringField()
+    urn_draws_3_5 = models.StringField()
+
+    urn_draws_1_6 = models.StringField()
+    urn_draws_2_6 = models.StringField()
+    urn_draws_3_6 = models.StringField()
+
+    payoff_1_1 = models.CurrencyField()
+    payoff_2_1 = models.CurrencyField()
+    payoff_3_1 = models.CurrencyField()
+
+    payoff_1_2 = models.CurrencyField()
+    payoff_2_2 = models.CurrencyField()
+    payoff_3_2 = models.CurrencyField()
+
+    payoff_1_3 = models.CurrencyField()
+    payoff_2_3 = models.CurrencyField()
+    payoff_3_3 = models.CurrencyField()
+
+    payoff_1_4 = models.CurrencyField()
+    payoff_2_4 = models.CurrencyField()
+    payoff_3_4 = models.CurrencyField()
+
+    payoff_1_5 = models.CurrencyField()
+    payoff_2_5 = models.CurrencyField()
+    payoff_3_5 = models.CurrencyField()
+
+    payoff_1_6 = models.CurrencyField()
+    payoff_2_6 = models.CurrencyField()
+    payoff_3_6 = models.CurrencyField()
 
     #################################
     # Comprehension Questions #######
