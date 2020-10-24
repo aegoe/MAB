@@ -257,6 +257,8 @@ class Priors(Page):
 
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
+               'draw': self.participant.vars['draw'],
+
                }
 
 

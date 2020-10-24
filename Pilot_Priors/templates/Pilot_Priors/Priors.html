@@ -3,7 +3,7 @@
 
 {% block title %}
 <div class="page-header">
-    <p> Learning Draws </p>
+    <p> Information Screen </p>
 </div>
 {% endblock %}
 
@@ -17,11 +17,11 @@
 <p>"SD" refers to an option's standard deviation. The standard deviation
     is a measure of how spread out the draws are in relation to the option's average. A low standard deviation means that most numbers are
 close to the average. A high standard deviation means that numbers are more widely dispersed.</p>
-<b><p>Note that options might be arranged in a different order on your decision screen.</p></b>
-
-
 
 <br>
+
+
+{% if draw == 'TSR' %}
 
     <div class="table">
     <table>
@@ -69,6 +69,254 @@ close to the average. A high standard deviation means that numbers are more wide
     </table>
 
     </div>
+
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Circle
+            <div class="imageholder"><img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Triangle
+            <div class="imageholder"><img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Rectangle
+            <div class="imageholder"><img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean (10 draws): &nbsp;</b> </td>
+            <td class="td"> 1.9 &nbsp;</td>
+            <td class="td"> 3.6 &nbsp;</td>
+            <td class="td"> 2 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD (10 draws):&nbsp;</b> </td>
+            <td class="td"> 14.1 &nbsp;</td>
+            <td class="td"> 1.7 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> -9</td>
+            <td class="td"> -1 </td>
+            <td class="td"> 2 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 30 &nbsp;</td>
+            <td class="td"> 5 &nbsp;</td>
+            <td class="td"> 2 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Rectangle
+            <div class="imageholder"><img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Triangle
+            <div class="imageholder"><img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Circle
+            <div class="imageholder"><img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean (10 draws): &nbsp;</b> </td>
+            <td class="td"> 2 &nbsp;</td>
+            <td class="td"> 3.6 &nbsp;</td>
+            <td class="td"> 1.9 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD (10 draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.7 &nbsp;</td>
+            <td class="td"> 14.1 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 2</td>
+            <td class="td"> -1 </td>
+            <td class="td"> 9 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 2 &nbsp;</td>
+            <td class="td"> 5 &nbsp;</td>
+            <td class="td"> 30 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'TRS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Triangle
+            <div class="imageholder"><img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Rectangle
+            <div class="imageholder"><img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Circle
+            <div class="imageholder"><img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean (10 draws): &nbsp;</b> </td>
+            <td class="td"> 3.6 &nbsp;</td>
+            <td class="td"> 2 &nbsp;</td>
+            <td class="td"> 1.9 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD (10 draws):&nbsp;</b> </td>
+            <td class="td"> 1.7 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 14.1 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> -1 </td>
+            <td class="td"> 2</td>
+            <td class="td"> -9 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 5 &nbsp;</td>
+            <td class="td"> 2 &nbsp;</td>
+            <td class="td"> 30 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Circle
+            <div class="imageholder"><img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Rectangle
+            <div class="imageholder"><img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Triangle
+            <div class="imageholder"><img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean (10 draws): &nbsp;</b> </td>
+            <td class="td"> 1.9 &nbsp;</td>
+            <td class="td"> 2 &nbsp;</td>
+            <td class="td"> 3.6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD (10 draws):&nbsp;</b> </td>
+            <td class="td"> 14.1 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.7 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> -9 </td>
+            <td class="td"> 2</td>
+            <td class="td"> -1 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 30 &nbsp;</td>
+            <td class="td"> 2 &nbsp;</td>
+            <td class="td"> 5 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Rectangle
+            <div class="imageholder"><img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Circle
+            <div class="imageholder"><img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Triangle
+            <div class="imageholder"><img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean (10 draws): &nbsp;</b> </td>
+            <td class="td"> 2 &nbsp;</td>
+            <td class="td"> 1.9 &nbsp;</td>
+            <td class="td"> 3.6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD (10 draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 14.1 &nbsp;</td>
+            <td class="td"> 1.7 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 2 </td>
+            <td class="td"> -9</td>
+            <td class="td"> -1 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 2 &nbsp;</td>
+            <td class="td"> 30 &nbsp;</td>
+            <td class="td"> 5 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% endif %}
 
 {% if choice %}
 <p>You will now complete six rounds. In each round, you will choose one of the three options above.</p>
