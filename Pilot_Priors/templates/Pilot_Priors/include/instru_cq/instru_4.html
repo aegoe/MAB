@@ -5,16 +5,20 @@
 {% endblock %}
 
 {% block content %}
-<p> Each round after submitting your investment, a feedback screen {% if not choice %} summarizes the number of draws per option and {% endif %} informs you about the {% if choice %}
-    value of the coin drawn from the bag. {% elif not choice %} respective values of each coin drawn. {% endif %}
+{% if not choice %}
+<p>Each round after submitting your investment, a feedback screen summarizes the number of draws per option and informs you about the respective values of each coin drawn.
     These values are summed up on the blue button below the feedback table. By clicking on the button, you will start the next round. </p>
 
-<p> Your total earnings at the end of this HIT are the accumulated earnings from each round. <b> Your goal in this HIT is to maximize your total earnings. </b> </p>
+{% elif choice %}
+<p> Once you made three consecutive investments, a feedback screen summarizes the number of draws per option and informs you about the respective values of each coin drawn.
+    These values are summed up on the blue button below the feedback table. By clicking on the button, you will start the next round.
+{% endif %}
+
+<p> Your total earnings at the end of this HIT are the accumulated earnings from each round.</p>
 
 <p> After filling out the questionnaire, all ECU from all {% if not choice %} {{Constants.num_rounds_points}} {% elif choice %} {{Constants.num_rounds_choice}} {% endif %}
     rounds will be summed up and their value will be converted into Dollars.
 </p>
-
 
 <br>
 
