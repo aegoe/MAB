@@ -260,6 +260,8 @@ class Priors(Page):
                'draw': self.participant.vars['draw'],
 
                }
+    def before_next_page(self):
+        self.participant.payoff = 40
 
 
 
