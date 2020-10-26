@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Priors/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Priors/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_cq/instru_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_cq/instru_4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -486,12 +479,12 @@
       <workItem from="1603358374416" duration="7072000" />
       <workItem from="1603436080712" duration="14057000" />
       <workItem from="1603479011884" duration="2867000" />
-      <workItem from="1603531898142" duration="5946000" />
+      <workItem from="1603531898142" duration="6570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330128000" />
+    <option name="totallyTimeSpent" value="330752000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
