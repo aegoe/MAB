@@ -837,6 +837,9 @@ class Questionnaire(Page):
             imi = [f'q_imi_{i}' for i in range(1, 8)]
             return imi
         elif self.player.questionnaire_page == 4:
+            epo = [f'q_epo_{i}' for i in range(1, 14)]
+            return epo
+        elif self.player.questionnaire_page == 5:
             return ['q_year', 'q_sex', 'q_employment', 'q_education',
                     'q_ethnicity']
 
@@ -889,6 +892,7 @@ page_sequence = [
     Priors,
     Decision,
     Feedback,
+    Questionnaire,
     Questionnaire,
     Questionnaire,
     Questionnaire,

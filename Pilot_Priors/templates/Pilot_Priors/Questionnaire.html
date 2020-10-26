@@ -21,6 +21,9 @@
     {% include 'Pilot_Priors/include/questionnaire_IMI.html' %}
 
 {% elif player.questionnaire_page == 4 %}
+{% include 'Pilot_Priors/include/questionnaire_epo.html' %}
+
+{% elif player.questionnaire_page == 5 %}
 {% include 'Pilot_Priors/include/questionnaire_socio_1.html' %}
 
 {% endif %}
@@ -38,10 +41,13 @@
 {% include 'Pilot_Priors/include/questionnaire_IMI.html' %}
 
 {% elif player.questionnaire_page == 4 %}
+{% include 'Pilot_Priors/include/questionnaire_epo.html' %}
+
+{% elif player.questionnaire_page == 5 %}
 {% include 'Pilot_Priors/include/questionnaire_socio_1.html' %}
 
-
 {% endif %}
+
 {% endif %}
 
 <br>

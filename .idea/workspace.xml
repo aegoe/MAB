@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Pilot_Priors/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Priors/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Questionnaire.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Questionnaire.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,11 +125,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot_Priors/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="796" column="68" lean-forward="true" selection-start-line="796" selection-start-column="68" selection-end-line="796" selection-end-column="68" />
+            <state relative-caret-position="674">
+              <caret line="895" column="18" selection-start-line="895" selection-start-column="18" selection-end-line="895" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#71#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Questionnaire.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="620">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="1436" selection-start-line="1436" selection-end-line="1438" selection-end-column="26" />
               <folding>
                 <element signature="e#0#71#0" expanded="true" />
               </folding>
@@ -150,7 +171,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>payof</find>
       <find>payoff</find>
       <find>safe</find>
       <find>improv</find>
@@ -180,6 +200,7 @@
       <find>compre</find>
       <find>max</find>
       <find>draw</find>
+      <find>feedbac</find>
     </findStrings>
     <replaceStrings>
       <replace>Circle</replace>
@@ -233,7 +254,6 @@
         <option value="$PROJECT_DIR$/Pilot_Priors/models.py" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/css/feedback.css" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Feedback.html" />
-        <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Questionnaire.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_cq/instru_1.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_2.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_cq/instru_2.html" />
@@ -242,6 +262,7 @@
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_cq/instru_4.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/pages.py" />
+        <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Questionnaire.html" />
       </list>
     </option>
   </component>
@@ -279,6 +300,32 @@
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAB" type="462c0819:PsiDirectoryNode" />
               <item name="Pilot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -443,12 +490,12 @@
       <workItem from="1603436080712" duration="14057000" />
       <workItem from="1603479011884" duration="2867000" />
       <workItem from="1603531898142" duration="6570000" />
-      <workItem from="1603707186519" duration="535000" />
+      <workItem from="1603707186519" duration="1923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="331287000" />
+    <option name="totallyTimeSpent" value="332675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -758,13 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Questionnaire.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/css/feedback.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
@@ -903,16 +943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="1327" selection-start-line="1327" selection-end-line="1340" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -920,13 +950,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Priors/pages.py">
+    <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="796" column="68" lean-forward="true" selection-start-line="796" selection-start-column="68" selection-end-line="796" selection-end-column="68" />
+        <state relative-caret-position="479">
+          <caret line="1436" selection-start-line="1436" selection-end-line="1438" selection-end-column="26" />
           <folding>
             <element signature="e#0#71#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Priors/pages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="895" column="18" selection-start-line="895" selection-start-column="18" selection-end-line="895" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Questionnaire.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
