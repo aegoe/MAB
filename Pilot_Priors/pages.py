@@ -694,7 +694,7 @@ class Feedback(Page):
             return self.round_number <= Constants.num_rounds_points
 
     def vars_for_template(self):
-        if self.round_number == 3:
+        if self.round_number == 3 and self.participant.vars['choice']:
             return {'payoff': self.player.payoff,
                     'payoff_1': self.player.payoff_1,
                     'payoff_2': self.player.payoff_2,
@@ -737,7 +737,7 @@ class Feedback(Page):
                     'option_3_sum': self.player.participant.vars['option_3_sum'],
                     }
 
-        elif self.round_number == 6:
+        elif self.round_number == 6 and self.participant.vars['choice']:
             return {'payoff': self.player.payoff,
                     'payoff_1': self.player.payoff_1,
                     'payoff_2': self.player.payoff_2,
@@ -800,8 +800,24 @@ class Feedback(Page):
                     'option_4_sum': self.player.participant.vars['option_3_sum'],
                     'option_5_sum': self.player.participant.vars['option_3_sum'],
                     'option_6_sum': self.player.participant.vars['option_3_sum'],
+                    }
+        elif not self.participant.vars['choice']:
+            return {'payoff': self.player.payoff,
+                    'payoff_1': self.player.payoff_1,
+                    'payoff_2': self.player.payoff_2,
+                    'payoff_3': self.player.payoff_3,
+                    'choice': self.participant.vars['choice'],
+                    'urn_draws_1': self.player.urn_draws_1,
+                    'urn_draws_2': self.player.urn_draws_2,
+                    'urn_draws_3': self.player.urn_draws_3,
+                    'urn_draws_4': self.player.urn_draws_4,
+                    'payoff_4': self.player.payoff_4,
+                    'safe': self.participant.vars['safe'],
+                    'draw': self.participant.vars['draw'],
 
                     }
+
+
 
 
 ########################################################################################################################
