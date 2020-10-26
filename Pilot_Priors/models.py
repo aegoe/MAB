@@ -20,7 +20,7 @@ class Constants(BaseConstants):
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
-    num_priors = 10
+    num_priors = 50
 
     a = -7
     b = -6
@@ -151,7 +151,7 @@ class Player(BasePlayer):
             [1, 'each point invested, i.e. each draw '],
             [9, 'one randomly chosen round'],
             [99, 'my performance in comparison to other workers'],
-            [999, 'the last 20 rounds'],
+            [999, 'only the first round'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
@@ -164,7 +164,7 @@ class Player(BasePlayer):
             [999, 'No, I have to choose blindly'],
             [9, 'Yes, I will see exactly how much each option is worth beforehand'],
             [99, 'Yes, I will receive information about two of the three options'],
-            [1, 'Yes, I will see summary statistics of 10 prior draws for each of the three options'],
+            [1, 'Yes, I will see summary statistics of 50 prior draws for each of the three options'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
