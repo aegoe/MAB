@@ -1,9 +1,11 @@
 {% load otree %}
 
 
+{% if not choice %}
+
 <div class="card">
         <div class="card-header">
-            Please describe how your strategy changed over the course of this HIT.
+            Please explain your choices in the first round.
         </div>
         <div class="card-body">
             {% formfield player.q_exploration_strategy %}
@@ -11,57 +13,17 @@
     </div>
 <br>
 
-{% if safe and not variance %}
-<div class="card">
-    <div class="card-header">
-        In your opinion, which option would maximize your income in the long run?
-        <br>
-        <i>Please choose one of the following answers. Remember to choose by the option's name and symbol, not by position!</i>.
-    </div>
-    <div class="card-body">
-        {% formfield player.q_maxoption %}
-    </div>
-</div>
-<br>
-
-{% elif not safe and not variance %}
-<div class="card">
-    <div class="card-header">
-        In your opinion, which option would maximize your income in the long run?
-        <br>
-        <i>Please choose one of the following answers</i>.
-    </div>
-    <div class="card-body">
-        {% formfield player.q_maxoption_2 %}
-    </div>
-</div>
-<br>
-
-{% elif safe and variance %}
-<div class="card">
-    <div class="card-header">
-        In your opinion, which option would maximize your income in the long run?
-        <br>
-        <i>Please choose one of the following answers</i>.
-    </div>
-    <div class="card-body">
-        {% formfield player.q_maxoption_3 %}
-    </div>
-</div>
-<br>
-
-{% endif %}
-
-
+{% elif choice %}
 
 <div class="card">
         <div class="card-header">
-            Do you think you would have made different choices if your performance in this HIT also determined the income of other workers in some related task?
-            Please explain your answer.
+            Please explain your choices in the first three rounds.
         </div>
         <div class="card-body">
-            {% formfield player.q_firm %}
+            {% formfield player.q_exploration_strategy %}
         </div>
-</div>
+    </div>
 
 <br>
+
+{% endif %}

@@ -15,72 +15,32 @@ You can invest {% if choice %} this point {% elif not choice %} these points {% 
 three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three
 points {% endif %} must be invested in each round. </p>
 
-{% if not choice %}
-<p>Once you have made your choice, you will receive feedback about the payoff from your investment. This will be shown on a separate feedback screen upon submitting your choice. </p>
+<!--{% if not choice %}-->
+<!--<p>Once you have made your choice, you will receive feedback about the payoff from your investment. This will be shown on a separate feedback screen upon submitting your choice. </p>-->
 
-{% elif choice %}
-<p> Once you made three consecutive choices, you will receive feedback about the payoff from your investment. Thus, you will
-receive feedback after the third and after the sixth round. This will be shown on a separate feedback screen.</p>
+<!--{% elif choice %}-->
+<!--<p> Once you made three consecutive choices, you will receive feedback about the payoff from your investment. Thus, you will-->
+<!--receive feedback after the third and after the sixth round. This will be shown on a separate feedback screen.</p>-->
 
-{% endif %}
+<!--{% endif %}-->
 
 
-{% if safe and not choice and not variance %}
+{% if choice %}
 
 <div class="card">
     <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
         <div class="card-body">
-            <img src='https://i.imgur.com/P8zkULX.png' alt="bla" width="800px"/>
+            <img src='https://i.imgur.com/9zjs7EA.png' alt="bla" width="800px"/>
     </div>
 </div>
 <br>
 
-{% elif not safe and not choice and not variance %}
+{% elif not choice %}
 
 <div class="card">
     <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
         <div class="card-body">
-            <img src='https://i.imgur.com/GUHsrRw.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% elif safe and choice and not variance %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/vxGFiMB.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% elif not safe and choice and not variance %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/eSboZq9.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% elif safe and choice and variance %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/LjE5a0t.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% elif safe and not choice and variance %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/9Q47z1w.png' alt="bla" width="800px"/>
+            <img src='https://i.imgur.com/Bp0v341.png' alt="bla" width="800px"/>
     </div>
 </div>
 <br>

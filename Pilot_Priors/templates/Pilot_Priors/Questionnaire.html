@@ -2,13 +2,11 @@
 {% load otree %}
 
 {% block title %}
-    <p>Questionnaire <h6>Page {{ player.questionnaire_page }}/5</h6></p>
+    <p>Questionnaire <h6>Page {{ player.questionnaire_page }}/7</h6></p>
 {% endblock %}
 
 
 {% block content %}
-
-{% if not variance %}
 
 {% if player.questionnaire_page == 1 %}
 
@@ -18,37 +16,23 @@
     {% include 'Pilot_Priors/include/questionnaire_1.html' %}
 
 {% elif player.questionnaire_page == 3 %}
+    {% include 'Pilot_Priors/include/questionnaire_2.html' %}
+
+{% elif player.questionnaire_page == 4 %}
+    {% include 'Pilot_Priors/include/questionnaire_3.html' %}
+
+{% elif player.questionnaire_page == 5%}
     {% include 'Pilot_Priors/include/questionnaire_IMI.html' %}
 
-{% elif player.questionnaire_page == 4 %}
-{% include 'Pilot_Priors/include/questionnaire_epo.html' %}
+{% elif player.questionnaire_page == 6 %}
+    {% include 'Pilot_Priors/include/questionnaire_epo.html' %}
 
-{% elif player.questionnaire_page == 5 %}
-{% include 'Pilot_Priors/include/questionnaire_socio_1.html' %}
-
-{% endif %}
-
-
-{% elif variance %}
-
-{% if player.questionnaire_page == 1 %}
-{% include 'Pilot_Priors/include/questionnaire_transition.html' %}
-
-{% elif player.questionnaire_page == 2 %}
-{% include 'Pilot_Priors/include/questionnaire_1.html' %}
-
-{% elif player.questionnaire_page == 3 %}
-{% include 'Pilot_Priors/include/questionnaire_IMI.html' %}
-
-{% elif player.questionnaire_page == 4 %}
-{% include 'Pilot_Priors/include/questionnaire_epo.html' %}
-
-{% elif player.questionnaire_page == 5 %}
-{% include 'Pilot_Priors/include/questionnaire_socio_1.html' %}
+{% elif player.questionnaire_page == 7 %}
+    {% include 'Pilot_Priors/include/questionnaire_socio_1.html' %}
 
 {% endif %}
 
-{% endif %}
+
 
 <br>
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Proceed</button>
