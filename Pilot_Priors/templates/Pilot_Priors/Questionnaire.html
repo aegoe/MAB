@@ -2,7 +2,7 @@
 {% load otree %}
 
 {% block title %}
-    <p>Questionnaire <h6>Page {{ player.questionnaire_page }}/7</h6></p>
+    <p>Questionnaire <h6>Page {{ player.questionnaire_page }}/6</h6></p>
 {% endblock %}
 
 
@@ -21,13 +21,10 @@
 {% elif player.questionnaire_page == 4 %}
     {% include 'Pilot_Priors/include/questionnaire_3.html' %}
 
-{% elif player.questionnaire_page == 5%}
-    {% include 'Pilot_Priors/include/questionnaire_IMI.html' %}
-
-{% elif player.questionnaire_page == 6 %}
+{% elif player.questionnaire_page == 5 %}
     {% include 'Pilot_Priors/include/questionnaire_epo.html' %}
 
-{% elif player.questionnaire_page == 7 %}
+{% elif player.questionnaire_page == 6 %}
     {% include 'Pilot_Priors/include/questionnaire_socio_1.html' %}
 
 {% endif %}
