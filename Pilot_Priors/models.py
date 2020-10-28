@@ -466,10 +466,10 @@ class Player(BasePlayer):
     q_max_scale_6 = sevenitems('No matter what I do, I have the highest standards for myself.')
 
 
-    q_mean_sequential = sevenitems('The information about each option\'s mean informed my decision in the first three rounds')
-    q_sd_sequential = sevenitems('The information about each option\'s standard deviation informed my decision in the first three rounds')
-    q_ld_sequential = sevenitems('The information about each option\'s lowest draw informed my decision in the first three rounds')
-    q_hd_sequential = sevenitems('The information about each option\'s highest draw informed my decision in the first three rounds')
+    q_mean_sequential = sevenitems('The information about each option\'s mean informed my decisions in the first three rounds')
+    q_sd_sequential = sevenitems('The information about each option\'s standard deviation informed my decisions in the first three rounds')
+    q_ld_sequential = sevenitems('The information about each option\'s lowest draw informed my decisions in the first three rounds')
+    q_hd_sequential = sevenitems('The information about each option\'s highest draw informed my decisions in the first three rounds')
 
 
     q_mean_simultan = sevenitems('The information about each option\'s mean informed my decision in the first round')
