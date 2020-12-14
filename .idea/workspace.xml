@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Priors/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Priors/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,14 +17,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot_Priors/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="471" column="105" selection-start-line="471" selection-start-column="105" selection-end-line="471" selection-end-column="105" />
+            <state relative-caret-position="624">
+              <caret line="303" column="9" selection-start-line="303" selection-start-column="6" selection-end-line="303" selection-end-column="9" />
               <folding>
                 <element signature="e#0#134#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/PriorsTransition.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -51,17 +59,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="337" column="34" selection-start-line="337" selection-start-column="34" selection-end-line="337" selection-end-column="34" />
+            <state relative-caret-position="7304">
+              <caret line="332" selection-start-line="332" selection-end-line="332" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pilot_Priors/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="786">
-              <caret line="903" selection-start-line="903" selection-end-line="903" />
+            <state relative-caret-position="4694">
+              <caret line="277" column="13" lean-forward="true" selection-start-line="277" selection-start-column="13" selection-end-line="277" selection-end-column="13" />
               <folding>
                 <element signature="e#0#71#0" expanded="true" />
               </folding>
@@ -90,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+            <state relative-caret-position="1034">
+              <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -101,15 +109,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="572">
               <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="17" selection-start-line="17" selection-start-column="4" selection-end-line="24" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -206,23 +205,23 @@
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_cq/instru_1.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_4.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_cq/instru_4.html" />
-        <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/PriorsTransition.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Decision.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_2.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_cq/instru_2.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_cq/instru_3.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_3.html" />
-        <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/questionnaire_2.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/questionnaire_3.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Questionnaire.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/pages.py" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html" />
+        <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/PriorsTransition.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/models.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -240,46 +239,6 @@
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Priors" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-              <item name="instru_cq" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -301,7 +260,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../price-discrimination" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -456,17 +415,22 @@
       <workItem from="1603479011884" duration="2867000" />
       <workItem from="1603531898142" duration="6570000" />
       <workItem from="1603707186519" duration="6702000" />
-      <workItem from="1603787096243" duration="5720000" />
+      <workItem from="1603787096243" duration="8454000" />
+      <workItem from="1605521213924" duration="612000" />
+      <workItem from="1605717920042" duration="42000" />
+      <workItem from="1606317942153" duration="24000" />
+      <workItem from="1607275065732" duration="131000" />
+      <workItem from="1607948196167" duration="964000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343174000" />
+    <option name="totallyTimeSpent" value="347681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.178762" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18836713" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -480,7 +444,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32949087" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50213444" side_tool="true" weight="0.3159609" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49786553" visible="true" weight="0.22382325" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49786553" visible="true" weight="0.22190201" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32853025" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -818,13 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/PriorsTransition.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="164" selection-start-line="11" selection-start-column="164" selection-end-line="11" selection-end-column="164" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/instru_cq/instru_4.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -860,10 +817,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
+    <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
-          <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+          <caret line="1361" column="48" selection-start-line="1361" selection-start-column="24" selection-end-line="1361" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Priors/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="303" column="9" selection-start-line="303" selection-start-column="6" selection-end-line="303" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/PriorsTransition.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -871,6 +848,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/questionnaire_3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7304">
+          <caret line="332" selection-start-line="332" selection-end-line="332" />
         </state>
       </provider>
     </entry>
@@ -888,20 +879,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot/pages.py">
+    <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="1361" column="48" selection-start-line="1361" selection-start-column="24" selection-end-line="1361" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/questionnaire_3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="1034">
+          <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -914,27 +895,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pilot_Priors/pages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="786">
-          <caret line="903" selection-start-line="903" selection-end-line="903" />
+        <state relative-caret-position="4694">
+          <caret line="277" column="13" lean-forward="true" selection-start-line="277" selection-start-column="13" selection-end-line="277" selection-end-column="13" />
           <folding>
             <element signature="e#0#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/Priors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="337" column="34" selection-start-line="337" selection-start-column="34" selection-end-line="337" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Priors/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="471" column="105" selection-start-line="471" selection-start-column="105" selection-end-line="471" selection-end-column="105" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
           </folding>
         </state>
       </provider>

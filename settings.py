@@ -70,7 +70,7 @@ SESSION_CONFIG_DEFAULTS = {
 SESSION_CONFIGS = [
     {
         'name': 'MAB_Pilot_Study_Priors',
-        'display_name': "Pilot Study Priors",
+        'display_name': "Pilot_Feedback Study Priors",
         'num_demo_participants': 1,
         'app_sequence': ['Pilot_Priors'],
         'choice': False,
@@ -94,9 +94,9 @@ SESSION_CONFIGS = [
     # },
     {
         'name': 'MAB_Pilot_Study_Var_2',
-        'display_name': "Pilot Study Variance 2",
+        'display_name': "Pilot_Feedback Study Variance 2",
         'num_demo_participants': 1,
-        'app_sequence': ['Pilot'],
+        'app_sequence': ['Pilot_Feedback'],
         'choice': False,
         'safe': False,
         'test_urns': True,
@@ -106,9 +106,9 @@ SESSION_CONFIGS = [
     },
     # {
     #     'name': 'MAB_Pilot_Study_Var',
-    #     'display_name': "Pilot Study Variance",
+    #     'display_name': "Pilot_Feedback Study Variance",
     #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot'],
+    #     'app_sequence': ['Pilot_Feedback'],
     #     'choice': False,
     #     'safe': False,
     #     'test_urns': False,
@@ -118,9 +118,9 @@ SESSION_CONFIGS = [
     # },
     # {
     #     'name': 'MAB_Pilot_Study',
-    #     'display_name': "Pilot Study",
+    #     'display_name': "Pilot_Feedback Study",
     #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot'],
+    #     'app_sequence': ['Pilot_Feedback'],
     #     'choice': False,
     #     'safe': False,
     #     'test_urns': False,
@@ -131,9 +131,9 @@ SESSION_CONFIGS = [
     #
     # {
     #    'name': 'MAB_Pilot_Testing',
-    #     'display_name': "Pilot Testing",
+    #     'display_name': "Pilot_Feedback Testing",
     #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot'],
+    #     'app_sequence': ['Pilot_Feedback'],
     #     'choice': False,
     #     'safe': False,
     #     'test_urns': False,
@@ -143,9 +143,9 @@ SESSION_CONFIGS = [
     # },
     # {
     #     'name': 'MAB_Pilot_Testing_Choice',
-    #     'display_name': "Pilot Testing_Choice",
+    #     'display_name': "Pilot_Feedback Testing_Choice",
     #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot'],
+    #     'app_sequence': ['Pilot_Feedback'],
     #     'choice': True,
     #     'safe': False,
     #     'test_urns': False,
@@ -155,9 +155,9 @@ SESSION_CONFIGS = [
     # },
     # {
     #     'name': 'MAB_Pilot_Testing_Safe',
-    #     'display_name': "Pilot Testing Safe",
+    #     'display_name': "Pilot_Feedback Testing Safe",
     #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot'],
+    #     'app_sequence': ['Pilot_Feedback'],
     #     'choice': False,
     #     'safe': True,
     #     'test_urns': False,
@@ -167,9 +167,9 @@ SESSION_CONFIGS = [
     # },
     # {
     #     'name': 'MAB_Pilot_Testing_Safe_Choice',
-    #     'display_name': "Pilot Testing Safe Choice",
+    #     'display_name': "Pilot_Feedback Testing Safe Choice",
     #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot'],
+    #     'app_sequence': ['Pilot_Feedback'],
     #     'choice': True,
     #     'safe': True,
     #     'test_urns': False,
@@ -180,9 +180,9 @@ SESSION_CONFIGS = [
     # {
     #
     #     'name': 'MAB_Pilot_Testing_Safe_Choice_TEST',
-    #     'display_name': "Pilot Testing Safe Choice TEST",
+    #     'display_name': "Pilot_Feedback Testing Safe Choice TEST",
     #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot'],
+    #     'app_sequence': ['Pilot_Feedback'],
     #     'choice': True,
     #     'safe': True,
     #     'test_urns': True,
@@ -192,9 +192,9 @@ SESSION_CONFIGS = [
     # },
     # {
     #     'name': 'MAB_Pilot_Testing_Safe_TEST',
-    #     'display_name': "Pilot Testing Safe TEST",
+    #     'display_name': "Pilot_Feedback Testing Safe TEST",
     #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot'],
+    #     'app_sequence': ['Pilot_Feedback'],
     #     'choice': False,
     #     'safe': True,
     #     'test_urns': True,

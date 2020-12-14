@@ -115,10 +115,10 @@ class Migration(migrations.Migration):
                 ('q_max_scale_4', otree.db.models.IntegerField(choices=[[1, '1'], [2, '2'], [3, '3'], [4, '4'], [5, '5'], [6, '6'], [7, '7']], null=True, verbose_name='Choosing a tv show or a movie to watch is really difficult. I’m always struggling to pick the best one.')),
                 ('q_max_scale_5', otree.db.models.IntegerField(choices=[[1, '1'], [2, '2'], [3, '3'], [4, '4'], [5, '5'], [6, '6'], [7, '7']], null=True, verbose_name='I never settle for second best.')),
                 ('q_max_scale_6', otree.db.models.IntegerField(choices=[[1, '1'], [2, '2'], [3, '3'], [4, '4'], [5, '5'], [6, '6'], [7, '7']], null=True, verbose_name='No matter what I do, I have the highest standards for myself.')),
-                ('group', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Pilot.Group')),
+                ('group', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Pilot_Feedback.Group')),
                 ('participant', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='pilot_player', to='otree.Participant')),
                 ('session', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='pilot_player', to='otree.Session')),
-                ('subsession', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Pilot.Subsession')),
+                ('subsession', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Pilot_Feedback.Subsession')),
             ],
             options={
                 'db_table': 'Pilot_player',
@@ -127,6 +127,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='group',
             name='subsession',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Pilot.Subsession'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Pilot_Feedback.Subsession'),
         ),
     ]
