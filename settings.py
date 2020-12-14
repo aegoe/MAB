@@ -69,6 +69,18 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
     {
+        'name': 'MAB_Pilot_Study_Feedback',
+        'display_name': "Pilot_Feedback Study",
+        'num_demo_participants': 1,
+        'app_sequence': ['Pilot_Feedback'],
+        'choice': False,
+        'safe': False,
+        'testing': False,
+        'variance': False,
+        'feedback_3': False,
+
+    },
+    {
         'name': 'MAB_Pilot_Study_Priors',
         'display_name': "Pilot_Feedback Study Priors",
         'num_demo_participants': 1,

@@ -14,9 +14,9 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'Pilot_Feedback'
-    num_rounds = 150
-    num_rounds_choice = 150
-    num_rounds_points = 50
+    num_rounds = 3
+    num_rounds_choice = 3
+    num_rounds_points = 1
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
@@ -70,11 +70,33 @@ class Player(BasePlayer):
     urn_draws_2 = models.StringField()
     urn_draws_3 = models.StringField()
     urn_draws_4 = models.StringField()
-    #payoff = models.CurrencyField(initial=None)
-    payoff_1 = models.CurrencyField()
-    payoff_2 = models.CurrencyField()
-    payoff_3 = models.CurrencyField()
-    payoff_4 = models.CurrencyField()
+    payoff_1 = models.IntegerField()
+    payoff_2 = models.IntegerField()
+    payoff_3 = models.IntegerField()
+    payoff_4 = models.IntegerField()
+    payoff_1_m1 = models.IntegerField()
+    payoff_1_m2 = models.IntegerField()
+    payoff_2_m1 = models.IntegerField()
+    payoff_2_m2 = models.IntegerField()
+    payoff_3_m1 = models.IntegerField()
+    payoff_3_m2 = models.IntegerField()
+    payoff_all3 = models.CurrencyField()
+    payoff_1_all3 = models.CurrencyField()
+    payoff_2_all3 = models.CurrencyField()
+    payoff_3_all3 = models.CurrencyField()
+
+    urn_draws_1_m2 = models.StringField()
+    urn_draws_2_m2 = models.StringField()
+    urn_draws_3_m2 = models.StringField()
+
+    urn_draws_1_m1 = models.StringField()
+    urn_draws_2_m1 = models.StringField()
+    urn_draws_3_m1 = models.StringField()
+
+    option_1_all3 = models.IntegerField()
+    option_2_all3 = models.IntegerField()
+    option_3_all3 = models.IntegerField()
+
     instru_page = models.IntegerField(initial=1)
     questionnaire_page = models.IntegerField(initial=1)
     controls = models.IntegerField(initial=0)
