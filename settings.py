@@ -61,18 +61,18 @@ SESSION_CONFIGS = [
         'feedback_3': False,
 
     },
-    {
-        'name': 'MAB_Pilot_Study_Priors',
-        'display_name': "Pilot_Feedback Study Priors",
-        'num_demo_participants': 1,
-        'app_sequence': ['Pilot_Priors'],
-        'choice': False,
-        'safe': False,
-        'test_urns': False,
-        'testing': False,
-        'variance': False,
-
-    },
+    # {
+    #     'name': 'MAB_Pilot_Study_Priors',
+    #     'display_name': "Pilot_Feedback Study Priors",
+    #     'num_demo_participants': 1,
+    #     'app_sequence': ['Pilot_Priors'],
+    #     'choice': False,
+    #     'safe': False,
+    #     'test_urns': False,
+    #     'testing': False,
+    #     'variance': False,
+    #
+    # },
     # {
     #     'name': 'MAB_Pilot_Study_Var_2_BRET',
     #     'display_name': "Pilot_BRET Study Variance 2 BRET",
@@ -85,18 +85,18 @@ SESSION_CONFIGS = [
     #     'variance': True,
     #
     # },
-    {
-        'name': 'MAB_Pilot_Study_Var_2',
-        'display_name': "Pilot_Feedback Study Variance 2",
-        'num_demo_participants': 1,
-        'app_sequence': ['Pilot_Feedback'],
-        'choice': False,
-        'safe': False,
-        'test_urns': True,
-        'testing': False,
-        'variance': True,
-
-    },
+    # {
+    #     'name': 'MAB_Pilot_Study_Var_2',
+    #     'display_name': "Pilot_Feedback Study Variance 2",
+    #     'num_demo_participants': 1,
+    #     'app_sequence': ['Pilot_Feedback'],
+    #     'choice': False,
+    #     'safe': False,
+    #     'test_urns': True,
+    #     'testing': False,
+    #     'variance': True,
+    #
+    # },
     # {
     #     'name': 'MAB_Pilot_Study_Var',
     #     'display_name': "Pilot_Feedback Study Variance",
@@ -121,80 +121,7 @@ SESSION_CONFIGS = [
     #     'variance': False,
     #
     # },
-    #
-    # {
-    #    'name': 'MAB_Pilot_Testing',
-    #     'display_name': "Pilot_Feedback Testing",
-    #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot_Feedback'],
-    #     'choice': False,
-    #     'safe': False,
-    #     'test_urns': False,
-    #     'testing': True,
-    #     'variance': False,
-    #
-    # },
-    # {
-    #     'name': 'MAB_Pilot_Testing_Choice',
-    #     'display_name': "Pilot_Feedback Testing_Choice",
-    #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot_Feedback'],
-    #     'choice': True,
-    #     'safe': False,
-    #     'test_urns': False,
-    #     'testing': True,
-    #     'variance': False,
-    #
-    # },
-    # {
-    #     'name': 'MAB_Pilot_Testing_Safe',
-    #     'display_name': "Pilot_Feedback Testing Safe",
-    #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot_Feedback'],
-    #     'choice': False,
-    #     'safe': True,
-    #     'test_urns': False,
-    #     'testing': True,
-    #     'variance': False,
-    #
-    # },
-    # {
-    #     'name': 'MAB_Pilot_Testing_Safe_Choice',
-    #     'display_name': "Pilot_Feedback Testing Safe Choice",
-    #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot_Feedback'],
-    #     'choice': True,
-    #     'safe': True,
-    #     'test_urns': False,
-    #     'testing': True,
-    #     'variance': False,
-    #
-    # },
-    # {
-    #
-    #     'name': 'MAB_Pilot_Testing_Safe_Choice_TEST',
-    #     'display_name': "Pilot_Feedback Testing Safe Choice TEST",
-    #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot_Feedback'],
-    #     'choice': True,
-    #     'safe': True,
-    #     'test_urns': True,
-    #     'testing': True,
-    #     'variance': False,
-    #
-    # },
-    # {
-    #     'name': 'MAB_Pilot_Testing_Safe_TEST',
-    #     'display_name': "Pilot_Feedback Testing Safe TEST",
-    #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot_Feedback'],
-    #     'choice': False,
-    #     'safe': True,
-    #     'test_urns': True,
-    #     'testing': True,
-    #     'variance': False,
-    #
-    # },
+
 ]
 
 # ISO-639 code

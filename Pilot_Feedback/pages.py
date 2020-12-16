@@ -37,7 +37,7 @@ class Device(Page):
             self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
 
             treatments = ['feedback1_choice', 'feedback3_choice', 'no_choice']
-            weights_2 = [0, 1, 0]
+            weights_2 = [0, 0, 1]
             draw_2 = choice(treatments, 1, p=weights_2)
             self.participant.vars['draw_2'] = draw_2[0]
             if draw_2[0] == 'feedback3_choice':
