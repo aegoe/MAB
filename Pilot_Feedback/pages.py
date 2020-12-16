@@ -436,9 +436,6 @@ class Decision(Page):
                 self.player.option_2_all3 = self.player.option_2 + self.player.in_round(self.round_number - 2).option_2 + self.player.in_round(self.round_number - 1).option_2
                 self.player.option_3_all3 = self.player.option_3 + self.player.in_round(self.round_number - 2).option_3 + self.player.in_round(self.round_number - 1).option_3
 
-
-
-
             else:
                 pass
 
@@ -569,7 +566,7 @@ class Questionnaire(Page):
     form_model ='player'
 
     def get_form_fields(self):
-        if self.participant.vars['choice'] and self.participant.vars['safe'] and not self.participant.vars['variance']:
+        if self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance'] and not self.participant.vars['feedback_3']:
             if self.player.questionnaire_page == 1:
                 return []
             elif self.player.questionnaire_page == 2:
@@ -578,17 +575,12 @@ class Questionnaire(Page):
                 imi = [f'q_imi_{i}' for i in range(1, 8)]
                 return imi
             elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
+                return ['q_exploration_strategy', 'q_maxoption']
             elif self.player.questionnaire_page == 5:
-                return ['q_fadein', 'q_fadeout']
-            elif self.player.questionnaire_page == 6:
-                return ['q_saving', 'q_wealth']
-            elif self.player.questionnaire_page == 7:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
-        elif self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars[
-            'variance']:
+        elif self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance'] and self.participant.vars['feedback_3']:
             if self.player.questionnaire_page == 1:
                 return []
             elif self.player.questionnaire_page == 2:
@@ -597,31 +589,8 @@ class Questionnaire(Page):
                 imi = [f'q_imi_{i}' for i in range(1, 8)]
                 return imi
             elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
+                return ['q_exploration_strategy', 'q_maxoption']
             elif self.player.questionnaire_page == 5:
-                return ['q_fadein', 'q_fadeout']
-            elif self.player.questionnaire_page == 6:
-                return ['q_saving', 'q_wealth']
-            elif self.player.questionnaire_page == 7:
-                return ['q_year', 'q_sex', 'q_employment', 'q_education',
-                        'q_ethnicity']
-
-        elif not self.participant.vars['choice'] and self.participant.vars['safe'] and not self.participant.vars[
-            'variance']:
-            if self.player.questionnaire_page == 1:
-                return []
-            elif self.player.questionnaire_page == 2:
-                return ['q_risk']
-            elif self.player.questionnaire_page == 3:
-                imi = [f'q_imi_{i}' for i in range(1, 8)]
-                return imi
-            elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_maxoption', 'q_firm']
-            elif self.player.questionnaire_page == 5:
-                return ['q_fadein', 'q_fadeout']
-            elif self.player.questionnaire_page == 6:
-                return ['q_saving', 'q_wealth']
-            elif self.player.questionnaire_page == 7:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
@@ -635,55 +604,11 @@ class Questionnaire(Page):
                 imi = [f'q_imi_{i}' for i in range(1, 8)]
                 return imi
             elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_maxoption_2', 'q_firm']
+                return ['q_exploration_strategy', 'q_maxoption_2']
             elif self.player.questionnaire_page == 5:
-                return ['q_fadein', 'q_fadeout']
-            elif self.player.questionnaire_page == 6:
-                return ['q_saving', 'q_wealth']
-            elif self.player.questionnaire_page == 7:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
 
-        elif not self.participant.vars['choice'] and self.participant.vars['safe'] and self.participant.vars[
-            'variance']:
-            if self.player.questionnaire_page == 1:
-                return []
-            elif self.player.questionnaire_page == 2:
-                return ['q_risk']
-            elif self.player.questionnaire_page == 3:
-                imi = [f'q_imi_{i}' for i in range(1, 8)]
-                return imi
-            elif self.player.questionnaire_page == 4:
-                epo = [f'q_epo_{i}' for i in range(1, 14)]
-                return epo
-            elif self.player.questionnaire_page == 5:
-                max = [f'q_max_scale_{i}' for i in range(1, 7)]
-                return max
-            elif self.player.questionnaire_page == 6:
-                return ['q_exploration_strategy', 'q_firm', 'q_maxoption_3',]
-            elif self.player.questionnaire_page == 7:
-                return ['q_year', 'q_sex', 'q_employment', 'q_education',
-                        'q_ethnicity']
-
-        elif self.participant.vars['choice'] and self.participant.vars['safe'] and self.participant.vars['variance']:
-            if self.player.questionnaire_page == 1:
-                return []
-            elif self.player.questionnaire_page == 2:
-                return ['q_risk']
-            elif self.player.questionnaire_page == 3:
-                imi = [f'q_imi_{i}' for i in range(1, 8)]
-                return imi
-            elif self.player.questionnaire_page == 4:
-                epo = [f'q_epo_{i}' for i in range(1, 14)]
-                return epo
-            elif self.player.questionnaire_page == 5:
-                max = [f'q_max_scale_{i}' for i in range(1, 7)]
-                return max
-            elif self.player.questionnaire_page == 6:
-                return ['q_exploration_strategy', 'q_firm', 'q_maxoption_3',]
-            elif self.player.questionnaire_page == 7:
-                return ['q_year', 'q_sex', 'q_employment', 'q_education',
-                        'q_ethnicity']
 
     def is_displayed(self):
         if self.participant.vars['choice']:
@@ -731,8 +656,6 @@ page_sequence = [
     DeadEnd2,
     Decision,
     Feedback,
-    Questionnaire,
-    Questionnaire,
     Questionnaire,
     Questionnaire,
     Questionnaire,

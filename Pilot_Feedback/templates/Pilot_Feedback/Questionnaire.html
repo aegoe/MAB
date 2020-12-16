@@ -8,35 +8,6 @@
 
 {% block content %}
 
-{% if not variance %}
-
-{% if player.questionnaire_page == 1 %}
-
-{% include 'Pilot_Feedback/include/questionnaire_transition.html' %}
-
-{% elif player.questionnaire_page == 2 %}
-    {% include 'Pilot_Feedback/include/questionnaire_1.html' %}
-
-{% elif player.questionnaire_page == 3 %}
-    {% include 'Pilot_Feedback/include/questionnaire_IMI.html' %}
-
-{% elif player.questionnaire_page == 4 %}
-    {% include 'Pilot_Feedback/include/questionnaire_2.html' %}
-
-{% elif player.questionnaire_page == 5 %}
-    {% include 'Pilot_Feedback/include/questionnaire_3.html' %}
-
-{% elif player.questionnaire_page == 6 %}
-    {% include 'Pilot_Feedback/include/questionnaire_4.html' %}
-
-{% elif player.questionnaire_page == 7 %}
-    {% include 'Pilot_Feedback/include/questionnaire_socio_1.html' %}
-
-{% endif %}
-
-
-{% elif variance %}
-
 {% if player.questionnaire_page == 1 %}
 {% include 'Pilot_Feedback/include/questionnaire_transition.html' %}
 
@@ -47,19 +18,11 @@
 {% include 'Pilot_Feedback/include/questionnaire_IMI.html' %}
 
 {% elif player.questionnaire_page == 4 %}
-{% include 'Pilot_Feedback/include/questionnaire_epo.html' %}
-
-{% elif player.questionnaire_page == 5 %}
-{% include 'Pilot_Feedback/include/questionnaire_max.html' %}
-
-{% elif player.questionnaire_page == 6 %}
 {% include 'Pilot_Feedback/include/questionnaire_2.html' %}
 
-{% elif player.questionnaire_page == 7 %}
+{% elif player.questionnaire_page == 5 %}
 {% include 'Pilot_Feedback/include/questionnaire_socio_1.html' %}
 
-
-{% endif %}
 {% endif %}
 
 <br>
