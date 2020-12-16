@@ -122,7 +122,7 @@ k = 4
 ucb_rewards = np.zeros(iters)
 # Initialize bandits
 ucb = ucb_bandit(k, 2, iters)
-episodes = 100
+episodes = 10000
 # Run experiments
 for i in range(episodes):
     ucb.reset('Pilot_Priors')

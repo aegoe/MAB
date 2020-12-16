@@ -8,33 +8,14 @@ from os import environ
 
 # https://otree.readthedocs.io/en/latest/mturk.html#session-config
 
-# mturk_hit_settings_compensation = {
-#     'keywords': [],
-#     'title': 'Compensation HIT',
-#     'description': '',
-#     'frame_height': 800,
-#     'minutes_allotted_per_assignment': 20,
-#     'expiration_hours': 168,
-#     'grant_qualification_id': '3OPOXV2R260YIB0WOK653HEZKCJI8A',
-#     'qualification_requirements': [
-#         {
-#             'QualificationTypeId': "3NCAQQYPG45BZJYRR28GQM0BV6CNNJ",
-#             'Comparator': "Exists",
-#         },
-#         {
-#             'QualificationTypeId': "3OPOXV2R260YIB0WOK653HEZKCJI8A",
-#             'Comparator': "DoesNotExist",
-#         },
-#     ]
-# }
 
 mturk_hit_settings = {
     'keywords': ['bonus', 'short', 'academic'],
     'title': 'A Study on Human Decision Making (with bonus)',
-    'description': 'This HIT takes approximately 8 minutes to complete. Please accept this HIT only if you can commit to completing it right away and without interruption. You can earn a substantial bonus that exceeds the reward for this HIT.',
+    'description': 'This HIT takes approximately 20 minutes to complete. Please accept this HIT only if you can commit to completing it right away and without interruption. You can earn a substantial bonus that exceeds the reward for this HIT.',
     'frame_height': 800,
     'template': 'global/mturk_template.html',
-    'minutes_allotted_per_assignment': 30,
+    'minutes_allotted_per_assignment': 50,
     'expiration_hours': 168,
     'grant_qualification_id': '3F4KLX19QVRYWWIPE260NYV94EYOER',
     'qualification_requirements': [
@@ -61,7 +42,7 @@ mturk_hit_settings = {
 }
 
 SESSION_CONFIG_DEFAULTS = {
-    'real_world_currency_per_point': 0.03,
+    'real_world_currency_per_point': 0.02,
     'participation_fee': 0.5,
     'doc': "",
     'mturk_hit_settings': mturk_hit_settings,

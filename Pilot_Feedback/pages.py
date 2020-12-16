@@ -117,6 +117,7 @@ class InstruStart(Page):
                 'endowment_points': Constants.endowment_points,
                 'draw': self.participant.vars['draw'],
                 'variance': self.participant.vars['variance'],
+                'feedback_3': self.participant.vars['feedback_3'],
 
                 }
 
@@ -239,13 +240,13 @@ class Decision(Page):
 
         if self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['feedback_3'] and not self.participant.vars['variance']:
 
-            Urn_1 = ['-4', '-3', '4', '12']
-            Urn_2 = ['-4', '4', '11', '12']
-            Urn_3 = ['-7', '-6', '1', '9']
+            Urn_1 = ['5', '4', '-3']
+            Urn_2 = ['2', '1', '0']
+            Urn_3 = ['1']
 
-            weights_1 = [0.125, 0.125, 0.39063, 0.35937]
-            weights_2 = [0.35937, 0.39063, 0.125, 0.125]
-            weights_3 = [0.125, 0.125, 0.39063, 0.35937]
+            weights_1 = [1/3, 1/3, 1/3]
+            weights_2 = [1/3, 1/3, 1/3]
+            weights_3 = [1]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -285,24 +286,18 @@ class Decision(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == '-7':
-                        data_counts[i][k] = v * Constants.a
-                    elif k == '-6':
-                        data_counts[i][k] = v * Constants.b
-                    elif k == '-4':
-                        data_counts[i][k] = v * Constants.c
-                    elif k == '-3':
-                        data_counts[i][k] = v * Constants.d
+                    if k == '-3':
+                        data_counts[i][k] = v * -3
+                    elif k == '0':
+                        data_counts[i][k] = v * 0
                     elif k == '1':
-                        data_counts[i][k] = v * Constants.e
+                        data_counts[i][k] = v * 1
+                    elif k == '2':
+                        data_counts[i][k] = v * 2
                     elif k == '4':
-                        data_counts[i][k] = v * Constants.f
-                    elif k == '9':
-                        data_counts[i][k] = v * Constants.g
-                    elif k == '11':
-                        data_counts[i][k] = v * Constants.h
-                    elif k == '12':
-                        data_counts[i][k] = v * Constants.i
+                        data_counts[i][k] = v * 4
+                    elif k == '5':
+                        data_counts[i][k] = v * 5
 
             self.player.payoff = 0
             for i in data_counts.keys():
@@ -324,13 +319,13 @@ class Decision(Page):
 
         elif self.participant.vars['choice'] and not self.participant.vars['safe'] and self.participant.vars['feedback_3'] and not self.participant.vars['variance']:
 
-            Urn_1 = ['5', '4', '3', '-1']
-            Urn_2 = ['30', '-4', '-6', '-9']
-            Urn_3 = ['2', '2', '2', '2']
+            Urn_1 = ['5', '4', '-3']
+            Urn_2 = ['2', '1', '0']
+            Urn_3 = ['1']
 
-            weights_1 = [0.25, 0.25, 0.25, 0.25]
-            weights_2 = [0.25, 0.25, 0.25, 0.25]
-            weights_3 = [0.25, 0.25, 0.25, 0.25]
+            weights_1 = [1/3, 1/3, 1/3]
+            weights_2 = [1/3, 1/3, 1/3]
+            weights_3 = [1]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -367,24 +362,18 @@ class Decision(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == '-9':
-                        data_counts[i][k] = v * -9
-                    elif k == '-6':
-                        data_counts[i][k] = v * -6
-                    elif k == '-4':
-                        data_counts[i][k] = v * -4
-                    elif k == '-1':
-                        data_counts[i][k] = v * -1
+                    if k == '-3':
+                        data_counts[i][k] = v * -3
+                    elif k == '0':
+                        data_counts[i][k] = v * 0
+                    elif k == '1':
+                        data_counts[i][k] = v * 1
                     elif k == '2':
                         data_counts[i][k] = v * 2
-                    elif k == '3':
-                        data_counts[i][k] = v * 3
                     elif k == '4':
                         data_counts[i][k] = v * 4
                     elif k == '5':
                         data_counts[i][k] = v * 5
-                    elif k == '30':
-                        data_counts[i][k] = v * 30
 
             self.player.payoff = 0
             for i in data_counts.keys():
@@ -441,13 +430,13 @@ class Decision(Page):
 
         elif not self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['feedback_3'] and not self.participant.vars['variance']:
 
-            Urn_1 = ['-4', '-3', '4', '12']
-            Urn_2 = ['-4', '4', '11', '12']
-            Urn_3 = ['-7', '-6', '1', '9']
+            Urn_1 = ['5', '4', '-3']
+            Urn_2 = ['2', '1', '0']
+            Urn_3 = ['1']
 
-            weights_1 = [0.125, 0.125, 0.39063, 0.35937]
-            weights_2 = [0.35937, 0.39063, 0.125, 0.125]
-            weights_3 = [0.125, 0.125, 0.39063, 0.35937]
+            weights_1 = [1/3, 1/3, 1/3]
+            weights_2 = [1/3, 1/3, 1/3]
+            weights_3 = [1]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -485,26 +474,18 @@ class Decision(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == '-7':
-                        data_counts[i][k] = v * Constants.a
-                    elif k == '-6':
-                        data_counts[i][k] = v * Constants.b
-                    elif k == '-4':
-                        data_counts[i][k] = v * Constants.c
-                    elif k == '-3':
-                        data_counts[i][k] = v * Constants.d
+                    if k == '-3':
+                        data_counts[i][k] = v * -3
+                    elif k == '0':
+                        data_counts[i][k] = v * 0
                     elif k == '1':
-                        data_counts[i][k] = v * Constants.e
+                        data_counts[i][k] = v * 1
+                    elif k == '2':
+                        data_counts[i][k] = v * 2
                     elif k == '4':
-                        data_counts[i][k] = v * Constants.f
-                    elif k == '9':
-                        data_counts[i][k] = v * Constants.g
-                    elif k == '11':
-                        data_counts[i][k] = v * Constants.h
-                    elif k == '12':
-                        data_counts[i][k] = v * Constants.i
-                    elif k == '4':
-                        data_counts[i][k] = v * Constants.safe_option
+                        data_counts[i][k] = v * 4
+                    elif k == '5':
+                        data_counts[i][k] = v * 5
 
             self.player.payoff = 0
             for i in data_counts.keys():
@@ -575,7 +556,7 @@ class Questionnaire(Page):
                 imi = [f'q_imi_{i}' for i in range(1, 8)]
                 return imi
             elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_maxoption']
+                return ['q_exploration_strategy', 'q_maxoption_2', 'q_evtriangle', 'q_evcircle']
             elif self.player.questionnaire_page == 5:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
@@ -589,7 +570,7 @@ class Questionnaire(Page):
                 imi = [f'q_imi_{i}' for i in range(1, 8)]
                 return imi
             elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_maxoption']
+                return ['q_exploration_strategy', 'q_maxoption_2', 'q_evtriangle', 'q_evcircle']
             elif self.player.questionnaire_page == 5:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
@@ -604,7 +585,7 @@ class Questionnaire(Page):
                 imi = [f'q_imi_{i}' for i in range(1, 8)]
                 return imi
             elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_maxoption_2']
+                return ['q_exploration_strategy', 'q_maxoption_2', 'q_evtriangle', 'q_evcircle']
             elif self.player.questionnaire_page == 5:
                 return ['q_year', 'q_sex', 'q_employment', 'q_education',
                         'q_ethnicity']
