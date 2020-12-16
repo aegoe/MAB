@@ -5,9 +5,17 @@
 {% endblock %}
 
 {% block content %}
+{% if not feedback_3 %}
+
 <p> Each round after submitting your investment, a feedback screen {% if not choice %} summarizes the number of draws per option and {% endif %} informs you about the {% if choice %}
     value of the coin drawn from the bag. {% elif not choice %} respective values of each coin drawn. {% endif %}
     These values are summed up on the blue button below the feedback table. By clicking on the button, you will start the next round. </p>
+
+{% elif feedback_3 %}
+<p> Every three consecutive investments, a feedback screen summarizes the number of draws per option and informs you about the respective values of each coin drawn.
+    These values are summed up on the blue button below the feedback table. By clicking on the button, you will start the next round.
+
+{% endif %}
 
 <p> Your total earnings at the end of this HIT are the accumulated earnings from each round. <b> Your goal in this HIT is to maximize your total earnings. </b> </p>
 
@@ -16,7 +24,9 @@
 </p>
 
 
-<br>
 
+<p> Click on the button below to proceed to the comprehension questions. </p>
+
+<br>
 
 {% endblock %}
