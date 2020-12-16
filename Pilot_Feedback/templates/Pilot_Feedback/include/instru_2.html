@@ -15,8 +15,11 @@ You can invest {% if choice %} this point {% elif not choice %} these points {% 
 three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three 
 points {% endif %} must be invested in each round. </p>
 
-<p> Once you have made your choice, you will get feedback about the payoff from your investment. This will be shown on a separate feedback screen upon submitting your choice. </p>
+<!--{% if not feedback_3 %}
+<p>Once you have made your choice, you will get feedback about the payoff from your investment. This will be shown on a separate feedback screen upon submitting your choice. </p>
 
+{% elif feedback_3 %}
+<p> </p>-->
 
 {% if safe and not choice and not variance %}
 
