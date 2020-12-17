@@ -284,6 +284,16 @@ class Player(BasePlayer):
         blank=False
     )
 
+    q_pattern = models.BooleanField(
+        choices=[
+            [1, 'Yes'],
+            [2, 'No'],
+        ],
+        widget=widgets.RadioSelect,
+        label="",
+        blank=False
+    )
+
     q_employment = models.IntegerField(
         choices=[
             [1, 'Working (paid employee)'],
