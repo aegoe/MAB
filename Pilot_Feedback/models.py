@@ -268,8 +268,8 @@ class Player(BasePlayer):
         blank=False
     )
 
-    q_evtriangle = models.StringField(blank=False, label="")
-    q_evcircle = models.StringField(blank=False, label="")
+    q_evtriangle = models.IntegerField(blank=False, label="")
+    q_evcircle = models.IntegerField(blank=False, label="")
 
     q_year = models.IntegerField(label="", blank=False, min=1900, max=2019)
 

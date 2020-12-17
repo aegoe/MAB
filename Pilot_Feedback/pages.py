@@ -143,6 +143,8 @@ class ComprehensionQuestions(Page):
                 'endowment_choice': Constants.endowment_choice,
                 'endowment_points': Constants.endowment_points,
                 'variance': self.participant.vars['variance'],
+                'feedback_3': self.participant.vars['feedback_3'],
+
                 }
 
     def get_form_fields(self):
