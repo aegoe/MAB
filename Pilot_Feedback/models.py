@@ -287,8 +287,8 @@ class Player(BasePlayer):
 
     q_pattern = models.BooleanField(
         choices=[
-            [1, 'Yes'],
-            [2, 'No'],
+            [0, 'Yes'],
+            [1, 'No'],
         ],
         widget=widgets.RadioSelect,
         label="",
