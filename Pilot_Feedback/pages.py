@@ -41,13 +41,13 @@ class Device(Page):
             draw_2 = choice(treatments, 1, p=weights_2)
             self.participant.vars['draw_2'] = draw_2[0]
             if draw_2[0] == 'feedback3_choice':
-                self.player.safe = self.participant.vars['feedback_3'] = True
+                self.player.feedback_3 = self.participant.vars['feedback_3'] = True
                 self.player.choice = self.participant.vars['choice'] = True
             elif draw_2[0] == 'feedback1_choice':
-                self.player.safe = self.participant.vars['feedback_3'] = False
+                self.player.feedback_3 = self.participant.vars['feedback_3'] = False
                 self.player.choice = self.participant.vars['choice'] = True
             elif draw_2[0] == 'no_choice':
-                self.player.safe = self.participant.vars['feedback_3'] = False
+                self.player.feedback_3 = self.participant.vars['feedback_3'] = False
                 self.player.choice = self.participant.vars['choice'] = False
 
 
@@ -242,12 +242,12 @@ class Decision(Page):
 
         if self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['feedback_3'] and not self.participant.vars['variance']:
 
-            Urn_1 = ['5', '4', '-3']
-            Urn_2 = ['2', '1', '0']
+            Urn_1 = ['10', '0', '-1', '-2']
+            Urn_2 = ['3', '2', '1', '-3']
             Urn_3 = ['1']
 
-            weights_1 = [1/3, 1/3, 1/3]
-            weights_2 = [1/3, 1/3, 1/3]
+            weights_1 = [1/4, 1/4, 1/4, 1/4]
+            weights_2 = [1/4, 1/4, 1/4, 1/4]
             weights_3 = [1]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
@@ -321,12 +321,12 @@ class Decision(Page):
 
         elif self.participant.vars['choice'] and not self.participant.vars['safe'] and self.participant.vars['feedback_3'] and not self.participant.vars['variance']:
 
-            Urn_1 = ['5', '4', '-3']
-            Urn_2 = ['2', '1', '0']
+            Urn_1 = ['10', '0', '-1', '-2']
+            Urn_2 = ['3', '2', '1', '-3']
             Urn_3 = ['1']
 
-            weights_1 = [1/3, 1/3, 1/3]
-            weights_2 = [1/3, 1/3, 1/3]
+            weights_1 = [1/4, 1/4, 1/4, 1/4]
+            weights_2 = [1/4, 1/4, 1/4, 1/4]
             weights_3 = [1]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
@@ -432,12 +432,12 @@ class Decision(Page):
 
         elif not self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['feedback_3'] and not self.participant.vars['variance']:
 
-            Urn_1 = ['5', '4', '-3']
-            Urn_2 = ['2', '1', '0']
+            Urn_1 = ['10', '0', '-1', '-2']
+            Urn_2 = ['3', '2', '1', '-3']
             Urn_3 = ['1']
 
-            weights_1 = [1/3, 1/3, 1/3]
-            weights_2 = [1/3, 1/3, 1/3]
+            weights_1 = [1/4, 1/4, 1/4, 1/4]
+            weights_2 = [1/4, 1/4, 1/4, 1/4]
             weights_3 = [1]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
