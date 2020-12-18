@@ -290,16 +290,20 @@ class Decision(Page):
                 for k, v in data_counts[i].items():
                     if k == '-3':
                         data_counts[i][k] = v * -3
+                    elif k == '-2':
+                        data_counts[i][k] = v * -2
+                    elif k == '-1':
+                        data_counts[i][k] = v * -1
                     elif k == '0':
                         data_counts[i][k] = v * 0
                     elif k == '1':
                         data_counts[i][k] = v * 1
                     elif k == '2':
                         data_counts[i][k] = v * 2
-                    elif k == '4':
-                        data_counts[i][k] = v * 4
-                    elif k == '5':
-                        data_counts[i][k] = v * 5
+                    elif k == '3':
+                        data_counts[i][k] = v * 3
+                    elif k == '10':
+                        data_counts[i][k] = v * 10
 
             self.player.payoff = 0
             for i in data_counts.keys():
@@ -366,16 +370,20 @@ class Decision(Page):
                 for k, v in data_counts[i].items():
                     if k == '-3':
                         data_counts[i][k] = v * -3
+                    elif k == '-2':
+                        data_counts[i][k] = v * -2
+                    elif k == '-1':
+                        data_counts[i][k] = v * -1
                     elif k == '0':
                         data_counts[i][k] = v * 0
                     elif k == '1':
                         data_counts[i][k] = v * 1
                     elif k == '2':
                         data_counts[i][k] = v * 2
-                    elif k == '4':
-                        data_counts[i][k] = v * 4
-                    elif k == '5':
-                        data_counts[i][k] = v * 5
+                    elif k == '3':
+                        data_counts[i][k] = v * 3
+                    elif k == '10':
+                        data_counts[i][k] = v * 10
 
             self.player.payoff = 0
             for i in data_counts.keys():
@@ -478,16 +486,20 @@ class Decision(Page):
                 for k, v in data_counts[i].items():
                     if k == '-3':
                         data_counts[i][k] = v * -3
+                    elif k == '-2':
+                        data_counts[i][k] = v * -2
+                    elif k == '-1':
+                        data_counts[i][k] = v * -1
                     elif k == '0':
                         data_counts[i][k] = v * 0
                     elif k == '1':
                         data_counts[i][k] = v * 1
                     elif k == '2':
                         data_counts[i][k] = v * 2
-                    elif k == '4':
-                        data_counts[i][k] = v * 4
-                    elif k == '5':
-                        data_counts[i][k] = v * 5
+                    elif k == '3':
+                        data_counts[i][k] = v * 3
+                    elif k == '10':
+                        data_counts[i][k] = v * 10
 
             self.player.payoff = 0
             for i in data_counts.keys():
