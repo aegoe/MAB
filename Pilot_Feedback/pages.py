@@ -558,7 +558,7 @@ class Questionnaire(Page):
                 imi = [f'q_imi_{i}' for i in range(1, 8)]
                 return imi
             elif self.player.questionnaire_page == 4:
-                return ['q_exploration_strategy', 'q_maxoption_2', 'q_evtriangle', 'q_evcircle']
+                return ['q_exploration_strategy', 'q_maxoption_2', 'q_evtriangle', 'q_evcircle', 'q_pattern']
             elif self.player.questionnaire_page == 5:
                 epo = [f'q_epo_{i}' for i in range(1, 14)]
                 return epo
