@@ -1,0 +1,14 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    {% if player.access_device == 0 %}
+    Unfortunately, for this HIT we can only allow participation of workers using
+    either a Laptop or Desktop PC. Therefore, you will not be able to participate in this HIT.
+    {% else %}
+        Unfortunately, you failed our attention check. Therefore, you will not be able to participate in this HIT.
+    {% endif %}
+{% endblock %}

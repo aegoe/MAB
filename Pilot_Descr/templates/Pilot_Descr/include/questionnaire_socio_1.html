@@ -1,0 +1,56 @@
+{% load otree %}
+
+
+<div class="card">
+    <div class="card-header">
+        Which year were you born in?<br>
+        <i>Please enter your year of birth into the text entry box</i>.
+    </div>
+    <div class="card-body">
+        {% formfield player.q_year %}
+    </div>
+</div>
+<br>
+
+<div class="card">
+    <div class="card-header">
+        What is your sex?<br>
+        <i>Please choose one of the following answers</i>.
+    </div>
+    <div class="card-body">
+        {% formfield player.q_sex %}
+    </div>
+</div>
+<br>
+
+<div class="card">
+    <div class="card-header">
+        Which statement best describes your current employment status?<br>
+        <i>Please choose one of the following answers</i>.
+    </div>
+    <div class="card-body">
+        {% formfield player.q_employment %}
+    </div>
+</div>
+<br>
+
+<div class="card">
+    <div class="card-header">
+        What is the highest level of school you have completed or the highest degree you have received?<br>
+        <i>Please choose one of the following answers</i>.
+    </div>
+    <div class="card-body">
+        {% formfield player.q_education %}
+    </div>
+</div>
+<br>
+
+<div class="card">
+    <div class="card-header">
+        Choose one or more ethnicities that you consider yourself to be:
+    </div>
+    <div class="card-body">
+        {% formfield player.q_ethnicity %}
+    </div>
+</div>
+<br>

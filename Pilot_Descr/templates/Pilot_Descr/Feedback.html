@@ -1,0 +1,2875 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+<div class="page-header">
+    <p>Draws & Earnings</p>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+{% if not safe %}
+
+
+{% if draw == 'TSR' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+{% if player.round_number == 3 %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws: &nbsp;</b> </td>
+            <td class="td_choice"> {{option_1_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_2_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_3_sum}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{urn_draws_1_1}} &nbsp; {{urn_draws_1_2}} &nbsp; {{urn_draws_1_3}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_2_1}} &nbsp; {{urn_draws_2_2}} &nbsp; {{urn_draws_2_3}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_3_1}} &nbsp; {{urn_draws_3_2}} &nbsp; {{urn_draws_3_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{payoff_sum_3rounds_1}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_2}} ECU&nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_3}} ECU&nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{payoff_sum_3rounds}} ECU</button>
+
+
+{% elif player.round_number == 6 %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws: &nbsp;</b> </td>
+            <td class="td_choice"> {{option_4_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_5_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_6_sum}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{urn_draws_1_4}} &nbsp; {{urn_draws_1_5}} &nbsp; {{urn_draws_1_6}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_2_4}} &nbsp; {{urn_draws_2_5}} &nbsp; {{urn_draws_2_6}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_3_4}} &nbsp; {{urn_draws_3_5}} &nbsp; {{urn_draws_3_6}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{payoff_sum_3rounds_4}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_5}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_6}} ECU &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{payoff_sum_36rounds}} ECU</button>
+
+{% endif %}
+{% endif %}
+
+{% elif draw == 'STR' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+
+{% elif choice %}
+
+{% if player.round_number == 3 %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws: &nbsp;</b> </td>
+            <td class="td_choice"> {{option_2_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_1_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_3_sum}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{urn_draws_2_1}} &nbsp; {{urn_draws_2_2}} &nbsp; {{urn_draws_2_3}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_1_1}} &nbsp; {{urn_draws_1_2}} &nbsp; {{urn_draws_1_3}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_3_1}} &nbsp; {{urn_draws_3_2}} &nbsp; {{urn_draws_3_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{payoff_sum_3rounds_2}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_1}} ECU&nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_3}} ECU&nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{payoff_sum_3rounds}} ECU</button>
+
+
+{% elif player.round_number == 6 %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws: &nbsp;</b> </td>
+            <td class="td_choice"> {{option_5_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_4_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_6_sum}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{urn_draws_2_4}} &nbsp; {{urn_draws_2_5}} &nbsp; {{urn_draws_2_6}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_1_4}} &nbsp; {{urn_draws_1_5}} &nbsp; {{urn_draws_1_6}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_3_4}} &nbsp; {{urn_draws_3_5}} &nbsp; {{urn_draws_3_6}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{payoff_sum_3rounds_5}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_4}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_6}} ECU &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{payoff_sum_36rounds}} ECU</button>
+
+{% endif %}
+
+{% endif %}
+
+
+{% elif draw == 'RTS' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+
+{% elif choice %}
+
+{% if player.round_number == 3 %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws: &nbsp;</b> </td>
+            <td class="td_choice"> {{option_3_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_1_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_2_sum}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{urn_draws_3_1}} &nbsp; {{urn_draws_3_2}} &nbsp; {{urn_draws_3_3}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_1_1}} &nbsp; {{urn_draws_1_2}} &nbsp; {{urn_draws_1_3}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_2_1}} &nbsp; {{urn_draws_2_2}} &nbsp; {{urn_draws_2_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{payoff_sum_3rounds_3}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_1}} ECU&nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_2}} ECU&nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{payoff_sum_3rounds}} ECU</button>
+
+
+{% elif player.round_number == 6 %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle&nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws: &nbsp;</b> </td>
+            <td class="td_choice"> {{option_6_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_4_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_5_sum}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{urn_draws_3_4}} &nbsp; {{urn_draws_3_5}} &nbsp; {{urn_draws_3_6}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_1_4}} &nbsp; {{urn_draws_1_5}} &nbsp; {{urn_draws_1_6}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_2_4}} &nbsp; {{urn_draws_2_5}} &nbsp; {{urn_draws_2_6}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{payoff_sum_3rounds_6}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_4}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_5}} ECU &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{payoff_sum_36rounds}} ECU</button>
+
+{% endif %}
+
+{% endif %}
+
+{% elif draw == 'TRS' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+
+{% elif choice %}
+
+{% if player.round_number == 3 %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws: &nbsp;</b> </td>
+            <td class="td_choice"> {{option_1_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_3_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_2_sum}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{urn_draws_1_1}} &nbsp; {{urn_draws_1_2}} &nbsp; {{urn_draws_1_3}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_3_1}} &nbsp; {{urn_draws_3_2}} &nbsp; {{urn_draws_3_3}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_2_1}} &nbsp; {{urn_draws_2_2}} &nbsp; {{urn_draws_2_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{payoff_sum_3rounds_1}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_3}} ECU&nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_2}} ECU&nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{payoff_sum_3rounds}} ECU</button>
+
+
+{% elif player.round_number == 6 %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws: &nbsp;</b> </td>
+            <td class="td_choice"> {{option_4_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_6_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_5_sum}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{urn_draws_1_4}} &nbsp; {{urn_draws_1_5}} &nbsp; {{urn_draws_1_6}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_3_4}} &nbsp; {{urn_draws_3_5}} &nbsp; {{urn_draws_3_6}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_2_4}} &nbsp; {{urn_draws_2_5}} &nbsp; {{urn_draws_2_6}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{payoff_sum_3rounds_4}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_6}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_5}} ECU &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{payoff_sum_36rounds}} ECU</button>
+
+{% endif %}
+
+{% endif %}
+
+
+{% elif draw == 'SRT' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+
+{% elif choice %}
+
+{% if player.round_number == 3 %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws: &nbsp;</b> </td>
+            <td class="td_choice"> {{option_2_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_3_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_1_sum}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{urn_draws_2_1}} &nbsp; {{urn_draws_2_2}} &nbsp; {{urn_draws_2_3}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_3_1}} &nbsp; {{urn_draws_3_2}} &nbsp; {{urn_draws_3_3}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_1_1}} &nbsp; {{urn_draws_1_2}} &nbsp; {{urn_draws_1_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{payoff_sum_3rounds_2}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_3}} ECU&nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_1}} ECU&nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{payoff_sum_3rounds}} ECU</button>
+
+
+{% elif player.round_number == 6 %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws: &nbsp;</b> </td>
+            <td class="td_choice"> {{option_5_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_6_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_4_sum}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{urn_draws_2_4}} &nbsp; {{urn_draws_2_5}} &nbsp; {{urn_draws_2_6}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_3_4}} &nbsp; {{urn_draws_3_5}} &nbsp; {{urn_draws_3_6}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_1_4}} &nbsp; {{urn_draws_1_5}} &nbsp; {{urn_draws_1_6}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{payoff_sum_3rounds_5}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_6}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_4}} ECU &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{payoff_sum_36rounds}} ECU</button>
+
+{% endif %}
+
+{% endif %}
+
+{% elif draw == 'RST' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+
+{% elif choice %}
+
+{% if player.round_number == 3 %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws: &nbsp;</b> </td>
+            <td class="td_choice"> {{option_3_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_2_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_1_sum}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{urn_draws_3_1}} &nbsp; {{urn_draws_3_2}} &nbsp; {{urn_draws_3_3}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_2_1}} &nbsp; {{urn_draws_2_2}} &nbsp; {{urn_draws_2_3}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_1_1}} &nbsp; {{urn_draws_1_2}} &nbsp; {{urn_draws_1_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{payoff_sum_3rounds_3}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_2}} ECU&nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_1}} ECU&nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{payoff_sum_3rounds}} ECU</button>
+
+
+{% elif player.round_number == 6 %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws: &nbsp;</b> </td>
+            <td class="td_choice"> {{option_6_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_5_sum}} &nbsp;</td>
+            <td class="td_choice"> {{option_4_sum}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{urn_draws_3_4}} &nbsp; {{urn_draws_3_5}} &nbsp; {{urn_draws_3_6}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_2_4}} &nbsp; {{urn_draws_2_5}} &nbsp; {{urn_draws_2_6}} &nbsp;</td>
+            <td class="td_choice"> {{urn_draws_1_4}} &nbsp; {{urn_draws_1_5}} &nbsp; {{urn_draws_1_6}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{payoff_sum_3rounds_6}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_5}} ECU &nbsp;</td>
+            <td class="td_choice"> {{payoff_sum_3rounds_4}} ECU &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{payoff_sum_36rounds}} ECU</button>
+
+{% endif %}
+
+{% endif %}
+{% endif %}
+{% endif %}
+
+
+{% if safe %}
+
+{% if draw == 'TSRH' %}
+
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'STRH' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+
+{% elif draw == 'RTSH' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'TRSH' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'SRTH' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'RSTH' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'HSTR' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'SHTR' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'THSR' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'HTSR' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'STHR' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'TSHR' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'TRHS' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'RTHS' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'HTRS' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'THRS' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'RHTS' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'HRTS' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'HRST' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'RHST' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'SHRT' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'HSRT' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'RSHT' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% elif draw == 'SRHT' %}
+
+{% if not choice %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws:</b> </td>
+            <td class="td"> {{player.option_2}} &nbsp;</td>
+            <td class="td"> {{player.option_3}} &nbsp;</td>
+            <td class="td"> {{player.option_safe}} &nbsp;</td>
+            <td class="td"> {{player.option_1}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% elif choice %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Circle &nbsp;</th>
+            <th class="th"> Rectangle &nbsp;</th>
+            <th class="th"> Hexagon &nbsp;</th>
+            <th class="th"> Triangle &nbsp;</th>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Draws:</b> </td>
+            <td class="td_choice"> {{player.option_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_safe}} &nbsp;</td>
+            <td class="td_choice"> {{player.option_1}} &nbsp;</td>
+
+        </tr>
+        <tr>
+            <td class="td_choice"> <b>Coins:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.urn_draws_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.urn_draws_1}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td_choice"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td_choice"> {{player.payoff_2}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_3}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_4}} &nbsp;</td>
+            <td class="td_choice"> {{player.payoff_1}} &nbsp;</td>
+
+        </tr>
+
+    </table>
+    </div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+{% endif %}
+
+{% endif %}
+
+{% endif %}
+
+{% endblock %}
+
+
+
+
+{% block styles %}
+    <style type="text/css">
+        {% include 'Pilot_Priors/css/feedback.css' %}
+    </style>
+{% endblock %}

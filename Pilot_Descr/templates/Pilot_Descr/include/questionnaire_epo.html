@@ -1,0 +1,29 @@
+{% load otree %}
+
+<div class="card">
+    <div class="card-header">
+        Indicate how much you agree with each of the following  statements. <br>
+        <i>The scale ranges from 1-7, where 1 is ‘strongly disagree’ and 7 is ‘strongly agree’.</i>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <td width="62%">
+                </td>
+                <td style="padding-right:0px" align="left" width="11%">strongly disagree</td>
+                <td align="center"> &mdash;&mdash;</td>
+                <td align="left" style="padding-left:0px" width="17%">strongly agree</td>
+            </tr>
+        </table>
+        <table class="table">
+            {% for field in form.visible_fields %}
+                <tr>
+                    <td width="63%">{{ field.label }}</td>
+                    <td colspan="3" id="test">{{ field }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+<br>

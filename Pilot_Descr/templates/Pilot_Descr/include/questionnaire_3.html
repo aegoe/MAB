@@ -1,0 +1,29 @@
+{% load otree %}
+
+<div class="card">
+    <div class="card-header">
+        For each of the following statements, please indicate how true it is for you.<br>
+        <i>The scale ranges from 1-7, where 1 is ‘not true at all’, 4 is `somewhat true' and 7 is ‘very true’.</i>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <td width="62%">
+                </td>
+                <td style="padding-right:0px" align="left" width="11%">not true at all</td>
+                <td align="center"> &mdash;&mdash;</td>
+                <td align="left" style="padding-left:0px" width="17%">very true</td>
+            </tr>
+        </table>
+        <table class="table">
+            {% for field in form.visible_fields %}
+                <tr>
+                    <td width="62%">{{ field.label }}</td>
+                    <td colspan="3" id="test">{{ field }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+<br>

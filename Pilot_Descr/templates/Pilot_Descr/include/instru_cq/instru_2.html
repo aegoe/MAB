@@ -1,0 +1,55 @@
+{% load otree %}
+{% block title %}
+<h4>The Task</h4>
+<br>
+
+{% endblock %}
+
+{% block content %}
+
+<p> This HIT comprises {% if not choice %} {{Constants.num_rounds_points}} {% elif choice %} {{Constants.num_rounds_choice}} {% endif %} rounds. You will repeatedly choose between different options, as shown in the image below.
+Each option is represented by a money bag. You choose options by investing points.</p>
+
+<p> At the beginning of {% if not choice %} both rounds{% elif choice %} each round{% endif %}, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}.
+You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
+three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three
+points {% endif %} must be invested in each round. </p>
+
+<!--{% if not choice %}-->
+<!--<p>Once you have made your choice, you will receive feedback about the payoff from your investment. This will be shown on a separate feedback screen upon submitting your choice. </p>-->
+
+<!--{% elif choice %}-->
+<!--<p> Once you made three consecutive choices, you will receive feedback about the payoff from your investment. Thus, you will-->
+<!--receive feedback after the third and after the sixth round. This will be shown on a separate feedback screen.</p>-->
+
+<!--{% endif %}-->
+
+
+{% if choice %}
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/9zjs7EA.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+{% elif not choice %}
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/Bp0v341.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+{% endif %}
+
+
+<br>
+
+{% endblock %}
+
+

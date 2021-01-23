@@ -1,0 +1,19 @@
+{% load otree %}
+{% block title %}
+<h4>Investments and Earnings </h4>
+<br>
+{% endblock %}
+
+{% block content %}
+<p> You can think of each option as a bag of coins. The coins are put in each bag before the game starts and for every point you invest in
+an option, a coin from the respective bag is drawn. Thus, one point equals one draw. After each draw, the coin is put back into the bag. </p>
+
+<p> Bags differ in the composition of coins they contain. At the beginning of the task, you will see summary statistics from {{Constants.num_priors}} prior
+    draws from each of the three options. You can use this data to inform your choices throughout the {% if not choice %} {{Constants.num_rounds_points}} {% elif choice %} {{Constants.num_rounds_choice}} {% endif %} rounds.</p>
+
+
+
+<br>
+
+
+{% endblock %}

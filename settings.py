@@ -65,7 +65,7 @@ SESSION_CONFIGS = [
     #     'name': 'MAB_Pilot_Study_Priors',
     #     'display_name': "Pilot_Feedback Study Priors",
     #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot_Priors'],
+    #     'app_sequence': ['Pilot_Descr'],
     #     'choice': False,
     #     'safe': False,
     #     'test_urns': False,
