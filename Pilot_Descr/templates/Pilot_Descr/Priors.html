@@ -11,7 +11,7 @@
 <br>
 
 
-<p>The table below shows summary information for <b> {{Constants.num_priors}} prior draws </b> from each option (150 draws in total).<b> You can use this data to inform your decisions over the next {% if choice %} six {% elif not choice %} two {% endif %} rounds. </p></b>
+<p>The table below shows summary information for <b> {{Constants.num_priors}} prior draws </b> from each option (300 draws in total).<b> You can use this data to inform your decisions over the next {% if choice %} six {% elif not choice %} two {% endif %} rounds. </p></b>
 
 <p>"Mean" refers to an option's average payoff per draw.</p>
 <p>"SD" refers to an option's standard deviation. The standard deviation
@@ -32,26 +32,26 @@ close to the average. A high standard deviation means that numbers are more wide
     <table>
         <tr>
             <th class="th">  </th>
-            <th class="th"> Triangle
+            <th class="th"> Option T
             <div class="imageholder"><img src="https://i.imgur.com/BvuIyzt.png" alt="bla" width="100px"/>
             </div></th>
-            <th class="th"> Circle
+            <th class="th"> Option C
             <div class="imageholder"><img src="https://i.imgur.com/KNAxFRw.png" alt="bla" width="100px"/>
             </div></th>
-            <th class="th"> Rectangle
+            <th class="th"> Option S
             <div class="imageholder"><img src='https://i.imgur.com/JmnyWdf.png' alt="bla" width="100px"/>
             </div></th>
         </tr>
 
         <tr>
-            <td class="td"> <b>Mean (50 draws): &nbsp;</b> </td>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
             <td class="td"> 2.9 &nbsp;</td>
             <td class="td"> 1.9 &nbsp;</td>
             <td class="td"> 2 &nbsp;</td>
         </tr>
 
          <tr>
-            <td class="td"> <b>SD (50 draws):&nbsp;</b> </td>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
             <td class="td"> 1.6 &nbsp;</td>
             <td class="td"> 17.3 &nbsp;</td>
             <td class="td"> 0 &nbsp;</td>
@@ -94,14 +94,14 @@ close to the average. A high standard deviation means that numbers are more wide
         </tr>
 
         <tr>
-            <td class="td"> <b>Mean (50 draws): &nbsp;</b> </td>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
             <td class="td"> 1.9 &nbsp;</td>
             <td class="td"> 2.9 &nbsp;</td>
             <td class="td"> 2 &nbsp;</td>
         </tr>
 
          <tr>
-            <td class="td"> <b>SD (50 draws):&nbsp;</b> </td>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
             <td class="td"> 17.3 &nbsp;</td>
             <td class="td"> 1.6 &nbsp;</td>
             <td class="td"> 0 &nbsp;</td>
@@ -143,14 +143,14 @@ close to the average. A high standard deviation means that numbers are more wide
         </tr>
 
         <tr>
-            <td class="td"> <b>Mean (50 draws): &nbsp;</b> </td>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
             <td class="td"> 2 &nbsp;</td>
             <td class="td"> 2.9 &nbsp;</td>
             <td class="td"> 1.9 &nbsp;</td>
         </tr>
 
          <tr>
-            <td class="td"> <b>SD (50 draws):&nbsp;</b> </td>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
             <td class="td"> 0 &nbsp;</td>
             <td class="td"> 1.6 &nbsp;</td>
             <td class="td"> 17.3 &nbsp;</td>
@@ -192,14 +192,14 @@ close to the average. A high standard deviation means that numbers are more wide
         </tr>
 
         <tr>
-            <td class="td"> <b>Mean (50 draws): &nbsp;</b> </td>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
             <td class="td"> 2.9 &nbsp;</td>
             <td class="td"> 2 &nbsp;</td>
             <td class="td"> 1.9 &nbsp;</td>
         </tr>
 
          <tr>
-            <td class="td"> <b>SD (50 draws):&nbsp;</b> </td>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
             <td class="td"> 1.6 &nbsp;</td>
             <td class="td"> 0 &nbsp;</td>
             <td class="td"> 17.3 &nbsp;</td>
@@ -241,14 +241,14 @@ close to the average. A high standard deviation means that numbers are more wide
         </tr>
 
         <tr>
-            <td class="td"> <b>Mean (50 draws): &nbsp;</b> </td>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
             <td class="td"> 1.9 &nbsp;</td>
             <td class="td"> 2 &nbsp;</td>
             <td class="td"> 2.9 &nbsp;</td>
         </tr>
 
          <tr>
-            <td class="td"> <b>SD (50 draws):&nbsp;</b> </td>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
             <td class="td"> 17.3 &nbsp;</td>
             <td class="td"> 0 &nbsp;</td>
             <td class="td"> 1.6 &nbsp;</td>
@@ -290,14 +290,14 @@ close to the average. A high standard deviation means that numbers are more wide
         </tr>
 
         <tr>
-            <td class="td"> <b>Mean (50 draws): &nbsp;</b> </td>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
             <td class="td"> 2 &nbsp;</td>
             <td class="td"> 1.9 &nbsp;</td>
             <td class="td"> 2.9 &nbsp;</td>
         </tr>
 
          <tr>
-            <td class="td"> <b>SD (50 draws):&nbsp;</b> </td>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
             <td class="td"> 0 &nbsp;</td>
             <td class="td"> 17.3 &nbsp;</td>
             <td class="td"> 1.6 &nbsp;</td>
@@ -324,10 +324,10 @@ close to the average. A high standard deviation means that numbers are more wide
 {% endif %}
 
 {% if choice %}
-<p>You will now complete six rounds. In each round, you will choose one of the three options above.</p>
+<p>You will now complete three rounds. In each round, you will choose one of the three options above.</p>
 
 {% elif not choice %}
-<p>You will now complete two rounds. In each round, you will decide how to allocate three points between the three options above.</p>
+<p>You will now decide how to allocate three points between the three options above.</p>
 
 {% endif %}
 

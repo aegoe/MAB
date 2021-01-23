@@ -20,7 +20,7 @@ class Constants(BaseConstants):
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
-    num_priors = 50
+    num_priors = 100
 
     a = -7
     b = -6
