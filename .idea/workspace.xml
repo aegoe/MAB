@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pilot_Descr/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Descr/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pilot_Descr/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Descr/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/Priors.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/Priors.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing/Urns Testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Urns Testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot_Descr/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+            <state relative-caret-position="-353">
+              <caret line="153" column="22" selection-start-line="153" selection-start-column="14" selection-end-line="153" selection-end-column="22" />
               <folding>
                 <element signature="e#0#134#0" expanded="true" />
               </folding>
@@ -42,14 +38,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pilot_Descr/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="434" column="40" selection-start-line="434" selection-start-column="40" selection-end-line="434" selection-end-column="40" />
+            <state relative-caret-position="698">
+              <caret line="188" column="53" selection-start-line="188" selection-start-column="53" selection-end-line="188" selection-end-column="53" />
               <folding>
                 <element signature="e#0#71#0" expanded="true" />
                 <element signature="e#14755#20817#0" />
+                <element signature="e#21005#24045#0" />
               </folding>
             </state>
           </provider>
@@ -59,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/Testing/Urns Testing.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
-              <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -67,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/Priors.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="261">
@@ -158,8 +155,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/css/priors.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+            <state relative-caret-position="572">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -235,10 +232,10 @@
       <find>option</find>
       <find>test_u</find>
       <find>https://i.imgur.com/BvuIyzt.png</find>
-      <find>decis</find>
       <find>2.9</find>
       <find>2</find>
       <find>17.3</find>
+      <find>decis</find>
     </findStrings>
     <replaceStrings>
       <replace>Circle</replace>
@@ -257,7 +254,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/ComprehensionQuestions.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/css/priors.css" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/include/PriorsTransition.html" />
         <option value="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/css/feedback.css" />
@@ -303,11 +299,12 @@
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/css/feedback.css" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/instru_2.html" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/Decision.html" />
-        <option value="$PROJECT_DIR$/Pilot_Descr/models.py" />
         <option value="$PROJECT_DIR$/settings.py" />
-        <option value="$PROJECT_DIR$/Pilot_Descr/pages.py" />
         <option value="$PROJECT_DIR$/Testing/Urns Testing.py" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/Priors.html" />
+        <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/css/priors.css" />
+        <option value="$PROJECT_DIR$/Pilot_Descr/models.py" />
+        <option value="$PROJECT_DIR$/Pilot_Descr/pages.py" />
       </list>
     </option>
   </component>
@@ -564,23 +561,23 @@
       <workItem from="1610117516207" duration="1514000" />
       <workItem from="1610119084404" duration="595000" />
       <workItem from="1611402550408" duration="7203000" />
-      <workItem from="1611490969059" duration="8392000" />
+      <workItem from="1611490969059" duration="9287000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="424677000" />
+    <option name="totallyTimeSpent" value="425572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1905016" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1905016" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49893278" weight="0.27089337" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" visible="true" weight="0.15092291" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.15092291" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995657" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -589,7 +586,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50213444" side_tool="true" weight="0.3159609" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49786553" weight="0.3615635" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49786553" visible="true" weight="0.3615635" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32790446" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -909,13 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/PriorsTransition.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="149" selection-start-line="11" selection-start-column="149" selection-end-line="11" selection-end-column="149" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/instru_1.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -938,48 +928,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Descr/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Descr/pages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="434" column="40" selection-start-line="434" selection-start-column="40" selection-end-line="434" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-            <element signature="e#14755#20817#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Urns Testing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/css/priors.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        <state relative-caret-position="572">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1065,6 +1017,52 @@
             <element signature="e#10277#10283#0" expanded="true" />
             <element signature="e#10324#10330#0" expanded="true" />
             <element signature="e#10367#10373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Urns Testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/PriorsTransition.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="149" selection-start-line="11" selection-start-column="149" selection-end-line="11" selection-end-column="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Descr/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-353">
+          <caret line="153" column="22" selection-start-line="153" selection-start-column="14" selection-end-line="153" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Descr/pages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="188" column="53" selection-start-line="188" selection-start-column="53" selection-end-line="188" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#14755#20817#0" />
+            <element signature="e#21005#24045#0" />
           </folding>
         </state>
       </provider>

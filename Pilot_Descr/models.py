@@ -150,6 +150,19 @@ class Player(BasePlayer):
         label='In this HIT you repeatedly choose between a number of options. Will you have any prior information about the value of these options?',
         initial=0
     )
+
+    cq_Pilot_3_simdesc = models.IntegerField(
+        choices=[
+            [999, 'No, I have to choose blindly'],
+            [9, 'Yes, I will see exactly how much each option is worth beforehand'],
+            [99, 'Yes, I will receive information about two of the three options'],
+            [1, 'Yes, I will see summary statistics of 100 prior draws for each of the three options'],
+        ],
+        widget=widgets.RadioSelect,
+        blank=False,
+        label='In this HIT you will decide how to allocate three points between three points. Will you have any prior information about the value of these options?',
+        initial=0
+    )
         
     cq_Pilot_4 = models.IntegerField(
         choices=[

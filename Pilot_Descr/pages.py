@@ -183,10 +183,10 @@ class ComprehensionQuestions(Page):
         if self.participant.vars['choice'] and not self.participant.vars['variance']:
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3']
         elif not self.participant.vars['choice'] and not self.participant.vars['variance']:
-                return ['cq_Pilot_2', 'cq_Pilot_3', 'cq_Pilot_4']
+                return ['cq_Pilot_2', 'cq_Pilot_3_simdesc', 'cq_Pilot_4']
         elif self.participant.vars['choice'] and  self.participant.vars['variance']:
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_5']
-        elif not self.participant.vars['choice'] and  self.participant.vars['variance']:
+        elif not self.participant.vars['choice'] and self.participant.vars['variance']:
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_4', 'cq_Pilot_5']
 
     def before_next_page(self):
