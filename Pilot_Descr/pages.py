@@ -32,7 +32,6 @@ class Device(Page):
             result_str = ''.join((random.choice(letters_and_digits) for i in range(7))) + str(random.randint(1, 8))
             self.player.completion_code = result_str
             self.participant.vars['completion_code'] = result_str
-            self.player.test_urns = self.participant.vars['test_urns'] = self.session.config['test_urns']
             self.player.variance = self.participant.vars['variance'] = self.session.config['variance']
 
             treatments = ['safe_choice', 'safe_no_choice', 'choice', 'no_choice']
@@ -71,7 +70,6 @@ class Device(Page):
             result_str = ''.join((random.choice(letters_and_digits) for i in range(7))) + str(random.randint(1, 8))
             self.player.completion_code = result_str
             self.participant.vars['completion_code'] = result_str
-            self.player.test_urns = self.participant.vars['test_urns'] = self.session.config['test_urns']
             self.player.variance = self.participant.vars['variance'] = self.session.config['variance']
             self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
 
@@ -151,7 +149,6 @@ class InstruStart(Page):
                 'endowment_choice': Constants.endowment_choice,
                 'endowment_points': Constants.endowment_points,
                 'draw': self.participant.vars['draw'],
-                'test_urns': self.participant.vars['test_urns'],
                 'variance': self.participant.vars['variance'],
                 'feedback_3': self.participant.vars['feedback_3'],
 
@@ -185,7 +182,7 @@ class ComprehensionQuestions(Page):
         if self.participant.vars['choice'] and not self.participant.vars['variance']:
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3']
         elif not self.participant.vars['choice'] and not self.participant.vars['variance']:
-                return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3', 'cq_Pilot_4']
+                return ['cq_Pilot_2', 'cq_Pilot_3', 'cq_Pilot_4']
         elif self.participant.vars['choice'] and  self.participant.vars['variance']:
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_5']
         elif not self.participant.vars['choice'] and  self.participant.vars['variance']:
@@ -233,8 +230,8 @@ class Priors(Page):
                'draw': self.participant.vars['draw'],
 
                }
-    def before_next_page(self):
-        self.participant.payoff = 40
+    #def before_next_page(self):
+     #   self.participant.payoff = 40
 
 
 
@@ -300,7 +297,7 @@ class Decision(Page):
 
     def before_next_page(self):
 
-        if self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['test_urns'] and not self.participant.vars['variance']:
+        if self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
 
             Urn_1 = ['3', '4', '5', '6', '7', '8', '9', '10']
             Urn_2 = ['0', '1', '2', '3', '20', '25', '35', '40']
@@ -428,7 +425,7 @@ class Decision(Page):
             else:
                 pass
 
-        elif not self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['test_urns'] and not self.participant.vars['variance']:
+        elif not self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
 
             Urn_1 = ['3', '4', '5', '6', '7', '8', '9', '10']
             Urn_2 = ['0', '1', '2', '3', '20', '25', '35', '40']
@@ -474,16 +471,13 @@ class Decision(Page):
             data_counts['count_2'] = count_2
             data_counts['count_3'] = count_3
 
+
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == '-9':
-                        data_counts[i][k] = v * -9
-                    elif k == '-6':
-                        data_counts[i][k] = v * -6
-                    elif k == '-4':
-                        data_counts[i][k] = v * -4
-                    elif k == '-1':
-                        data_counts[i][k] = v * -1
+                    if k == '0':
+                        data_counts[i][k] = v * 0
+                    elif k == '1':
+                        data_counts[i][k] = v * 1
                     elif k == '2':
                         data_counts[i][k] = v * 2
                     elif k == '3':
@@ -492,8 +486,24 @@ class Decision(Page):
                         data_counts[i][k] = v * 4
                     elif k == '5':
                         data_counts[i][k] = v * 5
-                    elif k == '30':
-                        data_counts[i][k] = v * 30
+                    elif k == '6':
+                        data_counts[i][k] = v * 6
+                    elif k == '7':
+                        data_counts[i][k] = v * 7
+                    elif k == '8':
+                        data_counts[i][k] = v * 8
+                    elif k == '9':
+                        data_counts[i][k] = v * 9
+                    elif k == '10':
+                        data_counts[i][k] = v * 10
+                    elif k == '20':
+                        data_counts[i][k] = v * 20
+                    elif k == '25':
+                        data_counts[i][k] = v * 25
+                    elif k == '35':
+                        data_counts[i][k] = v * 35
+                    elif k == '40':
+                        data_counts[i][k] = v * 40
 
             self.player.payoff = 0
             for i in data_counts.keys():

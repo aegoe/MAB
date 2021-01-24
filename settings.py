@@ -50,10 +50,10 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
     {
-        'name': 'MAB_Pilot_Study_Feedback',
-        'display_name': "Pilot_Feedback Study",
+        'name': 'MAB_MainStudy_Description',
+        'display_name': "MAB_MainStudy_Description",
         'num_demo_participants': 1,
-        'app_sequence': ['Pilot_Feedback'],
+        'app_sequence': ['Pilot_Descr'],
         'choice': False,
         'safe': False,
         'testing': False,

@@ -14,9 +14,9 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'Pilot_Descr'
-    num_rounds = 6
-    num_rounds_choice = 6
-    num_rounds_points = 2
+    num_rounds = 3
+    num_rounds_choice = 3
+    num_rounds_points = 1
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
@@ -52,12 +52,12 @@ class Player(BasePlayer):
 
     choice = models.BooleanField()
     safe = models.BooleanField()
-    test_urns = models.BooleanField()
+    feedback_3 = models.BooleanField()
     variance = models.BooleanField()
     endowment = models.IntegerField()
-    option_1 = models.IntegerField(initial=0, label="Triangle")
-    option_2 = models.IntegerField(initial=0, label="Circle")
-    option_3 = models.IntegerField(initial=0, label="Rectangle")
+    option_1 = models.IntegerField(initial=0, label="Option T")
+    option_2 = models.IntegerField(initial=0, label="Option C")
+    option_3 = models.IntegerField(initial=0, label="Option S")
     option_safe = models.IntegerField(initial=0, label = "Hexagon")
     #draws_1 = models.IntegerField()
     #draws_2 = models.IntegerField()
@@ -70,64 +70,42 @@ class Player(BasePlayer):
     urn_draws_2 = models.StringField()
     urn_draws_3 = models.StringField()
     urn_draws_4 = models.StringField()
-    #payoff = models.CurrencyField(initial=None)
-    payoff_1 = models.CurrencyField()
-    payoff_2 = models.CurrencyField()
-    payoff_3 = models.CurrencyField()
-    payoff_4 = models.CurrencyField()
+    payoff_1 = models.IntegerField()
+    payoff_2 = models.IntegerField()
+    payoff_3 = models.IntegerField()
+    payoff_4 = models.IntegerField()
+    payoff_1_m1 = models.IntegerField()
+    payoff_1_m2 = models.IntegerField()
+    payoff_2_m1 = models.IntegerField()
+    payoff_2_m2 = models.IntegerField()
+    payoff_3_m1 = models.IntegerField()
+    payoff_3_m2 = models.IntegerField()
+    payoff_all3 = models.CurrencyField()
+    payoff_1_all3 = models.CurrencyField()
+    payoff_2_all3 = models.CurrencyField()
+    payoff_3_all3 = models.CurrencyField()
+
+    urn_draws_1_m2 = models.StringField()
+    urn_draws_2_m2 = models.StringField()
+    urn_draws_3_m2 = models.StringField()
+
+    urn_draws_1_m1 = models.StringField()
+    urn_draws_2_m1 = models.StringField()
+    urn_draws_3_m1 = models.StringField()
+
+    option_1_all3 = models.IntegerField()
+    option_2_all3 = models.IntegerField()
+    option_3_all3 = models.IntegerField()
+
+
+
+
     instru_page = models.IntegerField(initial=1)
     questionnaire_page = models.IntegerField(initial=1)
     controls = models.IntegerField(initial=0)
     comprehension_page = models.IntegerField(initial=1)
     completion_code = models.StringField()
 
-    urn_draws_1_1 = models.StringField()
-    urn_draws_2_1 = models.StringField()
-    urn_draws_3_1 = models.StringField()
-
-    urn_draws_1_2 = models.StringField()
-    urn_draws_2_2 = models.StringField()
-    urn_draws_3_2 = models.StringField()
-
-    urn_draws_1_3 = models.StringField()
-    urn_draws_2_3 = models.StringField()
-    urn_draws_3_3 = models.StringField()
-
-    urn_draws_1_4 = models.StringField()
-    urn_draws_2_4 = models.StringField()
-    urn_draws_3_4 = models.StringField()
-
-    urn_draws_1_5 = models.StringField()
-    urn_draws_2_5 = models.StringField()
-    urn_draws_3_5 = models.StringField()
-
-    urn_draws_1_6 = models.StringField()
-    urn_draws_2_6 = models.StringField()
-    urn_draws_3_6 = models.StringField()
-
-    payoff_1_1 = models.CurrencyField()
-    payoff_2_1 = models.CurrencyField()
-    payoff_3_1 = models.CurrencyField()
-
-    payoff_1_2 = models.CurrencyField()
-    payoff_2_2 = models.CurrencyField()
-    payoff_3_2 = models.CurrencyField()
-
-    payoff_1_3 = models.CurrencyField()
-    payoff_2_3 = models.CurrencyField()
-    payoff_3_3 = models.CurrencyField()
-
-    payoff_1_4 = models.CurrencyField()
-    payoff_2_4 = models.CurrencyField()
-    payoff_3_4 = models.CurrencyField()
-
-    payoff_1_5 = models.CurrencyField()
-    payoff_2_5 = models.CurrencyField()
-    payoff_3_5 = models.CurrencyField()
-
-    payoff_1_6 = models.CurrencyField()
-    payoff_2_6 = models.CurrencyField()
-    payoff_3_6 = models.CurrencyField()
 
     #################################
     # Comprehension Questions #######
@@ -164,7 +142,7 @@ class Player(BasePlayer):
             [999, 'No, I have to choose blindly'],
             [9, 'Yes, I will see exactly how much each option is worth beforehand'],
             [99, 'Yes, I will receive information about two of the three options'],
-            [1, 'Yes, I will see summary statistics of 50 prior draws for each of the three options'],
+            [1, 'Yes, I will see summary statistics of 100 prior draws for each of the three options'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
