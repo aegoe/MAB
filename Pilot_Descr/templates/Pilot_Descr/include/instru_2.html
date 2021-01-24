@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<p> This HIT comprises {% if not choice %} {{Constants.num_rounds_points}} round {% elif choice %} {{Constants.num_rounds_choice}} rounds {% endif %}. You will {% if choice %} repeatedly {% endif %} choose between different options, as shown in the image below.
+<p> This HIT comprises {% if not choice %} {{Constants.num_rounds_points}} round{% elif choice %} {{Constants.num_rounds_choice}} rounds{% endif %}. You will {% if choice %} repeatedly {% endif %} choose between different options, as shown in the image below.
 Each option is represented by a money bag. You choose options by investing points.</p> 
 
 <p> At the beginning{% if choice %} of each round{% endif %}, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}.
