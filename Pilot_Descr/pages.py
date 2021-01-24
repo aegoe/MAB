@@ -72,6 +72,7 @@ class Device(Page):
             self.participant.vars['completion_code'] = result_str
             self.player.variance = self.participant.vars['variance'] = self.session.config['variance']
             self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
+            self.player.safe = self.participant.vars['sampling'] = self.session.config['sampling']
 
             treatments = ['choice', 'no_choice']
             weights_2 = [0.5, 0.5]
@@ -303,7 +304,7 @@ class Decision(Page):
             Urn_2 = ['0', '1', '2', '3', '20', '25', '35', '40']
             Urn_3 = ['6']
 
-            weights_1 = [0.05, 0.1, 0.21, 0.2, 0.2, 0.15, 0.1, 0.05]
+            weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
             weights_2 = [0.25, 0.25, 0.15, 0.15, 0.05, 0.05, 0.05, 0.05]
             weights_3 = [1]
 
@@ -431,7 +432,7 @@ class Decision(Page):
             Urn_2 = ['0', '1', '2', '3', '20', '25', '35', '40']
             Urn_3 = ['6']
 
-            weights_1 = [0.05, 0.1, 0.21, 0.2, 0.2, 0.15, 0.1, 0.05]
+            weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
             weights_2 = [0.25, 0.25, 0.15, 0.15, 0.05, 0.05, 0.05, 0.05]
             weights_3 = [1]
 

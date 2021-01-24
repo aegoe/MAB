@@ -58,6 +58,7 @@ SESSION_CONFIGS = [
         'safe': False,
         'testing': False,
         'variance': False,
+        'sampling':False,
         'feedback_3': False,
 
     },

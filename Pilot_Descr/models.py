@@ -55,6 +55,7 @@ class Player(BasePlayer):
     feedback_3 = models.BooleanField()
     variance = models.BooleanField()
     endowment = models.IntegerField()
+    sampling = models.BooleanField()
     option_1 = models.IntegerField(initial=0, label="Option T")
     option_2 = models.IntegerField(initial=0, label="Option C")
     option_3 = models.IntegerField(initial=0, label="Option S")
