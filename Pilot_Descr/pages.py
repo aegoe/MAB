@@ -144,7 +144,7 @@ class InstruStart(Page):
 
     def vars_for_template(self):
         return {'participation_fee': self.session.config['participation_fee'],
-                'conversion_factor': int(self.session.config['real_world_currency_per_point'] * 1000),
+                'conversion_factor': int(self.session.config['real_world_currency_per_point'] * 100),
                 'choice': self.participant.vars['choice'],
                 'safe': self.participant.vars['safe'],
                 'endowment_choice': Constants.endowment_choice,
