@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Descr/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Descr/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Descr/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Descr/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/Decision.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/Decision.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/instru_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/instru_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/questionnaire_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/questionnaire_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/Pilot_Descr/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="723">
-              <caret line="469" column="94" lean-forward="true" selection-start-line="469" selection-start-column="94" selection-end-line="469" selection-end-column="94" />
+              <caret line="469" column="94" selection-start-line="469" selection-start-column="94" selection-end-line="469" selection-end-column="94" />
               <folding>
                 <element signature="e#0#134#0" expanded="true" />
               </folding>
@@ -55,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/questionnaire_2.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -174,7 +166,7 @@
         <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/instru_2.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="313">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -548,12 +540,12 @@
       <workItem from="1610119084404" duration="595000" />
       <workItem from="1611402550408" duration="7203000" />
       <workItem from="1611490969059" duration="9447000" />
-      <workItem from="1611571895317" duration="2390000" />
+      <workItem from="1611571895317" duration="2692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="428122000" />
+    <option name="totallyTimeSpent" value="428424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -991,14 +983,14 @@
     <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/instru_2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pilot_Descr/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="723">
-          <caret line="469" column="94" lean-forward="true" selection-start-line="469" selection-start-column="94" selection-end-line="469" selection-end-column="94" />
+          <caret line="469" column="94" selection-start-line="469" selection-start-column="94" selection-end-line="469" selection-end-column="94" />
           <folding>
             <element signature="e#0#134#0" expanded="true" />
           </folding>
@@ -1024,7 +1016,7 @@
     <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/questionnaire_2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>

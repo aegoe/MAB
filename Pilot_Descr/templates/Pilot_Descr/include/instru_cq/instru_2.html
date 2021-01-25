@@ -7,10 +7,10 @@
 
 {% block content %}
 
-<p> This HIT comprises {% if not choice %} {{Constants.num_rounds_points}} {% elif choice %} {{Constants.num_rounds_choice}} {% endif %} rounds. You will repeatedly choose between different options, as shown in the image below.
+<p> This HIT comprises {% if not choice %} {{Constants.num_rounds_points}} round{% elif choice %} {{Constants.num_rounds_choice}} rounds{% endif %}. You will {% if choice %} repeatedly {% endif %} choose between different options, as shown in the image below.
 Each option is represented by a money bag. You choose options by investing points.</p>
 
-<p> At the beginning of {% if not choice %} both rounds{% elif choice %} each round{% endif %}, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}.
+<p> At the beginning{% if choice %} of each round{% endif %}, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}.
 You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
 three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three
 points {% endif %} must be invested in each round. </p>
@@ -30,7 +30,7 @@ points {% endif %} must be invested in each round. </p>
 <div class="card">
     <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
         <div class="card-body">
-            <img src='https://i.imgur.com/9zjs7EA.png' alt="bla" width="800px"/>
+            <img src='https://i.imgur.com/qQVd7qF.png' alt="bla" width="800px"/>
     </div>
 </div>
 <br>
@@ -40,12 +40,13 @@ points {% endif %} must be invested in each round. </p>
 <div class="card">
     <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
         <div class="card-body">
-            <img src='https://i.imgur.com/Bp0v341.png' alt="bla" width="800px"/>
+            <img src='https://i.imgur.com/8r5t5Om.png' alt="bla" width="800px"/>
     </div>
 </div>
 <br>
 
 {% endif %}
+
 
 
 <br>
