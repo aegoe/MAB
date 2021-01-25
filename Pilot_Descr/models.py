@@ -291,6 +291,19 @@ class Player(BasePlayer):
         blank=False
     )
 
+    q_decisive_information = models.IntegerField(
+        choices = [
+            [1, 'Mean'],
+            [2, 'Standard Deviation'],
+            [3, 'Lowest Draw'],
+            [4, 'Highest Draw'],
+
+            ],
+        widget=widgets.RadioSelect,
+        label="",
+        blank=False
+    )
+
     q_year = models.IntegerField(label="", blank=False, min=1900, max=2019)
 
     q_sex = models.IntegerField(

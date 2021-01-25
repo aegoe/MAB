@@ -11,11 +11,11 @@ from os import environ
 
 mturk_hit_settings = {
     'keywords': ['bonus', 'short', 'academic'],
-    'title': 'A Study on Human Decision Making (with bonus)',
-    'description': 'This HIT takes approximately 20 minutes to complete. Please accept this HIT only if you can commit to completing it right away and without interruption. You can earn a substantial bonus that exceeds the reward for this HIT.',
+    'title': 'A short study on decision-making (with bonus)',
+    'description': 'This HIT takes approximately 10 minutes to complete. Please accept this HIT only if you can commit to completing it right away and without interruption. You can earn a substantial bonus that exceeds the reward for this HIT.',
     'frame_height': 800,
     'template': 'global/mturk_template.html',
-    'minutes_allotted_per_assignment': 50,
+    'minutes_allotted_per_assignment': 30,
     'expiration_hours': 168,
     'grant_qualification_id': '3F4KLX19QVRYWWIPE260NYV94EYOER',
     'qualification_requirements': [

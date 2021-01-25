@@ -16,13 +16,26 @@
             </tr>
         </table>
         <table class="table">
-            {% for field in form.visible_fields %}
+            {% for field in form.visible_fields|slice:":-1" %}
                 <tr>
                     <td width="62%">{{ field.label }}</td>
                     <td colspan="3" id="test">{{ field }}</td>
                 </tr>
             {% endfor %}
         </table>
+    </div>
+</div>
+
+<br>
+
+<div class="card">
+    <div class="card-header">
+        Which information had the most influence on your investment choices?
+        <br>
+        <i>Please choose one of the following answers</i>.
+    </div>
+    <div class="card-body">
+        {% formfield player.q_decisive_information %}
     </div>
 </div>
 
