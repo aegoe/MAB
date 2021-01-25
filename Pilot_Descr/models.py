@@ -39,7 +39,7 @@ class Constants(BaseConstants):
     # Urn_1 = [('Black', 1), ('Yellow', 5), ('Blue', 3), ('Green', 1)]
     # Urn_2 = [('Black', 1), ('Yellow', 3), ('Blue', 5), ('Green', 1)]
     # Urn_3 = [('White', 1), ('Yellow', 5), ('Black', 3), ('Green', 1)]
-    safe_option = 2
+    safe_option = 6
 
 class Subsession(BaseSubsession):
     pass
@@ -160,7 +160,7 @@ class Player(BasePlayer):
         ],
         widget=widgets.RadioSelect,
         blank=False,
-        label='In this HIT you will decide how to allocate three points between three points. Will you have any prior information about the value of these options?',
+        label='In this HIT you will decide how to allocate three points between three options. Will you have any prior information about the value of these options?',
         initial=0
     )
         
@@ -458,13 +458,13 @@ class Player(BasePlayer):
     q_max_scale_6 = sevenitems('No matter what I do, I have the highest standards for myself.')
 
 
-    q_mean_sequential = sevenitems('The information about each option\'s mean informed my decisions in the first three rounds')
-    q_sd_sequential = sevenitems('The information about each option\'s standard deviation informed my decisions in the first three rounds')
-    q_ld_sequential = sevenitems('The information about each option\'s lowest draw informed my decisions in the first three rounds')
-    q_hd_sequential = sevenitems('The information about each option\'s highest draw informed my decisions in the first three rounds')
+    q_mean_sequential = sevenitems('The information about each option\'s mean informed my decisions across the three rounds')
+    q_sd_sequential = sevenitems('The information about each option\'s standard deviation informed my decisions across the three rounds')
+    q_ld_sequential = sevenitems('The information about each option\'s lowest draw informed my decisions across the three rounds')
+    q_hd_sequential = sevenitems('The information about each option\'s highest draw informed my decisions across the three rounds')
 
 
-    q_mean_simultan = sevenitems('The information about each option\'s mean informed my decision in the first round')
-    q_sd_simultan = sevenitems('The information about each option\'s standard deviation informed my decision in the first round')
-    q_ld_simultan = sevenitems('The information about each option\'s lowest draw informed my decision in the first round')
-    q_hd_simultan = sevenitems('The information about each option\'s highest draw informed my decision in the first round')
+    q_mean_simultan = sevenitems('The information about each option\'s mean informed my decision')
+    q_sd_simultan = sevenitems('The information about each option\'s standard deviation informed my decision')
+    q_ld_simultan = sevenitems('The information about each option\'s lowest draw informed my decision')
+    q_hd_simultan = sevenitems('The information about each option\'s highest draw informed my decision')

@@ -294,6 +294,8 @@ class Decision(Page):
                'endowment_points': Constants.endowment_points,
                'safe': self.participant.vars['safe'],
                'draw': self.participant.vars['draw'],
+               'sampling': self.participant.vars['sampling'],
+
                }
 
     def before_next_page(self):
