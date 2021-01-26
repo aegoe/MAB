@@ -75,7 +75,7 @@ class Device(Page):
             self.player.safe = self.participant.vars['sampling'] = self.session.config['sampling']
 
             treatments = ['choice', 'no_choice']
-            weights_2 = [0.5, 0.5]
+            weights_2 = [0.65, 0.35]
             draw_2 = choice(treatments, 1, p=weights_2)
             self.participant.vars['draw_2'] = draw_2[0]
             if draw_2[0] == 'choice':
