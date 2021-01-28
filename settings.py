@@ -50,6 +50,20 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
     {
+        'name': 'MAB_MainStudy_FreeSampling',
+        'display_name': "MAB_MainStudy_FreeSampling",
+        'num_demo_participants': 1,
+        'app_sequence': ['Pilot_Descr'],
+        'choice': False,
+        'safe': False,
+        'testing': False,
+        'variance': False,
+        'sampling': True,
+        'feedback_3': False,
+
+    },
+
+    {
         'name': 'MAB_MainStudy_Description',
         'display_name': "MAB_MainStudy_Description",
         'num_demo_participants': 1,

@@ -200,3 +200,11 @@ background-color: #F5F5F5 ;
 .active, .collapsible:hover {
   background-color: #d9d9d9;
 }
+
+#nosampling{
+    width: 100%;
+    text-align: right;
+    margin-bottom: 0px;
+    margin-top: -43px
+}
+

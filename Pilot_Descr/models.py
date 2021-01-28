@@ -14,9 +14,11 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'Pilot_Descr'
-    num_rounds = 3
+    num_rounds = 30
     num_rounds_choice = 3
     num_rounds_points = 1
+    #num_rounds_choice_sampling = 6
+    #num_rounds_points_sampling = 2
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
@@ -56,10 +58,14 @@ class Player(BasePlayer):
     variance = models.BooleanField()
     endowment = models.IntegerField()
     sampling = models.BooleanField()
+    option_1_samp = models.IntegerField(initial=0, label="Option T")
+    option_2_samp = models.IntegerField(initial=0, label="Option c")
+    option_3_samp = models.IntegerField(initial=0, label="Option S")
     option_1 = models.IntegerField(initial=0, label="Option T")
     option_2 = models.IntegerField(initial=0, label="Option C")
     option_3 = models.IntegerField(initial=0, label="Option S")
     option_safe = models.IntegerField(initial=0, label = "Hexagon")
+    end_button = models.BooleanField(initial=False, widget=widgets.RadioSelect, blank=True)
     #draws_1 = models.IntegerField()
     #draws_2 = models.IntegerField()
     #draws_3 = models.IntegerField()
@@ -106,6 +112,7 @@ class Player(BasePlayer):
     controls = models.IntegerField(initial=0)
     comprehension_page = models.IntegerField(initial=1)
     completion_code = models.StringField()
+    sampling_round = models.IntegerField(initial=1)
 
 
     #################################
