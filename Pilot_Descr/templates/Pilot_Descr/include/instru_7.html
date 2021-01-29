@@ -1,19 +1,21 @@
 {% load otree %}
 {% block title %}
-<h4>The Task</h4>
+<h4>Total Earnings</h4>
 <br>
 
 {% endblock %}
 
 {% block content %}
 
-<p> This HIT comprises {% if not choice %} {{Constants.num_rounds_points}} round{% elif choice %} {{Constants.num_rounds_choice}} rounds{% endif %}. You will {% if choice %} repeatedly {% endif %} choose between different options, as shown in the image below.
-Each option is represented by a money bag. You choose options by investing points.</p> 
+<p> Your total earnings at the end of this HIT are composed of your earnings determined by your investment choice between the three options at the decision stage 
+    and, if applicable, your sampling costs.</p>
 
-<p> At the beginning{% if choice %} of each round{% endif %}, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}.
-You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
-three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three 
-points {% endif %} must be invested in each round. </p>
+<p> After filling out the questionnaire, all ECU from your investments at the decision stage and possibly accuring sampling costs will be summed up and their value
+    will be converted into Dollars.
+</p>
+
+<p> Click on the button below to proceed to the comprehension questions. </p>
+
 
 <!--{% if not choice %}-->
 <!--<p>Once you have made your choice, you will receive feedback about the payoff from your investment. This will be shown on a separate feedback screen upon submitting your choice. </p>-->
@@ -23,29 +25,6 @@ points {% endif %} must be invested in each round. </p>
 <!--receive feedback after the third and after the sixth round. This will be shown on a separate feedback screen.</p>-->
 
 <!--{% endif %}-->
-
-
-{% if choice %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/qQVd7qF.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% elif not choice %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/8r5t5Om.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% endif %}
 
 
 <br>
