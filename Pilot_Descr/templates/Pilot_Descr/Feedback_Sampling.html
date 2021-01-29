@@ -47,7 +47,10 @@
     </table>
     </div>
 
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+
+<button name="end_button" value="False" class="btn-primary btn-lg">Yes, continue sampling.</button>
+<button name="end_button" value="True" class="btn-success btn-lg">No, take me to the main decision.</button>
+
 
 {% endif %}
 
@@ -290,7 +293,11 @@
     </table>
     </div>
 
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Earnings: {{player.payoff}}</button>
+<button name="end_button" value="False" class="btn-primary btn-lg">Yes, continue sampling.</button>
+<button name="end_button" value="True" class="btn-success btn-lg">No, take me to the main decision.</button>
+
+
+
 
 {% elif draw == 'STR' %}
 

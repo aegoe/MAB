@@ -113,6 +113,7 @@ class Player(BasePlayer):
     comprehension_page = models.IntegerField(initial=1)
     completion_code = models.StringField()
     sampling_round = models.IntegerField(initial=1)
+    points_sampling = models.IntegerField(initial=0)
 
 
     #################################

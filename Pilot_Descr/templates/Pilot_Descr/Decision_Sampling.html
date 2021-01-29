@@ -52,10 +52,21 @@
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+<!--
 <div id="nosampling">
     <button name="end_button" value ="True" class="btn btn-danger"> Stop sampling </button>
 
 </div>
+
+
+<input type="radio" name="end_button" value="True" onclick="endsampling.disabled=false"/> bla
+<input type="submit" name="endsampling" id="endsampling" size="1" disabled="disabled"/>
+-->
+
+
+
+
+
 
 <br>
 
@@ -3510,6 +3521,7 @@
 
 
 
+
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -3525,9 +3537,14 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-</script>
 
-<script>
+/*
+
+$('.btn').onClick(function(e){
+  e.preventDefault();
+});
+*/
+
 
 /*
 function on_load() {

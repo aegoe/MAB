@@ -72,7 +72,7 @@ class Device(Page):
             self.participant.vars['completion_code'] = result_str
             self.player.variance = self.participant.vars['variance'] = self.session.config['variance']
             self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
-            self.player.safe = self.participant.vars['sampling'] = self.session.config['sampling']
+            self.player.sampling = self.participant.vars['sampling'] = self.session.config['sampling']
 
             treatments = ['choice', 'no_choice']
             weights_2 = [0.65, 0.35]
@@ -108,6 +108,8 @@ class Device(Page):
             self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
             self.player.safe = self.participant.vars['sampling'] = self.session.config['sampling']
             self.player.sampling_round = self.participant.vars['sampling_round'] = 1
+            self.player.points_sampling = self.participant.vars['points_sampling'] = 0
+            self.player.end_button = self.participant.vars['end_button'] = False
 
             treatments = ['choice', 'no_choice']
             weights_3 = [0.5, 0.5]
@@ -350,6 +352,9 @@ class Decision_Sampling(Page):
 
     def before_next_page(self):
 
+        self.participant.vars['sampling_round']+=1
+        self.participant.vars['points_sampling']+=1
+
         if self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
 
             Urn_1 = ['3', '4', '5', '6', '7', '8', '9', '10']
@@ -552,6 +557,7 @@ class Decision_Sampling(Page):
 
 class Feedback_Sampling(Page):
     form_model = 'player'
+    form_fields = ['end_button',]
 
     def is_displayed(self):
         if self.participant.vars['choice'] and self.participant.vars['sampling']:
@@ -578,11 +584,27 @@ class Feedback_Sampling(Page):
                 'sampling': self.participant.vars['sampling'],
                 'end_button': self.player.end_button,
                 'sampling_round': self.participant.vars['sampling_round'],
+                'points_sampling': self.participant.vars['points_sampling'],
                 }
 
     def before_next_page(self):
-        self.participant.vars['sampling_round']+=1
+        self.player.payoff = 0
 
+# class HelpPage(Page):
+#     form_model = 'player'
+#
+#     def is_displayed(self):
+#         if self.participant.vars['choice'] and self.participant.vars['sampling']:
+#             return self.player.round_number <= self.participant.vars['sampling_round']
+#         elif not self.participant.vars['choice'] and self.participant.vars['sampling']:
+#             return self.player.round_number <= self.participant.vars['sampling_round']
+#         else:
+#             pass
+#
+#     def vars_for_template(self):
+#         return{'end_button': self.player.end_button,
+#
+#         }
 
 
 class DecisionTransition(Page):
@@ -601,12 +623,33 @@ class DecisionTransition(Page):
                'end_button': self.player.end_button,
                'payoff': self.participant.payoff,
                'sampling_round': self.participant.vars['sampling_round'],
-
+               'points_sampling': self.participant.vars['points_sampling'],
+               'round_number': self.player.round_number,
                }
 
     def before_next_page(self):
-        self.participant.payoff = 0
+        # self.participant.payoff = self.participant.payoff - self.participant.payoff
         self.player.end_button = self.participant.vars['end_button'] = True
+        self.participant.vars['sampling_round'] = self.participant.vars['sampling_round'] - 1
+
+
+        # if self.participant.vars['points_sampling'] < 0 and self.participant.vars['points_sampling']<=15:
+        #     self.participant.payoff_plus_participation_fee = self.participant.payoff_plus_participation_fee - 0.01
+        # elif self.participant.vars['points_sampling'] > 15 and self.participant.vars['points_sampling']<=30:
+        #     self.participant.payoff = self.participant.payoff - 0.2
+        # elif self.participant.vars['points_sampling'] > 30 and self.participant.vars['points_sampling']<=45:
+        #     self.participant.payoff = self.participant.payoff - 0.3
+        # elif self.participant.vars['points_sampling'] > 45 and self.participant.vars['points_sampling']<=60:
+        #     self.participant.payoff = self.participant.payoff - 0.4
+        # elif self.participant.vars['points_sampling'] > 60 and self.participant.vars['points_sampling']<=75:
+        #     self.participant.payoff = self.participant.payoff - 0.5
+        # elif self.participant.vars['points_sampling'] > 75 and self.participant.vars['points_sampling']<=100:
+        #     self.participant.payoff = self.participant.payoff - 0.6
+        # elif self.participant.vars['points_sampling'] > 100 and self.participant.vars['points_sampling']<=115:
+        #     self.participant.payoff = self.participant.payoff - 0.7
+        # else:
+        #     self.participant.payoff = self.participant.payoff - 0.8
+
 
 
 class Decision(Page):
@@ -618,9 +661,9 @@ class Decision(Page):
         elif not self.participant.vars['choice'] and not self.participant.vars['sampling']:
             return self.round_number <= Constants.num_rounds_points
         elif self.participant.vars['choice'] and self.participant.vars['sampling']:
-            return self.round_number >= self.participant.vars['sampling_round'] and self.round_number <= (self.participant.vars['sampling_round'] + Constants.num_rounds_choice)
+            return self.round_number >= self.participant.vars['sampling_round'] and self.round_number <= (self.participant.vars['sampling_round'] + Constants.num_rounds_choice -1)
         elif not self.participant.vars['choice'] and self.participant.vars['sampling']:
-            return self.round_number >=  self.participant.vars['sampling_round']  and self.round_number <= (self.participant.vars['sampling_round'] + Constants.num_rounds_points)
+            return self.round_number >=  self.participant.vars['sampling_round']  and self.round_number <= (self.participant.vars['sampling_round'] + Constants.num_rounds_points -1)
 
     def get_form_fields(self):
         if self.participant.vars['choice'] and not self.participant.vars['safe']:
@@ -668,6 +711,9 @@ class Decision(Page):
                'safe': self.participant.vars['safe'],
                'draw': self.participant.vars['draw'],
                'sampling': self.participant.vars['sampling'],
+               'payoff': self.participant.payoff,
+               'points_sampling': self.participant.vars['points_sampling'],
+               'sampling_round': self.participant.vars['sampling_round'],
 
                }
 
@@ -771,7 +817,7 @@ class Decision(Page):
             self.player.payoff_2 = payoffs_2
             self.player.payoff_3 = payoffs_3
 
-            if self.round_number % 3 == 0:
+            if (self.round_number - self.participant.vars['sampling_round']) % 2 == 0 and self.round_number >2:
                 self.player.payoff_1_m2 = self.player.in_round(self.round_number - 2).payoff_1
                 self.player.payoff_2_m2 = self.player.in_round(self.round_number - 2).payoff_2
                 self.player.payoff_3_m2 = self.player.in_round(self.round_number - 2).payoff_3
@@ -910,9 +956,9 @@ class Feedback(Page):
         elif not self.participant.vars['choice'] and not self.participant.vars['sampling']:
             return self.round_number <= Constants.num_rounds_points
         elif self.participant.vars['choice'] and self.participant.vars['sampling']:
-            return self.round_number >= self.participant.vars['sampling_round'] and self.round_number <= (self.participant.vars['sampling_round'] + Constants.num_rounds_choice)
+            return self.round_number >= self.participant.vars['sampling_round'] and self.round_number <= (self.participant.vars['sampling_round'] + Constants.num_rounds_choice -1) and ((self.round_number - self.participant.vars['sampling_round']) % 2 == 0) and ((self.round_number - self.participant.vars['sampling_round']) != 0)
         elif not self.participant.vars['choice'] and self.participant.vars['sampling']:
-            return self.round_number >=  self.participant.vars['sampling_round']  and self.round_number <= (self.participant.vars['sampling_round'] + Constants.num_rounds_points)
+            return self.round_number >=  self.participant.vars['sampling_round']  and self.round_number <= (self.participant.vars['sampling_round'] + Constants.num_rounds_points -1)
 
 
     def vars_for_template(self):
@@ -964,9 +1010,9 @@ class Questionnaire(Page):
 
     def is_displayed(self):
         if self.participant.vars['choice']:
-            return self.round_number == (self.participant.vars['sampling_round'] + Constants.num_rounds_choice)
+            return self.round_number == (self.participant.vars['sampling_round'] + Constants.num_rounds_choice -1)
         else:
-            return self.round_number == (self.participant.vars['sampling_round'] + Constants.num_rounds_choice)
+            return self.round_number == (self.participant.vars['sampling_round'])
 
     def vars_for_template(self):
         return{'questionnaire_page': self.player.questionnaire_page,
@@ -980,18 +1026,26 @@ class Questionnaire(Page):
     def before_next_page(self):
         self.player.questionnaire_page += 1
 
+        if self.player.questionnaire_page == 6:
+            if self.participant.vars['choice']:
+                if self.participant.vars['points_sampling'] > 0 and self.participant.vars['points_sampling'] <= 15:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.01
+            elif not self.participant.vars['choice']:
+                if self.participant.vars['points_sampling'] > 0 and self.participant.vars['points_sampling'] <= 5:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.01
+
 
 class FinalInfo(Page):
     def is_displayed(self):
         if self.participant.vars['choice']:
-            return self.round_number == (self.participant.vars['sampling_round'] + Constants.num_rounds_choice)
+            return self.round_number == (self.participant.vars['sampling_round'] + Constants.num_rounds_choice - 1)
         else:
-            return self.round_number == (self.participant.vars['sampling_round'] + Constants.num_rounds_choice)
+            return self.round_number == (self.participant.vars['sampling_round'])
 
     def vars_for_template(self):
         return {'participation_fee': self.session.config['participation_fee'],
                 'total_payoff': self.participant.payoff_plus_participation_fee(),
-                'bonus': self.participant.payoff.to_real_world_currency(self.session),
+                'bonus': self.participant.vars['bonus'],
                 'completion_code': self.participant.vars['completion_code'],
                 }
 
@@ -1013,6 +1067,7 @@ page_sequence = [
     SamplingTransition,
     Decision_Sampling,
     Feedback_Sampling,
+    #HelpPage,
     DecisionTransition,
     Decision,
     Feedback,
