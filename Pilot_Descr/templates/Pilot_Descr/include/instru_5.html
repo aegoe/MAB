@@ -1,19 +1,16 @@
 {% load otree %}
 {% block title %}
-<h4>The Task</h4>
+<h4>Sampling Stage: Feedback </h4>
 <br>
 
 {% endblock %}
 
 {% block content %}
 
-<p> This HIT comprises {% if not choice %} {{Constants.num_rounds_points}} round{% elif choice %} {{Constants.num_rounds_choice}} rounds{% endif %}. You will {% if choice %} repeatedly {% endif %} choose between different options, as shown in the image below.
-Each option is represented by a money bag. You choose options by investing points.</p> 
-
-<p> At the beginning{% if choice %} of each round{% endif %}, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}.
-You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
-three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three 
-points {% endif %} must be invested in each round. </p>
+<p> After submitting your investment, a feedback screen summarizes the number of draws per option and informs you about the respective values of each coin drawn.
+Below the feedback table, you can decide either to continue sampling by clicking the blue button or to end sampling and continue with the decision stage by 
+    clicking the green button, as shown in the image below. 
+ </p>
 
 <!--{% if not choice %}-->
 <!--<p>Once you have made your choice, you will receive feedback about the payoff from your investment. This will be shown on a separate feedback screen upon submitting your choice. </p>-->
@@ -24,28 +21,6 @@ points {% endif %} must be invested in each round. </p>
 
 <!--{% endif %}-->
 
-
-{% if choice %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/qQVd7qF.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% elif not choice %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/8r5t5Om.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% endif %}
 
 
 <br>
