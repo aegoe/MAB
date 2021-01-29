@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<p>At the decision stage, you can apply your knowledge about the options and play one last round. As in each sampling round, you receive {% if choice %} one 
+<p>In the decision stage, you will invest three final points between the three options. As in each sampling round, you receive {% if choice %} one
     point{% elif not choice %} three points{% endif %} and can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between 
     all three options. </p>
 
@@ -15,9 +15,7 @@
 These values are summed up on the blue button below the feedback table. By clicking on the button, you will finish the main task and proceed to the questionnaire. </p>
 
 {%if choice%}
-<p> In contrast to the sampling stage, you will receive feedback only after you have made three consecutive investments. Once you made three consecutive investments,
-    a feedback screen summarizes the number of draws per option and informs you about the respective values of each coin drawn.
-These values are summed up on the blue button below the feedback table. By clicking on the button, you will finish the main task and proceed to the questionnaire.<\p>
+<p> In contrast to the sampling stage, you will receive feedback only after you made three consecutive investments. Thus, you will decide how to allocate your point three times, and only then receive feedback about your three choices. </p>
 
 {% endif %}
 

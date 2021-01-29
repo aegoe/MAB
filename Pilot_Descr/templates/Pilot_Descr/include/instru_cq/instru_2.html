@@ -1,55 +1,20 @@
 {% load otree %}
 {% block title %}
-<h4>The Task</h4>
+<h4>The Stages</h4>
 <br>
 
 {% endblock %}
 
 {% block content %}
 
-<p> This HIT comprises {% if not choice %} {{Constants.num_rounds_points}} round{% elif choice %} {{Constants.num_rounds_choice}} rounds{% endif %}. You will {% if choice %} repeatedly {% endif %} choose between different options, as shown in the image below.
-Each option is represented by a money bag. You choose options by investing points.</p>
+<p>In this HIT, you will complete two stages. In each stage, you will choose between different options to receive Coins.</p>
 
-<p> At the beginning{% if choice %} of each round{% endif %}, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}.
-You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
-three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three
-points {% endif %} must be invested in each round. </p>
+<p>The first stage is the <b>sampling stage</b>. At the beginning, you will learn about the options by observing provided information.
+    Then, you will have the opportunity to learn more by sampling through the options yourself. </p>
 
-<!--{% if not choice %}-->
-<!--<p>Once you have made your choice, you will receive feedback about the payoff from your investment. This will be shown on a separate feedback screen upon submitting your choice. </p>-->
+<p> The second stage is the <b>decision stage</b>. Here, you will apply your gained knowledge and make {% if not choice %} a final choice {% elif choice %} your final choices {% endif %} that determine your bonus payoff.
+</p>
 
-<!--{% elif choice %}-->
-<!--<p> Once you made three consecutive choices, you will receive feedback about the payoff from your investment. Thus, you will-->
-<!--receive feedback after the third and after the sixth round. This will be shown on a separate feedback screen.</p>-->
-
-<!--{% endif %}-->
-
-
-{% if choice %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/qQVd7qF.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% elif not choice %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/8r5t5Om.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% endif %}
-
-
-
-<br>
 
 {% endblock %}
 

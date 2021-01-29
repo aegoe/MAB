@@ -323,17 +323,17 @@ close to the average. A high standard deviation means that numbers are more wide
 
 {% endif %}
 
-{% if choice %}
+{% if choice and not sampling %}
 <p>You will now complete three rounds. In each round, you will choose one of the three options above.</p>
 
-{% elif not choice %}
+{% elif not choice and not sampling %}
 <p>You will now decide how to allocate three points between the three options above.</p>
 
 {% endif %}
 
 
 <br>
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Proceed to the decision stage</button>
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Proceed to the sampling decision</button>
 
 {% endblock %}
 

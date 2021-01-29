@@ -1,36 +1,27 @@
 {% load otree %}
 {% block title %}
-<h4>Feedback and Total Earnings </h4>
+<h4>Sampling Stage: Investments and Earnings </h4>
 <br>
 {% endblock %}
 
 {% block content %}
-{% if not choice %}
-<p> After submitting your investment, a feedback screen summarizes the number of draws per option and informs you about the respective values of each coin drawn.
-    These values are summed up on the blue button below the feedback table. By clicking on the button, you will finish the main task and proceed to the questionnaire. </p>
 
-{% elif choice %}
-<p> Once you made three consecutive investments, a feedback screen summarizes the number of draws per option and informs you about the respective values of each coin drawn.
-    These values are summed up on the blue button below the feedback table. By clicking on the button, you will finish the main task and proceed to the questionnaire.
-{% endif %}
+<p>You can think of each option as a bag of coins. The coins are put in each bag before the game starts and for every point you invest in
+an option, a coin from the respective bag is drawn. Thus, one point equals one draw. After each draw, the coin is put back into the bag. Bags do not change over the
+course of the task and are independent of one another.</p>
 
-{% if choice %}
-<p>Your total earnings at the end of this HIT are the accumulated earnings from each round.</p>
-
-{% elif not choice %}
-<p> Your total earnings at the end of this HIT are the accumulated earnings as determined by your investment choice between the three options.</p>
-
-{% endif %}
-
-<p> After filling out the questionnaire, {% if not choice %} all ECU from your investment {% elif choice %} all ECU from all {{Constants.num_rounds_choice}} rounds {% endif %}
-    will be summed up and their value will be converted into Dollars.
-</p>
+<p> Bags differ in the composition of coins they contain. At the beginning of the task, you will see summary statistics from {{Constants.num_priors}} prior
+draws from each of the three options. You can use this data to inform your subsequent choices in the sampling as well as the decision stage.</p>
 
 
+<p>After having observed the summary statistics, you can draw more coins from each option by investing points.
+    These coins will not affect your final payoff, but they will give you additional information about the potential value of each option. </p>
 
-<p> Click on the button below to proceed to the comprehension questions. </p>
+<p> You can sample as many rounds as you wish to. However, for every 15 draws, we will charge you 0.2 ECU. Thus, for draws 1-15, you will be charged 0.2 ECU, no matter if you stop sampling at 9 draws.
+    If you sample anything between 16-30 draws, you will be charged another 0.2 ECU, summing up to 0.4 ECU total sampling costs. Again, you will be charged the full 0.4 ECU, even if you for example stop
+    sampling at draw 25. This interval charging continues until you finished sampling and decide to move to stage two, the decision stage.</p>
 
-<br>
+
 
 
 {% endblock %}

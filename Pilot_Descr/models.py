@@ -14,7 +14,7 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'Pilot_Descr'
-    num_rounds = 30
+    num_rounds = 500
     num_rounds_choice = 3
     num_rounds_points = 1
     #num_rounds_choice_sampling = 6
@@ -113,6 +113,7 @@ class Player(BasePlayer):
     comprehension_page = models.IntegerField(initial=1)
     completion_code = models.StringField()
     sampling_round = models.IntegerField(initial=1)
+    sampling_rnd_2 = models.IntegerField(initial=1)
     points_sampling = models.IntegerField(initial=0)
 
 
@@ -135,10 +136,10 @@ class Player(BasePlayer):
 
     cq_Pilot_2 = models.IntegerField(
         choices=[
-            [1, 'each point invested, i.e. each draw '],
-            [9, 'one randomly chosen round'],
+            [1, 'each point invested, i.e. each draw, during the decision stage and possibly accruing sampling costs'],
+            [9, 'coins drawn in the sampling stage'],
             [99, 'my performance in comparison to other workers'],
-            [999, 'only the first round'],
+            [999, 'only my final decision'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
@@ -150,8 +151,8 @@ class Player(BasePlayer):
         choices=[
             [999, 'No, I have to choose blindly'],
             [9, 'Yes, I will see exactly how much each option is worth beforehand'],
-            [99, 'Yes, I will receive information about two of the three options'],
-            [1, 'Yes, I will see summary statistics of 100 prior draws for each of the three options'],
+            [99, 'Yes, I won\'t receive any prior statistics but will be able to sample through the options beforehand'],
+            [1, 'Yes, I will see information from 100 prior draws for each option and can further sample through the options beforehand'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
@@ -163,8 +164,8 @@ class Player(BasePlayer):
         choices=[
             [999, 'No, I have to choose blindly'],
             [9, 'Yes, I will see exactly how much each option is worth beforehand'],
-            [99, 'Yes, I will receive information about two of the three options'],
-            [1, 'Yes, I will see summary statistics of 100 prior draws for each of the three options'],
+            [99, 'Yes, I won\'t receive any prior statistics but will be able to sample through the options beforehand'],
+            [1, 'Yes, I will see information from 100 prior draws for each option and can further sample through the options beforehand'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
@@ -195,6 +196,19 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect,
         blank=False,
         label='All options',
+        initial=0
+    )
+
+    cq_MS2_1 = models.IntegerField(
+        choices=[
+            [999, 'switch between stages whenever you want'],
+            [1, 'sample all three options as long as you want'],
+            [99, 'sample only for 15 rounds'],
+            [9, 'cannot gather additional information about the options through your own experience'],
+        ],
+        widget=widgets.RadioSelect,
+        blank=False,
+        label='In this HIT, you can',
         initial=0
     )
 
@@ -305,6 +319,17 @@ class Player(BasePlayer):
             [2, 'Standard Deviation'],
             [3, 'Lowest Draw'],
             [4, 'Highest Draw'],
+
+            ],
+        widget=widgets.RadioSelect,
+        label="",
+        blank=False
+    )
+
+    q_descr_exp = models.IntegerField(
+        choices = [
+            [1, 'The provided summary information'],
+            [2, 'Your own sampling experience'],
 
             ],
         widget=widgets.RadioSelect,
@@ -479,13 +504,13 @@ class Player(BasePlayer):
     q_max_scale_6 = sevenitems('No matter what I do, I have the highest standards for myself.')
 
 
-    q_mean_sequential = sevenitems('The information about each option\'s mean informed my decisions across the three rounds')
-    q_sd_sequential = sevenitems('The information about each option\'s standard deviation informed my decisions across the three rounds')
-    q_ld_sequential = sevenitems('The information about each option\'s lowest draw informed my decisions across the three rounds')
-    q_hd_sequential = sevenitems('The information about each option\'s highest draw informed my decisions across the three rounds')
+    q_mean_sequential = sevenitems('The summary information about each option\'s mean informed my main decision')
+    q_sd_sequential = sevenitems('The summary information about each option\'s standard deviation informed my main decision')
+    q_ld_sequential = sevenitems('The summary information about each option\'s lowest draw informed my main decision')
+    q_hd_sequential = sevenitems('The summary information about each option\'s highest draw informed my main decision')
 
 
-    q_mean_simultan = sevenitems('The information about each option\'s mean informed my decision')
-    q_sd_simultan = sevenitems('The information about each option\'s standard deviation informed my decision')
-    q_ld_simultan = sevenitems('The information about each option\'s lowest draw informed my decision')
-    q_hd_simultan = sevenitems('The information about each option\'s highest draw informed my decision')
+    q_mean_simultan = sevenitems('The summary information about each option\'s mean informed my main decision')
+    q_sd_simultan = sevenitems('The summary information about each option\'s standard deviation informed my main decision')
+    q_ld_simultan = sevenitems('The summary information about each option\'s lowest draw informed my main decision')
+    q_hd_simultan = sevenitems('The summary information about each option\'s highest draw informed my main decision')

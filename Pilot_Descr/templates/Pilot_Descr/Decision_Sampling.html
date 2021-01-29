@@ -3,7 +3,7 @@
 
 {% block title %}
 <div class="page-header">
-    Sampling
+    <p> Sampling Round
 </div>
 {% endblock %}
 
@@ -48,41 +48,13 @@
 {% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
            {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
            equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
 </div>
 
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
-<!--
-<div id="nosampling">
-    <button name="end_button" value ="True" class="btn btn-danger"> Stop sampling </button>
-
-</div>
-
-
-<input type="radio" name="end_button" value="True" onclick="endsampling.disabled=false"/> bla
-<input type="submit" name="endsampling" id="endsampling" size="1" disabled="disabled"/>
--->
-
-
-
-
-
-
 <br>
 
-
-<!--
-<div id="nosampling">
-&lt;!&ndash;   <button id="cart_outside" name="end_button" value="True"
-            class="btn btn-secondary btn-large cart cart-outside" type="button"> Don't buy any goods
-    </button>&ndash;&gt;
-    <button id="buy_outside" name="end_button" value="True"
-            class="btn btn-primary btn-large next-button otree-next-button">
-         Stop sampling
-    </button>
-</div>
--->
-
 <button type="button" class="collapsible"> Information table from prior draws </button>
 <div class="content">
 
@@ -423,6 +395,7 @@
 {% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
            {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
            equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
 
         </div>
 
@@ -762,6 +735,15 @@
 
 
  </div>
+
+       <div class="footer">
+
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
 
 {% elif draw == 'RTS' %}
 
@@ -799,6 +781,7 @@
 {% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
            {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
            equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
 
         </div>
 
@@ -1139,7 +1122,14 @@
 
 
  </div>
+       <div class="footer">
 
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
 
 {% elif draw == 'TRS' %}
 
@@ -1177,6 +1167,7 @@
 {% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
            {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
            equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
 
         </div>
 
@@ -1517,7 +1508,14 @@
 
 
  </div>
+       <div class="footer">
 
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
 
 {% elif draw == 'SRT' %}
 
@@ -1554,6 +1552,7 @@
 {% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
            {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
            equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
 
         </div>
 
@@ -1894,7 +1893,14 @@
 
 
  </div>
+       <div class="footer">
 
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
 
 {% elif draw == 'RST' %}
 
@@ -1932,6 +1938,7 @@
            {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
            equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
            <!--The option's name and position yield no information about the value of coins you get from each option.-->
+    Coins drawn during these sampling rounds do not count towards your final payoff.
 
         </div>
 
@@ -2271,7 +2278,14 @@
 
 
  </div>
+       <div class="footer">
 
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
 {% endif %}
 
 
@@ -2323,6 +2337,7 @@
            {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
            equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
            <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+    Coins drawn during these sampling rounds do not count towards your final payoff.
 
         </div>
 
@@ -2371,6 +2386,7 @@
            {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
            equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
            <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+    Coins drawn during these sampling rounds do not count towards your final payoff.
 
         </div>
 
@@ -2422,6 +2438,7 @@
            {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
            equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
            <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+    Coins drawn during these sampling rounds do not count towards your final payoff.
 
         </div>
 

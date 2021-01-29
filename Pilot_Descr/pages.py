@@ -132,7 +132,7 @@ class Device(Page):
 
             else:
                 order = ['TSR', 'STR', 'RTS', 'TRS', 'SRT', 'RST']
-                weights = [1, 0, 0, 0, 0, 0]
+                weights = [1/6, 1/6, 1/6, 1/6, 1/6, 1/6]
                 draw = choice(order, 1, p=weights)
                 self.participant.vars['draw'] = draw[0]
 
@@ -217,9 +217,9 @@ class ComprehensionQuestions(Page):
 
     def get_form_fields(self):
         if self.participant.vars['choice'] and not self.participant.vars['variance']:
-            return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3']
+            return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3','cq_MS2_1']
         elif not self.participant.vars['choice'] and not self.participant.vars['variance']:
-                return ['cq_Pilot_2', 'cq_Pilot_3_simdesc', 'cq_Pilot_4']
+                return ['cq_Pilot_2', 'cq_Pilot_3_simdesc', 'cq_Pilot_4', 'cq_MS2_1']
         elif self.participant.vars['choice'] and  self.participant.vars['variance']:
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_5']
         elif not self.participant.vars['choice'] and self.participant.vars['variance']:
@@ -227,10 +227,10 @@ class ComprehensionQuestions(Page):
 
     def before_next_page(self):
         if self.participant.vars['choice']:
-            if sum([self.player.cq_Pilot_1, self.player.cq_Pilot_2, self.player.cq_Pilot_3]) < 4:
+            if sum([self.player.cq_Pilot_1, self.player.cq_Pilot_2, self.player.cq_Pilot_3, self.player.cq_MS2_1]) < 5:
                 self.player.controls = 1
         else:
-            if sum([self.player.cq_Pilot_1, self.player.cq_Pilot_2, self.player.cq_Pilot_3, self.player.cq_Pilot_4]) < 5:
+            if sum([self.player.cq_Pilot_2, self.player.cq_Pilot_3, self.player.cq_Pilot_4, self.player.cq_MS2_1]) < 5:
                 self.player.controls = 1
 
         self.player.comprehension_page += 1
@@ -265,6 +265,7 @@ class Priors(Page):
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
                'draw': self.participant.vars['draw'],
+               'sampling': self.participant.vars['sampling'],
 
                }
     #def before_next_page(self):
@@ -278,6 +279,7 @@ class Priors(Page):
 
 class SamplingTransition(Page):
     form_model = 'player'
+    form_fields = ['end_button',]
 
     def is_displayed(self):
         return self.round_number == 1
@@ -346,7 +348,8 @@ class Decision_Sampling(Page):
                'draw': self.participant.vars['draw'],
                'sampling': self.participant.vars['sampling'],
                'end_button': self.player.end_button,
-               'sampling_round': self.participant.vars['sampling_round']
+               'sampling_round': self.participant.vars['sampling_round'],
+               'sampling_rnd_2': self.player.sampling_rnd_2,
 
                }
 
@@ -630,7 +633,10 @@ class DecisionTransition(Page):
     def before_next_page(self):
         # self.participant.payoff = self.participant.payoff - self.participant.payoff
         self.player.end_button = self.participant.vars['end_button'] = True
-        self.participant.vars['sampling_round'] = self.participant.vars['sampling_round'] - 1
+        if self.participant.vars['sampling_round'] > 1:
+            self.participant.vars['sampling_round'] = self.participant.vars['sampling_round'] - 1
+        else:
+            pass
 
 
         # if self.participant.vars['points_sampling'] < 0 and self.participant.vars['points_sampling']<=15:
@@ -997,9 +1003,9 @@ class Questionnaire(Page):
         elif self.player.questionnaire_page == 3:
             return ['q_exploration_strategy']
         elif self.player.questionnaire_page == 4 and self.participant.vars['choice']:
-            return ['q_mean_sequential', 'q_sd_sequential', 'q_ld_sequential', 'q_hd_sequential', 'q_decisive_information']
+            return ['q_mean_sequential', 'q_sd_sequential', 'q_ld_sequential', 'q_hd_sequential', 'q_descr_exp']
         elif self.player.questionnaire_page == 4 and not self.participant.vars['choice']:
-            return ['q_mean_simultan', 'q_sd_simultan', 'q_ld_simultan', 'q_hd_simultan', 'q_decisive_information']
+            return ['q_mean_simultan', 'q_sd_simultan', 'q_ld_simultan', 'q_hd_simultan', 'q_descr_exp']
         elif self.player.questionnaire_page == 5:
             epo = [f'q_epo_{i}' for i in range(1, 14)]
             return epo
@@ -1028,11 +1034,79 @@ class Questionnaire(Page):
 
         if self.player.questionnaire_page == 6:
             if self.participant.vars['choice']:
-                if self.participant.vars['points_sampling'] > 0 and self.participant.vars['points_sampling'] <= 15:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.01
+                if self.participant.vars['points_sampling'] == 0:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session)
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee()
+
+                elif self.participant.vars['points_sampling'] > 0 and self.participant.vars['points_sampling'] <= 15:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.02
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.02
+
+                elif self.participant.vars['points_sampling'] > 15 and self.participant.vars['points_sampling'] <= 30:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.04
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.04
+
+                elif self.participant.vars['points_sampling'] > 30 and self.participant.vars['points_sampling'] <= 45:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.06
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.06
+
+                elif self.participant.vars['points_sampling'] > 45 and self.participant.vars['points_sampling'] <= 60:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.06
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.06
+
+                elif self.participant.vars['points_sampling'] > 60 and self.participant.vars['points_sampling'] <= 75:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.08
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.08
+
+                elif self.participant.vars['points_sampling'] > 75 and self.participant.vars['points_sampling'] <= 90:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.1
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.1
+
+                elif self.participant.vars['points_sampling'] > 90 and self.participant.vars['points_sampling'] <= 105:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.12
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.12
+
+                elif self.participant.vars['points_sampling'] > 105:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.14
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.14
+
             elif not self.participant.vars['choice']:
-                if self.participant.vars['points_sampling'] > 0 and self.participant.vars['points_sampling'] <= 5:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.01
+                if self.participant.vars['points_sampling'] == 0:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session)
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee()
+
+                elif self.participant.vars['points_sampling'] > 0 and self.participant.vars['points_sampling'] <= 5:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.02
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.02
+
+                elif self.participant.vars['points_sampling'] > 5 and self.participant.vars['points_sampling'] <= 10:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.04
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.04
+
+                elif self.participant.vars['points_sampling'] > 10 and self.participant.vars['points_sampling'] <= 15:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.06
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.06
+
+                elif self.participant.vars['points_sampling'] > 15 and self.participant.vars['points_sampling'] <= 20:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.06
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.06
+
+                elif self.participant.vars['points_sampling'] > 20 and self.participant.vars['points_sampling'] <= 25:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.08
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.08
+
+                elif self.participant.vars['points_sampling'] > 25 and self.participant.vars['points_sampling'] <= 30:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.1
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.1
+
+                elif self.participant.vars['points_sampling'] > 30 and self.participant.vars['points_sampling'] <= 35:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.12
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.12
+
+                elif self.participant.vars['points_sampling'] > 35:
+                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.14
+                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.14
+
 
 
 class FinalInfo(Page):
@@ -1044,7 +1118,7 @@ class FinalInfo(Page):
 
     def vars_for_template(self):
         return {'participation_fee': self.session.config['participation_fee'],
-                'total_payoff': self.participant.payoff_plus_participation_fee(),
+                'total_payoff': self.participant.vars['total_payoff'],
                 'bonus': self.participant.vars['bonus'],
                 'completion_code': self.participant.vars['completion_code'],
                 }
@@ -1055,6 +1129,9 @@ page_sequence = [
     Device,
     AttentionCheck,
     DeadEnd,
+    InstruStart,
+    InstruStart,
+    InstruStart,
     InstruStart,
     InstruStart,
     InstruStart,

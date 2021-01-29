@@ -3,17 +3,25 @@
 
 {% block title %}
 <div class="page-header">
-    <p> Transition </p>
+    <p> You are now in stage 2, the decision stage. </p>
 </div>
 {% endblock %}
 
 {% block content %}
 
-<p>You will now be forwarded to the information page. You will see summary statistics derived from 100 prior draws for each of the three options (300 draws in total). </p>
-<p>Make sure to carefully read the information as they can help you learn about the options that will determine your payoff.</p>
+{% if not choice %}
+<p>Your next decision on how to allocate your three points will determine your final bonus payoff.</p>
+<p>To check the summary statistics from the 100 priors draws, open the information table at the bottom of your main decision screen.</p>
+
+{% elif choice %}
+<p>Your next three decisions on how to allocate your respective point will determine your final bonus payoff.</p>
+<p>To check the summary statistics from the 100 priors draws, open the information table at the bottom of your main decision screen.</p>
+<p>You will receive feedback only after you made all three decisions.</p>
+
+{% endif %}
 
 <br>
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Proceed to information page</button>
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Proceed to the main decision</button>
 
 {% endblock %}
 

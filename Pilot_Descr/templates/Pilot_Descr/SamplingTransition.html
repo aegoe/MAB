@@ -3,17 +3,28 @@
 
 {% block title %}
 <div class="page-header">
-    <p> Transition </p>
+    <p> You will now decide whether to start sampling and experience the options yourself, or skip directly to the main decision</p>
 </div>
 {% endblock %}
 
 {% block content %}
 
-<p>You will now be forwarded to the information page. You will see summary statistics derived from 100 prior draws for each of the three options (300 draws in total). </p>
-<p>Make sure to carefully read the information as they can help you learn about the options that will determine your payoff.</p>
+<p>If you decide to start sampling, you will be able to draw as many coins as you like from each option. </p>
+
+<p>If you decide to skip to the main decision, you will not receive any additional information.</p>
 
 <br>
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Proceed to information page</button>
+
+<div class="card">
+  <div class="card-header">
+      <b> Do you want to experience the different options yourself and gather more information? </b>
+  </div>
+<div class="card-body">
+<button name="end_button" value="False" class="btn-primary btn-lg">Yes, I want to start sampling.</button>
+<button name="end_button" value="True" class="btn-success btn-lg">No, take me to the main decision.</button>
+  </div>
+</div>
+
 
 {% endblock %}
 
