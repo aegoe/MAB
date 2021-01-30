@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pilot_Descr/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Descr/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pilot_Descr/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Descr/pages.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot_Descr/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+            <state relative-caret-position="306">
+              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
               <folding>
                 <element signature="e#0#134#0" expanded="true" />
               </folding>
@@ -29,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pilot_Descr/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-20132">
-              <caret line="134" column="55" selection-start-line="134" selection-start-column="55" selection-end-line="134" selection-end-column="55" />
+            <state relative-caret-position="156">
+              <caret line="1011" lean-forward="true" selection-start-line="1011" selection-end-line="1011" />
               <folding>
                 <element signature="e#0#71#0" expanded="true" />
               </folding>
@@ -133,15 +133,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/Feedback_Sampling.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1336">
-              <caret line="568" selection-start-line="568" selection-end-line="568" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/SamplingTransition.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
@@ -159,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+            <state relative-caret-position="176">
+              <caret line="8" column="55" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -192,9 +183,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>test_u</find>
-      <find>https://i.imgur.com/BvuIyzt.png</find>
-      <find>2.9</find>
       <find>2</find>
       <find>17.3</find>
       <find>decis</find>
@@ -211,17 +199,20 @@
       <find>player.option_2</find>
       <find>samp_samp</find>
       <find>deci</find>
-      <find>payoff</find>
-      <find>participant.payoff</find>
       <find>ecu</find>
       <find>conv</find>
       <find>before</find>
       <find>compre</find>
-      <find>sampling</find>
       <find>instru</find>
       <find>priors</find>
       <find>question</find>
       <find>desc</find>
+      <find>payoff</find>
+      <find>participant.pa</find>
+      <find>participant.payoff</find>
+      <find>self.participant.vars['sampling_rounds']</find>
+      <find>sampling</find>
+      <find>cq</find>
     </findStrings>
     <replaceStrings>
       <replace>Circle</replace>
@@ -278,7 +269,6 @@
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/instru_6.html" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/questionnaire_3.html" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/Feedback_Sampling.html" />
-        <option value="$PROJECT_DIR$/Pilot_Descr/pages.py" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/ComprehensionQuestions.html" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/instru_cq/instru_2.html" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/instru_3.html" />
@@ -287,12 +277,13 @@
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/instru_cq/instru_5.html" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/instru_cq/instru_6.html" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/instru_cq/instru_7.html" />
-        <option value="$PROJECT_DIR$/Pilot_Descr/models.py" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/include/instru_4.html" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/css/feedback.css" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/SamplingTransition.html" />
         <option value="$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/Priors.html" />
         <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/Pilot_Descr/pages.py" />
+        <option value="$PROJECT_DIR$/Pilot_Descr/models.py" />
       </list>
     </option>
   </component>
@@ -329,6 +320,11 @@
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="_builtin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
               <item name="_static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -340,6 +336,12 @@
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="_static" type="462c0819:PsiDirectoryNode" />
+              <item name="real_effort" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
               <item name="_templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -347,54 +349,6 @@
               <item name="MAB" type="462c0819:PsiDirectoryNode" />
               <item name="_templates" type="462c0819:PsiDirectoryNode" />
               <item name="global" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Descr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Descr" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Descr" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Descr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Descr" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Descr" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Descr" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Descr" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Descr" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Pilot_Descr" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-              <item name="instru_cq" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="Testing" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -583,18 +537,17 @@
       <workItem from="1611490969059" duration="9447000" />
       <workItem from="1611571895317" duration="18525000" />
       <workItem from="1611821745117" duration="35280000" />
-      <workItem from="1611908170787" duration="41151000" />
+      <workItem from="1611908170787" duration="45891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="520688000" />
+    <option name="totallyTimeSpent" value="525428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19690502" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19690502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -608,7 +561,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026681" side_tool="true" weight="0.3631124" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733192" visible="true" weight="0.2562432" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49733192" visible="true" weight="0.2562432" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32756963" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -648,15 +601,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Pilot_Feedback/templates/Pilot_Feedback/include/questionnaire_transition.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Feedback/templates/Pilot_Feedback/include/questionnaire_max.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Feedback/templates/Pilot_Feedback/include/questionnaire_1.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot_Feedback/templates/Pilot_Feedback/include/questionnaire_3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1297,13 +1241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/css/feedback.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/Feedback_Sampling.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1336">
@@ -1318,38 +1255,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/SamplingTransition.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Descr/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/FinalInfo.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/_templates/global/mturk_template.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pilot_Descr/pages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20132">
-          <caret line="134" column="55" selection-start-line="134" selection-start-column="55" selection-end-line="134" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/Priors.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1431,10 +1341,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/css/feedback.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Descr/templates/Pilot_Descr/SamplingTransition.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_builtin/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#38#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+        <state relative-caret-position="176">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Descr/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="e#0#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pilot_Descr/pages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="1011" lean-forward="true" selection-start-line="1011" selection-end-line="1011" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

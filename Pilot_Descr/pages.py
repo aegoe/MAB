@@ -639,25 +639,6 @@ class DecisionTransition(Page):
             pass
 
 
-        # if self.participant.vars['points_sampling'] < 0 and self.participant.vars['points_sampling']<=15:
-        #     self.participant.payoff_plus_participation_fee = self.participant.payoff_plus_participation_fee - 0.01
-        # elif self.participant.vars['points_sampling'] > 15 and self.participant.vars['points_sampling']<=30:
-        #     self.participant.payoff = self.participant.payoff - 0.2
-        # elif self.participant.vars['points_sampling'] > 30 and self.participant.vars['points_sampling']<=45:
-        #     self.participant.payoff = self.participant.payoff - 0.3
-        # elif self.participant.vars['points_sampling'] > 45 and self.participant.vars['points_sampling']<=60:
-        #     self.participant.payoff = self.participant.payoff - 0.4
-        # elif self.participant.vars['points_sampling'] > 60 and self.participant.vars['points_sampling']<=75:
-        #     self.participant.payoff = self.participant.payoff - 0.5
-        # elif self.participant.vars['points_sampling'] > 75 and self.participant.vars['points_sampling']<=100:
-        #     self.participant.payoff = self.participant.payoff - 0.6
-        # elif self.participant.vars['points_sampling'] > 100 and self.participant.vars['points_sampling']<=115:
-        #     self.participant.payoff = self.participant.payoff - 0.7
-        # else:
-        #     self.participant.payoff = self.participant.payoff - 0.8
-
-
-
 class Decision(Page):
     form_model = 'player'
 
@@ -1033,6 +1014,7 @@ class Questionnaire(Page):
         self.player.questionnaire_page += 1
 
         if self.player.questionnaire_page == 6:
+            self.player.smplrnd = self.participant.vars['sampling_round']
             if self.participant.vars['choice']:
                 if self.participant.vars['points_sampling'] == 0:
                     self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session)

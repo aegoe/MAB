@@ -14,7 +14,7 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'Pilot_Descr'
-    num_rounds = 300
+    num_rounds = 140
     num_rounds_choice = 3
     num_rounds_points = 1
     #num_rounds_choice_sampling = 6
@@ -115,6 +115,7 @@ class Player(BasePlayer):
     sampling_round = models.IntegerField(initial=1)
     sampling_rnd_2 = models.IntegerField(initial=1)
     points_sampling = models.IntegerField(initial=0)
+    smplrnd = models.IntegerField(initial=0)
 
 
     #################################
