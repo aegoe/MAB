@@ -1,0 +1,44 @@
+{% load otree %}
+
+<div class="card">
+        <div class="card-header">
+            Do you think you would have made different choices if you could save points from each round and invest them later on?
+            Please explain your answer.
+        </div>
+        <div class="card-body">
+            {% formfield player.q_saving %}
+        </div>
+    </div>
+<br>
+
+{% if choice %}
+
+<div class="card">
+        <div class="card-header">
+            Imagine that instead of directly acquiring payoff, each round you would instead earn or lose points which could be converted into Coins at the end of the HIT.
+            Thus, if you earned 2 additional points in the first round, you could re-invest them along with your endowment of 1 point, or choose to save them till the end of the HIT.
+            How many points would you have re-invested within the first 30 and within the last 30 rounds?
+            Please explain your answer.
+        </div>
+        <div class="card-body">
+            {% formfield player.q_wealth %}
+        </div>
+    </div>
+<br>
+
+{% elif not choice %}
+
+<div class="card">
+        <div class="card-header">
+            Imagine that instead of directly acquiring payoff, each round you would instead earn or lose points which could be converted into Coins at the end of the HIT.
+            Thus, if you earned 2 additional points in the first round, you could re-invest them along with your endowment of 3 points, or choose to save them until the end of the HIT.
+            <p>What share of your earnings would you have re-invested within the first 10 and within the last 10 rounds?
+                Please explain your answer.</p>
+        </div>
+        <div class="card-body">
+            {% formfield player.q_wealth %}
+        </div>
+    </div>
+<br>
+
+{% endif %}

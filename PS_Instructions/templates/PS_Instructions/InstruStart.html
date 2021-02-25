@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Instructions
+{% endblock %}
+
+{% block content %}
+
+{% if player.instru_page == 1 %}
+
+    {% include 'PS_Instructions/include/instru_1.html' %}
+
+{% elif player.instru_page == 2 %}
+
+     {% include 'PS_Instructions/include/instru_2.html' %}
+
+{% elif player.instru_page == 3 %}
+
+     {% include 'PS_Instructions/include/instru_3.html' %}
+
+{% elif player.instru_page == 4 %}
+
+     {% include 'PS_Instructions/include/instru_4.html' %}
+
+{% elif player.instru_page == 5 %}
+
+     {% include 'PS_Instructions/include/instru_5.html' %}
+
+{% elif player.instru_page == 6 %}
+
+     {% include 'PS_Instructions/include/instru_6.html' %}
+
+{% elif player.instru_page == 7 %}
+
+     {% include 'PS_Instructions/include/instru_7.html' %}
+
+{% endif %}
+
+
+{% endblock %}

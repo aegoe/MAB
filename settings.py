@@ -50,90 +50,29 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
     {
-        'name': 'MAB_MainStudy_FreeSampling',
-        'display_name': "MAB_MainStudy_FreeSampling",
+        'name': 'PS1',
+        'display_name': "PS1",
         'num_demo_participants': 1,
-        'app_sequence': ['Pilot_Descr'],
+        'app_sequence': ['PS_Instructions','PS_MAIN'],
         'choice': False,
         'safe': False,
         'testing': False,
         'variance': False,
-        'sampling': True,
-        'feedback_3': False,
-
-    },
-
-    {
-        'name': 'MAB_MainStudy_Description',
-        'display_name': "MAB_MainStudy_Description",
-        'num_demo_participants': 1,
-        'app_sequence': ['Pilot_Descr'],
-        'choice': False,
-        'safe': False,
-        'testing': False,
-        'variance': False,
-        'sampling':False,
+        'sampling': False,
         'feedback_3': False,
 
     },
     # {
-    #     'name': 'MAB_Pilot_Study_Priors',
-    #     'display_name': "Pilot_Feedback Study Priors",
+    #     'name': 'MAB_MainStudy_FreeSampling',
+    #     'display_name': "MAB_MainStudy_FreeSampling",
     #     'num_demo_participants': 1,
     #     'app_sequence': ['Pilot_Descr'],
     #     'choice': False,
     #     'safe': False,
-    #     'test_urns': False,
     #     'testing': False,
     #     'variance': False,
-    #
-    # },
-    # {
-    #     'name': 'MAB_Pilot_Study_Var_2_BRET',
-    #     'display_name': "Pilot_BRET Study Variance 2 BRET",
-    #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot_BRET', 'bret'],
-    #     'choice': False,
-    #     'safe': False,
-    #     'test_urns': True,
-    #     'testing': False,
-    #     'variance': True,
-    #
-    # },
-    # {
-    #     'name': 'MAB_Pilot_Study_Var_2',
-    #     'display_name': "Pilot_Feedback Study Variance 2",
-    #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot_Feedback'],
-    #     'choice': False,
-    #     'safe': False,
-    #     'test_urns': True,
-    #     'testing': False,
-    #     'variance': True,
-    #
-    # },
-    # {
-    #     'name': 'MAB_Pilot_Study_Var',
-    #     'display_name': "Pilot_Feedback Study Variance",
-    #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot_Feedback'],
-    #     'choice': False,
-    #     'safe': False,
-    #     'test_urns': False,
-    #     'testing': False,
-    #     'variance': True,
-    #
-    # },
-    # {
-    #     'name': 'MAB_Pilot_Study',
-    #     'display_name': "Pilot_Feedback Study",
-    #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot_Feedback'],
-    #     'choice': False,
-    #     'safe': False,
-    #     'test_urns': False,
-    #     'testing': False,
-    #     'variance': False,
+    #     'sampling': True,
+    #     'feedback_3': False,
     #
     # },
 
