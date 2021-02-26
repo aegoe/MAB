@@ -48,6 +48,20 @@ class DecisionTransition(Page):
             pass
 
 
+
+class PriorsA(Page):
+    form_model = 'player'
+
+    def is_displayed(self):
+        return self.round_number == self.participant.vars['options']['A']
+
+    def vars_for_template(self):
+        return{'choice': self.participant.vars['choice'],
+               'draw': self.participant.vars['draw'],
+               'sampling': self.participant.vars['sampling'],
+
+               }
+
 class DecisionA1(Page):
     form_model = 'player'
 
@@ -340,6 +354,20 @@ class DecisionA1(Page):
 
         self.player.decision_a_page += 1
 
+
+
+class PriorsB(Page):
+    form_model = 'player'
+
+    def is_displayed(self):
+        return self.round_number == self.participant.vars['options']['B']
+
+    def vars_for_template(self):
+        return{'choice': self.participant.vars['choice'],
+               'draw': self.participant.vars['draw'],
+               'sampling': self.participant.vars['sampling'],
+
+               }
 
 class DecisionB1(Page):
     form_model = 'player'
@@ -634,6 +662,20 @@ class DecisionB1(Page):
         self.player.decision_b_page += 1
 
 
+
+class PriorsC(Page):
+    form_model = 'player'
+
+    def is_displayed(self):
+        return self.round_number == self.participant.vars['options']['C']
+
+    def vars_for_template(self):
+        return{'choice': self.participant.vars['choice'],
+               'draw': self.participant.vars['draw'],
+               'sampling': self.participant.vars['sampling'],
+
+               }
+
 class DecisionC1(Page):
     form_model = 'player'
 
@@ -926,6 +968,20 @@ class DecisionC1(Page):
 
         self.player.decision_c_page += 1
 
+
+
+class PriorsD(Page):
+    form_model = 'player'
+
+    def is_displayed(self):
+        return self.round_number == self.participant.vars['options']['D']
+
+    def vars_for_template(self):
+        return{'choice': self.participant.vars['choice'],
+               'draw': self.participant.vars['draw'],
+               'sampling': self.participant.vars['sampling'],
+
+               }
 
 class DecisionD1(Page):
     form_model = 'player'
@@ -1315,9 +1371,13 @@ class FinalInfo(Page):
 
 page_sequence = [
     #DecisionTransition,
+    PriorsA,
     DecisionA1,
+    PriorsB,
     DecisionB1,
+    PriorsC,
     DecisionC1,
+    PriorsD,
     DecisionD1,
     Feedback,
     Questionnaire,

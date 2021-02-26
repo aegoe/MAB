@@ -185,18 +185,18 @@ class PriorsTransition(Page):
                }
 
 
-class Priors(Page):
-    form_model = 'player'
-
-    def is_displayed(self):
-        return self.round_number == 1
-
-    def vars_for_template(self):
-        return{'choice': self.participant.vars['choice'],
-               'draw': self.participant.vars['draw'],
-               'sampling': self.participant.vars['sampling'],
-
-               }
+# class Priors(Page):
+#     form_model = 'player'
+#
+#     def is_displayed(self):
+#         return self.round_number == 1
+#
+#     def vars_for_template(self):
+#         return{'choice': self.participant.vars['choice'],
+#                'draw': self.participant.vars['draw'],
+#                'sampling': self.participant.vars['sampling'],
+#
+#                }
     #def before_next_page(self):
      #   self.participant.payoff = 40
 
