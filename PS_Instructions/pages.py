@@ -216,5 +216,5 @@ page_sequence = [
     ComprehensionQuestions,
     DeadEnd2,
     PriorsTransition,
-    Priors,
+    #Priors,
 ]

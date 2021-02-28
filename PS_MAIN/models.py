@@ -22,7 +22,7 @@ class Constants(BaseConstants):
     endowment_points = 3
     num_priors = 100
     safe_option = 6
-    options = ['A', 'B', 'C', 'D']
+    options = ['A', 'B', 'C', 'D', 'E']
     num_rounds = len(options)
 
 
@@ -96,6 +96,7 @@ class Player(BasePlayer):
     decision_b_page = models.IntegerField(initial=1)
     decision_c_page = models.IntegerField(initial=1)
     decision_d_page = models.IntegerField(initial=1)
+    decision_e_page = models.IntegerField(initial=1)
 
 
 
