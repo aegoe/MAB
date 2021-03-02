@@ -34,6 +34,9 @@ class DecisionTransition(Page):
                'round_number': self.player.round_number,
                }
 
+    def before_next_page(self):
+        self.participant.payoff = 10
+
 
 ##lower mean risky option
 class PriorsA(Page):
@@ -164,20 +167,22 @@ class DecisionA1(Page):
                         data_counts[i][k] = v * 6
                     elif k == '7':
                         data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
                     elif k == '40':
                         data_counts[i][k] = v * 40
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
+                    elif k == '60':
+                        data_counts[i][k] = v * 60
+                    elif k == '-9':
+                        data_counts[i][k] = v * -9
+                    elif k == '-5':
+                        data_counts[i][k] = v * -5
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-3':
+                        data_counts[i][k] = v * -3
 
             self.player.payoff = 0
             payoffs = 0
@@ -186,6 +191,12 @@ class DecisionA1(Page):
                     payoffs += values
 
             self.player.payoff = payoffs
+            self.participant.vars['payoff_a1'] = self.player.payoff = payoffs
+            self.participant.vars['urndraws1_a1'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_a1'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_a1'] = self.player.urn_draws_3
+
+
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
@@ -303,25 +314,34 @@ class DecisionA1(Page):
                         data_counts[i][k] = v * 6
                     elif k == '7':
                         data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
                     elif k == '40':
                         data_counts[i][k] = v * 40
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
+                    elif k == '60':
+                        data_counts[i][k] = v * 60
+                    elif k == '-9':
+                        data_counts[i][k] = v * -9
+                    elif k == '-5':
+                        data_counts[i][k] = v * -5
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-3':
+                        data_counts[i][k] = v * -3
 
             self.player.payoff = 0
             for i in data_counts.keys():
                 for values in data_counts[i].values():
                     self.player.payoff += values
+
+
+            self.participant.vars['payoff_a1'] = self.player.payoff
+            self.participant.vars['urndraws1_a1'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_a1'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_a1'] = self.player.urn_draws_3
+
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
@@ -415,7 +435,7 @@ class DecisionB1(Page):
 
     def before_next_page(self):
 
-        if self.participant.vars['choice'] and not self.participant.vars['safe'] :
+        if self.participant.vars['choice'] and not self.participant.vars['safe']:
 
             Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
             Urn_2 = ['-9', '-5', '-4', '-3', '35', '40', '50', '60']
@@ -469,20 +489,22 @@ class DecisionB1(Page):
                         data_counts[i][k] = v * 6
                     elif k == '7':
                         data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
                     elif k == '40':
                         data_counts[i][k] = v * 40
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
+                    elif k == '60':
+                        data_counts[i][k] = v * 60
+                    elif k == '-9':
+                        data_counts[i][k] = v * -9
+                    elif k == '-5':
+                        data_counts[i][k] = v * -5
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-3':
+                        data_counts[i][k] = v * -3
 
             self.player.payoff = 0
             payoffs = 0
@@ -491,6 +513,10 @@ class DecisionB1(Page):
                     payoffs += values
 
             self.player.payoff = payoffs
+            self.participant.vars['payoff_b1'] = self.player.payoff = payoffs
+            self.participant.vars['urndraws1_b1'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_b1'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_b1'] = self.player.urn_draws_3
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
@@ -608,25 +634,32 @@ class DecisionB1(Page):
                         data_counts[i][k] = v * 6
                     elif k == '7':
                         data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
                     elif k == '40':
                         data_counts[i][k] = v * 40
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
+                    elif k == '60':
+                        data_counts[i][k] = v * 60
+                    elif k == '-9':
+                        data_counts[i][k] = v * -9
+                    elif k == '-5':
+                        data_counts[i][k] = v * -5
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-3':
+                        data_counts[i][k] = v * -3
 
             self.player.payoff = 0
             for i in data_counts.keys():
                 for values in data_counts[i].values():
                     self.player.payoff += values
+
+            self.participant.vars['payoff_b1'] = self.player.payoff
+            self.participant.vars['urndraws1_b1'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_b1'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_b1'] = self.player.urn_draws_3
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
@@ -644,7 +677,7 @@ class DecisionB1(Page):
         self.player.decision_b_page += 1
 
 
-##same urns as A nd B, but Bernoulli instead of safe
+##same urns as A , but Bernoulli instead of safe
 class PriorsC(Page):
     form_model = 'player'
 
@@ -719,11 +752,11 @@ class DecisionC1(Page):
 
     def before_next_page(self):
 
-        if self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
+        if self.participant.vars['choice'] and not self.participant.vars['safe']:
 
             Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
             Urn_2 = ['-9', '-5', '-4', '-3', '35', '40', '50', '60']
-            Urn_3 = ['2', '4']
+            Urn_3 = ['-2', '8']
 
             weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
             weights_2 = [0.2, 0.2, 0.2, 0.2, 0.05, 0.05, 0.05, 0.05]
@@ -773,20 +806,27 @@ class DecisionC1(Page):
                         data_counts[i][k] = v * 6
                     elif k == '7':
                         data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
                     elif k == '40':
                         data_counts[i][k] = v * 40
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
+                    elif k == '60':
+                        data_counts[i][k] = v * 60
+                    elif k == '-9':
+                        data_counts[i][k] = v * -9
+                    elif k == '-5':
+                        data_counts[i][k] = v * -5
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-3':
+                        data_counts[i][k] = v * -3
+                    elif k == '-2':
+                        data_counts[i][k] = v * -2
+                    elif k == '8':
+                        data_counts[i][k] = v * 8
+
 
             self.player.payoff = 0
             payoffs = 0
@@ -795,6 +835,11 @@ class DecisionC1(Page):
                     payoffs += values
 
             self.player.payoff = payoffs
+
+            self.participant.vars['payoff_c1'] = self.player.payoff = payoffs
+            self.participant.vars['urndraws1_c1'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_c1'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_c1'] = self.player.urn_draws_3
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
@@ -847,11 +892,11 @@ class DecisionC1(Page):
             else:
                 pass
 
-        elif not self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
+        elif not self.participant.vars['choice'] and not self.participant.vars['safe'] :
 
             Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
             Urn_2 = ['-9', '-5', '-4', '-3', '35', '40', '50', '60']
-            Urn_3 = ['2', '4']
+            Urn_3 = ['-2', '8']
 
             weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
             weights_2 = [0.2, 0.2, 0.2, 0.2, 0.05, 0.05, 0.05, 0.05]
@@ -912,25 +957,36 @@ class DecisionC1(Page):
                         data_counts[i][k] = v * 6
                     elif k == '7':
                         data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
                     elif k == '40':
                         data_counts[i][k] = v * 40
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
+                    elif k == '60':
+                        data_counts[i][k] = v * 60
+                    elif k == '-9':
+                        data_counts[i][k] = v * -9
+                    elif k == '-5':
+                        data_counts[i][k] = v * -5
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-3':
+                        data_counts[i][k] = v * -3
+                    elif k == '-2':
+                        data_counts[i][k] = v * -2
+                    elif k == '8':
+                        data_counts[i][k] = v * 8
 
             self.player.payoff = 0
             for i in data_counts.keys():
                 for values in data_counts[i].values():
                     self.player.payoff += values
+
+            self.participant.vars['payoff_c1'] = self.player.payoff
+            self.participant.vars['urndraws1_c1'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_c1'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_c1'] = self.player.urn_draws_3
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
@@ -948,7 +1004,7 @@ class DecisionC1(Page):
         self.player.decision_c_page += 1
 
 
-##no negative draws? Not ready, maybe cut
+##same urns as B, but Bernoulli instead of safe and higher mean of risk
 class PriorsD(Page):
     form_model = 'player'
 
@@ -1103,6 +1159,11 @@ class DecisionD1(Page):
 
             self.player.payoff = payoffs
 
+            self.participant.vars['payoff_d1'] = self.player.payoff = payoffs
+            self.participant.vars['urndraws1_d1'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_d1'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_d1'] = self.player.urn_draws_3
+
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
             self.player.payoff_3 = 0
@@ -1239,6 +1300,11 @@ class DecisionD1(Page):
                 for values in data_counts[i].values():
                     self.player.payoff += values
 
+            self.participant.vars['payoff_d1'] = self.player.payoff
+            self.participant.vars['urndraws1_d1'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_d1'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_d1'] = self.player.urn_draws_3
+
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
             self.player.payoff_3 = 0
@@ -1255,7 +1321,7 @@ class DecisionD1(Page):
         self.player.decision_d_page += 1
 
 
-##crazy differences
+##crazy differences and lower mean
 class PriorsE(Page):
     form_model = 'player'
 
@@ -1333,15 +1399,15 @@ class DecisionE1(Page):
 
     def before_next_page(self):
 
-        if self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
+        if self.participant.vars['choice'] and not self.participant.vars['safe']:
 
             Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
             Urn_2 = ['-19', '-5', '-4', '-3', '35', '40', '50', '100']
-            Urn_3 = ['2', '4']
+            Urn_3 = ['3']
 
             weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
             weights_2 = [0.2, 0.2, 0.2, 0.2, 0.05, 0.05, 0.05, 0.05]
-            weights_3 = [0.5, 0.5]
+            weights_3 = [1]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -1387,20 +1453,23 @@ class DecisionE1(Page):
                         data_counts[i][k] = v * 6
                     elif k == '7':
                         data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
                     elif k == '40':
                         data_counts[i][k] = v * 40
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
+                    elif k == '100':
+                        data_counts[i][k] = v * 100
+                    elif k == '-19':
+                        data_counts[i][k] = v * -19
+                    elif k == '-5':
+                        data_counts[i][k] = v * -5
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-3':
+                        data_counts[i][k] = v * -3
+
 
             self.player.payoff = 0
             payoffs = 0
@@ -1409,6 +1478,11 @@ class DecisionE1(Page):
                     payoffs += values
 
             self.player.payoff = payoffs
+
+            self.participant.vars['payoff_e1'] = self.player.payoff = payoffs
+            self.participant.vars['urndraws1_e1'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_e1'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_e1'] = self.player.urn_draws_3
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
@@ -1461,15 +1535,15 @@ class DecisionE1(Page):
             else:
                 pass
 
-        elif not self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
+        elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
 
             Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
             Urn_2 = ['-19', '-5', '-4', '-3', '35', '40', '50', '100']
-            Urn_3 = ['2', '4']
+            Urn_3 = ['3']
 
             weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
             weights_2 = [0.2, 0.2, 0.2, 0.2, 0.05, 0.05, 0.05, 0.05]
-            weights_3 = [0.5, 0.5]
+            weights_3 = [1]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -1526,25 +1600,32 @@ class DecisionE1(Page):
                         data_counts[i][k] = v * 6
                     elif k == '7':
                         data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
                     elif k == '40':
                         data_counts[i][k] = v * 40
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
+                    elif k == '100':
+                        data_counts[i][k] = v * 100
+                    elif k == '-19':
+                        data_counts[i][k] = v * -19
+                    elif k == '-5':
+                        data_counts[i][k] = v * -5
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-3':
+                        data_counts[i][k] = v * -3
 
             self.player.payoff = 0
             for i in data_counts.keys():
                 for values in data_counts[i].values():
                     self.player.payoff += values
+
+            self.participant.vars['payoff_e1'] = self.player.payoff
+            self.participant.vars['urndraws1_e1'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_e1'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_e1'] = self.player.urn_draws_3
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
@@ -1562,20 +1643,22 @@ class DecisionE1(Page):
         self.player.decision_e_page += 1
 
 
-##change in priors
+##crazy differences and higher mean
 
-class PriorsTransition_2(Page):
-    form_model = 'player'
+# class PriorsTransition_2(Page):
+#     form_model = 'player'
+#
+#     def is_displayed(self):
+#         return self.round_number == self.participant.vars['options']['F']
+#
+#     def vars_for_template(self):
+#         return{'choice': self.participant.vars['choice'],
+#                'draw': self.participant.vars['draw'],
+#                'sampling': self.participant.vars['sampling'],
+#
+#                }
 
-    def is_displayed(self):
-        return self.round_number == self.participant.vars['options']['F']
-
-    def vars_for_template(self):
-        return{'choice': self.participant.vars['choice'],
-               'draw': self.participant.vars['draw'],
-               'sampling': self.participant.vars['sampling'],
-
-               }
+##crazy differences and higher mean
 
 class PriorsF1(Page):
     form_model = 'player'
@@ -1731,6 +1814,11 @@ class DecisionF1(Page):
 
             self.player.payoff = payoffs
 
+            self.participant.vars['payoff_f1'] = self.player.payoff = payoffs
+            self.participant.vars['urndraws1_f1'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_f1'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_f1'] = self.player.urn_draws_3
+
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
             self.player.payoff_3 = 0
@@ -1867,6 +1955,11 @@ class DecisionF1(Page):
                 for values in data_counts[i].values():
                     self.player.payoff += values
 
+            self.participant.vars['payoff_f1'] = self.player.payoff
+            self.participant.vars['urndraws1_f1'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_f1'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_f1'] = self.player.urn_draws_3
+
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
             self.player.payoff_3 = 0
@@ -1882,7 +1975,10 @@ class DecisionF1(Page):
 
         self.player.decision_f_page += 1
 
-class PriorsF2(Page):
+
+##only positives? But still big eyes?
+
+class PriorsG1(Page):
     form_model = 'player'
 
     def is_displayed(self):
@@ -1895,7 +1991,7 @@ class PriorsF2(Page):
 
                }
 
-class DecisionF2(Page):
+class DecisionG1(Page):
     form_model = 'player'
 
     def is_displayed(self):
@@ -1959,7 +2055,7 @@ class DecisionF2(Page):
 
     def before_next_page(self):
 
-        if self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
+        if self.participant.vars['choice'] and not self.participant.vars['safe']:
 
             Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
             Urn_2 = ['-19', '-5', '-4', '-3', '35', '40', '50', '100']
@@ -2036,6 +2132,11 @@ class DecisionF2(Page):
 
             self.player.payoff = payoffs
 
+            self.participant.vars['payoff_f2'] = self.player.payoff = payoffs
+            self.participant.vars['urndraws1_f2'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_f2'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_f2'] = self.player.urn_draws_3
+
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
             self.player.payoff_3 = 0
@@ -2172,6 +2273,11 @@ class DecisionF2(Page):
                 for values in data_counts[i].values():
                     self.player.payoff += values
 
+            self.participant.vars['payoff_f2'] = self.player.payoff
+            self.participant.vars['urndraws1_f2'] = self.player.urn_draws_1
+            self.participant.vars['urndraws2_f2'] = self.player.urn_draws_2
+            self.participant.vars['urndraws3_f2'] = self.player.urn_draws_3
+
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
             self.player.payoff_3 = 0
@@ -2192,10 +2298,12 @@ class Feedback(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        if self.participant.vars['choice'] and not self.participant.vars['sampling']:
+        if self.participant.vars['choice'] and self.participant.vars['sampling']:
             return self.round_number <= Constants.num_rounds_choice
-        elif not self.participant.vars['choice'] and not self.participant.vars['sampling']:
+        elif not self.participant.vars['choice'] and self.participant.vars['sampling']:
             return self.round_number <= Constants.num_rounds_points
+        else:
+            pass
 
 
     def vars_for_template(self):
@@ -2260,6 +2368,20 @@ class Questionnaire(Page):
         self.player.questionnaire_page += 1
 
 
+class Disclose_Payoff(Page):
+    form_model ='player'
+
+    def is_displayed(self):
+        if self.participant.vars['choice']:
+            return self.round_number == Constants.num_rounds_choice
+        else:
+            return self.round_number == Constants.num_rounds_points
+
+    def vars_for_template(self):
+        return{'choice':self.participant.vars['choice'],
+               }
+
+
 class FinalInfo(Page):
     def is_displayed(self):
         if self.participant.vars['choice']:
@@ -2290,8 +2412,8 @@ page_sequence = [
     DecisionE1,
     PriorsF1,
     DecisionF1,
-    PriorsF2,
-    DecisionF2,
+    PriorsG1,
+    DecisionG1,
     Feedback,
     Questionnaire,
     Questionnaire,
@@ -2299,5 +2421,6 @@ page_sequence = [
     Questionnaire,
     Questionnaire,
     Questionnaire,
+    Disclose_Payoff,
     FinalInfo,
 ]
