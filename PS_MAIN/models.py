@@ -97,7 +97,8 @@ class Player(BasePlayer):
     decision_c_page = models.IntegerField(initial=1)
     decision_d_page = models.IntegerField(initial=1)
     decision_e_page = models.IntegerField(initial=1)
-
+    decision_f_page = models.IntegerField(initial=1)
+    decision_f2_page = models.IntegerField(initial=1)
 
 
 
