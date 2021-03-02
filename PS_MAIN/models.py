@@ -15,14 +15,14 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'PS_MAIN'
-    num_rounds_choice = 3
-    num_rounds_points = 1
+    num_rounds_choice = 18
+    num_rounds_points = 6
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
     num_priors = 100
     safe_option = 6
-    options = ['A', 'B', 'C', 'D', 'E']
+    options = ['A', 'B', 'C', 'D', 'E', 'F']
     num_rounds = len(options)
 
 

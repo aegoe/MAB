@@ -1,0 +1,21 @@
+{% load otree %}
+{% block title %}
+<h4>The Stages</h4>
+<br>
+
+{% endblock %}
+
+{% block content %}
+
+<p>In this HIT, you will complete two stages. In each stage, you will choose between different options to receive Coins.</p>
+
+<p>The first stage is the <b>sampling stage</b>. At the beginning, you will learn about the options by observing provided information.
+    Then, you will have the opportunity to learn more by sampling through the options yourself. </p>
+
+<p> The second stage is the <b>decision stage</b>. Here, you will apply your gained knowledge and make {% if not choice %} a final choice {% elif choice %} your final choices {% endif %} that determine your bonus payoff.
+</p>
+
+
+{% endblock %}
+
+

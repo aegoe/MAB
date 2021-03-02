@@ -28,17 +28,13 @@ class Device(Page):
 
     def before_next_page(self):
 
-        if self.session.config['name'] == 'MAB_MainStudy_FreeSampling':
+        if self.session.config['name'] == 'PS1':
             letters_and_digits = string.ascii_letters + string.digits
             result_str = ''.join((random.choice(letters_and_digits) for i in range(7))) + str(random.randint(1, 8))
             self.player.completion_code = result_str
             self.participant.vars['completion_code'] = result_str
-            self.player.variance = self.participant.vars['variance'] = self.session.config['variance']
             self.player.safe = self.participant.vars['safe'] = self.session.config['safe']
-            self.player.safe = self.participant.vars['sampling'] = self.session.config['sampling']
-            self.player.sampling_round = self.participant.vars['sampling_round'] = 1
-            self.player.points_sampling = self.participant.vars['points_sampling'] = 0
-            self.player.end_button = self.participant.vars['end_button'] = False
+            self.player.sampling = self.participant.vars['sampling'] = self.session.config['sampling']
 
             treatments = ['choice', 'no_choice']
             weights_3 = [0.5, 0.5]
@@ -115,7 +111,6 @@ class InstruStart(Page):
                 'endowment_choice': Constants.endowment_choice,
                 'endowment_points': Constants.endowment_points,
                 'draw': self.participant.vars['draw'],
-                'variance': self.participant.vars['variance'],
                 'feedback_3': self.participant.vars['feedback_3'],
 
                 }
@@ -141,17 +136,16 @@ class ComprehensionQuestions(Page):
                 'safe': self.participant.vars['safe'],
                 'endowment_choice': Constants.endowment_choice,
                 'endowment_points': Constants.endowment_points,
-                'variance': self.participant.vars['variance'],
                 }
 
     def get_form_fields(self):
-        if self.participant.vars['choice'] and not self.participant.vars['variance']:
+        if self.participant.vars['choice'] :
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3','cq_MS2_1']
-        elif not self.participant.vars['choice'] and not self.participant.vars['variance']:
+        elif not self.participant.vars['choice'] :
                 return ['cq_Pilot_2', 'cq_Pilot_3_simdesc', 'cq_Pilot_4', 'cq_MS2_1']
-        elif self.participant.vars['choice'] and  self.participant.vars['variance']:
+        elif self.participant.vars['choice']:
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_5']
-        elif not self.participant.vars['choice'] and self.participant.vars['variance']:
+        elif not self.participant.vars['choice'] :
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_4', 'cq_Pilot_5']
 
     def before_next_page(self):
