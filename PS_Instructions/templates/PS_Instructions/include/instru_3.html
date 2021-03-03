@@ -1,48 +1,18 @@
 {% load otree %}
 {% block title %}
-<h4>Sampling Stage: The Task</h4>
+<h4>Investments and Earnings </h4>
 <br>
 {% endblock %}
 
 {% block content %}
-<p> In both stages, you choose between different options, as shown in the image below. </p>
 
-<p> In the sampling stage, you will first see summary statistics for each option. Then, you will have the opportunity to learn more about the options by
-    sampling through them.</p>
-    
- <p>The following sampling rules apply:
-    
-At the beginning of each sampling round, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}. 
+<p> You can think of each option as a bag of coins. The coins are put in each bag before the game starts and for every point you invest in
+an option, a coin from the respective bag is drawn. Thus, one point equals one draw. After each draw, the coin is put back into the bag. </p>
 
-You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all 
+<p> Bags differ in the composition of coins they contain. At the beginning of each stage, you will see summary statistics from {{Constants.num_priors}} prior
+    draws from each of the three options. You can use this data to inform your choices throughout the task.</p>
 
-three options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three 
-
-points {% endif %} must be invested in each round. </p>
-
-
-
-{% if choice %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/ckJN7lt.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% elif not choice %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/yUMW7tL.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% endif %}
+<p> Draws from each stage are independent from one another, and you will always face a different trio of options. </p>
 
 
 <br>
@@ -50,3 +20,4 @@ points {% endif %} must be invested in each round. </p>
 <button value="True" id="proceed" class="btn btn-primary btn-large">Proceed</button>
 
 {% endblock %}
+

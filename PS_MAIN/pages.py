@@ -438,7 +438,7 @@ class DecisionB1(Page):
         if self.participant.vars['choice'] and not self.participant.vars['safe']:
 
             Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
-            Urn_2 = ['-9', '-5', '-4', '-3', '35', '40', '50', '60']
+            Urn_2 = ['-9', '-5', '-4', '-3', '35', '40', '50', '50']
             Urn_3 = ['3']
 
             weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
@@ -1084,13 +1084,13 @@ class DecisionD1(Page):
 
         if self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
 
-            Urn_1 = ['3', '4', '5', '6', '7', '8', '9', '10']
-            Urn_2 = ['0', '1', '2', '3', '20', '25', '35', '40']
-            Urn_3 = ['6']
+            Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
+            Urn_2 = ['-10', '-5', '-4', '-3', '35', '40', '50', '55']
+            Urn_3 = ['-2', '8']
 
             weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
-            weights_2 = [0.25, 0.25, 0.15, 0.15, 0.05, 0.05, 0.05, 0.05]
-            weights_3 = [1]
+            weights_2 = [0.2, 0.2, 0.2, 0.2, 0.05, 0.05, 0.05, 0.05]
+            weights_3 = [0.5, 0.5]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -1136,20 +1136,26 @@ class DecisionD1(Page):
                         data_counts[i][k] = v * 6
                     elif k == '7':
                         data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
                     elif k == '40':
                         data_counts[i][k] = v * 40
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
+                    elif k == '55':
+                        data_counts[i][k] = v * 55
+                    elif k == '-10':
+                        data_counts[i][k] = v * -10
+                    elif k == '-5':
+                        data_counts[i][k] = v * -5
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-3':
+                        data_counts[i][k] = v * -3
+                    elif k == '-2':
+                        data_counts[i][k] = v * -2
+                    elif k == '8':
+                        data_counts[i][k] = v * 8
 
             self.player.payoff = 0
             payoffs = 0
@@ -1645,18 +1651,6 @@ class DecisionE1(Page):
 
 ##crazy differences and higher mean
 
-# class PriorsTransition_2(Page):
-#     form_model = 'player'
-#
-#     def is_displayed(self):
-#         return self.round_number == self.participant.vars['options']['F']
-#
-#     def vars_for_template(self):
-#         return{'choice': self.participant.vars['choice'],
-#                'draw': self.participant.vars['draw'],
-#                'sampling': self.participant.vars['sampling'],
-#
-#                }
 
 ##crazy differences and higher mean
 
@@ -1740,12 +1734,12 @@ class DecisionF1(Page):
         if self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
 
             Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
-            Urn_2 = ['-19', '-5', '-4', '-3', '35', '40', '50', '100']
-            Urn_3 = ['2', '4']
+            Urn_2 = ['-20', '-5', '-4', '-3', '35', '40', '50', '95']
+            Urn_3 = ['3']
 
             weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
             weights_2 = [0.2, 0.2, 0.2, 0.2, 0.05, 0.05, 0.05, 0.05]
-            weights_3 = [0.5, 0.5]
+            weights_3 = [1]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -1791,20 +1785,22 @@ class DecisionF1(Page):
                         data_counts[i][k] = v * 6
                     elif k == '7':
                         data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
                     elif k == '40':
                         data_counts[i][k] = v * 40
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
+                    elif k == '95':
+                        data_counts[i][k] = v * 95
+                    elif k == '-20':
+                        data_counts[i][k] = v * -20
+                    elif k == '-5':
+                        data_counts[i][k] = v * -5
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-3':
+                        data_counts[i][k] = v * -3
 
             self.player.payoff = 0
             payoffs = 0
@@ -1873,12 +1869,12 @@ class DecisionF1(Page):
         elif not self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
 
             Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
-            Urn_2 = ['-19', '-5', '-4', '-3', '35', '40', '50', '100']
-            Urn_3 = ['2', '4']
+            Urn_2 = ['-20', '-5', '-4', '-3', '35', '40', '50', '95']
+            Urn_3 = ['3']
 
             weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
             weights_2 = [0.2, 0.2, 0.2, 0.2, 0.05, 0.05, 0.05, 0.05]
-            weights_3 = [0.5, 0.5]
+            weights_3 = [1]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -1896,26 +1892,15 @@ class DecisionF1(Page):
             self.player.urn_draws_2 = draws_2_str
             self.player.urn_draws_3 = draws_3_str
 
-            print(self.player.urn_draws_1)
-            print(draws_1)
-            print(draws_2)
-            print(draws_3)
 
             count_1 = Counter(draws_1)
             count_2 = Counter(draws_2)
             count_3 = Counter(draws_3)
 
-            print(count_1)
-            print(count_2)
-            print(count_3)
-
-
-
             data_counts = {}
             data_counts['count_1'] = count_1
             data_counts['count_2'] = count_2
             data_counts['count_3'] = count_3
-
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
@@ -1935,20 +1920,22 @@ class DecisionF1(Page):
                         data_counts[i][k] = v * 6
                     elif k == '7':
                         data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
                     elif k == '40':
                         data_counts[i][k] = v * 40
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
+                    elif k == '95':
+                        data_counts[i][k] = v * 95
+                    elif k == '-20':
+                        data_counts[i][k] = v * -20
+                    elif k == '-5':
+                        data_counts[i][k] = v * -5
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-3':
+                        data_counts[i][k] = v * -3
 
             self.player.payoff = 0
             for i in data_counts.keys():
@@ -2414,7 +2401,7 @@ page_sequence = [
     DecisionF1,
     PriorsG1,
     DecisionG1,
-    Feedback,
+    #Feedback,
     Questionnaire,
     Questionnaire,
     Questionnaire,
