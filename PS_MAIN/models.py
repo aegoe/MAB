@@ -15,14 +15,14 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'PS_MAIN'
-    num_rounds_choice = 18
-    num_rounds_points = 6
+    num_rounds_choice = 7
+    num_rounds_points = 7
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
     num_priors = 100
     safe_option = 6
-    options = ['A', 'B', 'C', 'D', 'E', 'F']
+    options = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
     num_rounds = len(options)
 
 
@@ -92,7 +92,41 @@ class Player(BasePlayer):
     decision_d_page = models.IntegerField(initial=1)
     decision_e_page = models.IntegerField(initial=1)
     decision_f_page = models.IntegerField(initial=1)
-    decision_f2_page = models.IntegerField(initial=1)
+    decision_g_page = models.IntegerField(initial=1)
+    stage_payment = models.StringField()
+    #stages = models.StringField()
+
+    urn_draws_1_a = models.StringField()
+    urn_draws_1_b = models.StringField()
+    urn_draws_1_c = models.StringField()
+    urn_draws_1_d = models.StringField()
+    urn_draws_1_e = models.StringField()
+    urn_draws_1_f = models.StringField()
+    urn_draws_1_g = models.StringField()
+
+    urn_draws_2_a = models.StringField()
+    urn_draws_2_b = models.StringField()
+    urn_draws_2_c = models.StringField()
+    urn_draws_2_d = models.StringField()
+    urn_draws_2_e = models.StringField()
+    urn_draws_2_f = models.StringField()
+    urn_draws_2_g = models.StringField()
+
+    urn_draws_3_a = models.StringField()
+    urn_draws_3_b = models.StringField()
+    urn_draws_3_c = models.StringField()
+    urn_draws_3_d = models.StringField()
+    urn_draws_3_e = models.StringField()
+    urn_draws_3_f = models.StringField()
+    urn_draws_3_g = models.StringField()
+
+    payoff_a = models.CurrencyField()
+    payoff_b = models.CurrencyField()
+    payoff_c = models.CurrencyField()
+    payoff_d = models.CurrencyField()
+    payoff_e = models.CurrencyField()
+    payoff_f = models.CurrencyField()
+    payoff_g = models.CurrencyField()
 
 
 

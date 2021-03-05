@@ -1,0 +1,59 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+<div class="page-header">
+    <p> Main Decision</p>
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+{% if player.decision_f_page == 1 %}
+
+{% include 'PS_MAIN/include/decisionG1.html' %}
+
+{% elif player.decision_g_page == 2 %}
+
+{% include 'PS_MAIN/include/decisionG1.html' %}
+
+{% elif player.decision_g_page == 3 %}
+
+{% include 'PS_MAIN/include/decisionG1.html' %}
+
+{% endif %}
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+{% endblock %}
+
+
+
+
+{% block styles %}
+    <style type="text/css">
+        {% include 'PS_MAIN/css/bandit_env.css' %}
+        .page-header {
+            margin-bottom: 0px;
+        }
+    </style>
+{% endblock %}
+

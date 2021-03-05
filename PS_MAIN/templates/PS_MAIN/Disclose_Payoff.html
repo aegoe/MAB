@@ -1,0 +1,80 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Your Payment
+{% endblock %}
+
+
+{% block content %}
+
+
+{% if stage_payment == 'A' %}
+
+<p>Chosen Stage:</p>
+
+<p>Your draws: {{player.urn_draws_1_a}}, {{player.urn_draws_2_a}}, {{player.urn_draws_3_a}}</p>
+
+<p>Your payoff from your allocation of points: {{player.payoff_a}}</p>
+
+
+
+{% elif stage_payment == 'B' %}
+
+<p>Chosen Stage:</p>
+
+<p>Your draws: {{player.urn_draws_1_b}}, {{player.urn_draws_2_b}}, {{player.urn_draws_3_b}}</p>
+
+<p>Your payoff from your allocation of points: {{player.payoff_b}}</p>
+
+
+{% elif stage_payment == 'C' %}
+
+<p>Chosen Stage:</p>
+
+<p>Your draws: {{player.urn_draws_1_c}}, {{player.urn_draws_2_c}}, {{player.urn_draws_3_c}}</p>
+
+<p>Your payoff from your allocation of points: {{player.payoff_c}}</p>
+
+
+{% elif stage_payment == 'D' %}
+
+<p>Chosen Stage:</p>
+
+<p>Your draws: {{player.urn_draws_1_d}}, {{player.urn_draws_2_d}}, {{player.urn_draws_3_d}}</p>
+
+<p>Your payoff from your allocation of points: {{player.payoff_d}}</p>
+
+{% elif stage_payment == 'E' %}
+
+<p>Chosen Stage:</p>
+
+<p>Your draws: {{player.urn_draws_1_e}}, {{player.urn_draws_2_e}}, {{player.urn_draws_3_e}}</p>
+
+<p>Your payoff from your allocation of points: {{player.payoff_e}}</p>
+
+{% elif stage_payment == 'F' %}
+
+<p>Chosen Stage:</p>
+
+<p>Your draws: {{player.urn_draws_1_f}}, {{player.urn_draws_2_f}}, {{player.urn_draws_3_f}}</p>
+
+<p>Your payoff from your allocation of points: {{player.payoff_f}}</p>
+
+{% elif stage_payment == 'G' %}
+<p>Chosen Stage:</p>
+
+<p>Your draws: {{player.urn_draws_1_g}}, {{player.urn_draws_2_g}}, {{player.urn_draws_3_g}}</p>
+
+<p>Your payoff from your allocation of points: {{player.payoff_g}}</p>
+
+{% endif %}
+
+
+
+
+
+<br>
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Next</button>
+
+{% endblock %}
