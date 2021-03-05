@@ -11,19 +11,500 @@
 
 {% if stage_payment == 'A' %}
 
-<p>Chosen Stage:</p>
+<p> Stage A has been randomly selected to determine your payoff. </p>
 
-<p>Your draws: {{player.urn_draws_1_a}}, {{player.urn_draws_2_a}}, {{player.urn_draws_3_a}}</p>
+
+{% if draw == 'TSR' %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_b}} &nbsp;</td>
+            <td class="td"> {{player.option_2_b}} &nbsp;</td>
+            <td class="td"> {{player.option_3_b}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_b}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_b}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_b}} &nbsp;</td>
+            <td class="td"> {{player.option_1_b}} &nbsp;</td>
+            <td class="td"> {{player.option_3_b}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_b}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_b}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_b}} &nbsp;</td>
+            <td class="td"> {{player.option_1_b}} &nbsp;</td>
+            <td class="td"> {{player.option_2_b}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_b}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_b}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'TRS' %}
+
+   <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_b}} &nbsp;</td>
+            <td class="td"> {{player.option_3_b}} &nbsp;</td>
+            <td class="td"> {{player.option_2_b}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_b}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_b}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_b}} &nbsp;</td>
+            <td class="td"> {{player.option_3_b}} &nbsp;</td>
+            <td class="td"> {{player.option_1_b}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_b}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_b}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_b}} &nbsp;</td>
+            <td class="td"> {{player.option_2_b}} &nbsp;</td>
+            <td class="td"> {{player.option_1_b}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_b}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_b}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% endif %}
+
+
+
 
 <p>Your payoff from your allocation of points: {{player.payoff_a}}</p>
 
 
 
 {% elif stage_payment == 'B' %}
-
 <p>Chosen Stage:</p>
 
-<p>Your draws: {{player.urn_draws_1_b}}, {{player.urn_draws_2_b}}, {{player.urn_draws_3_b}}</p>
+
+{% if draw == 'TSR' %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_b}} &nbsp;</td>
+            <td class="td"> {{player.option_2_b}} &nbsp;</td>
+            <td class="td"> {{player.option_3_b}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_b}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_b}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_b}} &nbsp;</td>
+            <td class="td"> {{player.option_1_b}} &nbsp;</td>
+            <td class="td"> {{player.option_3_b}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_b}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_b}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_b}} &nbsp;</td>
+            <td class="td"> {{player.option_1_b}} &nbsp;</td>
+            <td class="td"> {{player.option_2_b}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_b}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_b}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'TRS' %}
+
+   <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_b}} &nbsp;</td>
+            <td class="td"> {{player.option_3_b}} &nbsp;</td>
+            <td class="td"> {{player.option_2_b}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_b}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_b}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_b}} &nbsp;</td>
+            <td class="td"> {{player.option_3_b}} &nbsp;</td>
+            <td class="td"> {{player.option_1_b}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_b}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_b}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_b}} &nbsp;</td>
+            <td class="td"> {{player.option_2_b}} &nbsp;</td>
+            <td class="td"> {{player.option_1_b}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_b}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_b}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_b}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_b}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% endif %}
+
 
 <p>Your payoff from your allocation of points: {{player.payoff_b}}</p>
 
@@ -32,7 +513,247 @@
 
 <p>Chosen Stage:</p>
 
-<p>Your draws: {{player.urn_draws_1_c}}, {{player.urn_draws_2_c}}, {{player.urn_draws_3_c}}</p>
+
+
+{% if draw == 'TSR' %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_c}} &nbsp;</td>
+            <td class="td"> {{player.option_2_c}} &nbsp;</td>
+            <td class="td"> {{player.option_3_c}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_c}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_c}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_c}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_c}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_c}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_c}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_c}} &nbsp;</td>
+            <td class="td"> {{player.option_1_c}} &nbsp;</td>
+            <td class="td"> {{player.option_3_c}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_c}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_c}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_c}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_c}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_c}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_c}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_c}} &nbsp;</td>
+            <td class="td"> {{player.option_1_c}} &nbsp;</td>
+            <td class="td"> {{player.option_2_c}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_c}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_c}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_c}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_c}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_c}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_c}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'TRS' %}
+
+   <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_c}} &nbsp;</td>
+            <td class="td"> {{player.option_3_c}} &nbsp;</td>
+            <td class="td"> {{player.option_2_c}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_c}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_c}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_c}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_c}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_c}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_c}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_c}} &nbsp;</td>
+            <td class="td"> {{player.option_3_c}} &nbsp;</td>
+            <td class="td"> {{player.option_1_c}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_c}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_c}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_c}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_c}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_c}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_c}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_c}} &nbsp;</td>
+            <td class="td"> {{player.option_2_c}} &nbsp;</td>
+            <td class="td"> {{player.option_1_c}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_c}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_c}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_c}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_c}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_c}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_c}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% endif %}
 
 <p>Your payoff from your allocation of points: {{player.payoff_c}}</p>
 
@@ -41,7 +762,245 @@
 
 <p>Chosen Stage:</p>
 
-<p>Your draws: {{player.urn_draws_1_d}}, {{player.urn_draws_2_d}}, {{player.urn_draws_3_d}}</p>
+{% if draw == 'TSR' %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_d}} &nbsp;</td>
+            <td class="td"> {{player.option_2_d}} &nbsp;</td>
+            <td class="td"> {{player.option_3_d}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_d}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_d}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_d}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_d}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_d}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_d}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_d}} &nbsp;</td>
+            <td class="td"> {{player.option_1_d}} &nbsp;</td>
+            <td class="td"> {{player.option_3_d}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_d}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_d}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_d}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_d}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_d}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_d}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_d}} &nbsp;</td>
+            <td class="td"> {{player.option_1_d}} &nbsp;</td>
+            <td class="td"> {{player.option_2_d}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_d}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_d}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_d}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_d}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_d}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_d}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'TRS' %}
+
+   <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_d}} &nbsp;</td>
+            <td class="td"> {{player.option_3_d}} &nbsp;</td>
+            <td class="td"> {{player.option_2_d}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_d}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_d}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_d}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_d}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_d}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_d}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_d}} &nbsp;</td>
+            <td class="td"> {{player.option_3_d}} &nbsp;</td>
+            <td class="td"> {{player.option_1_d}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_d}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_d}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_d}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_d}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_d}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_d}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_d}} &nbsp;</td>
+            <td class="td"> {{player.option_2_d}} &nbsp;</td>
+            <td class="td"> {{player.option_1_d}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_d}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_d}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_d}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_d}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_d}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_d}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% endif %}
 
 <p>Your payoff from your allocation of points: {{player.payoff_d}}</p>
 
@@ -49,7 +1008,245 @@
 
 <p>Chosen Stage:</p>
 
-<p>Your draws: {{player.urn_draws_1_e}}, {{player.urn_draws_2_e}}, {{player.urn_draws_3_e}}</p>
+{% if draw == 'TSR' %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_e}} &nbsp;</td>
+            <td class="td"> {{player.option_2_e}} &nbsp;</td>
+            <td class="td"> {{player.option_3_e}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_e}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_e}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_e}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_e}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_e}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_e}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_e}} &nbsp;</td>
+            <td class="td"> {{player.option_1_e}} &nbsp;</td>
+            <td class="td"> {{player.option_3_e}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_e}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_e}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_e}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_e}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_e}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_e}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_e}} &nbsp;</td>
+            <td class="td"> {{player.option_1_e}} &nbsp;</td>
+            <td class="td"> {{player.option_2_e}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_e}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_e}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_e}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_e}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_e}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_e}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'TRS' %}
+
+   <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_e}} &nbsp;</td>
+            <td class="td"> {{player.option_3_e}} &nbsp;</td>
+            <td class="td"> {{player.option_2_e}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_e}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_e}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_e}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_e}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_e}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_e}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_e}} &nbsp;</td>
+            <td class="td"> {{player.option_3_e}} &nbsp;</td>
+            <td class="td"> {{player.option_1_e}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_e}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_e}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_e}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_e}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_e}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_e}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_e}} &nbsp;</td>
+            <td class="td"> {{player.option_2_e}} &nbsp;</td>
+            <td class="td"> {{player.option_1_e}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_e}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_e}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_e}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_e}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_e}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_e}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% endif %}
 
 <p>Your payoff from your allocation of points: {{player.payoff_e}}</p>
 
@@ -57,14 +1254,492 @@
 
 <p>Chosen Stage:</p>
 
-<p>Your draws: {{player.urn_draws_1_f}}, {{player.urn_draws_2_f}}, {{player.urn_draws_3_f}}</p>
+{% if draw == 'TSR' %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_f}} &nbsp;</td>
+            <td class="td"> {{player.option_2_f}} &nbsp;</td>
+            <td class="td"> {{player.option_3_f}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_f}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_f}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_f}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_f}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_f}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_f}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_f}} &nbsp;</td>
+            <td class="td"> {{player.option_1_f}} &nbsp;</td>
+            <td class="td"> {{player.option_3_f}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_f}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_f}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_f}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_f}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_f}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_f}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_f}} &nbsp;</td>
+            <td class="td"> {{player.option_1_f}} &nbsp;</td>
+            <td class="td"> {{player.option_2_f}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_f}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_f}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_f}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_f}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_f}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_f}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'TRS' %}
+
+   <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_f}} &nbsp;</td>
+            <td class="td"> {{player.option_3_f}} &nbsp;</td>
+            <td class="td"> {{player.option_2_f}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_f}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_f}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_f}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_f}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_f}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_f}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_f}} &nbsp;</td>
+            <td class="td"> {{player.option_3_f}} &nbsp;</td>
+            <td class="td"> {{player.option_1_f}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_f}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_f}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_f}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_f}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_f}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_f}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_f}} &nbsp;</td>
+            <td class="td"> {{player.option_2_f}} &nbsp;</td>
+            <td class="td"> {{player.option_1_f}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_f}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_f}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_f}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_f}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_f}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_f}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% endif %}
+
 
 <p>Your payoff from your allocation of points: {{player.payoff_f}}</p>
 
 {% elif stage_payment == 'G' %}
+
 <p>Chosen Stage:</p>
 
-<p>Your draws: {{player.urn_draws_1_g}}, {{player.urn_draws_2_g}}, {{player.urn_draws_3_g}}</p>
+{% if draw == 'TSR' %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_g}} &nbsp;</td>
+            <td class="td"> {{player.option_2_g}} &nbsp;</td>
+            <td class="td"> {{player.option_3_g}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_g}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_g}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_g}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_g}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_g}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_g}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_g}} &nbsp;</td>
+            <td class="td"> {{player.option_1_g}} &nbsp;</td>
+            <td class="td"> {{player.option_3_g}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_g}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_g}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_g}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_g}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_g}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_g}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_g}} &nbsp;</td>
+            <td class="td"> {{player.option_1_g}} &nbsp;</td>
+            <td class="td"> {{player.option_2_g}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_g}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_g}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_g}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_g}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_g}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_g}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'TRS' %}
+
+   <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_g}} &nbsp;</td>
+            <td class="td"> {{player.option_3_g}} &nbsp;</td>
+            <td class="td"> {{player.option_2_g}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_g}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_g}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_g}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_g}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_g}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_g}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_g}} &nbsp;</td>
+            <td class="td"> {{player.option_3_g}} &nbsp;</td>
+            <td class="td"> {{player.option_1_g}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_g}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_g}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_g}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_g}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_g}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_g}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_g}} &nbsp;</td>
+            <td class="td"> {{player.option_2_g}} &nbsp;</td>
+            <td class="td"> {{player.option_1_g}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_g}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_g}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_g}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_g}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_g}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_g}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% endif %}
 
 <p>Your payoff from your allocation of points: {{player.payoff_g}}</p>
 

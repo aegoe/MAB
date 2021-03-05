@@ -218,26 +218,50 @@ class DecisionA1(Page):
                 self.participant.vars['urndraws1_a1_1'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_a1_1'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_a1_1'] = self.player.urn_draws_3
+                self.participant.vars['option_1_a1_1'] = self.player.option_1
+                self.participant.vars['option_2_a1_1'] = self.player.option_2
+                self.participant.vars['option_3_a1_1'] = self.player.option_3
+
+                self.participant.vars['payoff_1_a_1'] = self.player.payoff_1
+                self.participant.vars['payoff_2_a_1'] = self.player.payoff_2
+                self.participant.vars['payoff_3_a_1'] = self.player.payoff_3
 
             if self.player.decision_a_page == 2:
                 self.participant.vars['payoff_a1_2'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_a1_2'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_a1_2'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_a1_2'] = self.player.urn_draws_3
-
+                self.participant.vars['option_1_a1_2'] = self.player.option_1
+                self.participant.vars['option_2_a1_2'] = self.player.option_2
+                self.participant.vars['option_3_a1_2'] = self.player.option_3
+                
+                self.participant.vars['payoff_1_a_2'] = self.player.payoff_1
+                self.participant.vars['payoff_2_a_2'] = self.player.payoff_2
+                self.participant.vars['payoff_3_a_2'] = self.player.payoff_3                
+               
             if self.player.decision_a_page == 3:
                 self.participant.vars['payoff_a1_3'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_a1_3'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_a1_3'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_a1_3'] = self.player.urn_draws_3
+                self.participant.vars['option_1_a1_3'] = self.player.option_1
+                self.participant.vars['option_2_a1_3'] = self.player.option_2
+                self.participant.vars['option_3_a1_3'] = self.player.option_3
+                
+                self.participant.vars['payoff_1_a_3'] = self.player.payoff_1
+                self.participant.vars['payoff_2_a_3'] = self.player.payoff_2
+                self.participant.vars['payoff_3_a_3'] = self.player.payoff_3
 
                 self.participant.vars['payoff_a1'] = self.participant.vars['payoff_a1_1'] + self.participant.vars['payoff_a1_2'] + self.participant.vars['payoff_a1_3']
                 self.participant.vars['urndraws1_a1'] = self.participant.vars['urndraws1_a1_1'] + self.participant.vars['urndraws1_a1_2'] + self.participant.vars['urndraws1_a1_3']
                 self.participant.vars['urndraws2_a1'] = self.participant.vars['urndraws2_a1_1'] + self.participant.vars['urndraws2_a1_2'] + self.participant.vars['urndraws2_a1_3']
                 self.participant.vars['urndraws3_a1'] = self.participant.vars['urndraws3_a1_1'] + self.participant.vars['urndraws3_a1_2'] + self.participant.vars['urndraws3_a1_3']
+                self.participant.vars['option_1_a1'] = self.participant.vars['option_1_a1_1'] + self.participant.vars['option_1_a1_2'] + self.participant.vars['option_1_a1_3']
+                self.participant.vars['payoff_1_a'] = self.participant.vars['payoff_1_a_1'] + self.participant.vars['payoff_1_a_2'] + self.participant.vars['payoff_1_a_3']
+                self.participant.vars['payoff_2_a'] = self.participant.vars['payoff_2_a_1'] + self.participant.vars['payoff_2_a_2'] + self.participant.vars['payoff_2_a_3']
+                self.participant.vars['payoff_3_a'] = self.participant.vars['payoff_3_a_1'] + self.participant.vars['payoff_3_a_2'] + self.participant.vars['payoff_3_a_3']
 
-
-        elif not self.participant.vars['choice'] :
+        elif not self.participant.vars['choice']:
 
             Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
             Urn_2 = ['-9', '-5', '-4', '-3', '35', '40', '50', '60']
@@ -329,6 +353,10 @@ class DecisionA1(Page):
             self.participant.vars['urndraws1_a1'] = self.player.urn_draws_1
             self.participant.vars['urndraws2_a1'] = self.player.urn_draws_2
             self.participant.vars['urndraws3_a1'] = self.player.urn_draws_3
+            
+            self.participant.vars['option_1_a1'] = self.player.option_1
+            self.participant.vars['option_2_a1'] = self.player.option_2
+            self.participant.vars['option_3_a1'] = self.player.option_3
 
 
             self.player.payoff_1 = 0
@@ -343,6 +371,10 @@ class DecisionA1(Page):
                         self.player.payoff_2 += v
                     if i == 'count_3':
                         self.player.payoff_3 += v
+
+            self.participant.vars['payoff_1_a'] = self.player.payoff_1
+            self.participant.vars['payoff_2_a'] = self.player.payoff_2
+            self.participant.vars['payoff_3_a'] = self.player.payoff_3
 
         self.player.decision_a_page += 1
 
@@ -526,23 +558,54 @@ class DecisionB1(Page):
                 self.participant.vars['urndraws1_b1_1'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_b1_1'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_b1_1'] = self.player.urn_draws_3
+                self.participant.vars['option_1_b1_1'] = self.player.option_1
+                self.participant.vars['option_2_b1_1'] = self.player.option_2
+                self.participant.vars['option_3_b1_1'] = self.player.option_3
+
+                self.participant.vars['payoff_1_b_1'] = self.player.payoff_1
+                self.participant.vars['payoff_2_b_1'] = self.player.payoff_2
+                self.participant.vars['payoff_3_b_1'] = self.player.payoff_3
 
             if self.player.decision_b_page == 2:
                 self.participant.vars['payoff_b1_2'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_b1_2'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_b1_2'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_b1_2'] = self.player.urn_draws_3
+                self.participant.vars['option_1_b1_2'] = self.player.option_1
+                self.participant.vars['option_2_b1_2'] = self.player.option_2
+                self.participant.vars['option_3_b1_2'] = self.player.option_3
+
+                self.participant.vars['payoff_1_b_2'] = self.player.payoff_1
+                self.participant.vars['payoff_2_b_2'] = self.player.payoff_2
+                self.participant.vars['payoff_3_b_2'] = self.player.payoff_3
 
             if self.player.decision_b_page == 3:
                 self.participant.vars['payoff_b1_3'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_b1_3'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_b1_3'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_b1_3'] = self.player.urn_draws_3
+                self.participant.vars['option_1_b1_3'] = self.player.option_1
+                self.participant.vars['option_2_b1_3'] = self.player.option_2
+                self.participant.vars['option_3_b1_3'] = self.player.option_3
 
-                self.participant.vars['payoff_b1'] = self.participant.vars['payoff_b1_1'] + self.participant.vars['payoff_b1_2'] + self.participant.vars['payoff_b1_3']
-                self.participant.vars['urndraws1_b1'] = self.participant.vars['urndraws1_b1_1'] + self.participant.vars['urndraws1_b1_2'] + self.participant.vars['urndraws1_b1_3']
-                self.participant.vars['urndraws2_b1'] = self.participant.vars['urndraws2_b1_1'] + self.participant.vars['urndraws2_b1_2'] + self.participant.vars['urndraws2_b1_3']
-                self.participant.vars['urndraws3_b1'] = self.participant.vars['urndraws3_b1_1'] + self.participant.vars['urndraws3_b1_2'] + self.participant.vars['urndraws3_b1_3']
+                self.participant.vars['payoff_1_b_3'] = self.player.payoff_1
+                self.participant.vars['payoff_2_b_3'] = self.player.payoff_2
+                self.participant.vars['payoff_3_b_3'] = self.player.payoff_3
+
+                self.participant.vars['payoff_b1'] = self.participant.vars['payoff_b1_1'] + self.participant.vars[
+                    'payoff_b1_2'] + self.participant.vars['payoff_b1_3']
+                self.participant.vars['urndraws1_b1'] = self.participant.vars['urndraws1_b1_1'] + self.participant.vars[
+                    'urndraws1_b1_2'] + self.participant.vars['urndraws1_b1_3']
+                self.participant.vars['urndraws2_b1'] = self.participant.vars['urndraws2_b1_1'] + self.participant.vars[
+                    'urndraws2_b1_2'] + self.participant.vars['urndraws2_b1_3']
+                self.participant.vars['urndraws3_b1'] = self.participant.vars['urndraws3_b1_1'] + self.participant.vars[
+                    'urndraws3_b1_2'] + self.participant.vars['urndraws3_b1_3']
+                self.participant.vars['option_1_b1'] = self.participant.vars['option_1_b1_1'] + self.participant.vars[
+                    'option_1_b1_2'] + self.participant.vars['option_1_b1_3']
+                
+                self.participant.vars['payoff_1_b'] = self.participant.vars['payoff_1_b_1'] + self.participant.vars['payoff_1_b_2'] + self.participant.vars['payoff_1_b_3']
+                self.participant.vars['payoff_2_b'] = self.participant.vars['payoff_2_b_1'] + self.participant.vars['payoff_2_b_2'] + self.participant.vars['payoff_2_b_3']
+                self.participant.vars['payoff_3_b'] = self.participant.vars['payoff_3_b_1'] + self.participant.vars['payoff_3_b_2'] + self.participant.vars['payoff_3_b_3']
 
 
         elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
@@ -636,7 +699,11 @@ class DecisionB1(Page):
             self.participant.vars['urndraws1_b1'] = self.player.urn_draws_1
             self.participant.vars['urndraws2_b1'] = self.player.urn_draws_2
             self.participant.vars['urndraws3_b1'] = self.player.urn_draws_3
-
+            
+            self.participant.vars['option_1_b1'] = self.player.option_1
+            self.participant.vars['option_2_b1'] = self.player.option_2
+            self.participant.vars['option_3_b1'] = self.player.option_3
+            
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
             self.player.payoff_3 = 0
@@ -649,6 +716,12 @@ class DecisionB1(Page):
                         self.player.payoff_2 += v
                     if i == 'count_3':
                         self.player.payoff_3 += v
+
+            self.participant.vars['payoff_1_b'] = self.player.payoff_1
+            self.participant.vars['payoff_2_b'] = self.player.payoff_2
+            self.participant.vars['payoff_3_b'] = self.player.payoff_3
+
+
 
         self.player.decision_b_page += 1
 
@@ -838,23 +911,54 @@ class DecisionC1(Page):
                 self.participant.vars['urndraws1_c1_1'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_c1_1'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_c1_1'] = self.player.urn_draws_3
+                self.participant.vars['option_1_c1_1'] = self.player.option_1
+                self.participant.vars['option_2_c1_1'] = self.player.option_2
+                self.participant.vars['option_3_c1_1'] = self.player.option_3
+
+                self.participant.vars['payoff_1_c_1'] = self.player.payoff_1
+                self.participant.vars['payoff_2_c_1'] = self.player.payoff_2
+                self.participant.vars['payoff_3_c_1'] = self.player.payoff_3
 
             if self.player.decision_c_page == 2:
                 self.participant.vars['payoff_c1_2'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_c1_2'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_c1_2'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_c1_2'] = self.player.urn_draws_3
+                self.participant.vars['option_1_c1_2'] = self.player.option_1
+                self.participant.vars['option_2_c1_2'] = self.player.option_2
+                self.participant.vars['option_3_c1_2'] = self.player.option_3
+
+                self.participant.vars['payoff_1_c_2'] = self.player.payoff_1
+                self.participant.vars['payoff_2_c_2'] = self.player.payoff_2
+                self.participant.vars['payoff_3_c_2'] = self.player.payoff_3
 
             if self.player.decision_c_page == 3:
                 self.participant.vars['payoff_c1_3'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_c1_3'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_c1_3'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_c1_3'] = self.player.urn_draws_3
+                self.participant.vars['option_1_c1_3'] = self.player.option_1
+                self.participant.vars['option_2_c1_3'] = self.player.option_2
+                self.participant.vars['option_3_c1_3'] = self.player.option_3
 
-                self.participant.vars['payoff_c1'] = self.participant.vars['payoff_c1_1'] + self.participant.vars['payoff_c1_2'] + self.participant.vars['payoff_c1_3']
-                self.participant.vars['urndraws1_c1'] = self.participant.vars['urndraws1_c1_1'] + self.participant.vars['urndraws1_c1_2'] + self.participant.vars['urndraws1_c1_3']
-                self.participant.vars['urndraws2_c1'] = self.participant.vars['urndraws2_c1_1'] + self.participant.vars['urndraws2_c1_2'] + self.participant.vars['urndraws2_c1_3']
-                self.participant.vars['urndraws3_c1'] = self.participant.vars['urndraws3_c1_1'] + self.participant.vars['urndraws3_c1_2'] + self.participant.vars['urndraws3_c1_3']
+                self.participant.vars['payoff_1_c_3'] = self.player.payoff_1
+                self.participant.vars['payoff_2_c_3'] = self.player.payoff_2
+                self.participant.vars['payoff_3_c_3'] = self.player.payoff_3
+
+                self.participant.vars['payoff_c1'] = self.participant.vars['payoff_c1_1'] + self.participant.vars[
+                    'payoff_c1_2'] + self.participant.vars['payoff_c1_3']
+                self.participant.vars['urndraws1_c1'] = self.participant.vars['urndraws1_c1_1'] + self.participant.vars[
+                    'urndraws1_c1_2'] + self.participant.vars['urndraws1_c1_3']
+                self.participant.vars['urndraws2_c1'] = self.participant.vars['urndraws2_c1_1'] + self.participant.vars[
+                    'urndraws2_c1_2'] + self.participant.vars['urndraws2_c1_3']
+                self.participant.vars['urndraws3_c1'] = self.participant.vars['urndraws3_c1_1'] + self.participant.vars[
+                    'urndraws3_c1_2'] + self.participant.vars['urndraws3_c1_3']
+                self.participant.vars['option_1_c1'] = self.participant.vars['option_1_c1_1'] + self.participant.vars[
+                    'option_1_c1_2'] + self.participant.vars['option_1_c1_3']
+                
+                self.participant.vars['payoff_1_c'] = self.participant.vars['payoff_1_c_1'] + self.participant.vars['payoff_1_c_2'] + self.participant.vars['payoff_1_c_3']
+                self.participant.vars['payoff_2_c'] = self.participant.vars['payoff_2_c_1'] + self.participant.vars['payoff_2_c_2'] + self.participant.vars['payoff_2_c_3']
+                self.participant.vars['payoff_3_c'] = self.participant.vars['payoff_3_c_1'] + self.participant.vars['payoff_3_c_2'] + self.participant.vars['payoff_3_c_3']
 
 
         elif not self.participant.vars['choice'] and not self.participant.vars['safe'] :
@@ -953,6 +1057,10 @@ class DecisionC1(Page):
             self.participant.vars['urndraws2_c1'] = self.player.urn_draws_2
             self.participant.vars['urndraws3_c1'] = self.player.urn_draws_3
 
+            self.participant.vars['option_1_c1'] = self.player.option_1
+            self.participant.vars['option_2_c1'] = self.player.option_2
+            self.participant.vars['option_3_c1'] = self.player.option_3
+
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
             self.player.payoff_3 = 0
@@ -965,6 +1073,10 @@ class DecisionC1(Page):
                         self.player.payoff_2 += v
                     if i == 'count_3':
                         self.player.payoff_3 += v
+
+            self.participant.vars['payoff_1_c'] = self.player.payoff_1
+            self.participant.vars['payoff_2_c'] = self.player.payoff_2
+            self.participant.vars['payoff_3_c'] = self.player.payoff_3
 
         self.player.decision_c_page += 1
 
@@ -1154,34 +1266,65 @@ class DecisionD1(Page):
                 self.participant.vars['urndraws1_d1_1'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_d1_1'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_d1_1'] = self.player.urn_draws_3
+                self.participant.vars['option_1_d1_1'] = self.player.option_1
+                self.participant.vars['option_2_d1_1'] = self.player.option_2
+                self.participant.vars['option_3_d1_1'] = self.player.option_3
+
+                self.participant.vars['payoff_1_d_1'] = self.player.payoff_1
+                self.participant.vars['payoff_2_d_1'] = self.player.payoff_2
+                self.participant.vars['payoff_3_d_1'] = self.player.payoff_3
 
             if self.player.decision_d_page == 2:
                 self.participant.vars['payoff_d1_2'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_d1_2'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_d1_2'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_d1_2'] = self.player.urn_draws_3
+                self.participant.vars['option_1_d1_2'] = self.player.option_1
+                self.participant.vars['option_2_d1_2'] = self.player.option_2
+                self.participant.vars['option_3_d1_2'] = self.player.option_3
+
+                self.participant.vars['payoff_1_d_2'] = self.player.payoff_1
+                self.participant.vars['payoff_2_d_2'] = self.player.payoff_2
+                self.participant.vars['payoff_3_d_2'] = self.player.payoff_3
 
             if self.player.decision_d_page == 3:
                 self.participant.vars['payoff_d1_3'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_d1_3'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_d1_3'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_d1_3'] = self.player.urn_draws_3
+                self.participant.vars['option_1_d1_3'] = self.player.option_1
+                self.participant.vars['option_2_d1_3'] = self.player.option_2
+                self.participant.vars['option_3_d1_3'] = self.player.option_3
 
-                self.participant.vars['payoff_d1'] = self.participant.vars['payoff_d1_1'] + self.participant.vars['payoff_d1_2'] + self.participant.vars['payoff_d1_3']
-                self.participant.vars['urndraws1_d1'] = self.participant.vars['urndraws1_d1_1'] + self.participant.vars['urndraws1_d1_2'] + self.participant.vars['urndraws1_d1_3']
-                self.participant.vars['urndraws2_d1'] = self.participant.vars['urndraws2_d1_1'] + self.participant.vars['urndraws2_d1_2'] + self.participant.vars['urndraws2_d1_3']
-                self.participant.vars['urndraws3_d1'] = self.participant.vars['urndraws3_d1_1'] + self.participant.vars['urndraws3_d1_2'] + self.participant.vars['urndraws3_d1_3']
+                self.participant.vars['payoff_1_d_3'] = self.player.payoff_1
+                self.participant.vars['payoff_2_d_3'] = self.player.payoff_2
+                self.participant.vars['payoff_3_d_3'] = self.player.payoff_3
 
+                self.participant.vars['payoff_d1'] = self.participant.vars['payoff_d1_1'] + self.participant.vars[
+                    'payoff_d1_2'] + self.participant.vars['payoff_d1_3']
+                self.participant.vars['urndraws1_d1'] = self.participant.vars['urndraws1_d1_1'] + self.participant.vars[
+                    'urndraws1_d1_2'] + self.participant.vars['urndraws1_d1_3']
+                self.participant.vars['urndraws2_d1'] = self.participant.vars['urndraws2_d1_1'] + self.participant.vars[
+                    'urndraws2_d1_2'] + self.participant.vars['urndraws2_d1_3']
+                self.participant.vars['urndraws3_d1'] = self.participant.vars['urndraws3_d1_1'] + self.participant.vars[
+                    'urndraws3_d1_2'] + self.participant.vars['urndraws3_d1_3']
+                self.participant.vars['option_1_d1'] = self.participant.vars['option_1_d1_1'] + self.participant.vars[
+                    'option_1_d1_2'] + self.participant.vars['option_1_d1_3']
+                
+                
+                self.participant.vars['payoff_1_d'] = self.participant.vars['payoff_1_d_1'] + self.participant.vars['payoff_1_d_2'] + self.participant.vars['payoff_1_d_3']
+                self.participant.vars['payoff_2_d'] = self.participant.vars['payoff_2_d_1'] + self.participant.vars['payoff_2_d_2'] + self.participant.vars['payoff_2_d_3']
+                self.participant.vars['payoff_3_d'] = self.participant.vars['payoff_3_d_1'] + self.participant.vars['payoff_3_d_2'] + self.participant.vars['payoff_3_d_3']
 
         elif not self.participant.vars['choice'] and not self.participant.vars['safe'] :
 
-            Urn_1 = ['3', '4', '5', '6', '7', '8', '9', '10']
-            Urn_2 = ['0', '1', '2', '3', '20', '25', '35', '40']
-            Urn_3 = ['6']
+            Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
+            Urn_2 = ['-10', '-5', '-4', '-3', '35', '40', '50', '55']
+            Urn_3 = ['-2', '8']
 
             weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
-            weights_2 = [0.25, 0.25, 0.15, 0.15, 0.05, 0.05, 0.05, 0.05]
-            weights_3 = [1]
+            weights_2 = [0.2, 0.2, 0.2, 0.2, 0.05, 0.05, 0.05, 0.05]
+            weights_3 = [0.5, 0.5]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
             draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
@@ -1199,26 +1342,15 @@ class DecisionD1(Page):
             self.player.urn_draws_2 = draws_2_str
             self.player.urn_draws_3 = draws_3_str
 
-            print(self.player.urn_draws_1)
-            print(draws_1)
-            print(draws_2)
-            print(draws_3)
 
             count_1 = Counter(draws_1)
             count_2 = Counter(draws_2)
             count_3 = Counter(draws_3)
 
-            print(count_1)
-            print(count_2)
-            print(count_3)
-
-
-
             data_counts = {}
             data_counts['count_1'] = count_1
             data_counts['count_2'] = count_2
             data_counts['count_3'] = count_3
-
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
@@ -1238,20 +1370,26 @@ class DecisionD1(Page):
                         data_counts[i][k] = v * 6
                     elif k == '7':
                         data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
                     elif k == '40':
                         data_counts[i][k] = v * 40
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
+                    elif k == '55':
+                        data_counts[i][k] = v * 55
+                    elif k == '-10':
+                        data_counts[i][k] = v * -10
+                    elif k == '-5':
+                        data_counts[i][k] = v * -5
+                    elif k == '-4':
+                        data_counts[i][k] = v * -4
+                    elif k == '-3':
+                        data_counts[i][k] = v * -3
+                    elif k == '-2':
+                        data_counts[i][k] = v * -2
+                    elif k == '8':
+                        data_counts[i][k] = v * 8
 
             self.player.payoff = 0
             for i in data_counts.keys():
@@ -1262,6 +1400,10 @@ class DecisionD1(Page):
             self.participant.vars['urndraws1_d1'] = self.player.urn_draws_1
             self.participant.vars['urndraws2_d1'] = self.player.urn_draws_2
             self.participant.vars['urndraws3_d1'] = self.player.urn_draws_3
+            
+            self.participant.vars['option_1_d1'] = self.player.option_1
+            self.participant.vars['option_2_d1'] = self.player.option_2
+            self.participant.vars['option_3_d1'] = self.player.option_3
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
@@ -1275,6 +1417,10 @@ class DecisionD1(Page):
                         self.player.payoff_2 += v
                     if i == 'count_3':
                         self.player.payoff_3 += v
+
+            self.participant.vars['payoff_1_d'] = self.player.payoff_1
+            self.participant.vars['payoff_2_d'] = self.player.payoff_2
+            self.participant.vars['payoff_3_d'] = self.player.payoff_3
 
         self.player.decision_d_page += 1
 
@@ -1461,23 +1607,55 @@ class DecisionE1(Page):
                 self.participant.vars['urndraws1_e1_1'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_e1_1'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_e1_1'] = self.player.urn_draws_3
+                self.participant.vars['option_1_e1_1'] = self.player.option_1
+                self.participant.vars['option_2_e1_1'] = self.player.option_2
+                self.participant.vars['option_3_e1_1'] = self.player.option_3
+
+                self.participant.vars['payoff_1_e_1'] = self.player.payoff_1
+                self.participant.vars['payoff_2_e_1'] = self.player.payoff_2
+                self.participant.vars['payoff_3_e_1'] = self.player.payoff_3
 
             if self.player.decision_e_page == 2:
                 self.participant.vars['payoff_e1_2'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_e1_2'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_e1_2'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_e1_2'] = self.player.urn_draws_3
+                self.participant.vars['option_1_e1_2'] = self.player.option_1
+                self.participant.vars['option_2_e1_2'] = self.player.option_2
+                self.participant.vars['option_3_e1_2'] = self.player.option_3
+
+                self.participant.vars['payoff_1_e_2'] = self.player.payoff_1
+                self.participant.vars['payoff_2_e_2'] = self.player.payoff_2
+                self.participant.vars['payoff_3_e_2'] = self.player.payoff_3
+
 
             if self.player.decision_e_page == 3:
                 self.participant.vars['payoff_e1_3'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_e1_3'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_e1_3'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_e1_3'] = self.player.urn_draws_3
+                self.participant.vars['option_1_e1_3'] = self.player.option_1
+                self.participant.vars['option_2_e1_3'] = self.player.option_2
+                self.participant.vars['option_3_e1_3'] = self.player.option_3
 
-                self.participant.vars['payoff_e1'] = self.participant.vars['payoff_e1_1'] + self.participant.vars['payoff_e1_2'] + self.participant.vars['payoff_e1_3']
-                self.participant.vars['urndraws1_e1'] = self.participant.vars['urndraws1_e1_1'] + self.participant.vars['urndraws1_e1_2'] + self.participant.vars['urndraws1_e1_3']
-                self.participant.vars['urndraws2_e1'] = self.participant.vars['urndraws2_e1_1'] + self.participant.vars['urndraws2_e1_2'] + self.participant.vars['urndraws2_e1_3']
-                self.participant.vars['urndraws3_e1'] = self.participant.vars['urndraws3_e1_1'] + self.participant.vars['urndraws3_e1_2'] + self.participant.vars['urndraws3_e1_3']
+                self.participant.vars['payoff_1_e_3'] = self.player.payoff_1
+                self.participant.vars['payoff_2_e_3'] = self.player.payoff_2
+                self.participant.vars['payoff_3_e_3'] = self.player.payoff_3
+
+                self.participant.vars['payoff_e1'] = self.participant.vars['payoff_e1_1'] + self.participant.vars[
+                    'payoff_e1_2'] + self.participant.vars['payoff_e1_3']
+                self.participant.vars['urndraws1_e1'] = self.participant.vars['urndraws1_e1_1'] + self.participant.vars[
+                    'urndraws1_e1_2'] + self.participant.vars['urndraws1_e1_3']
+                self.participant.vars['urndraws2_e1'] = self.participant.vars['urndraws2_e1_1'] + self.participant.vars[
+                    'urndraws2_e1_2'] + self.participant.vars['urndraws2_e1_3']
+                self.participant.vars['urndraws3_e1'] = self.participant.vars['urndraws3_e1_1'] + self.participant.vars[
+                    'urndraws3_e1_2'] + self.participant.vars['urndraws3_e1_3']
+                self.participant.vars['option_1_e1'] = self.participant.vars['option_1_e1_1'] + self.participant.vars[
+                    'option_1_e1_2'] + self.participant.vars['option_1_e1_3']
+                
+                self.participant.vars['payoff_1_e'] = self.participant.vars['payoff_1_e_1'] + self.participant.vars['payoff_1_e_2'] + self.participant.vars['payoff_1_e_3']
+                self.participant.vars['payoff_2_e'] = self.participant.vars['payoff_2_e_1'] + self.participant.vars['payoff_2_e_2'] + self.participant.vars['payoff_2_e_3']
+                self.participant.vars['payoff_3_e'] = self.participant.vars['payoff_3_e_1'] + self.participant.vars['payoff_3_e_2'] + self.participant.vars['payoff_3_e_3']
 
         elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
 
@@ -1570,6 +1748,10 @@ class DecisionE1(Page):
             self.participant.vars['urndraws1_e1'] = self.player.urn_draws_1
             self.participant.vars['urndraws2_e1'] = self.player.urn_draws_2
             self.participant.vars['urndraws3_e1'] = self.player.urn_draws_3
+            
+            self.participant.vars['option_1_e1'] = self.player.option_1
+            self.participant.vars['option_2_e1'] = self.player.option_2
+            self.participant.vars['option_3_e1'] = self.player.option_3
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
@@ -1584,10 +1766,11 @@ class DecisionE1(Page):
                     if i == 'count_3':
                         self.player.payoff_3 += v
 
+            self.participant.vars['payoff_1_e'] = self.player.payoff_1
+            self.participant.vars['payoff_2_e'] = self.player.payoff_2
+            self.participant.vars['payoff_3_e'] = self.player.payoff_3
+
         self.player.decision_e_page += 1
-
-
-##crazy differences and higher mean
 
 
 ##crazy differences and higher mean
@@ -1772,25 +1955,54 @@ class DecisionF1(Page):
                 self.participant.vars['urndraws1_f1_1'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_f1_1'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_f1_1'] = self.player.urn_draws_3
+                self.participant.vars['option_1_f1_1'] = self.player.option_1
+                self.participant.vars['option_2_f1_1'] = self.player.option_2
+                self.participant.vars['option_3_f1_1'] = self.player.option_3
+
+                self.participant.vars['payoff_1_f_1'] = self.player.payoff_1
+                self.participant.vars['payoff_2_f_1'] = self.player.payoff_2
+                self.participant.vars['payoff_3_f_1'] = self.player.payoff_3
 
             if self.player.decision_f_page == 2:
                 self.participant.vars['payoff_f1_2'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_f1_2'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_f1_2'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_f1_2'] = self.player.urn_draws_3
+                self.participant.vars['option_1_f1_2'] = self.player.option_1
+                self.participant.vars['option_2_f1_2'] = self.player.option_2
+                self.participant.vars['option_3_f1_2'] = self.player.option_3
+
+                self.participant.vars['payoff_1_f_2'] = self.player.payoff_1
+                self.participant.vars['payoff_2_f_2'] = self.player.payoff_2
+                self.participant.vars['payoff_3_f_2'] = self.player.payoff_3
 
             if self.player.decision_f_page == 3:
                 self.participant.vars['payoff_f1_3'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_f1_3'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_f1_3'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_f1_3'] = self.player.urn_draws_3
+                self.participant.vars['option_1_f1_3'] = self.player.option_1
+                self.participant.vars['option_2_f1_3'] = self.player.option_2
+                self.participant.vars['option_3_f1_3'] = self.player.option_3
 
-                self.participant.vars['payoff_f1'] = self.participant.vars['payoff_f1_1'] + self.participant.vars['payoff_f1_2'] + self.participant.vars['payoff_f1_3']
-                self.participant.vars['urndraws1_f1'] = self.participant.vars['urndraws1_f1_1'] + self.participant.vars['urndraws1_f1_2'] + self.participant.vars['urndraws1_f1_3']
-                self.participant.vars['urndraws2_f1'] = self.participant.vars['urndraws2_f1_1'] + self.participant.vars['urndraws2_f1_2'] + self.participant.vars['urndraws2_f1_3']
-                self.participant.vars['urndraws3_f1'] = self.participant.vars['urndraws3_f1_1'] + self.participant.vars['urndraws3_f1_2'] + self.participant.vars['urndraws3_f1_3']
+                self.participant.vars['payoff_1_f_3'] = self.player.payoff_1
+                self.participant.vars['payoff_2_f_3'] = self.player.payoff_2
+                self.participant.vars['payoff_3_f_3'] = self.player.payoff_3
 
-
+                self.participant.vars['payoff_f1'] = self.participant.vars['payoff_f1_1'] + self.participant.vars[
+                    'payoff_f1_2'] + self.participant.vars['payoff_f1_3']
+                self.participant.vars['urndraws1_f1'] = self.participant.vars['urndraws1_f1_1'] + self.participant.vars[
+                    'urndraws1_f1_2'] + self.participant.vars['urndraws1_f1_3']
+                self.participant.vars['urndraws2_f1'] = self.participant.vars['urndraws2_f1_1'] + self.participant.vars[
+                    'urndraws2_f1_2'] + self.participant.vars['urndraws2_f1_3']
+                self.participant.vars['urndraws3_f1'] = self.participant.vars['urndraws3_f1_1'] + self.participant.vars[
+                    'urndraws3_f1_2'] + self.participant.vars['urndraws3_f1_3']
+                self.participant.vars['option_1_f1'] = self.participant.vars['option_1_f1_1'] + self.participant.vars[
+                    'option_1_f1_2'] + self.participant.vars['option_1_f1_3']
+                
+                self.participant.vars['payoff_1_f'] = self.participant.vars['payoff_1_f_1'] + self.participant.vars['payoff_1_f_2'] + self.participant.vars['payoff_1_f_3']
+                self.participant.vars['payoff_2_f'] = self.participant.vars['payoff_2_f_1'] + self.participant.vars['payoff_2_f_2'] + self.participant.vars['payoff_2_f_3']
+                self.participant.vars['payoff_3_f'] = self.participant.vars['payoff_3_f_1'] + self.participant.vars['payoff_3_f_2'] + self.participant.vars['payoff_3_f_3']
 
         elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
 
@@ -1872,7 +2084,11 @@ class DecisionF1(Page):
             self.participant.vars['urndraws1_f1'] = self.player.urn_draws_1
             self.participant.vars['urndraws2_f1'] = self.player.urn_draws_2
             self.participant.vars['urndraws3_f1'] = self.player.urn_draws_3
-
+            
+            self.participant.vars['option_1_f1'] = self.player.option_1
+            self.participant.vars['option_2_f1'] = self.player.option_2
+            self.participant.vars['option_3_f1'] = self.player.option_3
+            
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
             self.player.payoff_3 = 0
@@ -1885,6 +2101,10 @@ class DecisionF1(Page):
                         self.player.payoff_2 += v
                     if i == 'count_3':
                         self.player.payoff_3 += v
+
+            self.participant.vars['payoff_1_f'] = self.player.payoff_1
+            self.participant.vars['payoff_2_f'] = self.player.payoff_2
+            self.participant.vars['payoff_3_f'] = self.player.payoff_3
 
         self.player.decision_f_page += 1
 
@@ -2068,25 +2288,51 @@ class DecisionG1(Page):
                 self.participant.vars['urndraws1_g1_1'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_g1_1'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_g1_1'] = self.player.urn_draws_3
+                self.participant.vars['option_1_g1_1'] = self.player.option_1
+                self.participant.vars['option_2_g1_1'] = self.player.option_2
+                self.participant.vars['option_3_g1_1'] = self.player.option_3
+
+                self.participant.vars['payoff_1_g_1'] = self.player.payoff_1
+                self.participant.vars['payoff_2_g_1'] = self.player.payoff_2
+                self.participant.vars['payoff_3_g_1'] = self.player.payoff_3
 
             if self.player.decision_g_page == 2:
                 self.participant.vars['payoff_g1_2'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_g1_2'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_g1_2'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_g1_2'] = self.player.urn_draws_3
+                self.participant.vars['option_1_g1_2'] = self.player.option_1
+                self.participant.vars['option_2_g1_2'] = self.player.option_2
+                self.participant.vars['option_3_g1_2'] = self.player.option_3
+
+                self.participant.vars['payoff_1_g_2'] = self.player.payoff_1
+                self.participant.vars['payoff_2_g_2'] = self.player.payoff_2
+                self.participant.vars['payoff_3_g_2'] = self.player.payoff_3
 
             if self.player.decision_g_page == 3:
                 self.participant.vars['payoff_g1_3'] = self.player.payoff = payoffs
                 self.participant.vars['urndraws1_g1_3'] = self.player.urn_draws_1
                 self.participant.vars['urndraws2_g1_3'] = self.player.urn_draws_2
                 self.participant.vars['urndraws3_g1_3'] = self.player.urn_draws_3
+                self.participant.vars['option_1_g1_3'] = self.player.option_1
+                self.participant.vars['option_2_g1_3'] = self.player.option_2
+                self.participant.vars['option_3_g1_3'] = self.player.option_3
+
+                self.participant.vars['payoff_1_g_3'] = self.player.payoff_1
+                self.participant.vars['payoff_2_g_3'] = self.player.payoff_2
+                self.participant.vars['payoff_3_g_3'] = self.player.payoff_3
 
                 self.participant.vars['payoff_g1'] = self.participant.vars['payoff_g1_1'] + self.participant.vars['payoff_g1_2'] + self.participant.vars['payoff_g1_3']
                 self.participant.vars['urndraws1_g1'] = self.participant.vars['urndraws1_g1_1'] + self.participant.vars['urndraws1_g1_2'] + self.participant.vars['urndraws1_g1_3']
                 self.participant.vars['urndraws2_g1'] = self.participant.vars['urndraws2_g1_1'] + self.participant.vars['urndraws2_g1_2'] + self.participant.vars['urndraws2_g1_3']
                 self.participant.vars['urndraws3_g1'] = self.participant.vars['urndraws3_g1_1'] + self.participant.vars['urndraws3_g1_2'] + self.participant.vars['urndraws3_g1_3']
+                self.participant.vars['option_1_g1'] = self.participant.vars['option_1_g1_1'] + self.participant.vars['option_1_g1_2'] + self.participant.vars['option_1_g1_3']
+                
+                self.participant.vars['payoff_1_g'] = self.participant.vars['payoff_1_g_1'] + self.participant.vars['payoff_1_g_2'] + self.participant.vars['payoff_1_g_3']
+                self.participant.vars['payoff_2_g'] = self.participant.vars['payoff_2_g_1'] + self.participant.vars['payoff_2_g_2'] + self.participant.vars['payoff_2_g_3']
+                self.participant.vars['payoff_3_g'] = self.participant.vars['payoff_3_g_1'] + self.participant.vars['payoff_3_g_2'] + self.participant.vars['payoff_3_g_3']
 
-
+                
         elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
 
             Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
@@ -2176,6 +2422,10 @@ class DecisionG1(Page):
             self.participant.vars['urndraws1_g1'] = self.player.urn_draws_1
             self.participant.vars['urndraws2_g1'] = self.player.urn_draws_2
             self.participant.vars['urndraws3_g1'] = self.player.urn_draws_3
+            
+            self.participant.vars['option_1_g1'] = self.player.option_1
+            self.participant.vars['option_2_g1'] = self.player.option_2
+            self.participant.vars['option_3_g1'] = self.player.option_3            
 
             self.player.payoff_1 = 0
             self.player.payoff_2 = 0
@@ -2189,6 +2439,10 @@ class DecisionG1(Page):
                         self.player.payoff_2 += v
                     if i == 'count_3':
                         self.player.payoff_3 += v
+
+            self.participant.vars['payoff_1_g'] = self.player.payoff_1
+            self.participant.vars['payoff_2_g'] = self.player.payoff_2
+            self.participant.vars['payoff_3_g'] = self.player.payoff_3
 
         self.player.decision_g_page += 1
 
@@ -2302,7 +2556,54 @@ class Questionnaire(Page):
             self.player.urn_draws_3_e = self.participant.vars['urndraws3_e1']
             self.player.urn_draws_3_f = self.participant.vars['urndraws3_f1']
             self.player.urn_draws_3_g = self.participant.vars['urndraws3_g1']
+            
+            self.player.option_1_a = self.participant.vars['option_1_a1']
+            self.player.option_1_b = self.participant.vars['option_1_b1']
+            self.player.option_1_c = self.participant.vars['option_1_c1']
+            self.player.option_1_d = self.participant.vars['option_1_d1']
+            self.player.option_1_e = self.participant.vars['option_1_e1']
+            self.player.option_1_f = self.participant.vars['option_1_f1']
+            self.player.option_1_g = self.participant.vars['option_1_g1']
 
+            self.player.option_2_a = self.participant.vars['option_2_a1']
+            self.player.option_2_b = self.participant.vars['option_2_b1']
+            self.player.option_2_c = self.participant.vars['option_2_c1']
+            self.player.option_2_d = self.participant.vars['option_2_d1']
+            self.player.option_2_e = self.participant.vars['option_2_e1']
+            self.player.option_2_f = self.participant.vars['option_2_f1']
+            self.player.option_2_g = self.participant.vars['option_2_g1']
+
+            self.player.option_3_a = self.participant.vars['option_3_a1']
+            self.player.option_3_b = self.participant.vars['option_3_b1']
+            self.player.option_3_c = self.participant.vars['option_3_c1']
+            self.player.option_3_d = self.participant.vars['option_3_d1']
+            self.player.option_3_e = self.participant.vars['option_3_e1']
+            self.player.option_3_f = self.participant.vars['option_3_f1']
+            self.player.option_3_g = self.participant.vars['option_3_g1']
+
+            self.player.payoff_1_a = self.participant.vars['payoff_1_a']
+            self.player.payoff_1_b = self.participant.vars['payoff_1_b']
+            self.player.payoff_1_c = self.participant.vars['payoff_1_c']
+            self.player.payoff_1_d = self.participant.vars['payoff_1_d']
+            self.player.payoff_1_e = self.participant.vars['payoff_1_e']
+            self.player.payoff_1_f = self.participant.vars['payoff_1_f']
+            self.player.payoff_1_g = self.participant.vars['payoff_1_g']
+
+            self.player.payoff_2_a = self.participant.vars['payoff_2_a']
+            self.player.payoff_2_b = self.participant.vars['payoff_2_b']
+            self.player.payoff_2_c = self.participant.vars['payoff_2_c']
+            self.player.payoff_2_d = self.participant.vars['payoff_2_d']
+            self.player.payoff_2_e = self.participant.vars['payoff_2_e']
+            self.player.payoff_2_f = self.participant.vars['payoff_2_f']
+            self.player.payoff_2_g = self.participant.vars['payoff_2_g']
+
+            self.player.payoff_3_a = self.participant.vars['payoff_3_a']
+            self.player.payoff_3_b = self.participant.vars['payoff_3_b']
+            self.player.payoff_3_c = self.participant.vars['payoff_3_c']
+            self.player.payoff_3_d = self.participant.vars['payoff_3_d']
+            self.player.payoff_3_e = self.participant.vars['payoff_3_e']
+            self.player.payoff_3_f = self.participant.vars['payoff_3_f']
+            self.player.payoff_3_g = self.participant.vars['payoff_3_g']
 
 class Disclose_Payoff(Page):
     form_model ='player'
@@ -2344,7 +2645,49 @@ class Disclose_Payoff(Page):
                'payoff_e': self.player.payoff_e,
                'payoff_f': self.player.payoff_f,
                'payoff_g': self.player.payoff_g,
-
+               'option_1_a': self.player.option_1_a,
+               'option_1_b': self.player.option_1_b,
+               'option_1_c': self.player.option_1_c,
+               'option_1_d': self.player.option_1_d,
+               'option_1_e': self.player.option_1_e,
+               'option_1_f': self.player.option_1_f,
+               'option_1_g': self.player.option_1_g,
+               'option_2_a': self.player.option_2_a,
+               'option_2_b': self.player.option_2_b,
+               'option_2_c': self.player.option_2_c,
+               'option_2_d': self.player.option_2_d,
+               'option_2_e': self.player.option_2_e,
+               'option_2_f': self.player.option_2_f,
+               'option_2_g': self.player.option_2_g,
+               'option_3_a': self.player.option_3_a,
+               'option_3_b': self.player.option_3_b,
+               'option_3_c': self.player.option_3_c,
+               'option_3_d': self.player.option_3_d,
+               'option_3_e': self.player.option_3_e,
+               'option_3_f': self.player.option_3_f,
+               'option_3_g': self.player.option_3_g,
+               'draw': self.participant.vars['draw'],
+               'payoff_1_a': self.player.payoff_1_a,
+               'payoff_1_b': self.player.payoff_1_b,
+               'payoff_1_c': self.player.payoff_1_c,
+               'payoff_1_d': self.player.payoff_1_d,
+               'payoff_1_e': self.player.payoff_1_e,
+               'payoff_1_f': self.player.payoff_1_f,
+               'payoff_1_g': self.player.payoff_1_g,
+               'payoff_2_a': self.player.payoff_2_a,
+               'payoff_2_b': self.player.payoff_2_b,
+               'payoff_2_c': self.player.payoff_2_c,
+               'payoff_2_d': self.player.payoff_2_d,
+               'payoff_2_e': self.player.payoff_2_e,
+               'payoff_2_f': self.player.payoff_2_f,
+               'payoff_2_g': self.player.payoff_2_g,
+               'payoff_3_a': self.player.payoff_3_a,
+               'payoff_3_b': self.player.payoff_3_b,
+               'payoff_3_c': self.player.payoff_3_c,
+               'payoff_3_d': self.player.payoff_3_d,
+               'payoff_3_e': self.player.payoff_3_e,
+               'payoff_3_f': self.player.payoff_3_f,
+               'payoff_3_g': self.player.payoff_3_g,
                }
 
     def before_next_page(self):
