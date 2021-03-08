@@ -8,12 +8,13 @@
 
 {% block content %}
 
-<p>This HIT comprises seven stages. In each stage, you will choose between three different options, as shown in the image below.</p>
+<p>This HIT comprises seven stages. In each stage, you will {% if choice %} repeatedly {% endif %} choose between three different options, as shown in the image below.</p>
 
 <p>At the beginning of each stage, you receive three points. You can invest these points freely between all {% if not safe %}
 three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, all three points must be invested in each stage. </p>
 
-<p>In each stage, you will receive a different group of options.</p>
+<p>You will receive a different group of options in each stage.</p>
+
 
 {% if choice %}
 

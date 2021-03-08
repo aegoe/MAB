@@ -140,20 +140,16 @@ class ComprehensionQuestions(Page):
 
     def get_form_fields(self):
         if self.participant.vars['choice'] :
-            return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3','cq_MS2_1']
+            return ['cq_PS1', 'cq_PS2', 'cq_PS3','cq_PS5']
         elif not self.participant.vars['choice'] :
-                return ['cq_Pilot_2', 'cq_Pilot_3_simdesc', 'cq_Pilot_4', 'cq_MS2_1']
-        elif self.participant.vars['choice']:
-            return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_5']
-        elif not self.participant.vars['choice'] :
-            return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_4', 'cq_Pilot_5']
+                return ['cq_PS1', 'cq_PS2', 'cq_PS3','cq_PS5']
 
     def before_next_page(self):
         if self.participant.vars['choice']:
-            if sum([self.player.cq_Pilot_1, self.player.cq_Pilot_2, self.player.cq_Pilot_3, self.player.cq_MS2_1]) < 5:
+            if sum([self.player.cq_PS1, self.player.cq_PS2, self.player.cq_PS3, self.player.cq_PS5]) < 5:
                 self.player.controls = 1
         else:
-            if sum([self.player.cq_Pilot_2, self.player.cq_Pilot_3, self.player.cq_Pilot_4, self.player.cq_MS2_1]) < 5:
+            if sum([self.player.cq_PS1, self.player.cq_PS2, self.player.cq_PS3, self.player.cq_PS5]) < 5:
                 self.player.controls = 1
 
         self.player.comprehension_page += 1
