@@ -2248,12 +2248,12 @@ class DecisionG1(Page):
 
         if self.participant.vars['choice'] and not self.participant.vars['safe']:
 
-            Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
-            Urn_2 = ['-19', '-5', '-4', '-3', '35', '40', '50', '100']
-            Urn_3 = ['2', '4']
+            Urn_1 = ['2', '3', '4', '5', '6', '7', '8', '9']
+            Urn_2 = ['0', '100']
+            Urn_3 = ['1', '10']
 
             weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
-            weights_2 = [0.2, 0.2, 0.2, 0.2, 0.05, 0.05, 0.05, 0.05]
+            weights_2 = [0.5, 0.5]
             weights_3 = [0.5, 0.5]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
@@ -2284,11 +2284,7 @@ class DecisionG1(Page):
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == '0':
-                        data_counts[i][k] = v * 0
-                    elif k == '1':
-                        data_counts[i][k] = v * 1
-                    elif k == '2':
+                    if k == '2':
                         data_counts[i][k] = v * 2
                     elif k == '3':
                         data_counts[i][k] = v * 3
@@ -2304,16 +2300,15 @@ class DecisionG1(Page):
                         data_counts[i][k] = v * 8
                     elif k == '9':
                         data_counts[i][k] = v * 9
+                    elif k == '0':
+                        data_counts[i][k] = v * 0
+                    elif k == '100':
+                        data_counts[i][k] = v * 100
                     elif k == '10':
                         data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
-                    elif k == '35':
-                        data_counts[i][k] = v * 35
-                    elif k == '40':
-                        data_counts[i][k] = v * 40
+                    elif k == '1':
+                        data_counts[i][k] = v * 1
+
 
             self.player.payoff = 0
             payoffs = 0
@@ -2405,12 +2400,12 @@ class DecisionG1(Page):
 
         elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
 
-            Urn_1 = ['0', '1', '2', '3', '4', '5', '6', '7']
-            Urn_2 = ['-19', '-5', '-4', '-3', '35', '40', '50', '100']
-            Urn_3 = ['2', '4']
+            Urn_1 = ['2', '3', '4', '5', '6', '7', '8', '9']
+            Urn_2 = ['0', '100']
+            Urn_3 = ['1', '10']
 
             weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
-            weights_2 = [0.2, 0.2, 0.2, 0.2, 0.05, 0.05, 0.05, 0.05]
+            weights_2 = [0.5, 0.5]
             weights_3 = [0.5, 0.5]
 
             draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
@@ -2429,34 +2424,19 @@ class DecisionG1(Page):
             self.player.urn_draws_2 = draws_2_str
             self.player.urn_draws_3 = draws_3_str
 
-            print(self.player.urn_draws_1)
-            print(draws_1)
-            print(draws_2)
-            print(draws_3)
 
             count_1 = Counter(draws_1)
             count_2 = Counter(draws_2)
             count_3 = Counter(draws_3)
-
-            print(count_1)
-            print(count_2)
-            print(count_3)
-
-
 
             data_counts = {}
             data_counts['count_1'] = count_1
             data_counts['count_2'] = count_2
             data_counts['count_3'] = count_3
 
-
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
-                    if k == '0':
-                        data_counts[i][k] = v * 0
-                    elif k == '1':
-                        data_counts[i][k] = v * 1
-                    elif k == '2':
+                    if k == '2':
                         data_counts[i][k] = v * 2
                     elif k == '3':
                         data_counts[i][k] = v * 3
@@ -2472,16 +2452,14 @@ class DecisionG1(Page):
                         data_counts[i][k] = v * 8
                     elif k == '9':
                         data_counts[i][k] = v * 9
+                    elif k == '0':
+                        data_counts[i][k] = v * 0
+                    elif k == '100':
+                        data_counts[i][k] = v * 100
                     elif k == '10':
                         data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
-                    elif k == '35':
-                        data_counts[i][k] = v * 35
-                    elif k == '40':
-                        data_counts[i][k] = v * 40
+                    elif k == '1':
+                        data_counts[i][k] = v * 1
 
             self.player.payoff = 0
             for i in data_counts.keys():
@@ -2675,6 +2653,7 @@ class Questionnaire(Page):
             self.player.payoff_3_f = self.participant.vars['payoff_3_f']
             self.player.payoff_3_g = self.participant.vars['payoff_3_g']
 
+
 class Disclose_Payoff(Page):
     form_model ='player'
 
@@ -2776,6 +2755,7 @@ class Disclose_Payoff(Page):
         elif self.player.stage_payment == "G":
             self.participant.payoff = self.player.payoff_g + 10
 
+
 class FinalInfo(Page):
     def is_displayed(self):
         if self.participant.vars['choice']:
@@ -2789,7 +2769,6 @@ class FinalInfo(Page):
                 'bonus': self.participant.payoff.to_real_world_currency(self.session),
                 'completion_code': self.participant.vars['completion_code'],
                 }
-
 
 
 page_sequence = [

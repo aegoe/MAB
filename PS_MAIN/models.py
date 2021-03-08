@@ -187,7 +187,7 @@ class Player(BasePlayer):
     q_wealth =models.LongStringField(blank=False, label="")
 
     q_maxoption = models.IntegerField(
-        choices = [
+        choices=[
             [1, 'Triangle'],
             [2, 'Circle'],
             [3, 'Rectangle'],
@@ -199,7 +199,7 @@ class Player(BasePlayer):
     )
 
     q_maxoption_2 = models.IntegerField(
-        choices = [
+        choices=[
             [1, 'Triangle'],
             [2, 'Circle'],
             [3, 'Rectangle'],
@@ -210,7 +210,7 @@ class Player(BasePlayer):
     )
 
     q_maxoption_3 = models.IntegerField(
-        choices = [
+        choices=[
             [1, 'Triangle'],
             [2, 'Circle'],
             [3, 'Rectangle'],
@@ -223,7 +223,7 @@ class Player(BasePlayer):
     )
 
     q_decisive_information = models.IntegerField(
-        choices = [
+        choices=[
             [1, 'Mean'],
             [2, 'Standard Deviation'],
             [3, 'Lowest Draw'],
