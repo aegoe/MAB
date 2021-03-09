@@ -413,13 +413,13 @@ class Player(BasePlayer):
     q_max_scale_6 = sevenitems('No matter what I do, I have the highest standards for myself.')
 
 
-    q_mean_sequential = sevenitems('The summary information about each option\'s mean informed my main decision')
-    q_sd_sequential = sevenitems('The summary information about each option\'s standard deviation informed my main decision')
-    q_ld_sequential = sevenitems('The summary information about each option\'s lowest draw informed my main decision')
-    q_hd_sequential = sevenitems('The summary information about each option\'s highest draw informed my main decision')
+    q_mean_sequential = sevenitems('The summary information about each option\'s mean pimarily informed my main decisions')
+    q_sd_sequential = sevenitems('The summary information about each option\'s standard deviation pimarily informed my main decisions')
+    q_ld_sequential = sevenitems('The summary information about each option\'s lowest draw pimarily informed my main decisions')
+    q_hd_sequential = sevenitems('The summary information about each option\'s highest draw pimarily informed my main decisions')
 
 
-    q_mean_simultan = sevenitems('The summary information about each option\'s mean informed my main decision')
-    q_sd_simultan = sevenitems('The summary information about each option\'s standard deviation informed my main decision')
-    q_ld_simultan = sevenitems('The summary information about each option\'s lowest draw informed my main decision')
-    q_hd_simultan = sevenitems('The summary information about each option\'s highest draw informed my main decision')
+    q_mean_simultan = sevenitems('The summary information about each option\'s mean pimarily informed my main decisions')
+    q_sd_simultan = sevenitems('The summary information about each option\'s standard deviation pimarily informed my main decisions')
+    q_ld_simultan = sevenitems('The summary information about each option\'s lowest draw pimarily informed my main decisions')
+    q_hd_simultan = sevenitems('The summary information about each option\'s highest draw pimarily informed my main decisions')
