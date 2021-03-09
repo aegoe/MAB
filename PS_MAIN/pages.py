@@ -2542,7 +2542,7 @@ class Questionnaire(Page):
         elif self.player.questionnaire_page == 4 and self.participant.vars['choice']:
             return ['q_mean_sequential', 'q_sd_sequential', 'q_ld_sequential', 'q_hd_sequential', 'q_descr_exp']
         elif self.player.questionnaire_page == 4 and not self.participant.vars['choice']:
-            return ['q_mean_simultan', 'q_sd_simultan', 'q_ld_simultan', 'q_hd_simultan',]
+            return ['q_mean_simultan', 'q_sd_simultan', 'q_ld_simultan', 'q_hd_simultan', 'q_descr_exp']
         elif self.player.questionnaire_page == 5:
             epo = [f'q_epo_{i}' for i in range(1, 14)]
             return epo
