@@ -2540,9 +2540,9 @@ class Questionnaire(Page):
         elif self.player.questionnaire_page == 3:
             return ['q_exploration_strategy']
         elif self.player.questionnaire_page == 4 and self.participant.vars['choice']:
-            return ['q_mean_sequential', 'q_sd_sequential', 'q_ld_sequential', 'q_hd_sequential', 'q_descr_exp']
+            return ['q_mean_sequential', 'q_sd_sequential', 'q_ld_sequential', 'q_hd_sequential', 'q_descr_exp', 'q_descr_exp2', 'q_descr_exp3','q_descr_exp4']
         elif self.player.questionnaire_page == 4 and not self.participant.vars['choice']:
-            return ['q_mean_simultan', 'q_sd_simultan', 'q_ld_simultan', 'q_hd_simultan', 'q_descr_exp']
+            return ['q_mean_simultan', 'q_sd_simultan', 'q_ld_simultan', 'q_hd_simultan', 'q_descr_exp', 'q_descr_exp2', 'q_descr_exp3','q_descr_exp4',]
         elif self.player.questionnaire_page == 5:
             epo = [f'q_epo_{i}' for i in range(1, 14)]
             return epo
@@ -2564,6 +2564,18 @@ class Questionnaire(Page):
                'round': self.player.round_number,
 
                }
+
+    def error_message(self, values):
+        if self.player.questionnaire_page == 4:
+            list_rank = [values['q_descr_exp'],values['q_descr_exp2'],values['q_descr_exp3'],values['q_descr_exp4']]
+            list_rank_duplicates = Counter(list_rank)
+
+            print(list_rank_duplicates)
+
+            for v in list_rank_duplicates.values():
+                if v > 1:
+                    return 'You have to use all four numbers. Please rank the information signals according to their influence on your decisions in this task'
+
 
     def before_next_page(self):
         self.player.questionnaire_page += 1

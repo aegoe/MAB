@@ -16,7 +16,7 @@
             </tr>
         </table>
         <table class="table">
-            {% for field in form.visible_fields|slice:":-1" %}
+            {% for field in form.visible_fields|slice:":-4" %}
                 <tr>
                     <td width="62%">{{ field.label }}</td>
                     <td colspan="3" id="test">{{ field }}</td>
@@ -30,13 +30,18 @@
 
 <div class="card">
     <div class="card-header">
-        Please rank the four information signals with regard to their importance for your investment decisions
-        <br>
-        <i>Please choose one of the following answers</i>.
+        Please rank the four information signals according to their importance. <br>
+        <i>Please enter a "1" for the signal that influenced your decisions the most, a "2" for the signal that influenced your decisions the second most, and so on.</i>.
     </div>
     <div class="card-body">
         {% formfield player.q_descr_exp %}
+        {% formfield player.q_descr_exp2 %}
+        {% formfield player.q_descr_exp3 %}
+        {% formfield player.q_descr_exp4 %}
+
+
     </div>
 </div>
+<br>
 
 <br>

@@ -235,16 +235,11 @@ class Player(BasePlayer):
         blank=False
     )
 
-    q_descr_exp = models.IntegerField(
-        choices = [
-            [1, 'The provided summary information'],
-            [2, 'Your own sampling experience'],
+    q_descr_exp = models.IntegerField(label="Mean", blank=False, min=1, max=4)
+    q_descr_exp2 = models.IntegerField(label="Standard Deviation", blank=False, min=1, max=4)
+    q_descr_exp3 = models.IntegerField(label="Lowest Draw", blank=False, min=1, max=4)
+    q_descr_exp4 = models.IntegerField(label="Highest Draw", blank=False, min=1, max=4)
 
-            ],
-        widget=widgets.RadioSelect,
-        label="",
-        blank=False
-    )
 
     q_year = models.IntegerField(label="", blank=False, min=1900, max=2019)
 
