@@ -317,14 +317,22 @@
 <div class="card">
     <div class="card-header">
         Please rank the four information signals according to their importance. <br>
-        <i>Please enter a "1" for the signal that influenced your decisions the most, a "2" for the signal that influenced your decisions the second most, and so on.</i>.
+        <i>Please enter a "1" for the signal that influenced your decisions the most, a "2" for the signal that influenced your decisions the second most, and so on.</i>
     </div>
     <div class="card-body">
         {% formfield player.q_rank21 %}
         {% formfield player.q_rank22 %}
+        {% formfield player.q_rank23 %}
         {% formfield player.q_rank24 %}
-        {% formfield player.q_rank25 %}
 
 
     </div>
 </div>
+
+
+
+{% block styles %}
+    <style type="text/css">
+        {% include 'PS_MAIN/css/priors.css' %}
+    </style>
+{% endblock %}
