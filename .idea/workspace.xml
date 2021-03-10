@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PS_MAIN/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/PS_MAIN/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/Questionnaire.html" beforeDir="false" afterPath="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/Questionnaire.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_rank1.html" beforeDir="false" afterPath="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_rank1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_rank2.html" beforeDir="false" afterPath="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_rank2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/Disclose_Payoff.html" beforeDir="false" afterPath="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/Disclose_Payoff.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,36 +18,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="33" column="169" selection-start-line="33" selection-start-column="169" selection-end-line="33" selection-end-column="169" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PS_MAIN/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="307" column="72" selection-start-line="307" selection-start-column="72" selection-end-line="307" selection-end-column="72" />
-              <folding>
-                <element signature="e#0#134#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PS_MAIN/pages.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46991">
@@ -130,6 +94,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PS_Instructions/pages.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="144" column="61" selection-start-line="144" selection-start-column="61" selection-end-line="144" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#71#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_3.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="17" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_4.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="880">
+              <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/Questionnaire.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="88">
@@ -139,10 +142,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/PriorsG.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="41" column="78" lean-forward="true" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/Disclose_Payoff.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-383">
-              <caret line="1011" column="15" selection-start-line="1011" selection-start-column="10" selection-end-line="1011" selection-end-column="15" />
+            <state relative-caret-position="313">
+              <caret line="1549" lean-forward="true" selection-start-line="1549" selection-end-line="1549" />
               <folding>
                 <element signature="e#266#1700#0" />
                 <element signature="e#290#1689#0" />
@@ -444,6 +456,18 @@
                 <element signature="e#37356#37615#0" />
                 <element signature="e#37624#37891#0" />
                 <element signature="e#37901#38162#0" />
+                <element signature="e#38219#39652#0" />
+                <element signature="e#38243#39641#0" />
+                <element signature="e#38259#38812#0" />
+                <element signature="e#38311#38464#0" />
+                <element signature="e#38347#38459#0" />
+                <element signature="e#38477#38631#0" />
+                <element signature="e#38514#38626#0" />
+                <element signature="e#38644#38798#0" />
+                <element signature="e#38681#38793#0" />
+                <element signature="e#38821#39080#0" />
+                <element signature="e#39089#39356#0" />
+                <element signature="e#39366#39627#0" />
                 <element signature="e#39684#41118#0" />
                 <element signature="e#39708#41107#0" />
                 <element signature="e#39724#40278#0" />
@@ -643,182 +667,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_rank1.html">
+        <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/PriorsC.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="333" column="14" selection-start-line="333" selection-start-column="14" selection-end-line="333" selection-end-column="14" />
-              <folding>
-                <element signature="e#49#1575#0" />
-                <element signature="e#73#1563#0" />
-                <element signature="e#89#643#0" />
-                <element signature="e#141#295#0" />
-                <element signature="e#178#290#0" />
-                <element signature="e#308#462#0" />
-                <element signature="e#345#457#0" />
-                <element signature="e#475#629#0" />
-                <element signature="e#512#624#0" />
-                <element signature="e#653#890#0" />
-                <element signature="e#901#1136#0" />
-                <element signature="e#1146#1332#0" />
-                <element signature="e#1342#1549#0" />
-                <element signature="e#1657#3170#0" />
-                <element signature="e#1681#3158#0" />
-                <element signature="e#1648#2201#0" />
-                <element signature="e#1700#1853#0" />
-                <element signature="e#1736#1848#0" />
-                <element signature="e#1866#2020#0" />
-                <element signature="e#1903#2015#0" />
-                <element signature="e#2033#2187#0" />
-                <element signature="e#2070#2182#0" />
-                <element signature="e#2260#2491#0" />
-                <element signature="e#2502#2731#0" />
-                <element signature="e#2741#2927#0" />
-                <element signature="e#2937#3144#0" />
-                <element signature="e#3202#4716#0" />
-                <element signature="e#3226#4704#0" />
-                <element signature="e#3242#3796#0" />
-                <element signature="e#3294#3448#0" />
-                <element signature="e#3331#3443#0" />
-                <element signature="e#3461#3615#0" />
-                <element signature="e#3498#3610#0" />
-                <element signature="e#3628#3782#0" />
-                <element signature="e#3665#3777#0" />
-                <element signature="e#3806#4037#0" />
-                <element signature="e#4048#4277#0" />
-                <element signature="e#4287#4473#0" />
-                <element signature="e#4483#4690#0" />
-                <element signature="e#4748#6262#0" />
-                <element signature="e#4772#6250#0" />
-                <element signature="e#4788#5342#0" />
-                <element signature="e#4840#4994#0" />
-                <element signature="e#4877#4989#0" />
-                <element signature="e#5007#5161#0" />
-                <element signature="e#5044#5156#0" />
-                <element signature="e#5174#5328#0" />
-                <element signature="e#5211#5323#0" />
-                <element signature="e#5352#5583#0" />
-                <element signature="e#5594#5823#0" />
-                <element signature="e#5833#6019#0" />
-                <element signature="e#6029#6236#0" />
-                <element signature="e#6294#7808#0" />
-                <element signature="e#6318#7796#0" />
-                <element signature="e#6334#6888#0" />
-                <element signature="e#6386#6540#0" />
-                <element signature="e#6423#6535#0" />
-                <element signature="e#6553#6707#0" />
-                <element signature="e#6590#6702#0" />
-                <element signature="e#6720#6874#0" />
-                <element signature="e#6757#6869#0" />
-                <element signature="e#6898#7129#0" />
-                <element signature="e#7140#7369#0" />
-                <element signature="e#7379#7565#0" />
-                <element signature="e#7575#7782#0" />
-                <element signature="e#7840#9353#0" />
-                <element signature="e#7864#9341#0" />
-                <element signature="e#7880#8434#0" />
-                <element signature="e#7932#8086#0" />
-                <element signature="e#7969#8081#0" />
-                <element signature="e#8099#8253#0" />
-                <element signature="e#8136#8248#0" />
-                <element signature="e#8266#8420#0" />
-                <element signature="e#8303#8415#0" />
-                <element signature="e#8444#8675#0" />
-                <element signature="e#8686#8915#0" />
-                <element signature="e#8925#9111#0" />
-                <element signature="e#9121#9327#0" />
-                <element signature="n#div#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_rank2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="319" column="169" selection-start-line="319" selection-start-column="169" selection-end-line="319" selection-end-column="169" />
-              <folding>
-                <element signature="e#141#1656#0" />
-                <element signature="e#165#1644#0" />
-                <element signature="e#169#723#0" />
-                <element signature="e#221#375#0" />
-                <element signature="e#258#370#0" />
-                <element signature="e#388#542#0" />
-                <element signature="e#425#537#0" />
-                <element signature="e#555#709#0" />
-                <element signature="e#592#704#0" />
-                <element signature="e#745#976#0" />
-                <element signature="e#987#1216#0" />
-                <element signature="e#1226#1413#0" />
-                <element signature="e#1423#1630#0" />
-                <element signature="e#1689#3202#0" />
-                <element signature="e#1713#3190#0" />
-                <element signature="e#1729#2282#0" />
-                <element signature="e#1781#1934#0" />
-                <element signature="e#1817#1929#0" />
-                <element signature="e#1947#2101#0" />
-                <element signature="e#1984#2096#0" />
-                <element signature="e#2114#2268#0" />
-                <element signature="e#2151#2263#0" />
-                <element signature="e#2292#2523#0" />
-                <element signature="e#2534#2763#0" />
-                <element signature="e#2773#2959#0" />
-                <element signature="e#2969#3176#0" />
-                <element signature="e#3234#4748#0" />
-                <element signature="e#3258#4736#0" />
-                <element signature="e#3274#3828#0" />
-                <element signature="e#3326#3480#0" />
-                <element signature="e#3363#3475#0" />
-                <element signature="e#3493#3647#0" />
-                <element signature="e#3530#3642#0" />
-                <element signature="e#3660#3814#0" />
-                <element signature="e#3697#3809#0" />
-                <element signature="e#3838#4069#0" />
-                <element signature="e#4080#4309#0" />
-                <element signature="e#4319#4505#0" />
-                <element signature="e#4515#4722#0" />
-                <element signature="e#4780#6294#0" />
-                <element signature="e#4804#6282#0" />
-                <element signature="e#4820#5374#0" />
-                <element signature="e#4872#5026#0" />
-                <element signature="e#4909#5021#0" />
-                <element signature="e#5039#5193#0" />
-                <element signature="e#5076#5188#0" />
-                <element signature="e#5206#5360#0" />
-                <element signature="e#5243#5355#0" />
-                <element signature="e#5384#5615#0" />
-                <element signature="e#5626#5855#0" />
-                <element signature="e#5865#6051#0" />
-                <element signature="e#6061#6268#0" />
-                <element signature="e#6326#7840#0" />
-                <element signature="e#6350#7828#0" />
-                <element signature="e#6366#6920#0" />
-                <element signature="e#6418#6572#0" />
-                <element signature="e#6455#6567#0" />
-                <element signature="e#6585#6739#0" />
-                <element signature="e#6622#6734#0" />
-                <element signature="e#6752#6906#0" />
-                <element signature="e#6789#6901#0" />
-                <element signature="e#6930#7161#0" />
-                <element signature="e#7172#7401#0" />
-                <element signature="e#7411#7597#0" />
-                <element signature="e#7607#7814#0" />
-                <element signature="e#7872#9385#0" />
-                <element signature="e#7896#9373#0" />
-                <element signature="e#7912#8466#0" />
-                <element signature="e#7964#8118#0" />
-                <element signature="e#8001#8113#0" />
-                <element signature="e#8131#8285#0" />
-                <element signature="e#8168#8280#0" />
-                <element signature="e#8298#8452#0" />
-                <element signature="e#8335#8447#0" />
-                <element signature="e#8476#8707#0" />
-                <element signature="e#8718#8947#0" />
-                <element signature="e#8957#9143#0" />
-                <element signature="e#9153#9359#0" />
-              </folding>
+            <state relative-caret-position="434">
+              <caret line="41" column="78" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -826,8 +678,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/PriorsA.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="347" selection-start-line="347" selection-end-line="351" selection-end-column="14" />
+            <state relative-caret-position="1064">
+              <caret line="342" lean-forward="true" selection-start-line="342" selection-end-line="342" />
               <folding>
                 <element signature="e#69#145#0" />
                 <element signature="e#670#979#0" />
@@ -956,6 +808,7 @@
       <find>https://i.imgur.com/dyUQSwI.png</find>
       <find>descr</find>
       <find>kappa</find>
+      <find>str(',')</find>
     </findStrings>
     <replaceStrings>
       <replace>Circle</replace>
@@ -986,6 +839,7 @@
       <replace>4.78</replace>
       <replace>4.44</replace>
       <replace>https://i.imgur.com/oDbfFQn.png</replace>
+      <replace>str('')</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -1010,10 +864,8 @@
         <option value="$PROJECT_DIR$/PS_Instructions/models.py" />
         <option value="$PROJECT_DIR$/PS_Instructions/pages.py" />
         <option value="$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_5.html" />
-        <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_2.html" />
         <option value="$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_3.html" />
-        <option value="$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_4.html" />
         <option value="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/decisionF1.html" />
         <option value="$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/ComprehensionQuestions.html" />
         <option value="$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_cq/instru_1.html" />
@@ -1042,9 +894,11 @@
         <option value="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_3.html" />
         <option value="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_rank1.html" />
         <option value="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_rank2.html" />
-        <option value="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/Disclose_Payoff.html" />
         <option value="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/Questionnaire.html" />
         <option value="$PROJECT_DIR$/PS_MAIN/pages.py" />
+        <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_4.html" />
+        <option value="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/Disclose_Payoff.html" />
       </list>
     </option>
   </component>
@@ -1082,6 +936,27 @@
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAB" type="462c0819:PsiDirectoryNode" />
               <item name="PS_Instructions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="PS_Instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="PS_Instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="PS_Instructions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="PS_Instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="PS_Instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
@@ -1326,12 +1201,12 @@
       <workItem from="1615134519884" duration="4560000" />
       <workItem from="1615202969462" duration="11141000" />
       <workItem from="1615291847788" duration="11589000" />
-      <workItem from="1615370171630" duration="2587000" />
+      <workItem from="1615370171630" duration="3921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="633808000" />
+    <option name="totallyTimeSpent" value="635142000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -6120,13 +5995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="17" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_cq/instru_3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -6138,13 +6006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
           <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="64" />
         </state>
       </provider>
     </entry>
@@ -6166,23 +6027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PS_Instructions/pages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1548">
-          <caret line="144" column="61" selection-start-line="144" selection-start-column="61" selection-end-line="144" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -6286,95 +6130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/PriorsC.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <element signature="e#666#975#0" />
-            <element signature="e#1255#2784#0" />
-            <element signature="e#1279#2772#0" />
-            <element signature="e#1295#1849#0" />
-            <element signature="e#1347#1501#0" />
-            <element signature="e#1384#1496#0" />
-            <element signature="e#1514#1668#0" />
-            <element signature="e#1551#1663#0" />
-            <element signature="e#1681#1835#0" />
-            <element signature="e#1718#1830#0" />
-            <element signature="e#1859#2096#0" />
-            <element signature="e#2107#2344#0" />
-            <element signature="e#2354#2541#0" />
-            <element signature="e#2551#2758#0" />
-            <element signature="e#2817#4344#0" />
-            <element signature="e#2841#4332#0" />
-            <element signature="e#2857#3410#0" />
-            <element signature="e#2909#3062#0" />
-            <element signature="e#2945#3057#0" />
-            <element signature="e#3075#3229#0" />
-            <element signature="e#3112#3224#0" />
-            <element signature="e#3242#3396#0" />
-            <element signature="e#3279#3391#0" />
-            <element signature="e#3420#3657#0" />
-            <element signature="e#3668#3905#0" />
-            <element signature="e#3915#4101#0" />
-            <element signature="e#4111#4318#0" />
-            <element signature="e#4376#5904#0" />
-            <element signature="e#4400#5892#0" />
-            <element signature="e#4416#4970#0" />
-            <element signature="e#4468#4622#0" />
-            <element signature="e#4505#4617#0" />
-            <element signature="e#4635#4789#0" />
-            <element signature="e#4672#4784#0" />
-            <element signature="e#4802#4956#0" />
-            <element signature="e#4839#4951#0" />
-            <element signature="e#4980#5217#0" />
-            <element signature="e#5228#5465#0" />
-            <element signature="e#5475#5661#0" />
-            <element signature="e#5671#5878#0" />
-            <element signature="e#5936#7464#0" />
-            <element signature="e#5960#7452#0" />
-            <element signature="e#5976#6530#0" />
-            <element signature="e#6028#6182#0" />
-            <element signature="e#6065#6177#0" />
-            <element signature="e#6195#6349#0" />
-            <element signature="e#6232#6344#0" />
-            <element signature="e#6362#6516#0" />
-            <element signature="e#6399#6511#0" />
-            <element signature="e#6540#6777#0" />
-            <element signature="e#6788#7025#0" />
-            <element signature="e#7035#7221#0" />
-            <element signature="e#7231#7438#0" />
-            <element signature="e#7496#9024#0" />
-            <element signature="e#7520#9012#0" />
-            <element signature="e#7536#8090#0" />
-            <element signature="e#7588#7742#0" />
-            <element signature="e#7625#7737#0" />
-            <element signature="e#7755#7909#0" />
-            <element signature="e#7792#7904#0" />
-            <element signature="e#7922#8076#0" />
-            <element signature="e#7959#8071#0" />
-            <element signature="e#8100#8337#0" />
-            <element signature="e#8348#8585#0" />
-            <element signature="e#8595#8781#0" />
-            <element signature="e#8791#8998#0" />
-            <element signature="e#9056#10584#0" />
-            <element signature="e#9080#10572#0" />
-            <element signature="e#9096#9650#0" />
-            <element signature="e#9148#9302#0" />
-            <element signature="e#9185#9297#0" />
-            <element signature="e#9315#9469#0" />
-            <element signature="e#9352#9464#0" />
-            <element signature="e#9482#9636#0" />
-            <element signature="e#9519#9631#0" />
-            <element signature="e#9660#9898#0" />
-            <element signature="e#9909#10146#0" />
-            <element signature="e#10156#10342#0" />
-            <element signature="e#10352#10558#0" />
-            <element signature="e#11056#11139#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -6675,95 +6430,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/java/rank.js" />
     <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_test.html" />
-    <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/PriorsG.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <element signature="e#666#975#0" />
-            <element signature="e#1255#2786#0" />
-            <element signature="e#1279#2774#0" />
-            <element signature="e#1295#1849#0" />
-            <element signature="e#1347#1501#0" />
-            <element signature="e#1384#1496#0" />
-            <element signature="e#1514#1668#0" />
-            <element signature="e#1551#1663#0" />
-            <element signature="e#1681#1835#0" />
-            <element signature="e#1718#1830#0" />
-            <element signature="e#1859#2097#0" />
-            <element signature="e#2108#2346#0" />
-            <element signature="e#2356#2541#0" />
-            <element signature="e#2551#2760#0" />
-            <element signature="e#2819#4348#0" />
-            <element signature="e#2843#4336#0" />
-            <element signature="e#2859#3412#0" />
-            <element signature="e#2911#3064#0" />
-            <element signature="e#2947#3059#0" />
-            <element signature="e#3077#3231#0" />
-            <element signature="e#3114#3226#0" />
-            <element signature="e#3244#3398#0" />
-            <element signature="e#3281#3393#0" />
-            <element signature="e#3422#3660#0" />
-            <element signature="e#3671#3909#0" />
-            <element signature="e#3919#4103#0" />
-            <element signature="e#4113#4322#0" />
-            <element signature="e#4380#5910#0" />
-            <element signature="e#4404#5898#0" />
-            <element signature="e#4420#4974#0" />
-            <element signature="e#4472#4626#0" />
-            <element signature="e#4509#4621#0" />
-            <element signature="e#4639#4793#0" />
-            <element signature="e#4676#4788#0" />
-            <element signature="e#4806#4960#0" />
-            <element signature="e#4843#4955#0" />
-            <element signature="e#4984#5222#0" />
-            <element signature="e#5233#5471#0" />
-            <element signature="e#5481#5665#0" />
-            <element signature="e#5675#5884#0" />
-            <element signature="e#5942#7472#0" />
-            <element signature="e#5966#7460#0" />
-            <element signature="e#5982#6536#0" />
-            <element signature="e#6034#6188#0" />
-            <element signature="e#6071#6183#0" />
-            <element signature="e#6201#6355#0" />
-            <element signature="e#6238#6350#0" />
-            <element signature="e#6368#6522#0" />
-            <element signature="e#6405#6517#0" />
-            <element signature="e#6546#6784#0" />
-            <element signature="e#6795#7033#0" />
-            <element signature="e#7043#7227#0" />
-            <element signature="e#7237#7446#0" />
-            <element signature="e#7504#9034#0" />
-            <element signature="e#7528#9022#0" />
-            <element signature="e#7544#8098#0" />
-            <element signature="e#7596#7750#0" />
-            <element signature="e#7633#7745#0" />
-            <element signature="e#7763#7917#0" />
-            <element signature="e#7800#7912#0" />
-            <element signature="e#7930#8084#0" />
-            <element signature="e#7967#8079#0" />
-            <element signature="e#8108#8346#0" />
-            <element signature="e#8357#8595#0" />
-            <element signature="e#8605#8789#0" />
-            <element signature="e#8799#9008#0" />
-            <element signature="e#9066#10596#0" />
-            <element signature="e#9090#10584#0" />
-            <element signature="e#9106#9660#0" />
-            <element signature="e#9158#9312#0" />
-            <element signature="e#9195#9307#0" />
-            <element signature="e#9325#9479#0" />
-            <element signature="e#9362#9474#0" />
-            <element signature="e#9492#9646#0" />
-            <element signature="e#9529#9641#0" />
-            <element signature="e#9670#9909#0" />
-            <element signature="e#9920#10158#0" />
-            <element signature="e#10168#10352#0" />
-            <element signature="e#10362#10570#0" />
-            <element signature="e#11068#11151#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/DecisionG1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -6799,95 +6465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="726">
           <caret line="33" column="169" selection-start-line="33" selection-start-column="169" selection-end-line="33" selection-end-column="169" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/PriorsA.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="347" selection-start-line="347" selection-end-line="351" selection-end-column="14" />
-          <folding>
-            <element signature="e#69#145#0" />
-            <element signature="e#670#979#0" />
-            <element signature="e#1259#2785#0" />
-            <element signature="e#1283#2773#0" />
-            <element signature="e#1299#1853#0" />
-            <element signature="e#1351#1505#0" />
-            <element signature="e#1388#1500#0" />
-            <element signature="e#1518#1672#0" />
-            <element signature="e#1555#1667#0" />
-            <element signature="e#1685#1839#0" />
-            <element signature="e#1722#1834#0" />
-            <element signature="e#1863#2100#0" />
-            <element signature="e#2111#2346#0" />
-            <element signature="e#2356#2542#0" />
-            <element signature="e#2552#2759#0" />
-            <element signature="e#2818#4342#0" />
-            <element signature="e#2842#4330#0" />
-            <element signature="e#2858#3411#0" />
-            <element signature="e#2910#3063#0" />
-            <element signature="e#2946#3058#0" />
-            <element signature="e#3076#3230#0" />
-            <element signature="e#3113#3225#0" />
-            <element signature="e#3243#3397#0" />
-            <element signature="e#3280#3392#0" />
-            <element signature="e#3421#3658#0" />
-            <element signature="e#3669#3904#0" />
-            <element signature="e#3914#4099#0" />
-            <element signature="e#4109#4316#0" />
-            <element signature="e#4374#5899#0" />
-            <element signature="e#4398#5887#0" />
-            <element signature="e#4414#4968#0" />
-            <element signature="e#4466#4620#0" />
-            <element signature="e#4503#4615#0" />
-            <element signature="e#4633#4787#0" />
-            <element signature="e#4670#4782#0" />
-            <element signature="e#4800#4954#0" />
-            <element signature="e#4837#4949#0" />
-            <element signature="e#4978#5215#0" />
-            <element signature="e#5226#5461#0" />
-            <element signature="e#5471#5656#0" />
-            <element signature="e#5666#5873#0" />
-            <element signature="e#5931#7456#0" />
-            <element signature="e#5955#7444#0" />
-            <element signature="e#5971#6525#0" />
-            <element signature="e#6023#6177#0" />
-            <element signature="e#6060#6172#0" />
-            <element signature="e#6190#6344#0" />
-            <element signature="e#6227#6339#0" />
-            <element signature="e#6357#6511#0" />
-            <element signature="e#6394#6506#0" />
-            <element signature="e#6535#6772#0" />
-            <element signature="e#6783#7018#0" />
-            <element signature="e#7028#7213#0" />
-            <element signature="e#7223#7430#0" />
-            <element signature="e#7488#9013#0" />
-            <element signature="e#7512#9001#0" />
-            <element signature="e#7528#8082#0" />
-            <element signature="e#7580#7734#0" />
-            <element signature="e#7617#7729#0" />
-            <element signature="e#7747#7901#0" />
-            <element signature="e#7784#7896#0" />
-            <element signature="e#7914#8068#0" />
-            <element signature="e#7951#8063#0" />
-            <element signature="e#8092#8329#0" />
-            <element signature="e#8340#8575#0" />
-            <element signature="e#8585#8770#0" />
-            <element signature="e#8780#8987#0" />
-            <element signature="e#9045#10569#0" />
-            <element signature="e#9069#10557#0" />
-            <element signature="e#9085#9639#0" />
-            <element signature="e#9137#9291#0" />
-            <element signature="e#9174#9286#0" />
-            <element signature="e#9304#9458#0" />
-            <element signature="e#9341#9453#0" />
-            <element signature="e#9471#9625#0" />
-            <element signature="e#9508#9620#0" />
-            <element signature="e#9649#9886#0" />
-            <element signature="e#9897#10132#0" />
-            <element signature="e#10142#10327#0" />
-            <element signature="e#10337#10543#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -7068,10 +6645,225 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/Questionnaire.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/PriorsA.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="342" lean-forward="true" selection-start-line="342" selection-end-line="342" />
+          <folding>
+            <element signature="e#69#145#0" />
+            <element signature="e#670#979#0" />
+            <element signature="e#1259#2785#0" />
+            <element signature="e#1283#2773#0" />
+            <element signature="e#1299#1853#0" />
+            <element signature="e#1351#1505#0" />
+            <element signature="e#1388#1500#0" />
+            <element signature="e#1518#1672#0" />
+            <element signature="e#1555#1667#0" />
+            <element signature="e#1685#1839#0" />
+            <element signature="e#1722#1834#0" />
+            <element signature="e#1863#2100#0" />
+            <element signature="e#2111#2346#0" />
+            <element signature="e#2356#2542#0" />
+            <element signature="e#2552#2759#0" />
+            <element signature="e#2818#4342#0" />
+            <element signature="e#2842#4330#0" />
+            <element signature="e#2858#3411#0" />
+            <element signature="e#2910#3063#0" />
+            <element signature="e#2946#3058#0" />
+            <element signature="e#3076#3230#0" />
+            <element signature="e#3113#3225#0" />
+            <element signature="e#3243#3397#0" />
+            <element signature="e#3280#3392#0" />
+            <element signature="e#3421#3658#0" />
+            <element signature="e#3669#3904#0" />
+            <element signature="e#3914#4099#0" />
+            <element signature="e#4109#4316#0" />
+            <element signature="e#4374#5899#0" />
+            <element signature="e#4398#5887#0" />
+            <element signature="e#4414#4968#0" />
+            <element signature="e#4466#4620#0" />
+            <element signature="e#4503#4615#0" />
+            <element signature="e#4633#4787#0" />
+            <element signature="e#4670#4782#0" />
+            <element signature="e#4800#4954#0" />
+            <element signature="e#4837#4949#0" />
+            <element signature="e#4978#5215#0" />
+            <element signature="e#5226#5461#0" />
+            <element signature="e#5471#5656#0" />
+            <element signature="e#5666#5873#0" />
+            <element signature="e#5931#7456#0" />
+            <element signature="e#5955#7444#0" />
+            <element signature="e#5971#6525#0" />
+            <element signature="e#6023#6177#0" />
+            <element signature="e#6060#6172#0" />
+            <element signature="e#6190#6344#0" />
+            <element signature="e#6227#6339#0" />
+            <element signature="e#6357#6511#0" />
+            <element signature="e#6394#6506#0" />
+            <element signature="e#6535#6772#0" />
+            <element signature="e#6783#7018#0" />
+            <element signature="e#7028#7213#0" />
+            <element signature="e#7223#7430#0" />
+            <element signature="e#7488#9013#0" />
+            <element signature="e#7512#9001#0" />
+            <element signature="e#7528#8082#0" />
+            <element signature="e#7580#7734#0" />
+            <element signature="e#7617#7729#0" />
+            <element signature="e#7747#7901#0" />
+            <element signature="e#7784#7896#0" />
+            <element signature="e#7914#8068#0" />
+            <element signature="e#7951#8063#0" />
+            <element signature="e#8092#8329#0" />
+            <element signature="e#8340#8575#0" />
+            <element signature="e#8585#8770#0" />
+            <element signature="e#8780#8987#0" />
+            <element signature="e#9045#10569#0" />
+            <element signature="e#9069#10557#0" />
+            <element signature="e#9085#9639#0" />
+            <element signature="e#9137#9291#0" />
+            <element signature="e#9174#9286#0" />
+            <element signature="e#9304#9458#0" />
+            <element signature="e#9341#9453#0" />
+            <element signature="e#9471#9625#0" />
+            <element signature="e#9508#9620#0" />
+            <element signature="e#9649#9886#0" />
+            <element signature="e#9897#10132#0" />
+            <element signature="e#10142#10327#0" />
+            <element signature="e#10337#10543#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PS_MAIN/pages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46991">
+          <caret line="2390" column="159" selection-start-line="2390" selection-start-column="159" selection-end-line="2390" selection-end-column="159" />
+          <folding>
+            <element signature="e#210#235#0" />
+            <element signature="e#376#496#0" />
+            <element signature="e#776#1360#0" />
+            <element signature="e#835#871#0" />
+            <element signature="e#914#1290#0" />
+            <element signature="e#920#1290#0" />
+            <element signature="e#1332#1360#0" />
+            <element signature="e#1414#1764#0" />
+            <element signature="e#1473#1538#0" />
+            <element signature="e#1581#1764#0" />
+            <element signature="e#1587#1764#0" />
+            <element signature="e#1853#2252#0" />
+            <element signature="e#2294#2876#0" />
+            <element signature="e#2923#4523#0" />
+            <element signature="e#3009#3297#0" />
+            <element signature="e#3391#3727#0" />
+            <element signature="e#3829#4103#0" />
+            <element signature="e#4201#4523#0" />
+            <element signature="e#4566#5031#0" />
+            <element signature="e#4572#5031#0" />
+            <element signature="e#6494#7903#0" />
+            <element signature="e#6550#7903#0" />
+            <element signature="e#8021#8097#0" />
+            <element signature="e#8389#8656#0" />
+            <element signature="e#8443#8656#0" />
+            <element signature="e#8859#9762#0" />
+            <element signature="e#9829#10764#0" />
+            <element signature="e#113232#117009#0" />
+            <element signature="e#114546#115605#0" />
+            <element signature="e#114602#115605#0" />
+            <element signature="e#115699#115786#0" />
+            <element signature="e#116495#116795#0" />
+            <element signature="e#116549#116795#0" />
+            <element signature="e#117080#118226#0" />
+            <element signature="e#117139#117467#0" />
+            <element signature="e#117511#118226#0" />
+            <element signature="e#117518#118226#0" />
+            <element signature="e#118229#118349#0" />
+            <element signature="e#118625#126302#0" />
+            <element signature="e#118686#119695#0" />
+            <element signature="e#119475#119540#0" />
+            <element signature="e#119603#119695#0" />
+            <element signature="e#119610#119695#0" />
+            <element signature="e#119734#119919#0" />
+            <element signature="e#119962#120201#0" />
+            <element signature="e#119968#120201#0" />
+            <element signature="e#120477#121943#0" />
+            <element signature="e#120300#120737#0" />
+            <element signature="e#120569#120737#0" />
+            <element signature="e#121027#121464#0" />
+            <element signature="e#121296#121464#0" />
+            <element signature="e#121516#121943#0" />
+            <element signature="e#121775#121943#0" />
+            <element signature="e#120780#126302#0" />
+            <element signature="e#120876#126302#0" />
+            <element signature="e#126338#131419#0" />
+            <element signature="e#126396#126581#0" />
+            <element signature="e#126624#130611#0" />
+            <element signature="e#126630#130611#0" />
+            <element signature="e#130653#131419#0" />
+            <element signature="e#131449#132043#0" />
+            <element signature="e#131481#131666#0" />
+            <element signature="e#131709#132043#0" />
+            <element signature="e#131716#132043#0" />
+            <element signature="e#132062#132682#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PS_Instructions/pages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="144" column="61" selection-start-line="144" selection-start-column="61" selection-end-line="144" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="17" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PS_Instructions/templates/PS_Instructions/include/instru_4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/PriorsC.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="41" column="78" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/PriorsG.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="41" column="78" lean-forward="true" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/Disclose_Payoff.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-383">
-          <caret line="1011" column="15" selection-start-line="1011" selection-start-column="10" selection-end-line="1011" selection-end-column="15" />
+        <state relative-caret-position="313">
+          <caret line="1549" lean-forward="true" selection-start-line="1549" selection-end-line="1549" />
           <folding>
             <element signature="e#266#1700#0" />
             <element signature="e#290#1689#0" />
@@ -7373,6 +7165,18 @@
             <element signature="e#37356#37615#0" />
             <element signature="e#37624#37891#0" />
             <element signature="e#37901#38162#0" />
+            <element signature="e#38219#39652#0" />
+            <element signature="e#38243#39641#0" />
+            <element signature="e#38259#38812#0" />
+            <element signature="e#38311#38464#0" />
+            <element signature="e#38347#38459#0" />
+            <element signature="e#38477#38631#0" />
+            <element signature="e#38514#38626#0" />
+            <element signature="e#38644#38798#0" />
+            <element signature="e#38681#38793#0" />
+            <element signature="e#38821#39080#0" />
+            <element signature="e#39089#39356#0" />
+            <element signature="e#39366#39627#0" />
             <element signature="e#39684#41118#0" />
             <element signature="e#39708#41107#0" />
             <element signature="e#39724#40278#0" />
@@ -7566,87 +7370,6 @@
             <element signature="e#63196#63463#0" />
             <element signature="e#63473#63734#0" />
             <element signature="e#64130#64215#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/Questionnaire.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PS_MAIN/pages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46991">
-          <caret line="2390" column="159" selection-start-line="2390" selection-start-column="159" selection-end-line="2390" selection-end-column="159" />
-          <folding>
-            <element signature="e#210#235#0" />
-            <element signature="e#376#496#0" />
-            <element signature="e#776#1360#0" />
-            <element signature="e#835#871#0" />
-            <element signature="e#914#1290#0" />
-            <element signature="e#920#1290#0" />
-            <element signature="e#1332#1360#0" />
-            <element signature="e#1414#1764#0" />
-            <element signature="e#1473#1538#0" />
-            <element signature="e#1581#1764#0" />
-            <element signature="e#1587#1764#0" />
-            <element signature="e#1853#2252#0" />
-            <element signature="e#2294#2876#0" />
-            <element signature="e#2923#4523#0" />
-            <element signature="e#3009#3297#0" />
-            <element signature="e#3391#3727#0" />
-            <element signature="e#3829#4103#0" />
-            <element signature="e#4201#4523#0" />
-            <element signature="e#4566#5031#0" />
-            <element signature="e#4572#5031#0" />
-            <element signature="e#6494#7903#0" />
-            <element signature="e#6550#7903#0" />
-            <element signature="e#8021#8097#0" />
-            <element signature="e#8389#8656#0" />
-            <element signature="e#8443#8656#0" />
-            <element signature="e#8859#9762#0" />
-            <element signature="e#9829#10764#0" />
-            <element signature="e#113232#117009#0" />
-            <element signature="e#114546#115605#0" />
-            <element signature="e#114602#115605#0" />
-            <element signature="e#115699#115786#0" />
-            <element signature="e#116495#116795#0" />
-            <element signature="e#116549#116795#0" />
-            <element signature="e#117080#118226#0" />
-            <element signature="e#117139#117467#0" />
-            <element signature="e#117511#118226#0" />
-            <element signature="e#117518#118226#0" />
-            <element signature="e#118229#118349#0" />
-            <element signature="e#118625#126302#0" />
-            <element signature="e#118686#119695#0" />
-            <element signature="e#119475#119540#0" />
-            <element signature="e#119603#119695#0" />
-            <element signature="e#119610#119695#0" />
-            <element signature="e#119734#119919#0" />
-            <element signature="e#119962#120201#0" />
-            <element signature="e#119968#120201#0" />
-            <element signature="e#120477#121943#0" />
-            <element signature="e#120300#120737#0" />
-            <element signature="e#120569#120737#0" />
-            <element signature="e#121027#121464#0" />
-            <element signature="e#121296#121464#0" />
-            <element signature="e#121516#121943#0" />
-            <element signature="e#121775#121943#0" />
-            <element signature="e#120780#126302#0" />
-            <element signature="e#120876#126302#0" />
-            <element signature="e#126338#131419#0" />
-            <element signature="e#126396#126581#0" />
-            <element signature="e#126624#130611#0" />
-            <element signature="e#126630#130611#0" />
-            <element signature="e#130653#131419#0" />
-            <element signature="e#131449#132043#0" />
-            <element signature="e#131481#131666#0" />
-            <element signature="e#131709#132043#0" />
-            <element signature="e#131716#132043#0" />
-            <element signature="e#132062#132682#0" />
           </folding>
         </state>
       </provider>
