@@ -193,8 +193,8 @@ class PriorsTransition(Page):
 
 page_sequence = [
     Device,
-    #AttentionCheck,
-    #DeadEnd,
+    AttentionCheck,
+    DeadEnd,
     InstruStart,
     InstruStart,
     InstruStart,
