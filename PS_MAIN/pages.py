@@ -261,9 +261,9 @@ class DecisionA1(Page):
                 self.participant.vars['payoff_3_a_3'] = self.player.payoff_3
 
                 self.participant.vars['payoff_a1'] = self.participant.vars['payoff_a1_1'] + self.participant.vars['payoff_a1_2'] + self.participant.vars['payoff_a1_3']
-                self.participant.vars['urndraws1_a1'] = self.participant.vars['urndraws1_a1_1'] + str('') + self.participant.vars['urndraws1_a1_2'] + str('') + self.participant.vars['urndraws1_a1_3']
-                self.participant.vars['urndraws2_a1'] = self.participant.vars['urndraws2_a1_1'] + str('') + self.participant.vars['urndraws2_a1_2'] + str('') + self.participant.vars['urndraws2_a1_3']
-                self.participant.vars['urndraws3_a1'] = self.participant.vars['urndraws3_a1_1'] + str('') + self.participant.vars['urndraws3_a1_2'] + str('') + self.participant.vars['urndraws3_a1_3']
+                self.participant.vars['urndraws1_a1'] = self.participant.vars['urndraws1_a1_1'] + '  ' + self.participant.vars['urndraws1_a1_2'] + '  ' + self.participant.vars['urndraws1_a1_3']
+                self.participant.vars['urndraws2_a1'] = self.participant.vars['urndraws2_a1_1'] + '  ' + self.participant.vars['urndraws2_a1_2'] + '  ' + self.participant.vars['urndraws2_a1_3']
+                self.participant.vars['urndraws3_a1'] = self.participant.vars['urndraws3_a1_1'] + '  ' + self.participant.vars['urndraws3_a1_2'] + '  ' + self.participant.vars['urndraws3_a1_3']
                 self.participant.vars['option_1_a1'] = self.participant.vars['option_1_a1_1'] + self.participant.vars['option_1_a1_2'] + self.participant.vars['option_1_a1_3']
                 self.participant.vars['option_2_a1'] = self.participant.vars['option_2_a1_1'] + self.participant.vars['option_2_a1_2'] + self.participant.vars['option_2_a1_3']
                 self.participant.vars['option_3_a1'] = self.participant.vars['option_3_a1_1'] + self.participant.vars['option_3_a1_2'] + self.participant.vars['option_3_a1_3']
@@ -613,12 +613,12 @@ class DecisionB1(Page):
 
                 self.participant.vars['payoff_b1'] = self.participant.vars['payoff_b1_1'] + self.participant.vars[
                     'payoff_b1_2'] + self.participant.vars['payoff_b1_3']
-                self.participant.vars['urndraws1_b1'] = self.participant.vars['urndraws1_b1_1'] + str('') + self.participant.vars[
-                    'urndraws1_b1_2'] + str('') + self.participant.vars['urndraws1_b1_3']
-                self.participant.vars['urndraws2_b1'] = self.participant.vars['urndraws2_b1_1'] + str('') + self.participant.vars[
-                    'urndraws2_b1_2'] + str('') + self.participant.vars['urndraws2_b1_3']
-                self.participant.vars['urndraws3_b1'] = self.participant.vars['urndraws3_b1_1'] + str('') + self.participant.vars[
-                    'urndraws3_b1_2'] + str('') + self.participant.vars['urndraws3_b1_3']
+                self.participant.vars['urndraws1_b1'] = self.participant.vars['urndraws1_b1_1'] + '  ' + self.participant.vars[
+                    'urndraws1_b1_2'] + '  ' + self.participant.vars['urndraws1_b1_3']
+                self.participant.vars['urndraws2_b1'] = self.participant.vars['urndraws2_b1_1'] + '  ' + self.participant.vars[
+                    'urndraws2_b1_2'] + '  ' + self.participant.vars['urndraws2_b1_3']
+                self.participant.vars['urndraws3_b1'] = self.participant.vars['urndraws3_b1_1'] + '  ' + self.participant.vars[
+                    'urndraws3_b1_2'] + '  ' + self.participant.vars['urndraws3_b1_3']
                 self.participant.vars['option_1_b1'] = self.participant.vars['option_1_b1_1'] + self.participant.vars[
                     'option_1_b1_2'] + self.participant.vars['option_1_b1_3']
                 self.participant.vars['option_2_b1'] = self.participant.vars['option_2_b1_1'] + self.participant.vars['option_2_b1_2'] + self.participant.vars['option_2_b1_3']
@@ -976,12 +976,12 @@ class DecisionC1(Page):
 
                 self.participant.vars['payoff_c1'] = self.participant.vars['payoff_c1_1'] + self.participant.vars[
                     'payoff_c1_2'] + self.participant.vars['payoff_c1_3']
-                self.participant.vars['urndraws1_c1'] = self.participant.vars['urndraws1_c1_1'] + str('') + self.participant.vars[
-                    'urndraws1_c1_2'] + str('') + self.participant.vars['urndraws1_c1_3']
-                self.participant.vars['urndraws2_c1'] = self.participant.vars['urndraws2_c1_1'] + str('') + self.participant.vars[
-                    'urndraws2_c1_2'] + str('') + self.participant.vars['urndraws2_c1_3']
-                self.participant.vars['urndraws3_c1'] = self.participant.vars['urndraws3_c1_1'] + str('') + self.participant.vars[
-                    'urndraws3_c1_2'] + str('') + self.participant.vars['urndraws3_c1_3']
+                self.participant.vars['urndraws1_c1'] = self.participant.vars['urndraws1_c1_1'] + '  ' + self.participant.vars[
+                    'urndraws1_c1_2'] + '  ' + self.participant.vars['urndraws1_c1_3']
+                self.participant.vars['urndraws2_c1'] = self.participant.vars['urndraws2_c1_1'] + '  ' + self.participant.vars[
+                    'urndraws2_c1_2'] + '  ' + self.participant.vars['urndraws2_c1_3']
+                self.participant.vars['urndraws3_c1'] = self.participant.vars['urndraws3_c1_1'] + '  ' + self.participant.vars[
+                    'urndraws3_c1_2'] + '  ' + self.participant.vars['urndraws3_c1_3']
                 self.participant.vars['option_1_c1'] = self.participant.vars['option_1_c1_1'] + self.participant.vars[
                     'option_1_c1_2'] + self.participant.vars['option_1_c1_3']
                 self.participant.vars['option_2_c1'] = self.participant.vars['option_2_c1_1'] + self.participant.vars['option_2_c1_2'] + self.participant.vars['option_2_c1_3']
@@ -1342,12 +1342,12 @@ class DecisionD1(Page):
 
                 self.participant.vars['payoff_d1'] = self.participant.vars['payoff_d1_1'] + self.participant.vars[
                     'payoff_d1_2'] + self.participant.vars['payoff_d1_3']
-                self.participant.vars['urndraws1_d1'] = self.participant.vars['urndraws1_d1_1'] + str('') + self.participant.vars[
-                    'urndraws1_d1_2'] + str('') + self.participant.vars['urndraws1_d1_3']
-                self.participant.vars['urndraws2_d1'] = self.participant.vars['urndraws2_d1_1'] + str('') + self.participant.vars[
-                    'urndraws2_d1_2'] + str('') + self.participant.vars['urndraws2_d1_3']
-                self.participant.vars['urndraws3_d1'] = self.participant.vars['urndraws3_d1_1'] + str('') + self.participant.vars[
-                    'urndraws3_d1_2'] + str('') + self.participant.vars['urndraws3_d1_3']
+                self.participant.vars['urndraws1_d1'] = self.participant.vars['urndraws1_d1_1'] + '  ' + self.participant.vars[
+                    'urndraws1_d1_2'] + '  ' + self.participant.vars['urndraws1_d1_3']
+                self.participant.vars['urndraws2_d1'] = self.participant.vars['urndraws2_d1_1'] + '  ' + self.participant.vars[
+                    'urndraws2_d1_2'] + '  ' + self.participant.vars['urndraws2_d1_3']
+                self.participant.vars['urndraws3_d1'] = self.participant.vars['urndraws3_d1_1'] + '  ' + self.participant.vars[
+                    'urndraws3_d1_2'] + '  ' + self.participant.vars['urndraws3_d1_3']
                 self.participant.vars['option_1_d1'] = self.participant.vars['option_1_d1_1'] + self.participant.vars[
                     'option_1_d1_2'] + self.participant.vars['option_1_d1_3']
                 self.participant.vars['option_2_d1'] = self.participant.vars['option_2_d1_1'] + self.participant.vars['option_2_d1_2'] + self.participant.vars['option_2_d1_3']
@@ -1692,12 +1692,12 @@ class DecisionE1(Page):
 
                 self.participant.vars['payoff_e1'] = self.participant.vars['payoff_e1_1'] + self.participant.vars[
                     'payoff_e1_2'] + self.participant.vars['payoff_e1_3']
-                self.participant.vars['urndraws1_e1'] = self.participant.vars['urndraws1_e1_1'] + str('') + self.participant.vars[
-                    'urndraws1_e1_2'] + str('') + self.participant.vars['urndraws1_e1_3']
-                self.participant.vars['urndraws2_e1'] = self.participant.vars['urndraws2_e1_1'] + str('') + self.participant.vars[
-                    'urndraws2_e1_2'] + str('') + self.participant.vars['urndraws2_e1_3']
-                self.participant.vars['urndraws3_e1'] = self.participant.vars['urndraws3_e1_1'] + str('') + self.participant.vars[
-                    'urndraws3_e1_2'] + str('') + self.participant.vars['urndraws3_e1_3']
+                self.participant.vars['urndraws1_e1'] = self.participant.vars['urndraws1_e1_1'] + '  ' + self.participant.vars[
+                    'urndraws1_e1_2'] + '  ' + self.participant.vars['urndraws1_e1_3']
+                self.participant.vars['urndraws2_e1'] = self.participant.vars['urndraws2_e1_1'] + '  ' + self.participant.vars[
+                    'urndraws2_e1_2'] + '  ' + self.participant.vars['urndraws2_e1_3']
+                self.participant.vars['urndraws3_e1'] = self.participant.vars['urndraws3_e1_1'] + '  ' + self.participant.vars[
+                    'urndraws3_e1_2'] + '  ' + self.participant.vars['urndraws3_e1_3']
                 self.participant.vars['option_1_e1'] = self.participant.vars['option_1_e1_1'] + self.participant.vars[
                     'option_1_e1_2'] + self.participant.vars['option_1_e1_3']
                 self.participant.vars['option_2_e1'] = self.participant.vars['option_2_e1_1'] + self.participant.vars['option_2_e1_2'] + self.participant.vars['option_2_e1_3']
@@ -2049,12 +2049,12 @@ class DecisionF1(Page):
 
                 self.participant.vars['payoff_f1'] = self.participant.vars['payoff_f1_1'] + self.participant.vars[
                     'payoff_f1_2'] + self.participant.vars['payoff_f1_3']
-                self.participant.vars['urndraws1_f1'] = self.participant.vars['urndraws1_f1_1'] + str('') + self.participant.vars[
-                    'urndraws1_f1_2'] + str('') + self.participant.vars['urndraws1_f1_3']
-                self.participant.vars['urndraws2_f1'] = self.participant.vars['urndraws2_f1_1'] + str('') + self.participant.vars[
-                    'urndraws2_f1_2'] + str('') + self.participant.vars['urndraws2_f1_3']
-                self.participant.vars['urndraws3_f1'] = self.participant.vars['urndraws3_f1_1'] + str('') + self.participant.vars[
-                    'urndraws3_f1_2'] + str('') + self.participant.vars['urndraws3_f1_3']
+                self.participant.vars['urndraws1_f1'] = self.participant.vars['urndraws1_f1_1'] + '  ' + self.participant.vars[
+                    'urndraws1_f1_2'] + '  ' + self.participant.vars['urndraws1_f1_3']
+                self.participant.vars['urndraws2_f1'] = self.participant.vars['urndraws2_f1_1'] + '  ' + self.participant.vars[
+                    'urndraws2_f1_2'] + '  ' + self.participant.vars['urndraws2_f1_3']
+                self.participant.vars['urndraws3_f1'] = self.participant.vars['urndraws3_f1_1'] + '  ' + self.participant.vars[
+                    'urndraws3_f1_2'] + '  ' + self.participant.vars['urndraws3_f1_3']
                 self.participant.vars['option_1_f1'] = self.participant.vars['option_1_f1_1'] + self.participant.vars[
                     'option_1_f1_2'] + self.participant.vars['option_1_f1_3']
                 self.participant.vars['option_2_f1'] = self.participant.vars['option_2_f1_1'] + self.participant.vars['option_2_f1_2'] + self.participant.vars['option_2_f1_3']
@@ -2386,9 +2386,9 @@ class DecisionG1(Page):
                 self.participant.vars['payoff_3_g_3'] = self.player.payoff_3
 
                 self.participant.vars['payoff_g1'] = self.participant.vars['payoff_g1_1'] + self.participant.vars['payoff_g1_2'] + self.participant.vars['payoff_g1_3']
-                self.participant.vars['urndraws1_g1'] = self.participant.vars['urndraws1_g1_1'] + str('') + self.participant.vars['urndraws1_g1_2']  + str('') +  self.participant.vars['urndraws1_g1_3']
-                self.participant.vars['urndraws2_g1'] = self.participant.vars['urndraws2_g1_1'] + str('') + self.participant.vars['urndraws2_g1_2']  + str('') +  self.participant.vars['urndraws2_g1_3']
-                self.participant.vars['urndraws3_g1'] = self.participant.vars['urndraws3_g1_1'] + str('') + self.participant.vars['urndraws3_g1_2']  + str('') +  self.participant.vars['urndraws3_g1_3']
+                self.participant.vars['urndraws1_g1'] = self.participant.vars['urndraws1_g1_1'] + '  ' + self.participant.vars['urndraws1_g1_2']  + '  ' +  self.participant.vars['urndraws1_g1_3']
+                self.participant.vars['urndraws2_g1'] = self.participant.vars['urndraws2_g1_1'] + '  ' + self.participant.vars['urndraws2_g1_2']  + '  ' +  self.participant.vars['urndraws2_g1_3']
+                self.participant.vars['urndraws3_g1'] = self.participant.vars['urndraws3_g1_1'] + '  ' + self.participant.vars['urndraws3_g1_2']  + '  ' +  self.participant.vars['urndraws3_g1_3']
                 self.participant.vars['option_1_g1'] = self.participant.vars['option_1_g1_1'] + self.participant.vars['option_1_g1_2'] + self.participant.vars['option_1_g1_3']
                 self.participant.vars['option_2_g1'] = self.participant.vars['option_2_g1_1'] + self.participant.vars['option_2_g1_2'] + self.participant.vars['option_2_g1_3']
                 self.participant.vars['option_3_g1'] = self.participant.vars['option_3_g1_1'] + self.participant.vars['option_3_g1_2'] + self.participant.vars['option_3_g1_3']
