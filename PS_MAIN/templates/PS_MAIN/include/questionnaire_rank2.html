@@ -1,0 +1,330 @@
+{% load otree %}
+
+
+
+{% load otree %}
+
+
+
+<p>Now, please take a look at the following second set of options:</p>
+
+
+{% if draw == 'TSR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 3 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 2 &nbsp;</td>
+            <td class="td"> 20 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0 </td>
+            <td class="td"> -10</td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td">  8 &nbsp;</td>
+            <td class="td"> 60 &nbsp;</td>
+            <td class="td"> 3 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5 &nbsp;</td>
+            <td class="td"> 3 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 20 &nbsp;</td>
+            <td class="td"> 2 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td">-10</td>
+            <td class="td"> 0 </td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 60 &nbsp;</td>
+            <td class="td">  8 &nbsp;</td>
+            <td class="td"> 3 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 3 &nbsp;</td>
+            <td class="td"> 5 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 2 &nbsp;</td>
+            <td class="td"> 20 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3</td>
+            <td class="td"> 0 </td>
+            <td class="td">-10 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 &nbsp;</td>
+            <td class="td">  8 &nbsp;</td>
+            <td class="td"> 60 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'TRS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5 &nbsp;</td>
+            <td class="td"> 3 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 2 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 20 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0 </td>
+            <td class="td"> 3</td>
+            <td class="td">-10 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td">  8 &nbsp;</td>
+            <td class="td"> 3 &nbsp;</td>
+            <td class="td"> 60 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 3 &nbsp;</td>
+            <td class="td"> 5 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 20 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 2 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td">-10 </td>
+            <td class="td"> 3</td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 60 &nbsp;</td>
+            <td class="td"> 3 &nbsp;</td>
+            <td class="td">  8 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/dyUQSwI.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/lI5fdIP.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/T8OqWry.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 3 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 20 &nbsp;</td>
+            <td class="td"> 2 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 </td>
+            <td class="td">-10</td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 &nbsp;</td>
+            <td class="td"> 60 &nbsp;</td>
+            <td class="td"> 8 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% endif %}
+
+
+
+<p>If you had to make a decision on how to allocate three points between these options, how would you rank the four information signals with respect to their importance for you investment decision?</p>
+<p>Please rank the information signals down below.</p>
+
+
+
+<br>
+<div class="card">
+    <div class="card-header">
+        Please rank the four information signals according to their importance. <br>
+        <i>Please enter a "1" for the signal that influenced your decisions the most, a "2" for the signal that influenced your decisions the second most, and so on.</i>.
+    </div>
+    <div class="card-body">
+        {% formfield player.q_rank21 %}
+        {% formfield player.q_rank22 %}
+        {% formfield player.q_rank24 %}
+        {% formfield player.q_rank25 %}
+
+
+    </div>
+</div>

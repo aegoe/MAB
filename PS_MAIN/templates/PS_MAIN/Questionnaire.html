@@ -22,9 +22,15 @@
     {% include 'PS_MAIN/include/questionnaire_3.html' %}
 
 {% elif player.questionnaire_page == 5 %}
-    {% include 'PS_MAIN/include/questionnaire_epo.html' %}
+    {% include 'PS_MAIN/include/questionnaire_rank1.html' %}
 
 {% elif player.questionnaire_page == 6 %}
+    {% include 'PS_MAIN/include/questionnaire_rank2.html' %}
+
+{% elif player.questionnaire_page == 7 %}
+    {% include 'PS_MAIN/include/questionnaire_epo.html' %}
+
+{% elif player.questionnaire_page == 8 %}
     {% include 'PS_MAIN/include/questionnaire_socio_1.html' %}
 
 {% endif %}

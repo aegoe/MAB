@@ -2544,9 +2544,13 @@ class Questionnaire(Page):
         elif self.player.questionnaire_page == 4 and not self.participant.vars['choice']:
             return ['q_mean_simultan', 'q_sd_simultan', 'q_ld_simultan', 'q_hd_simultan', 'q_descr_exp', 'q_descr_exp2', 'q_descr_exp3','q_descr_exp4',]
         elif self.player.questionnaire_page == 5:
+            return ['q_rank', 'q_rank2', 'q_rank3','q_rank4']
+        elif self.player.questionnaire_page == 6:
+            return ['q_rank21', 'q_rank22', 'q_rank23','q_rank24']
+        elif self.player.questionnaire_page == 7:
             epo = [f'q_epo_{i}' for i in range(1, 14)]
             return epo
-        elif self.player.questionnaire_page == 6:
+        elif self.player.questionnaire_page == 8:
             return ['q_year', 'q_sex', 'q_employment', 'q_education',
                     'q_ethnicity']
 
@@ -2573,6 +2577,26 @@ class Questionnaire(Page):
             print(list_rank_duplicates)
 
             for v in list_rank_duplicates.values():
+                if v > 1:
+                    return 'You have to use all four numbers. Please rank the information signals according to their influence on your decisions in this task'
+
+        if self.player.questionnaire_page == 5:
+            list_rank_2 = [values['q_rank'],values['q_rank2'],values['q_rank3'],values['q_rank4']]
+            list_rank_duplicates_2 = Counter(list_rank_2)
+
+            print(list_rank_duplicates_2)
+
+            for v in list_rank_duplicates_2.values():
+                if v > 1:
+                    return 'You have to use all four numbers. Please rank the information signals according to their influence on your decisions in this task'
+
+        if self.player.questionnaire_page == 6:
+            list_rank_3 = [values['q_rank21'],values['q_rank22'],values['q_rank23'],values['q_rank24']]
+            list_rank_duplicates_3 = Counter(list_rank_3)
+
+            print(list_rank_duplicates_3)
+
+            for v in list_rank_duplicates_3.values():
                 if v > 1:
                     return 'You have to use all four numbers. Please rank the information signals according to their influence on your decisions in this task'
 
