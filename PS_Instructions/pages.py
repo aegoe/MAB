@@ -37,7 +37,7 @@ class Device(Page):
             self.player.sampling = self.participant.vars['sampling'] = self.session.config['sampling']
 
             treatments = ['choice', 'no_choice']
-            weights_3 = [0.5, 0.5]
+            weights_3 = [0.6, 0.4]
             draw_3 = choice(treatments, 1, p=weights_3)
             self.participant.vars['draw_2'] = draw_3[0]
             if draw_3[0] == 'choice':
