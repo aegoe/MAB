@@ -318,7 +318,6 @@ class DecisionA1(Page):
             data_counts['count_2'] = count_2
             data_counts['count_3'] = count_3
 
-
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
                     if k == '0':

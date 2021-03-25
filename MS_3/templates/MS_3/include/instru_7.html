@@ -1,0 +1,34 @@
+{% load otree %}
+{% block title %}
+<h4>Total Earnings</h4>
+<br>
+
+{% endblock %}
+
+{% block content %}
+
+<p> Your total earnings at the end of this HIT are composed of the coins drawn from your final investment choice in the decision stage
+    and, if applicable, your sampling costs.</p>
+
+<p> After filling out the questionnaire, all ECU from your investments in the decision stage and possibly accruing sampling costs will be summed up and their value
+    will be converted into Dollars.
+</p>
+
+<p> Click on the button below to proceed to the comprehension questions. </p>
+
+
+<!--{% if not choice %}-->
+<!--<p>Once you have made your choice, you will receive feedback about the payoff from your investment. This will be shown on a separate feedback screen upon submitting your choice. </p>-->
+
+<!--{% elif choice %}-->
+<!--<p> Once you made three consecutive choices, you will receive feedback about the payoff from your investment. Thus, you will-->
+<!--receive feedback after the third and after the sixth round. This will be shown on a separate feedback screen.</p>-->
+
+<!--{% endif %}-->
+
+
+<br>
+
+<button value="True" id="proceed" class="btn btn-primary btn-large">Proceed</button>
+{% endblock %}
+
