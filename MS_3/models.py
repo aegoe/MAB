@@ -13,7 +13,7 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'Pilot_Descr'
+    name_in_url = 'MS_3'
     num_rounds = 80
     num_rounds_choice = 3
     num_rounds_points = 1

@@ -13,6 +13,8 @@ import time
 from functools import reduce
 from collections import Counter
 import string
+from decimal import Decimal, ROUND_HALF_UP
+
 
 
 ########################################################################################################################
@@ -28,7 +30,7 @@ class Device(Page):
 
     def before_next_page(self):
 
-        if self.session.config['name'] == 'MS_3':
+        if self.session.config['name'] == 'MS3':
             letters_and_digits = string.ascii_letters + string.digits
             result_str = ''.join((random.choice(letters_and_digits) for i in range(7))) + str(random.randint(1, 8))
             self.player.completion_code = result_str
@@ -39,9 +41,9 @@ class Device(Page):
             treatments = ['choice', 'no_choice']
             weights_3 = [0.5, 0.5]
             draw_3 = choice(treatments, 1, p=weights_3)
-            self.participant.vars['draw_2'] = draw_3[0]
+            self.participant.vars['draw_3'] = draw_3[0]
             if draw_3[0] == 'choice':
-                self.player.feedback_3 = self.participant.vars['feedback_3'] = True
+                self.player.feedback_3 = self.participant.vars['feedback_3'] = False
                 self.player.choice = self.participant.vars['choice'] = True
             else:
                 self.player.feedback_3 = self.participant.vars['feedback_3'] = False
@@ -78,6 +80,10 @@ class AttentionCheck(Page):
     form_model = 'player'
     form_fields = ['attention_check_1', 'attention_check_2']
 
+    def vars_for_template(self):
+        return{
+            'choice': self.participant.vars['choice']
+        }
 
 
 
@@ -111,7 +117,6 @@ class InstruStart(Page):
                 'endowment_choice': Constants.endowment_choice,
                 'endowment_points': Constants.endowment_points,
                 'draw': self.participant.vars['draw'],
-                'variance': self.participant.vars['variance'],
                 'feedback_3': self.participant.vars['feedback_3'],
 
                 }
@@ -137,17 +142,16 @@ class ComprehensionQuestions(Page):
                 'safe': self.participant.vars['safe'],
                 'endowment_choice': Constants.endowment_choice,
                 'endowment_points': Constants.endowment_points,
-                'variance': self.participant.vars['variance'],
                 }
 
     def get_form_fields(self):
-        if self.participant.vars['choice'] and not self.participant.vars['variance']:
+        if self.participant.vars['choice'] :
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_3','cq_MS2_1']
-        elif not self.participant.vars['choice'] and not self.participant.vars['variance']:
+        elif not self.participant.vars['choice']:
                 return ['cq_Pilot_2', 'cq_Pilot_3_simdesc', 'cq_Pilot_4', 'cq_MS2_1']
-        elif self.participant.vars['choice'] and  self.participant.vars['variance']:
+        elif self.participant.vars['choice']:
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_5']
-        elif not self.participant.vars['choice'] and self.participant.vars['variance']:
+        elif not self.participant.vars['choice']:
             return ['cq_Pilot_1', 'cq_Pilot_2', 'cq_Pilot_4', 'cq_Pilot_5']
 
     def before_next_page(self):
@@ -255,16 +259,12 @@ class Decision(Page):
                'endowment_points': Constants.endowment_points,
                'safe': self.participant.vars['safe'],
                'draw': self.participant.vars['draw'],
-               'sampling': self.participant.vars['sampling'],
                'payoff': self.participant.payoff,
-               'points_sampling': self.participant.vars['points_sampling'],
-               'sampling_round': self.participant.vars['sampling_round'],
-
                }
 
     def before_next_page(self):
 
-        if self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
+        if self.participant.vars['choice'] and not self.participant.vars['safe']:
 
             Urn_1 = ['3', '4', '5', '6', '7', '8', '9', '10']
             Urn_2 = ['0', '1', '2', '3', '20', '25', '35', '40']
@@ -434,7 +434,7 @@ class Decision(Page):
                 self.participant.vars['payoff_3_a'] = self.participant.vars['payoff_3_a_1'] + self.participant.vars[
                     'payoff_3_a_2'] + self.participant.vars['payoff_3_a_3']
 
-        elif not self.participant.vars['choice'] and not self.participant.vars['safe'] and not self.participant.vars['variance']:
+        elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
 
             Urn_1 = ['3', '4', '5', '6', '7', '8', '9', '10']
             Urn_2 = ['0', '1', '2', '3', '20', '25', '35', '40']
@@ -569,7 +569,7 @@ class SamplingTransition(Page):
 class Sampling(Page):
     form_model = 'player'
     def is_displayed(self):
-        return self.round_number <= 60
+        return self.round_number <= 10
 
     def get_form_fields(self):
         return ['option_1_samp', 'option_2_samp', 'option_3_samp']
@@ -600,9 +600,9 @@ class Sampling(Page):
         weights_2 = [0.25, 0.25, 0.15, 0.15, 0.05, 0.05, 0.05, 0.05]
         weights_3 = [1]
 
-        draws_1 = random.choices(Urn_1, weights=weights_1, k=self.player.option_1)
-        draws_2 = random.choices(Urn_2, weights=weights_2, k=self.player.option_2)
-        draws_3 = random.choices(Urn_3, weights=weights_3, k=self.player.option_3)
+        draws_1 = random.choices(Urn_1, weights=weights_1, k=self.player.option_1_samp)
+        draws_2 = random.choices(Urn_2, weights=weights_2, k=self.player.option_2_samp)
+        draws_3 = random.choices(Urn_3, weights=weights_3, k=self.player.option_3_samp)
 
         draws_1_str = str(draws_1)[1:-1]
         draws_2_str = str(draws_2)[1:-1]
@@ -692,32 +692,41 @@ class Feedback_Sampling(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.round_number <= 60
+        return self.round_number <= 10
 
     def vars_for_template(self):
         return {'choice': self.participant.vars['choice'],
                 'draw': self.participant.vars['draw'],
-                'option_1_samp': self.player.option_1_samp,
-                'option_2_samp': self.player.option_2_samp,
-                'option_3_samp': self.player.option_3_samp,
+                #'option_1_samp': self.player.option_1_samp,
+                #'option_2_samp': self.player.option_2_samp,
+                #'option_3_samp': self.player.option_3_samp,
                 'urn_draws_1_samp': self.player.urn_draws_1_samp,
                 'urn_draws_2_samp': self.player.urn_draws_2_samp,
                 'urn_draws_3_samp': self.player.urn_draws_3_samp,
                 'payoff_1_samp': self.player.payoff_1_samp,
                 'payoff_2_samp': self.player.payoff_2_samp,
                 'payoff_3_samp': self.player.payoff_3_samp,
-                },
+                'payoff': self.player.payoff,
+
+                }
+
+    def before_next_page(self):
+        if self.player.round_number == 10:
+            payoff = int(self.participant.payoff)
+            self.player.endowment_after_sampling = (payoff/100)
+            self.player.endowment_after_sampling = self.player.endowment_after_sampling.to_integral_value(round=ROUND_HALF_UP)
 
 
 class Decision2Transition(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.round_number == 60
+        return self.round_number == 10
 
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
                'payoff': self.participant.payoff,
+               'endowment_samp': self.player.endowment_after_sampling
                }
 
     def before_next_page(self):
@@ -732,14 +741,7 @@ class Decision2(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        if self.participant.vars['choice'] and not self.participant.vars['sampling']:
-            return self.round_number <= Constants.num_rounds_choice
-        elif not self.participant.vars['choice'] and not self.participant.vars['sampling']:
-            return self.round_number <= Constants.num_rounds_points
-        elif self.participant.vars['choice'] and self.participant.vars['sampling']:
-            return self.round_number >= self.participant.vars['sampling_round'] and self.round_number <= (self.participant.vars['sampling_round'] + Constants.num_rounds_choice -1)
-        elif not self.participant.vars['choice'] and self.participant.vars['sampling']:
-            return self.round_number >=  self.participant.vars['sampling_round']  and self.round_number <= (self.participant.vars['sampling_round'] + Constants.num_rounds_points -1)
+        return self.round_number == 10
 
     def get_form_fields(self):
         if self.participant.vars['choice'] and not self.participant.vars['safe']:
@@ -1051,10 +1053,8 @@ class Questionnaire(Page):
 
 
     def is_displayed(self):
-        if self.participant.vars['choice']:
-            return self.round_number == (self.participant.vars['sampling_round'] + Constants.num_rounds_choice -1)
-        else:
-            return self.round_number == (self.participant.vars['sampling_round'])
+        return self.round_number == 10
+
 
     def vars_for_template(self):
         return{'questionnaire_page': self.player.questionnaire_page,
@@ -1068,90 +1068,38 @@ class Questionnaire(Page):
     def before_next_page(self):
         self.player.questionnaire_page += 1
 
+        if self.player.questionnaire_page == 5:
+            self.player.payoff_a = self.participant.vars['payoff_a1']
+            self.player.payoff_b = self.participant.vars['payoff_b1']
+            self.player.urn_draws_1_a = self.participant.vars['urndraws1_a1']
+            self.player.urn_draws_1_b = self.participant.vars['urndraws1_b1']
+            self.player.urn_draws_2_a = self.participant.vars['urndraws2_a1']
+            self.player.urn_draws_2_b = self.participant.vars['urndraws2_b1']
+            self.player.urn_draws_3_a = self.participant.vars['urndraws3_a1']
+            self.player.urn_draws_3_b = self.participant.vars['urndraws3_b1']
+            self.player.option_1_a = self.participant.vars['option_1_a1']
+            self.player.option_1_b = self.participant.vars['option_1_b1']
+            self.player.option_2_a = self.participant.vars['option_2_a1']
+            self.player.option_2_b = self.participant.vars['option_2_b1']
+            self.player.option_3_a = self.participant.vars['option_3_a1']
+            self.player.option_3_b = self.participant.vars['option_3_b1']
+            self.player.payoff_1_a = self.participant.vars['payoff_1_a']
+            self.player.payoff_1_b = self.participant.vars['payoff_1_b']
+            self.player.payoff_2_a = self.participant.vars['payoff_2_a']
+            self.player.payoff_2_b = self.participant.vars['payoff_2_b']
+            self.player.payoff_3_a = self.participant.vars['payoff_3_a']
+            self.player.payoff_3_b = self.participant.vars['payoff_3_b']
+
         if self.player.questionnaire_page == 6:
-            self.player.smplrnd = self.participant.vars['sampling_round']
-            if self.participant.vars['choice']:
-                if self.participant.vars['points_sampling'] == 0:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session)
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee()
+            self.participant.payoff = self.player.payoff + self.player.payoff_a
 
-                elif self.participant.vars['points_sampling'] > 0 and self.participant.vars['points_sampling'] <= 15:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.02
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.02
-
-                elif self.participant.vars['points_sampling'] > 15 and self.participant.vars['points_sampling'] <= 30:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.04
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.04
-
-                elif self.participant.vars['points_sampling'] > 30 and self.participant.vars['points_sampling'] <= 45:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.06
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.06
-
-                elif self.participant.vars['points_sampling'] > 45 and self.participant.vars['points_sampling'] <= 60:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.06
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.06
-
-                elif self.participant.vars['points_sampling'] > 60 and self.participant.vars['points_sampling'] <= 75:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.08
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.08
-
-                elif self.participant.vars['points_sampling'] > 75 and self.participant.vars['points_sampling'] <= 90:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.1
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.1
-
-                elif self.participant.vars['points_sampling'] > 90 and self.participant.vars['points_sampling'] <= 105:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.12
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.12
-
-                elif self.participant.vars['points_sampling'] > 105:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.14
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.14
-
-            elif not self.participant.vars['choice']:
-                if self.participant.vars['points_sampling'] == 0:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session)
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee()
-
-                elif self.participant.vars['points_sampling'] > 0 and self.participant.vars['points_sampling'] <= 5:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.02
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.02
-
-                elif self.participant.vars['points_sampling'] > 5 and self.participant.vars['points_sampling'] <= 10:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.04
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.04
-
-                elif self.participant.vars['points_sampling'] > 10 and self.participant.vars['points_sampling'] <= 15:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.06
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.06
-
-                elif self.participant.vars['points_sampling'] > 15 and self.participant.vars['points_sampling'] <= 20:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.06
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.06
-
-                elif self.participant.vars['points_sampling'] > 20 and self.participant.vars['points_sampling'] <= 25:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.08
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.08
-
-                elif self.participant.vars['points_sampling'] > 25 and self.participant.vars['points_sampling'] <= 30:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.1
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.1
-
-                elif self.participant.vars['points_sampling'] > 30 and self.participant.vars['points_sampling'] <= 35:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.12
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.12
-
-                elif self.participant.vars['points_sampling'] > 35:
-                    self.participant.vars['bonus'] = self.participant.payoff.to_real_world_currency(self.session) - 0.14
-                    self.participant.vars['total_payoff'] = self.participant.payoff_plus_participation_fee() - 0.14
 
 
 
 class FinalInfo(Page):
     def is_displayed(self):
-        if self.participant.vars['choice']:
-            return self.round_number == (self.participant.vars['sampling_round'] + Constants.num_rounds_choice - 1)
-        else:
-            return self.round_number == (self.participant.vars['sampling_round'])
+        return self.round_number == 10
+
 
     def vars_for_template(self):
         return {'participation_fee': self.session.config['participation_fee'],
@@ -1179,6 +1127,15 @@ page_sequence = [
     PriorsTransition,
     Priors,
     Decision,
+    Decision,
+    Decision,
+    SamplingTransition,
+    Sampling,
+    Feedback_Sampling,
+    Decision2Transition,
+    Decision2,
+    Decision2,
+    Decision2,
     Questionnaire,
     Questionnaire,
     Questionnaire,

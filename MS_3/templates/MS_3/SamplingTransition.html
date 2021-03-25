@@ -3,27 +3,20 @@
 
 {% block title %}
 <div class="page-header">
-    <p> You will now decide whether to start sampling and experience the options yourself, or skip directly to the main decision</p>
+    <p> Transition</p>
 </div>
 {% endblock %}
 
 {% block content %}
 
-<p>If you decide to start sampling, you will be able to draw as many coins as you like from each option. </p>
+<p> You will now start the sampling phase. You will make 60 decisions on how to allocate one point between the three options. After each decision, you receive feedback on your decision. </p>
 
-<p>If you decide to skip to the main decision, you will not receive any additional information.</p>
+<p> The payoff from the next 60 rounds determines how many points you will be allowed to invest in the second investment decision.</p>
+
+<p> You can also use the following 60 rounds to learn more about the options. </p>
 
 <br>
-
-<div class="card">
-  <div class="card-header">
-      <b> Do you want to experience the different options yourself and gather more information? </b>
-  </div>
-<div class="card-body">
-<button name="end_button" value="False" class="btn-primary btn-lg">Yes, I want to start sampling.</button>
-<button name="end_button" value="True" class="btn-success btn-lg">No, take me to the main decision.</button>
-  </div>
-</div>
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Proceed to the sampling stage</button>
 
 
 {% endblock %}

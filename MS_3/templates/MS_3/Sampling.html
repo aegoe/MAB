@@ -3,7 +3,7 @@
 
 {% block title %}
 <div class="page-header">
-    <p> Main Decision</p>
+    <p> Sampling </p>
 </div>
 {% endblock %}
 
@@ -32,9 +32,9 @@
             </div>
         </div>
 
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_3_samp %}
 
 
  </div>
@@ -42,9 +42,8 @@
 
 <div class="footer">
 
-            You will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %}
+            You will use your 1 point to draw from one option. Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+
 </div>
 
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
@@ -376,18 +375,16 @@
             </div>
         </div>
 
-        {% formfield player.option_2 %}
-        {% formfield player.option_1 %}
-        {% formfield player.option_3 %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
 
 
  </div>
 
        <div class="footer">
+            You will use your 1 point to draw from one option. Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
 
-            You will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %}
         </div>
 
 
@@ -720,9 +717,9 @@
             </div>
         </div>
 
-        {% formfield player.option_2 %}
-        {% formfield player.option_1 %}
-        {% formfield player.option_3 %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
 
 
  </div>
@@ -751,18 +748,16 @@
         </div>
 
 
-        {% formfield player.option_3 %}
-        {% formfield player.option_1 %}
-        {% formfield player.option_2 %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_2_samp %}
 
 
  </div>
 
        <div class="footer">
 
-            You will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %}
+            You will use your 1 point to draw from one option. Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
 
 
         </div>
@@ -1098,9 +1093,9 @@
             </div>
         </div>
 
-        {% formfield player.option_2 %}
-        {% formfield player.option_1 %}
-        {% formfield player.option_3 %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
 
 
  </div>
@@ -1130,18 +1125,17 @@
             </div>
         </div>
 
-        {% formfield player.option_1 %}
-        {% formfield player.option_3 %}
-        {% formfield player.option_2 %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_2_samp %}
 
 
  </div>
 
        <div class="footer">
 
-            You will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %}
+            You will use your 1 point to draw from one option. Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+
         </div>
 
 
@@ -1475,9 +1469,9 @@
             </div>
         </div>
 
-        {% formfield player.option_2 %}
-        {% formfield player.option_1 %}
-        {% formfield player.option_3 %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
 
 
  </div>
@@ -1506,18 +1500,16 @@
         </div>
 
 
-        {% formfield player.option_2 %}
-        {% formfield player.option_3 %}
-        {% formfield player.option_1 %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_1_samp %}
 
 
  </div>
 
        <div class="footer">
+            You will use your 1 point to draw from one option. Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
 
-            You will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %}
         </div>
 
 
@@ -1851,9 +1843,9 @@
             </div>
         </div>
 
-        {% formfield player.option_2 %}
-        {% formfield player.option_1 %}
-        {% formfield player.option_3 %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
 
 
  </div>
@@ -1882,18 +1874,16 @@
         </div>
 
 
-        {% formfield player.option_3 %}
-        {% formfield player.option_2 %}
-        {% formfield player.option_1 %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
 
 
  </div>
 
        <div class="footer">
+            You will use your 1 point to draw from one option. Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
 
-            You will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
-           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
-           equals one draw.{% endif %}
         </div>
 
 
@@ -2226,9 +2216,9 @@
             </div>
         </div>
 
-        {% formfield player.option_2 %}
-        {% formfield player.option_1 %}
-        {% formfield player.option_3 %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
 
 
  </div>

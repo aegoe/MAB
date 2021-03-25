@@ -50,10 +50,10 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
     {
-        'name': 'MAB_MainStudy_Description',
-        'display_name': "PS1",
+        'name': 'MS3',
+        'display_name': "MS3",
         'num_demo_participants': 1,
-        'app_sequence': ['Pilot_Descr'],
+        'app_sequence': ['MS_3'],
         'choice': False,
         'safe': False,
         'testing': False,

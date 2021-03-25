@@ -46,8 +46,6 @@
     </div>
 
 
-{% endif %}
-
 
 {% elif draw == 'STR' %}
 
@@ -84,7 +82,6 @@
     </div>
 
 
-{% endif %}
 
 {% elif draw == 'RTS' %}
 
@@ -122,7 +119,6 @@
 
 
 
-{% endif %}
 
 {% elif draw == 'TRS' %}
 
@@ -160,8 +156,6 @@
 
 
 
-{% endif %}
-
 {% elif draw == 'SRT' %}
 
 
@@ -196,8 +190,6 @@
     </table>
     </div>
 
-
-{% endif %}
 
 {% elif draw == 'RST' %}
 
@@ -234,14 +226,16 @@
     </div>
 
 {% endif %}
-{% endif %}
 
 
 <br>
 <button class="otree-btn-next btn btn-primary next-button otree-next-button">{{player.payoff}}</button>
 
+
+{% endblock %}
+
 {% block styles %}
     <style type="text/css">
-        {% include 'Pilot_Descr/css/feedback.css' %}
+        {% include 'MS_3/css/feedback.css' %}
     </style>
 {% endblock %}
