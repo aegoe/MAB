@@ -60,6 +60,7 @@ SESSION_CONFIGS = [
         'variance': False,
         'sampling': False,
         'feedback_3': False,
+        'incentive': False,
 
     },
     # {

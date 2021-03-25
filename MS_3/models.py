@@ -22,7 +22,7 @@ class Constants(BaseConstants):
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
-    num_priors = 100
+    num_priors = 20
 
     safe_option = 6
 
@@ -40,6 +40,7 @@ class Player(BasePlayer):
     feedback_3 = models.BooleanField()
     variance = models.BooleanField()
     endowment = models.IntegerField()
+    incentive = models.BooleanField()
     sampling = models.BooleanField()
     option_1_samp = models.IntegerField(initial=0, label="Option T")
     option_2_samp = models.IntegerField(initial=0, label="Option c")
@@ -76,17 +77,41 @@ class Player(BasePlayer):
     sampling_round = models.IntegerField(initial=1)
     points_sampling = models.IntegerField(initial=0)
     decision_1_page = models.IntegerField(initial=1)
+    decision_2_page = models.IntegerField(initial=1)
+
+    payoff_a = models.CurrencyField()
+    payoff_b = models.CurrencyField()
+    urn_draws_1_a = models.StringField()
+    urn_draws_2_a = models.StringField()
+    urn_draws_3_a = models.StringField()
+    urn_draws_1_b = models.StringField()
+    urn_draws_2_b = models.StringField()
+    urn_draws_3_b = models.StringField()
+    option_1_a = models.IntegerField()
+    option_2_a = models.IntegerField()
+    option_3_a = models.IntegerField()
+    option_1_b = models.IntegerField()
+    option_2_b = models.IntegerField()
+    option_3_b = models.IntegerField()
+    payoff_1_a = models.IntegerField()
+    payoff_2_a = models.IntegerField()
+    payoff_3_a = models.IntegerField()
+    payoff_1_b = models.IntegerField()
+    payoff_2_b = models.IntegerField()
+    payoff_3_b = models.IntegerField()
+
+
 
     #################################
     # Comprehension Questions #######
     #################################
 
-    cq_Pilot_1 = models.IntegerField(
+    cq1_MS3 = models.IntegerField(
         choices=[
-            [9, 'I am not sure'],
+            [9, 'No, options change between stages'],
             [1, 'Yes'],
-            [99, 'No'],
-            [999, 'Yes, but there is an additional option after 2 rounds'],
+            [99, 'No, options change for the sampling phase'],
+            [999, 'Yes, but there is an additional option in the last investment decision'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
@@ -94,12 +119,12 @@ class Player(BasePlayer):
         initial=0
     )
 
-    cq_Pilot_2 = models.IntegerField(
+    cq2_MS3 = models.IntegerField(
         choices=[
-            [1, 'each point invested, i.e. each draw, during the decision stage and possibly accruing sampling costs'],
-            [9, 'coins drawn in the sampling stage'],
+            [999, 'each point invested, i.e. each draw, across all stages and rounds'],
+            [9, 'each point invested in the first, but not the second investment decision'],
             [99, 'my performance in comparison to other workers'],
-            [999, 'only my final decision'],
+            [1, 'each point invested in the first and the second investment decision'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
@@ -107,46 +132,33 @@ class Player(BasePlayer):
         initial=0
     )
 
-    cq_Pilot_3 = models.IntegerField(
+    cq3_MS3 = models.IntegerField(
         choices=[
             [999, 'No, I have to choose blindly'],
             [9, 'Yes, I will see exactly how much each option is worth beforehand'],
             [99, 'Yes, I won\'t receive any prior statistics but will be able to sample through the options beforehand'],
-            [1, 'Yes, I will see information from 100 prior draws for each option and can further sample through the options beforehand'],
+            [1, 'Yes, I will see information from 20 prior draws for each option'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
-        label='In this HIT you repeatedly choose between a number of options. Will you have any prior information about the value of these options?',
+        label='In this HIT you repeatedly choose between a number of options. In the first investment decision, will you have any prior information about the value of these options?',
         initial=0
     )
 
-    cq_Pilot_3_simdesc = models.IntegerField(
+    cq4_MS3 = models.IntegerField(
         choices=[
             [999, 'No, I have to choose blindly'],
-            [9, 'Yes, I will see exactly how much each option is worth beforehand'],
-            [99, 'Yes, I won\'t receive any prior statistics but will be able to sample through the options beforehand'],
-            [1, 'Yes, I will see information from 100 prior draws for each option and can further sample through the options beforehand'],
+            [9, 'Yes, for my second investment decision, I will see exactly how much each option is worth beforehand'],
+            [1, 'Yes, I will have information from 20 prior draws and the information gathered during the sampling phase'],
+            [99, 'Yes, for my second investment decision, I will have the same information as I did for the first investment decision'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
-        label='In this HIT you will decide how to allocate three points between three options. Will you have any prior information about the value of these options?',
+        label='In this HIT you repeatedly choose between a number of options. In the second investment decision, will you have any prior information about the value of these options?',
         initial=0
     )
         
-    cq_Pilot_4 = models.IntegerField(
-        choices=[
-            [999, 'need to invest all three points into one option'],
-            [9, 'can not invest more than two points into one option'],
-            [1, 'can choose to invest your three points however you want'],
-            [99, 'can save points for later rounds'],
-        ],
-        widget=widgets.RadioSelect,
-        blank=False,
-        label='In each round, you',
-        initial=0
-    )
-
-    cq_Pilot_5 = models.IntegerField(
+    cq5_MS3 = models.IntegerField(
         choices=[
             [999, 'contain the same coins'],
             [9, 'return a constant value'],
@@ -155,20 +167,7 @@ class Player(BasePlayer):
         ],
         widget=widgets.RadioSelect,
         blank=False,
-        label='All options',
-        initial=0
-    )
-
-    cq_MS2_1 = models.IntegerField(
-        choices=[
-            [999, 'switch between stages whenever you want'],
-            [1, 'sample all three options as long as you want'],
-            [99, 'sample only for 15 rounds'],
-            [9, 'cannot gather additional information about the options through your own experience'],
-        ],
-        widget=widgets.RadioSelect,
-        blank=False,
-        label='In this HIT, you can',
+        label='Options',
         initial=0
     )
 
