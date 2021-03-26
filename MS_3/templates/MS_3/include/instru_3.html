@@ -1,14 +1,13 @@
 {% load otree %}
 {% block title %}
-<h4>Stage "ONE"</h4>
+<h4>The Stages Stage "ONE"</h4>
 <br>
 {% endblock %}
 
 {% block content %}
-<p> In both stages, you choose between different options, as shown in the image below. </p>
 
-<p> Bags differ in the composition of coins they contain. At the beginning of stage "ONE", you will see summary statistics from {{Constants.num_priors}} prior
-    draws from each of the three options. You can use this data to inform your following choices.</p>
+<p> At the beginning of stage "ONE", you will see summary statistics from {{Constants.num_priors}} prior draws from each of the three options. 
+    You can use this data to inform your following choices.</p>
     
 <p> At the beginning of {% if not choice %} both rounds{% elif choice %} each round{% endif %}, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}.
 You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
@@ -38,7 +37,8 @@ points {% endif %} must be invested in each round. </p>
     
 </p>
 
-
+<p>  At the beginning of the task, you will see summary statistics from {{Constants.num_priors}} prior
+draws from each of the three options. You can use this data to inform your subsequent choices in the sampling as well as the decision stage.</p>
 
 <br>
 
