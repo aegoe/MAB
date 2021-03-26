@@ -12,6 +12,28 @@ Each option is represented by a money bag, as shown in the image below. You choo
 </p>
 
 
+{% if choice %}
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/ckJN7lt.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+{% elif not choice %}
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/yUMW7tL.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+{% endif %}
+
 
 
 <!--<p> This HIT comprises <b>two stages</b> and you will repeatedly choose between different options. In the first stage (<b>sampling stage</b>),-->
