@@ -18,21 +18,14 @@
     will be informed about your bonus payoff.  
 </p>
 
-<h6> Stage "ONE" <\h6>
-<p> At the beginning of stage "ONE", you will see summary statistics from {{Constants.num_priors}} prior draws from each of the three options. 
-    You can use this data to inform your following investment decisions.</p>
-    
-<p> In a next step, you will make your % if choice %} three consecutive investment decisions {% elif not choice %} investment decision {% endif %}.
-    You receive {% if choice %} one point separately for each investment decision {% elif not choice %} three points {% endif %}.
-You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
-three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three 
-points {% endif %} must be invested. </p>
    
+    
     <h6>Stage "TWO" <\h6>
+ <p> In order to learn more about the options, stage "TWO" consists of 100 rounds, where you can draw 
+     more coins from each option by investing points.
+    These coins will not affect your final payoff, but they will give you additional information about the potential value of each option.
     
- <p>In order to learn more about the option, you 
-    
-At the beginning of each sampling round, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}. 
+Again, at the beginning of each sampling round, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}. 
 
 You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all 
 
