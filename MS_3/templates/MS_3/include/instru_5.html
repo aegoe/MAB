@@ -13,10 +13,19 @@
      
     
    <p>At the beginning of each round, you receive one point. You can invest this point freely between all three options, by directly clicking on
-       the button below the option. Points cannot be accumulated and therefore, each point must be invested in each round. After 
+       the button below the option. Points cannot be accumulated and therefore, each point must be invested in each round. Each round after 
      submitting your sampling investment, a feedback screen informs you about the value of the coin drawn (see image below).</p>
      
-     <p> After you have finished all 100 sampling round, you mak  </p>
+     <p> After you have finished all 100 sampling rounds, you make another {% if choice %} three consecutive investment decisions 
+       {% elif not choice %} investment decision {% endif %}. As in stage "ONE", you receive {% if choice %} one point separately for each investment 
+       decision {% elif not choice %} three points {% endif %}.
+You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all 
+three options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three 
+points {% endif %} must be invested.</p>
+   
+   <p> 
+
+    
 
 
 <!--<p> Each round after submitting your sampling investment, a feedback screen summarizes the number of draws per option and informs you about the respective values of each coin drawn. </p>
