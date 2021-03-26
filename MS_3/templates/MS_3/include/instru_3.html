@@ -1,23 +1,36 @@
 {% load otree %}
 {% block title %}
-<h4>The Stages Stage "ONE"</h4>
+<h4>The Stages</h4>
 <br>
 {% endblock %}
 
 {% block content %}
 
+<p> At the beginning of stage "ONE", you will learn about the options by observing provided information. Afterwards, you make {% if choice %} three consecutive 
+    investment decisions that determine {% elif not choice %} one investment decision that determines {% endif %} your bonus
+    payoff. Stage "ONE" is than finsihed and you will directly be forwarded to stage "TWO".
+     </p>
+
+<p> At stage "TWO", you will be able to learn more about the options, you already know from stage "ONE", by sampling through them. After you have done sampling, 
+    again, you will make another {% if choice %} three consecutive investment decisions that determine 
+    {% elif not choice %} investment decision that determines {% endif %} your bonus payoff. 
+   Afterwards, you will receive feedback about your investment decisions from stage "ONE" and "TWO" and 
+    will be informed about your bonus payoff.  
+</p>
+
+<h6> Stage "ONE" <\h6>
 <p> At the beginning of stage "ONE", you will see summary statistics from {{Constants.num_priors}} prior draws from each of the three options. 
-    You can use this data to inform your following choices.</p>
+    You can use this data to inform your following investment decisions.</p>
     
-<p> At the beginning of {% if not choice %} both rounds{% elif choice %} each round{% endif %}, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}.
+<p> In a next step, you will make your % if choice %} three consecutive investment decisions {% elif not choice %} investment decision {% endif %}.
+    You receive {% if choice %} one point separately for each investment decision {% elif not choice %} three points {% endif %}.
 You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
 three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three 
-points {% endif %} must be invested in each round. </p>
-
-<p> In stage "ONE", you will first see summary statistics for each option. Then, you will have the opportunity to learn more about the options by
-    sampling through them.</p>
+points {% endif %} must be invested. </p>
+   
+    <h6>Stage "TWO" <\h6>
     
- <p>The following sampling rules apply:
+ <p>In order to learn more about the option, you 
     
 At the beginning of each sampling round, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}. 
 
@@ -27,18 +40,7 @@ three options. Points cannot be accumulated and therefore, {% if choice %} each 
 
 points {% endif %} must be invested in each round. </p>
 
-<p> At the beginning of stage "ONE", you will learn about the options by observing provided information. Afterwards, you make your choice that determines your bonus
-    payoff. Stage "ONE" is than finsihed and your directly be forwarded to stage "TWO".
-     </p>
 
-<p> At stage "TWO", you will be able to learn more about the options, you already know from stage "ONE", by sampling through them. After you have done sampling, again, you 
-    will make another choice that determines your bonus payoff. After you made this choice, you will receive feedback about your choices from stage "ONE" and "TWO" and 
-    will be informed about your bonus payoff.
-    
-</p>
-
-<p>  At the beginning of the task, you will see summary statistics from {{Constants.num_priors}} prior
-draws from each of the three options. You can use this data to inform your subsequent choices in the sampling as well as the decision stage.</p>
 
 <br>
 
