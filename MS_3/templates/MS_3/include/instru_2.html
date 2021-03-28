@@ -1,6 +1,6 @@
 {% load otree %}
 {% block title %}
-<h4>The Stages</h4>
+<h4>The Task</h4>
 <br>
 
 {% endblock %}
@@ -8,18 +8,36 @@
 {% block content %}
 
 <p>In this HIT, you will complete two stages. In each stage, you will choose among same set of different options to receive Coins.
-Each option is represented by a money bag. You choose options by investing points.</p> 
+Each option is represented by a money bag, as shown in the image below. You choose options by investing points.</p> 
 </p>
 
-<p> At the beginning of stage "ONE", you will learn about the options by observing provided information. Afterwards, you make your choice that determines your bonus
-    payoff. Stage "ONE" is than finsihed and your directly be forwarded to stage "TWO".
-     </p>
+<p>You can think of each option as a bag of coins. The coins are put in each bag before the game starts and for every point you invest in
+an option, a coin from the respective bag is drawn. Thus, one point equals one draw. After each draw, the coin is put back into the bag. Bags do not change over the 
+course of the task and are independent of one another. However, bags differ in the composition of coins they contain.</p>
 
-<p> At stage "TWO", you will be able to learn more about the options, you already know from stage "ONE", by sampling through them. After you have done sampling, again, you 
-    will make another choice that determines your bonus payoff. After you made this choice, you will receive feedback about your choices from stage "ONE" and "TWO" and 
-    will be informed about your bonus payoff.
-    
-</p>
+
+
+{% if choice %}
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/ckJN7lt.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+{% elif not choice %}
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/yUMW7tL.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+{% endif %}
 
 
 

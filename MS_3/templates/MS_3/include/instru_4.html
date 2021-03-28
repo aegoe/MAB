@@ -1,12 +1,21 @@
 {% load otree %}
 {% block title %}
-<h4>Sampling Stage: Investments and Earnings </h4>
+<h4>Stage "ONE"</h4>
 <br>
 {% endblock %}
 
 {% block content %}
 
-<p>You can think of each option as a bag of coins. The coins are put in each bag before the game starts and for every point you invest in
+<p> At the beginning of stage "ONE", you will see summary statistics from {{Constants.num_priors}} prior draws from each of the three options. 
+    You can use this data to inform your following investment decisions.</p>
+    
+<p> In a next step, you will make your {% if choice %} three consecutive investment decisions {% elif not choice %} investment decision {% endif %}.
+    You receive {% if choice %} one point separately for each investment decision {% elif not choice %} three points {% endif %}.
+You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
+three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three 
+points {% endif %} must be invested. </p>
+
+<!--<p>You can think of each option as a bag of coins. The coins are put in each bag before the game starts and for every point you invest in
 an option, a coin from the respective bag is drawn. Thus, one point equals one draw. After each draw, the coin is put back into the bag. Bags do not change over the 
 course of the task and are independent of one another.</p>
 
@@ -19,7 +28,7 @@ draws from each of the three options. You can use this data to inform your subse
 
 <p> You can sample as many rounds as you wish to. However, for every 15 draws, we will charge you 0.2 ECU. Thus, for draws 1-15, you will be charged 0.2 ECU, no matter if you stop sampling at 9 draws.
     If you sample anything between 16-30 draws, you will be charged another 0.2 ECU, summing up to 0.4 ECU total sampling costs. Again, you will be charged the full 0.4 ECU, even if you, for example, stop
-    sampling at draw 25. This interval charging continues until you finished sampling and decide to move to stage two, the decision stage.</p>
+    sampling at draw 25. This interval charging continues until you finished sampling and decide to move to stage two, the decision stage.</p>-->
 
 
 

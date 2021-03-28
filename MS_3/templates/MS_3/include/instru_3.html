@@ -1,56 +1,22 @@
 {% load otree %}
 {% block title %}
-<h4>Stage "ONE"</h4>
+<h4>The Stages</h4>
 <br>
 {% endblock %}
 
 {% block content %}
-<p> In both stages, you choose between different options, as shown in the image below. </p>
 
-<p> Bags differ in the composition of coins they contain. At the beginning of stage "ONE", you will see summary statistics from {{Constants.num_priors}} prior
-    draws from each of the three options. You can use this data to inform your following choices.</p>
-    
-<p> At the beginning of {% if not choice %} both rounds{% elif choice %} each round{% endif %}, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}.
-You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all {% if not safe %}
-three {% elif safe %} four {% endif %} options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three 
-points {% endif %} must be invested in each round. </p>
+<p> At the beginning of stage "ONE", you will learn about the options by observing provided information. Afterwards, you make {% if choice %} three consecutive 
+    investment decisions that determine {% elif not choice %} one investment decision that determines {% endif %} your bonus
+    payoff. Stage "ONE" is than finsihed and you will directly be forwarded to stage "TWO".
+     </p>
 
-<p> In stage "ONE", you will first see summary statistics for each option. Then, you will have the opportunity to learn more about the options by
-    sampling through them.</p>
-    
- <p>The following sampling rules apply:
-    
-At the beginning of each sampling round, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}. 
-
-You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all 
-
-three options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three 
-
-points {% endif %} must be invested in each round. </p>
-
-
-
-{% if choice %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/ckJN7lt.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% elif not choice %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/yUMW7tL.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% endif %}
+<p> At stage "TWO", you will be able to learn more about the options, you already know from stage "ONE", by sampling through them. After you have done sampling, 
+    again, you will make another {% if choice %} three consecutive investment decisions that determine 
+    {% elif not choice %} investment decision that determines {% endif %} your bonus payoff. 
+   Afterwards, you will receive feedback about your investment decisions from stage "ONE" and "TWO" and 
+    will be informed about your bonus payoff.  
+</p>
 
 
 <br>
