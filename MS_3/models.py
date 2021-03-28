@@ -160,10 +160,10 @@ class Player(BasePlayer):
         
     cq5_MS3 = models.IntegerField(
         choices=[
+            [1, 'can differ in their composition of coins'],
             [999, 'contain the same coins'],
             [9, 'return a constant value'],
             [99, 'change over the course of the HIT'],
-            [1, 'can differ in their composition of coins'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
