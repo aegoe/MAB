@@ -1,27 +1,34 @@
 {% load otree %}
 {% block title %}
-<h4>Sampling Stage: Investments and Earnings </h4>
+<h4>The Stages</h4>
 <br>
 {% endblock %}
 
 {% block content %}
 
-<p>You can think of each option as a bag of coins. The coins are put in each bag before the game starts and for every point you invest in
-an option, a coin from the respective bag is drawn. Thus, one point equals one draw. After each draw, the coin is put back into the bag. Bags do not change over the
-course of the task and are independent of one another.</p>
+<p> In <b> Stage 2</b>, you will be able to learn more about the options you already know from the first stage by sampling through them 100 times.</p>
 
-<p> Bags differ in the composition of coins they contain. At the beginning of the task, you will see summary statistics from {{Constants.num_priors}} prior
-draws from each of the three options. You can use this data to inform your subsequent choices in the sampling as well as the decision stage.</p>
+<p> In each of the 100 sampling rounds, you freely choose which one of the three options to draw from (see image below). After each decision, you receive feedback on the value of that draw. </p>
+
+<p> You choose by clicking on the "Choose" text right below each option.</p>
+
+<p> Coins drawn during the sampling phase do not count towards your bonus payoff. However, they are meant to give you additional information about the options.</p>
+
+<p> After you have finished all 100 sampling rounds, you make another {% if choice %} three consecutive main investment decisions{% elif not choice %} main investment decision{% endif %}, analogous to <b> Stage 1</b>.
+
+<br>
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/htU49kg.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
 
 
-<p>After having observed the summary statistics, you can draw more coins from each option by investing points.
-    These coins will not affect your final payoff, but they will give you additional information about the potential value of each option. </p>
 
-<p> You can sample as many rounds as you wish to. However, for every 15 draws, we will charge you 0.2 ECU. Thus, for draws 1-15, you will be charged 0.2 ECU, no matter if you stop sampling at 9 draws.
-    If you sample anything between 16-30 draws, you will be charged another 0.2 ECU, summing up to 0.4 ECU total sampling costs. Again, you will be charged the full 0.4 ECU, even if you for example stop
-    sampling at draw 25. This interval charging continues until you finished sampling and decide to move to stage two, the decision stage.</p>
-
-
+<br>
 
 
 {% endblock %}

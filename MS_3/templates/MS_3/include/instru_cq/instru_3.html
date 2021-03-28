@@ -1,47 +1,22 @@
 {% load otree %}
 {% block title %}
-<h4>Sampling Stage: The Task</h4>
+<h4>The Stages</h4>
 <br>
 {% endblock %}
 
 {% block content %}
-<p> In both stages, you choose between different options, as shown in the image below. </p>
 
-<p> In the sampling stage, you will first see summary statistics for each option. Then, you will have the opportunity to learn more about the options by
-    sampling through them.</p>
-
- <p>The following sampling rules apply:
-
-At the beginning of each sampling round, you receive {% if choice %} one point{% elif not choice %} three points{% endif %}.
-
-You can invest {% if choice %} this point {% elif not choice %} these points {% endif %} freely between all
-
-three options. Points cannot be accumulated and therefore, {% if choice %} each point {% elif not choice %} all three
-
-points {% endif %} must be invested in each round. </p>
+<p> In both stages, you first gather information about the options, and the decide how to allocate three points between them. Both stages determine your bonus payoff </p>
 
 
+<p> In <b> Stage 1</b>, you learn about the options by observing summary statistics based on {{Constants.num_priors}} prior draws from each of the three options.
 
-{% if choice %}
+<p> You then proceed to your first main investment decision and make {% if choice %} three consecutive decisions on how to allocate one point between the three options.
+    {% elif not choice %} one decision on how to allocate your three points between the three options. {% endif %}   </p>
 
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/ckJN7lt.png' alt="bla" width="800px"/>
-    </div>
-</div>
+<p> After submitting your decision, you will be immediately forwarded to <b> Stage 2</b>. You receive feedback on your main investment decisions at the end of this HIT. </p>
+
+
 <br>
-
-{% elif not choice %}
-
-<div class="card">
-    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
-        <div class="card-body">
-            <img src='https://i.imgur.com/yUMW7tL.png' alt="bla" width="800px"/>
-    </div>
-</div>
-<br>
-
-{% endif %}
 
 {% endblock %}
