@@ -6,17 +6,15 @@
 
 {% block content %}
 
-<p> At the beginning of stage "ONE", you will learn about the options by observing provided information. Afterwards, you make {% if choice %} three consecutive 
-    investment decisions that determine {% elif not choice %} one investment decision that determines {% endif %} your bonus
-    payoff. Stage "ONE" is than finsihed and you will directly be forwarded to stage "TWO".
-     </p>
+<p> In both stages, you first gather information about the options, and the decide how to allocate three points between them. Both stages determine your bonus payoff </p>
 
-<p> At stage "TWO", you will be able to learn more about the options, you already know from stage "ONE", by sampling through them. After you have done sampling, 
-    again, you will make another {% if choice %} three consecutive investment decisions that determine 
-    {% elif not choice %} investment decision that determines {% endif %} your bonus payoff. 
-   Afterwards, you will receive feedback about your investment decisions from stage "ONE" and "TWO" and 
-    will be informed about your bonus payoff.  
-</p>
+
+<p> In <b> Stage 1</b>, you learn about the options by observing summary statistics based on {{Constants.num_priors}} prior draws from each of the three options.
+
+<p> You then proceed to your first main investment decision and make {% if choice %} three consecutive decisions on how to allocate one point between the three options.
+    {% elif not choice %} one decision on how to allocate your three points between the three options. {% endif %}   </p>
+
+<p> After submitting your decision, you will be immediately forwarded to <b> Stage 2</b>. You receive feedback on your main investment decisions at the end of this HIT. </p>
 
 
 <br>

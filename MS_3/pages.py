@@ -1070,6 +1070,51 @@ class Decision2(Page):
         self.player.decision_2_page += 1
 
 
+class PayoffTransition(Page):
+    form_model = 'player'
+
+    def is_displayed(self):
+        return self.round_number == 10
+
+    def vars_for_template(self):
+        return {'choice': self.participant.vars['choice'],
+                'payoff': self.participant.payoff,
+                'endowment_samp': self.player.endowment_after_sampling,
+                'incentive': self.participant.vars['incentive'],
+                }
+
+    def before_next_page(self):
+        self.player.payoff_a = self.participant.vars['payoff_a1']
+        self.player.payoff_b = self.participant.vars['payoff_b1']
+        self.player.urn_draws_1_a = self.participant.vars['urndraws1_a1']
+        self.player.urn_draws_1_b = self.participant.vars['urndraws1_b1']
+        self.player.urn_draws_2_a = self.participant.vars['urndraws2_a1']
+        self.player.urn_draws_2_b = self.participant.vars['urndraws2_b1']
+        self.player.urn_draws_3_a = self.participant.vars['urndraws3_a1']
+        self.player.urn_draws_3_b = self.participant.vars['urndraws3_b1']
+        self.player.option_1_a = self.participant.vars['option_1_a1']
+        self.player.option_1_b = self.participant.vars['option_1_b1']
+        self.player.option_2_a = self.participant.vars['option_2_a1']
+        self.player.option_2_b = self.participant.vars['option_2_b1']
+        self.player.option_3_a = self.participant.vars['option_3_a1']
+        self.player.option_3_b = self.participant.vars['option_3_b1']
+        self.player.payoff_1_a = self.participant.vars['payoff_1_a']
+        self.player.payoff_1_b = self.participant.vars['payoff_1_b']
+        self.player.payoff_2_a = self.participant.vars['payoff_2_a']
+        self.player.payoff_2_b = self.participant.vars['payoff_2_b']
+        self.player.payoff_3_a = self.participant.vars['payoff_3_a']
+        self.player.payoff_3_b = self.participant.vars['payoff_3_b']
+
+        print(self.player.payoff_b)
+        print(self.player.payoff_a)
+
+        self.participant.payoff = self.player.payoff_b + self.player.payoff_a
+
+        print(self.participant.payoff)
+        print(self.player.payoff_b)
+        print(self.player.payoff_a)
+
+
 ########################################################################################################################
 # Questionnaire and Final Page #########################################################################################
 ########################################################################################################################
@@ -1111,37 +1156,6 @@ class Questionnaire(Page):
     def before_next_page(self):
         self.player.questionnaire_page += 1
 
-        if self.player.questionnaire_page == 5:
-            self.player.payoff_a = self.participant.vars['payoff_a1']
-            self.player.payoff_b = self.participant.vars['payoff_b1']
-            self.player.urn_draws_1_a = self.participant.vars['urndraws1_a1']
-            self.player.urn_draws_1_b = self.participant.vars['urndraws1_b1']
-            self.player.urn_draws_2_a = self.participant.vars['urndraws2_a1']
-            self.player.urn_draws_2_b = self.participant.vars['urndraws2_b1']
-            self.player.urn_draws_3_a = self.participant.vars['urndraws3_a1']
-            self.player.urn_draws_3_b = self.participant.vars['urndraws3_b1']
-            self.player.option_1_a = self.participant.vars['option_1_a1']
-            self.player.option_1_b = self.participant.vars['option_1_b1']
-            self.player.option_2_a = self.participant.vars['option_2_a1']
-            self.player.option_2_b = self.participant.vars['option_2_b1']
-            self.player.option_3_a = self.participant.vars['option_3_a1']
-            self.player.option_3_b = self.participant.vars['option_3_b1']
-            self.player.payoff_1_a = self.participant.vars['payoff_1_a']
-            self.player.payoff_1_b = self.participant.vars['payoff_1_b']
-            self.player.payoff_2_a = self.participant.vars['payoff_2_a']
-            self.player.payoff_2_b = self.participant.vars['payoff_2_b']
-            self.player.payoff_3_a = self.participant.vars['payoff_3_a']
-            self.player.payoff_3_b = self.participant.vars['payoff_3_b']
-
-            print(self.player.payoff_b)
-            print(self.player.payoff_a)
-
-        if self.player.questionnaire_page == 6:
-            self.participant.payoff = self.player.payoff_b + self.player.payoff_a
-
-            print(self.participant.payoff)
-            print(self.player.payoff_b)
-            print(self.player.payoff_a)
 
 
 class Disclose_Payoff(Page):
@@ -1199,8 +1213,6 @@ page_sequence = [
     InstruStart,
     InstruStart,
     InstruStart,
-    InstruStart,
-    InstruStart,
     ComprehensionQuestions,
     ComprehensionQuestions,
     DeadEnd2,
@@ -1216,12 +1228,13 @@ page_sequence = [
     Decision2,
     Decision2,
     Decision2,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
+    PayoffTransition,
     Disclose_Payoff,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
     FinalInfo,
 ]
