@@ -14,7 +14,7 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'MS_3'
-    num_rounds = 80
+    num_rounds = 100
     num_rounds_choice = 3
     num_rounds_points = 1
     #num_rounds_choice_sampling = 6
