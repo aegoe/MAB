@@ -754,8 +754,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MS_3/templates/MS_3/Sampling.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="1870" column="83" selection-start-line="1870" selection-start-column="83" selection-end-line="1870" selection-end-column="83" />
+            <state relative-caret-position="311">
+              <caret line="1504" column="58" selection-start-line="1504" selection-start-column="58" selection-end-line="1504" selection-end-column="58" />
               <folding>
                 <element signature="e#2221#2227#0" expanded="true" />
                 <element signature="e#2271#2277#0" expanded="true" />
@@ -1778,7 +1778,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>3.49</find>
       <find>1.75</find>
       <find>-9</find>
       <find>2.87</find>
@@ -1808,11 +1807,9 @@
       <find>You will use your 1 point to draw from one option.</find>
       <find>&lt;button class=&quot;button&quot; name = &quot;option_3_samp&quot; value=1&gt;Choose&lt;/button&gt;</find>
       <find>rst</find>
+      <find>&lt;button class=&quot;button&quot; name = &quot;option_3_samp&quot; value=1&gt;Choose Option S&lt;/button&gt;</find>
     </findStrings>
     <replaceStrings>
-      <replace>player.urn_draws_1</replace>
-      <replace>7</replace>
-      <replace>60</replace>
       <replace>b1</replace>
       <replace>20.52</replace>
       <replace>2.9</replace>
@@ -1840,6 +1837,9 @@
       <replace>&lt;button class=&quot;button&quot; name = &quot;option_3_samp&quot; value=1&gt;Choose Option S&lt;/button&gt;</replace>
       <replace>&lt;button class=&quot;button&quot; name = &quot;option_2_samp&quot; value=1&gt;Choose Option C&lt;/button&gt;</replace>
       <replace>&lt;button class=&quot;button&quot; name = &quot;option_1_samp&quot; value=1&gt;Choose Option T&lt;/button&gt;</replace>
+      <replace>&lt;button class=&quot;button&quot; name = &quot;option_3_samp&quot; value=1&gt;Option S &lt;br/&gt; Choose&lt;/button&gt;</replace>
+      <replace>&lt;button class=&quot;button&quot; name = &quot;option_2_samp&quot; value=1&gt;Option C &lt;br/&gt; Choose&lt;/button&gt;</replace>
+      <replace>&lt;button class=&quot;button&quot; name = &quot;option_1_samp&quot; value=1&gt;Option T &lt;br/&gt; Choose&lt;/button&gt;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -2196,18 +2196,17 @@
       <workItem from="1616514244830" duration="869000" />
       <workItem from="1616660810840" duration="27244000" />
       <workItem from="1616754288451" duration="9168000" />
-      <workItem from="1616936701144" duration="3447000" />
+      <workItem from="1616936701144" duration="3687000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="690383000" />
+    <option name="totallyTimeSpent" value="690623000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1664888" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1664888" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -2221,7 +2220,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026681" side_tool="true" weight="0.3631124" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733192" visible="true" weight="0.37848222" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49733192" visible="true" weight="0.37848222" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32756963" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -2236,13 +2235,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_socio_1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-469">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/questionnaire_2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -5067,10 +5059,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/channels/sessions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="182" selection-start-line="182" selection-end-line="182" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MS_3/templates/MS_3/Sampling.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="1870" column="83" selection-start-line="1870" selection-start-column="83" selection-end-line="1870" selection-end-column="83" />
+        <state relative-caret-position="311">
+          <caret line="1504" column="58" selection-start-line="1504" selection-start-column="58" selection-end-line="1504" selection-end-column="58" />
           <folding>
             <element signature="e#2221#2227#0" expanded="true" />
             <element signature="e#2271#2277#0" expanded="true" />
