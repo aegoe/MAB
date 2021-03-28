@@ -11,13 +11,19 @@
 
 {% block content %}
 
-
+{% if incentive %}
 <p> You have completed the sampling stage and earned a total amount of {{participant.payoff}}.</p>
 
 <p> Accordingly, you will invest {{endowment_samp}} points in the second investment decision.</p>
 
-<p> To proceed, click on the blue button below. Remember that options do not change of the course of this task.</p>
+<p> To proceed, click on the blue button below. Remember that options do not change over the course of this task.</p>
 
+{% elif not incentive %}
+<p> You have completed the sampling stage. You will now proceed to the second investment decision.</p>
+
+<p> Remember that options do not change over the course of this task.</p>
+
+{% endif %}
 
 
 <br>

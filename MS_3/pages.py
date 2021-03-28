@@ -552,6 +552,7 @@ class SamplingTransition(Page):
 
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
+               'incentive': self.participant.vars['incentive'],
                }
 
     def before_next_page(self):
@@ -566,12 +567,12 @@ class Sampling(Page):
     def get_form_fields(self):
         return ['option_1_samp', 'option_2_samp', 'option_3_samp']
 
-    def error_message(self, values):
-        if self.participant.vars['choice'] or not self.participant.vars['choice']:
-            if values['option_1_samp'] + values['option_2_samp'] + values['option_3_samp'] < 1:
-                return 'You have to use your point to choose an urn.'
-            elif values['option_1_samp'] + values['option_2_samp'] + values['option_3_samp'] > 1:
-                return 'You can only choose one option per round.'
+    # def error_message(self, values):
+    #     if self.participant.vars['choice'] or not self.participant.vars['choice']:
+    #         if values['option_1_samp'] + values['option_2_samp'] + values['option_3_samp'] < 1:
+    #             return 'You have to use your point to choose an urn.'
+    #         elif values['option_1_samp'] + values['option_2_samp'] + values['option_3_samp'] > 1:
+    #             return 'You can only choose one option per round.'
 
     def vars_for_template(self):
         return {'choice': self.participant.vars['choice'],
@@ -581,6 +582,8 @@ class Sampling(Page):
                 'draw': self.participant.vars['draw'],
                 'feedback_3': self.participant.vars['feedback_3'],
                 'incentive': self.participant.vars['incentive'],
+                'sampling_round': self.player.sampling_round,
+
                 }
 
     def before_next_page(self):
@@ -681,6 +684,7 @@ class Sampling(Page):
         self.player.payoff_3_samp = payoffs_3
 
 
+
 class Feedback_Sampling(Page):
     form_model = 'player'
 
@@ -723,7 +727,8 @@ class Decision2Transition(Page):
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
                'payoff': self.participant.payoff,
-               'endowment_samp': self.player.endowment_after_sampling
+               'endowment_samp': self.player.endowment_after_sampling,
+               'incentive': self.participant.vars['incentive'],
                }
 
     def before_next_page(self):
@@ -1064,6 +1069,7 @@ class Decision2(Page):
 
         self.player.decision_2_page += 1
 
+
 ########################################################################################################################
 # Questionnaire and Final Page #########################################################################################
 ########################################################################################################################
@@ -1137,6 +1143,40 @@ class Questionnaire(Page):
             print(self.player.payoff_b)
             print(self.player.payoff_a)
 
+
+class Disclose_Payoff(Page):
+    form_model ='player'
+
+    def is_displayed(self):
+        return self.round_number == 10
+
+
+    def vars_for_template(self):
+        return{'choice': self.participant.vars['choice'],
+               'urn_draws_1_a': self.player.urn_draws_1_a,
+               'urn_draws_2_a': self.player.urn_draws_2_a,
+               'urn_draws_3_a': self.player.urn_draws_3_a,
+               'urn_draws_1_b': self.player.urn_draws_1_b,
+               'urn_draws_2_b': self.player.urn_draws_2_b,
+               'urn_draws_3_b': self.player.urn_draws_3_b,
+               'payoff_a': self.player.payoff_a,
+               'payoff_b': self.player.payoff_b,
+               'option_1_a': self.player.option_1_a,
+               'option_1_b': self.player.option_1_b,
+               'option_2_a': self.player.option_2_a,
+               'option_2_b': self.player.option_2_b,
+               'option_3_a': self.player.option_3_a,
+               'option_3_b': self.player.option_3_b,
+               'draw': self.participant.vars['draw'],
+               'payoff_1_a': self.player.payoff_1_a,
+               'payoff_1_b': self.player.payoff_1_b,
+               'payoff_2_a': self.player.payoff_2_a,
+               'payoff_2_b': self.player.payoff_2_b,
+               'payoff_3_a': self.player.payoff_3_a,
+               'payoff_3_b': self.player.payoff_3_b,
+               }
+
+
 class FinalInfo(Page):
     def is_displayed(self):
         return self.round_number == 10
@@ -1182,5 +1222,6 @@ page_sequence = [
     Questionnaire,
     Questionnaire,
     Questionnaire,
+    Disclose_Payoff,
     FinalInfo,
 ]

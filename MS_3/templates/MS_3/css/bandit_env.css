@@ -28,18 +28,6 @@
     margin-bottom: 100px;
 }
 
-/*.background{
-    position: center;
-    width: 500px;
-    height: 200px;
-    background: #FFF5EE;
-    border: 1px solid #000000;
-    display: inline-block;
-    margin-right: auto;
-    margin-left: auto;
-
-}*/
-
 .background{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -208,3 +196,19 @@ background-color: #F5F5F5 ;
     margin-top: -43px
 }
 
+.button {
+    padding: 14px 1px;
+    background-color:transparent;
+    outline:none;
+    border:none;
+    text-align: left;
+    font-size: 22px;
+    transition-duration: 0.4s;
+    cursor:pointer;
+
+}
+
+.button:hover {
+  background-color: white;
+  color: blue;
+}

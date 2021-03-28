@@ -3,12 +3,15 @@
 
 {% block title %}
 <div class="page-header">
-    <p> Sampling </p>
+    <p> Sampling Round {{player.round_number}}/100 </p>
 </div>
 {% endblock %}
 
 
 {% block content %}
+
+{{ form.errors }}
+
 
 {% if draw == 'TSR' %}
 
@@ -32,9 +35,9 @@
             </div>
         </div>
 
-        {% formfield player.option_1_samp %}
-        {% formfield player.option_2_samp %}
-        {% formfield player.option_3_samp %}
+        <button class="button" name = "option_1_samp" value=1>Option T <br/> Choose</button>
+        <button class="button" name = "option_2_samp" value=1>Option C <br/> Choose</button>
+        <button class="button" name = "option_3_samp" value=1>Option S <br/> Choose</button>
 
 
  </div>
@@ -42,11 +45,10 @@
 
 <div class="footer">
 
-            You will use your 1 point to draw from one option. {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+            You draw from an option by clicking on "Choose". {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
            {% elif not incentive %} You can use the sampling phase to learn more about the options. {% endif %}
 </div>
 
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
 
 
 <button type="button" class="collapsible"> Information table from prior draws </button>
@@ -375,20 +377,18 @@
             </div>
         </div>
 
-        {% formfield player.option_2_samp %}
-        {% formfield player.option_1_samp %}
-        {% formfield player.option_3_samp %}
+        <button class="button" name = "option_2_samp" value=1>Option C <br/> Choose</button>
+        <button class="button" name = "option_1_samp" value=1>Option T <br/> Choose</button>
+        <button class="button" name = "option_3_samp" value=1>Option S <br/> Choose</button>
 
 
  </div>
 
        <div class="footer">
-            You will use your 1 point to draw from one option. {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+            You draw from an option by clicking on "Choose". {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
            {% elif not incentive %} You can use the sampling phase to learn more about the options. {% endif %}
         </div>
 
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
 
 
 <button type="button" class="collapsible"> Information table from prior draws </button>
@@ -717,9 +717,9 @@
             </div>
         </div>
 
-        {% formfield player.option_2_samp %}
-        {% formfield player.option_1_samp %}
-        {% formfield player.option_3_samp %}
+        <button class="button" name = "option_2_samp" value=1>Option C <br/> Choose</button>
+        <button class="button" name = "option_1_samp" value=1>Option T <br/> Choose</button>
+        <button class="button" name = "option_3_samp" value=1>Option S <br/> Choose</button>
 
 
  </div>
@@ -748,22 +748,19 @@
         </div>
 
 
-        {% formfield player.option_3_samp %}
-        {% formfield player.option_1_samp %}
-        {% formfield player.option_2_samp %}
+        <button class="button" name = "option_3_samp" value=1>Option S <br/> Choose</button>
+        <button class="button" name = "option_1_samp" value=1>Option T <br/> Choose</button>
+        <button class="button" name = "option_2_samp" value=1>Option C <br/> Choose</button>
 
 
  </div>
 
        <div class="footer">
 
-            You will use your 1 point to draw from one option. {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+            You draw from an option by clicking on "Choose". {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
            {% elif not incentive %} You can use the sampling phase to learn more about the options. {% endif %}
 
         </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
 
 
 
@@ -1093,9 +1090,9 @@
             </div>
         </div>
 
-        {% formfield player.option_2_samp %}
-        {% formfield player.option_1_samp %}
-        {% formfield player.option_3_samp %}
+        <button class="button" name = "option_2_samp" value=1>Option C <br/> Choose</button>
+        <button class="button" name = "option_1_samp" value=1>Option T <br/> Choose</button>
+        <button class="button" name = "option_3_samp" value=1>Option S <br/> Choose</button>
 
 
  </div>
@@ -1125,21 +1122,18 @@
             </div>
         </div>
 
-        {% formfield player.option_1_samp %}
-        {% formfield player.option_3_samp %}
-        {% formfield player.option_2_samp %}
+        <button class="button" name = "option_1_samp" value=1>Option T <br/> Choose</button>
+        <button class="button" name = "option_3_samp" value=1>Option S <br/> Choose</button>
+        <button class="button" name = "option_2_samp" value=1>Option C <br/> Choose</button>
 
 
  </div>
 
        <div class="footer">
 
-            You will use your 1 point to draw from one option. {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+            You draw from an option by clicking on "Choose". {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
            {% elif not incentive %} You can use the sampling phase to learn more about the options. {% endif %}
         </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
 
 
 
@@ -1469,9 +1463,9 @@
             </div>
         </div>
 
-        {% formfield player.option_2_samp %}
-        {% formfield player.option_1_samp %}
-        {% formfield player.option_3_samp %}
+        <button class="button" name = "option_2_samp" value=1>Option C <br/> Choose</button>
+        <button class="button" name = "option_1_samp" value=1>Option T <br/> Choose</button>
+        <button class="button" name = "option_3_samp" value=1>Option S <br/> Choose</button>
 
 
  </div>
@@ -1500,20 +1494,18 @@
         </div>
 
 
-        {% formfield player.option_2_samp %}
-        {% formfield player.option_3_samp %}
-        {% formfield player.option_1_samp %}
+        <button class="button" name = "option_2_samp" value=1>Option C <br/> Choose</button>
+        <button class="button" name = "option_3_samp" value=1>Option S <br/> Choose</button>
+        <button class="button" name = "option_1_samp" value=1>Option T <br/> Choose</button>
 
 
  </div>
 
        <div class="footer">
-            You will use your 1 point to draw from one option. {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+            You draw from an option by clicking on "Choose". {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
            {% elif not incentive %} You can use the sampling phase to learn more about the options. {% endif %}
         </div>
 
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
 
 
 
@@ -1843,9 +1835,9 @@
             </div>
         </div>
 
-        {% formfield player.option_2_samp %}
-        {% formfield player.option_1_samp %}
-        {% formfield player.option_3_samp %}
+        <button class="button" name = "option_2_samp" value=1>Option C <br/> Choose</button>
+        <button class="button" name = "option_1_samp" value=1>Option T <br/> Choose</button>
+        <button class="button" name = "option_3_samp" value=1>Option S <br/> Choose</button>
 
 
  </div>
@@ -1874,21 +1866,18 @@
         </div>
 
 
-        {% formfield player.option_3_samp %}
-        {% formfield player.option_2_samp %}
-        {% formfield player.option_1_samp %}
+        <button class="button" name = "option_3_samp" value=1>Option S <br/> Choose</button>
+        <button class="button" name = "option_2_samp" value=1>Option C <br/> Choose</button>
+        <button class="button" name = "option_1_samp" value=1>Option T <br/> Choose </button>
 
 
  </div>
 
        <div class="footer">
-            You will use your 1 point to draw from one option. {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+            You draw from an option by clicking on "Choose". {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
            {% elif not incentive %} You can use the sampling phase to learn more about the options. {% endif %}
 
         </div>
-
-
-<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
 
 
 <button type="button" class="collapsible"> Information table from prior draws </button>
@@ -2190,8 +2179,9 @@
 
     </div>
 
+    {% endif %}
+
     </div>
-{% endif %}
 
 
 {% elif draw == 'STR' %}
@@ -2217,15 +2207,34 @@
             </div>
         </div>
 
-        {% formfield player.option_2_samp %}
-        {% formfield player.option_1_samp %}
-        {% formfield player.option_3_samp %}
+        <button class="button" name = "option_2_samp" value=1>Option C <br/> Choose</button>
+        <button class="button" name = "option_1_samp" value=1>Choice</button>
+        <button class="button" name = "option_3_samp" value=1>Option S <br/> Choose</button>
 
 
  </div>
 
 {% endif %}
 
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
 {% endblock %}

@@ -42,9 +42,9 @@ class Player(BasePlayer):
     endowment = models.IntegerField()
     incentive = models.BooleanField()
     sampling = models.BooleanField()
-    option_1_samp = models.IntegerField(initial=0, label="Option T")
-    option_2_samp = models.IntegerField(initial=0, label="Option c")
-    option_3_samp = models.IntegerField(initial=0, label="Option S")
+    option_1_samp = models.IntegerField(initial=0, label="Option T", blank=True)
+    option_2_samp = models.IntegerField(initial=0, label="Option C", blank=True)
+    option_3_samp = models.IntegerField(initial=0, label="Option S", blank=True)
 
     payoff_1_samp = models.IntegerField()
     payoff_2_samp = models.IntegerField()

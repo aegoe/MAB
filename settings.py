@@ -63,19 +63,19 @@ SESSION_CONFIGS = [
         'incentive': False,
 
     },
-    # {
-    #     'name': 'MAB_MainStudy_FreeSampling',
-    #     'display_name': "MAB_MainStudy_FreeSampling",
-    #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot_Descr'],
-    #     'choice': False,
-    #     'safe': False,
-    #     'testing': False,
-    #     'variance': False,
-    #     'sampling': True,
-    #     'feedback_3': False,
-    #
-    # },
+    {
+        'name': 'MAB_MainStudy_FreeSampling',
+        'display_name': "MAB_MainStudy_FreeSampling",
+        'num_demo_participants': 1,
+        'app_sequence': ['Pilot_Descr'],
+        'choice': False,
+        'safe': False,
+        'testing': False,
+        'variance': False,
+        'sampling': True,
+        'feedback_3': False,
+
+    },
 
 ]
 
