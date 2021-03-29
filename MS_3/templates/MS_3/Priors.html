@@ -11,7 +11,7 @@
 <br>
 
 
-<p>The table below shows summary information for <b> {{Constants.num_priors}} prior draws </b> from each option (60 draws in total).<b> You can use this data to inform your {% if choice and not sampling %}decisions over the next {{Constants.num_rounds}} rounds. {% elif not choice and not sampling %} main decision. {% elif sampling %}decisions over the next rounds.  {% endif %} </b> </p>
+<p>The table below shows summary information for <b> {{Constants.num_priors}} prior draws </b> from each option (60 draws in total).<b> You can use this data to inform your {% if choice and not sampling %}main investment decisions. {% elif not choice and not sampling %} main investment decisions. {% elif sampling %}decisions over the next rounds.  {% endif %} </b> </p>
 
 <p>"Mean" refers to an option's average payoff per draw.</p>
 <p>"SD" refers to an option's standard deviation. The standard deviation
@@ -22,7 +22,7 @@ close to the average. A high standard deviation means that numbers are more wide
 
 <p>"Highest Draw" refers to the coin which returned the highest value from the {{Constants.num_priors}}-draw sample.</p>
 
-
+<p>The numbers for "Mean", "Lowest Draw" and "Highest Draw" refer to the respective value in ECU.</p>
 <br>
 
 
