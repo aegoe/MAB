@@ -1128,7 +1128,7 @@ class Questionnaire(Page):
         elif self.player.questionnaire_page == 2:
             return ['q_risk']
         elif self.player.questionnaire_page == 3:
-            return ['q_exploration_strategy']
+            return ['q_exploration_strategy', 'q_sampling_strategy']
         elif self.player.questionnaire_page == 4 and self.participant.vars['choice']:
             return ['q_mean_sequential', 'q_sd_sequential', 'q_ld_sequential', 'q_hd_sequential', 'q_descr_exp']
         elif self.player.questionnaire_page == 4 and not self.participant.vars['choice']:

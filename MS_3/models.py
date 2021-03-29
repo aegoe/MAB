@@ -226,6 +226,8 @@ class Player(BasePlayer):
 
     q_exploration_strategy =models.LongStringField(blank=False, label="")
 
+    q_sampling_strategy =models.LongStringField(blank=False, label="")
+
     q_firm =models.LongStringField(blank=False, label="")
 
     q_fadein =models.LongStringField(blank=False, label="")
