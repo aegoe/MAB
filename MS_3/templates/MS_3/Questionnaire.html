@@ -2,7 +2,7 @@
 {% load otree %}
 
 {% block title %}
-    <p>Questionnaire <h6>Page {{ player.questionnaire_page }}/6</h6></p>
+    <p>Questionnaire <h6>Page {{ player.questionnaire_page }}/8</h6></p>
 {% endblock %}
 
 
@@ -22,9 +22,21 @@
     {% include 'MS_3/include/questionnaire_3.html' %}
 
 {% elif player.questionnaire_page == 5 %}
+    {% include 'MS_3/include/questionnaire_4.html' %}
+
+{% elif player.questionnaire_page == 6 and player.q_function == 1 %}
+    {% include 'MS_3/include/questionnaire_5.html' %}
+
+{% elif player.questionnaire_page == 7 and player.q_function == 1 %}
     {% include 'MS_3/include/questionnaire_epo.html' %}
 
-{% elif player.questionnaire_page == 6 %}
+{% elif player.questionnaire_page == 8 and player.q_function == 1 %}
+    {% include 'MS_3/include/questionnaire_socio_1.html' %}
+
+{% elif player.questionnaire_page == 6 and player.q_function == 2 %}
+    {% include 'MS_3/include/questionnaire_epo.html' %}
+
+{% elif player.questionnaire_page == 7 and player.q_function == 2 %}
     {% include 'MS_3/include/questionnaire_socio_1.html' %}
 
 {% endif %}

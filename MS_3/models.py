@@ -238,6 +238,18 @@ class Player(BasePlayer):
 
     q_wealth =models.LongStringField(blank=False, label="")
 
+    q_function = models.IntegerField(
+        choices=[
+            [1, 'Yes'],
+            [2, 'No'],
+        ],
+        widget=widgets.RadioSelect,
+        label="",
+        blank=False
+    )
+
+    q_function_yes = models.LongStringField(blank=False, label="")
+
     q_maxoption = models.IntegerField(
         choices = [
             [1, 'Triangle'],
