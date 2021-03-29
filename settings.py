@@ -11,8 +11,8 @@ from os import environ
 
 mturk_hit_settings = {
     'keywords': ['bonus', 'short', 'academic'],
-    'title': 'A short study on decision-making (with bonus)',
-    'description': 'This HIT takes approximately 10 minutes to complete. Please accept this HIT only if you can commit to completing it right away and without interruption. You can earn a substantial bonus that exceeds the reward for this HIT.',
+    'title': 'A Short Study on Decision-Making (with bonus)',
+    'description': 'This HIT takes approximately 10-12 minutes to complete. Please accept this HIT only if you can commit to completing it right away and without interruption. You can earn a substantial bonus that exceeds the reward for this HIT.',
     'frame_height': 800,
     'template': 'global/mturk_template.html',
     'minutes_allotted_per_assignment': 45,
