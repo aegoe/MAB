@@ -121,7 +121,7 @@ class Player(BasePlayer):
 
     cq2_MS3 = models.IntegerField(
         choices=[
-            [999, 'each point invested, i.e. each draw, across all stages and rounds'],
+            [999, 'each point invested, i.e. each draw, across all stages, rounds and the sampling phase'],
             [9, 'each point invested in the first, but not the second investment decision'],
             [99, 'my performance in comparison to other workers'],
             [1, 'each point invested in the first and the second investment decision'],
