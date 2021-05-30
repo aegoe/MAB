@@ -112,7 +112,7 @@ class Device(Page):
             self.player.end_button = self.participant.vars['end_button'] = False
 
             treatments = ['choice', 'no_choice']
-            weights_3 = [0.5, 0.5]
+            weights_3 = [1, 0]
             draw_3 = choice(treatments, 1, p=weights_3)
             self.participant.vars['draw_2'] = draw_3[0]
             if draw_3[0] == 'choice':

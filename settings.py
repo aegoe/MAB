@@ -49,33 +49,33 @@ SESSION_CONFIG_DEFAULTS = {
 }
 
 SESSION_CONFIGS = [
-    {
-        'name': 'MS3',
-        'display_name': "MS3",
-        'num_demo_participants': 1,
-        'app_sequence': ['MS_3'],
-        'choice': False,
-        'safe': False,
-        'testing': False,
-        'variance': False,
-        'sampling': False,
-        'feedback_3': False,
-        'incentive': False,
-
-    },
     # {
-    #     'name': 'MAB_MainStudy_FreeSampling',
-    #     'display_name': "MAB_MainStudy_FreeSampling",
+    #     'name': 'MS3',
+    #     'display_name': "MS3",
     #     'num_demo_participants': 1,
-    #     'app_sequence': ['Pilot_Descr'],
+    #     'app_sequence': ['MS_3'],
     #     'choice': False,
     #     'safe': False,
     #     'testing': False,
     #     'variance': False,
-    #     'sampling': True,
+    #     'sampling': False,
     #     'feedback_3': False,
+    #     'incentive': False,
     #
     # },
+    {
+        'name': 'MAB_MainStudy_FreeSampling',
+        'display_name': "MAB_MainStudy_FreeSampling",
+        'num_demo_participants': 1,
+        'app_sequence': ['Pilot_Descr'],
+        'choice': False,
+        'safe': False,
+        'testing': False,
+        'variance': False,
+        'sampling': True,
+        'feedback_3': False,
+
+    },
 
 ]
 
