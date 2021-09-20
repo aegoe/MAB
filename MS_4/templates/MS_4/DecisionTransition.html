@@ -1,0 +1,32 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+<div class="page-header">
+    <p> You are now in stage 2, the decision stage. </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% if not choice %}
+<p>Your next decision on how to allocate your three points will determine your final bonus payoff.</p>
+<p>To check the summary statistics from the 100 priors draws, open the information table at the bottom of your main decision screen.</p>
+
+{% elif choice %}
+<p>Your next three decisions on how to allocate your respective point will determine your final bonus payoff.</p>
+<p>To check the summary statistics from the 100 priors draws, open the information table at the bottom of your main decision screen.</p>
+<p>You will receive feedback only after you made all three decisions.</p>
+
+{% endif %}
+
+<br>
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Proceed to the main decision</button>
+
+{% endblock %}
+
+
+
+
+
+

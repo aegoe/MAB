@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Final
+{% endblock %}
+
+{% block content %}
+<p>Thank you very much for participating!</p>
+<p>Based on your decisions in the HIT, you earned a bonus of {{ participant.payoff }}, which converts
+to {{ bonus }}. Adding the {{ participation_fee }} participation fee, <b>your total payoff equals {{ total_payoff }}.</b></p>
+
+    <div class="alert alert-warning" role="alert">
+        Your completion code is <code>{{ completion_code }}</code>. To submit your work, copy/paste that code on the
+        MTurk page.
+    </div>
+
+
+{% endblock %}
+

@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Please fill out this form.
+{% endblock %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            What device are you using right now?<br>
+            <i>Please choose one of the following answers</i>.
+        </div>
+        <div class="card-body">
+            {% formfield player.access_device %}
+        </div>
+    </div>
+    <br>
+    {% next_button %}
+{% endblock %}

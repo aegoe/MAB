@@ -1,0 +1,30 @@
+{% load otree %}
+{% block title %}
+<h4>Stage 1</h4>
+<br>
+{% endblock %}
+
+{% block content %}
+
+<p>This task has two stages.</p>
+
+<p>In the first stage, you learn about the options by sampling through them 100 times. This is the only way you gain information about the composition of Coins for each option. Thus, you should consider your choices carefully.</p>
+
+<p>Coins drawn in this stage do not count towards your final bonus. Each sampling round, you freely choose which one of the three options to draw from (see image below). After each decision, you receive feedback on the value of that draw. <p>
+
+<p>After you have finished all 100 sampling rounds, the second stage begins. </p>
+
+<br>
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/htU49kg.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+<button value="True" id="proceed" class="btn btn-primary btn-large">Proceed</button>
+
+
+{% endblock %}

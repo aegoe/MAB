@@ -1,0 +1,35 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+<div class="page-header">
+    <p> Transition</p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<p> You will now start the sampling phase. You will make 100 decisions on how to allocate one point between the three options. After each decision, you receive feedback about the return of your draw. </p>
+
+{% if incentive %}
+<p> The payoff from the next 100 rounds determines how many points you will be allowed to invest in the second investment decision.</p>
+
+<p> You can also use the following 100 rounds to learn more about the options. </p>
+
+{% elif not incentive %}
+<p> Your decisions in the next 100 rounds do not count towards your total payoff.</p>
+
+<p> However, you should use them to learn more about the options before your second investment decision.</p>
+
+{% endif %}
+<br>
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Proceed to the sampling stage</button>
+
+
+{% endblock %}
+
+
+
+
+
+

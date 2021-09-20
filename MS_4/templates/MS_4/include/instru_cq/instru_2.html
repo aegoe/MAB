@@ -1,0 +1,44 @@
+{% load otree %}
+{% block title %}
+<h4>The Task</h4>
+<br>
+
+{% endblock %}
+
+{% block content %}
+
+<p>In this HIT, you complete two stages. In each stage, you choose between the same set of options to receive Coins. You choose options by investing points.</p>
+
+<p>You can think of each option as a bag of coins (see image below). The coins are put in each bag before the game starts and for every point you invest in
+an option, a coin from the respective bag is drawn. Thus, one point equals one draw. After each draw, the coin is put back into the bag. Bags do not change over the
+course of the task. However, bags can differ in the composition of coins they contain.</p>
+
+
+
+{% if choice %}
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/2jFkW9D.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+{% elif not choice %}
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/OI1vt5V.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+{% endif %}
+
+
+<br>
+{% endblock %}
+
+
