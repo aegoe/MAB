@@ -170,7 +170,7 @@ class SamplingTransition(Page):
 class Sampling(Page):
     form_model = 'player'
     def is_displayed(self):
-        return self.round_number <= 100
+        return self.round_number <= 5
 
     def get_form_fields(self):
         return ['option_1_samp', 'option_2_samp', 'option_3_samp']
@@ -297,7 +297,7 @@ class Feedback_Sampling(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.round_number <= 100
+        return self.round_number <= 5
 
     def vars_for_template(self):
         return {'choice': self.participant.vars['choice'],
@@ -330,7 +330,7 @@ class Decision2Transition(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.round_number == 100
+        return self.round_number == 5
 
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
@@ -351,9 +351,9 @@ class Decision2(Page):
 
     def is_displayed(self):
         if not self.participant.vars['choice'] and self.player.decision_2_page == 1:
-            return self.round_number == 100
+            return self.round_number == 5
         elif self.participant.vars['choice'] and self.player.decision_2_page <= 3:
-            return self.round_number == 100
+            return self.round_number == 5
 
     def get_form_fields(self):
         if self.participant.vars['choice'] and not self.participant.vars['safe']:
@@ -680,11 +680,11 @@ class Decision2(Page):
 
 #transition and introduction belief elicitation?
 
-class PayoffTransition(Page):
+class BeliefTransition(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.round_number == 100
+        return self.round_number == 5
 
     def vars_for_template(self):
         return {'choice': self.participant.vars['choice'],
@@ -713,12 +713,34 @@ class PayoffTransition(Page):
         print(self.player.payoff_b)
 
 
+
+class Beliefs(Page):
+    form_model = 'player'
+
+    def get_form_fields(self):
+        if self.player.belief_page == 3:
+            return ['ranking', 'rankingsd']
+        else:
+            return[]
+
+    def is_displayed(self):
+        return self.round_number == 5
+
+    def vars_for_template(self):
+        return {
+
+        }
+
+    def before_next_page(self):
+        self.player.belief_page += 1
+
+
 ########################################################################################################################
 # Questionnaire and Final Page #########################################################################################
 ########################################################################################################################
 
 class Questionnaire(Page):
-    form_model ='player'
+    form_model = 'player'
 
     def get_form_fields(self):
         if self.player.questionnaire_page == 1:
@@ -750,9 +772,9 @@ class Questionnaire(Page):
 
     def is_displayed(self):
         if self.player.q_function == 1 or not self.player.q_function:
-            return self.round_number == 100 and self.player.questionnaire_page <=8
+            return self.round_number == 5 and self.player.questionnaire_page <=8
         elif self.player.q_function == 2 or not self.player.q_function:
-            return self.round_number == 100 and self.player.questionnaire_page <=7
+            return self.round_number == 5 and self.player.questionnaire_page <=7
 
 
     def vars_for_template(self):
@@ -773,7 +795,7 @@ class Disclose_Payoff(Page):
     form_model ='player'
 
     def is_displayed(self):
-        return self.round_number == 100
+        return self.round_number == 5
 
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
@@ -793,7 +815,7 @@ class Disclose_Payoff(Page):
 
 class FinalInfo(Page):
     def is_displayed(self):
-        return self.round_number == 100
+        return self.round_number == 5
 
     def vars_for_template(self):
         return {'participation_fee': self.session.config['participation_fee'],
@@ -821,15 +843,18 @@ page_sequence = [
     Decision2,
     Decision2,
     Decision2,
-    PayoffTransition,
+    BeliefTransition,
+    Beliefs,
+    Beliefs,
+    Beliefs,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
     Disclose_Payoff,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
     FinalInfo,
 ]

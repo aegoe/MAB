@@ -23,6 +23,10 @@ class Constants(BaseConstants):
     endowment_choice = 1
     endowment_points = 3
     num_priors = 20
+    choices = ['Option 1', 'Option 2', 'Option 3']
+    choices2 = ['Option 1', 'Option 2', 'Option 3']
+    choices3 = ['Option 1', 'Option 2', 'Option 3']
+    choices4 = ['Option 1', 'Option 2', 'Option 3']
 
     safe_option = 6
 
@@ -70,6 +74,7 @@ class Player(BasePlayer):
     endowment_after_sampling = models.IntegerField()
 
     instru_page = models.IntegerField(initial=1)
+    belief_page = models.IntegerField(initial=1)
     questionnaire_page = models.IntegerField(initial=1)
     controls = models.IntegerField(initial=0)
     comprehension_page = models.IntegerField(initial=1)
@@ -78,6 +83,11 @@ class Player(BasePlayer):
     points_sampling = models.IntegerField(initial=0)
     decision_1_page = models.IntegerField(initial=1)
     decision_2_page = models.IntegerField(initial=1)
+
+    ranking = models.StringField()
+    rankingsd = models.StringField()
+    rankingld = models.StringField()
+    rankinghd = models.StringField()
 
     payoff_a = models.CurrencyField()
     payoff_b = models.CurrencyField()

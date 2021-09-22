@@ -1,18 +1,25 @@
 {% load otree %}
-<h4>The Stages</h4>
+<h4>Stage 1</h4>
 <br>
 
 
-<p> In both stages, you first gather information about the options, and then decide how to allocate three points between them. Both stages determine your bonus payoff. </p>
 
+<p>You will complete two stages.</p>
 
-<p> In <b> Stage 1</b>, you learn about the options by observing summary statistics based on {{Constants.num_priors}} prior draws from each of the three options.
+<p>In the first stage, you can learn about the contents of each option by sampling through them 100 times. This is the only way you gain information about the composition of Coins for each option. Thus, you should consider your choices carefully.</p>
 
-<p> You then proceed to your first main investment decision and make {% if choice %} three consecutive decisions on how to allocate one point between the three options.
-    {% elif not choice %} one decision on how to allocate your three points between the three options. {% endif %}   </p>
+<p>Coins drawn in this stage do not count towards your final bonus. Each sampling round, you freely choose which one of the three options to draw from (see image below). After each decision, you receive feedback on the value of that draw. <p>
 
-<p> After submitting your decision, you will be immediately forwarded to <b> Stage 2</b>. You receive feedback on your main investment decisions at the end of this HIT. </p>
+<p>After you have finished all 100 sampling rounds, the second stage begins. </p>
 
+<br>
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/htU49kg.png' alt="bla" width="800px"/>
+    </div>
+</div>
 
 <br>
 
