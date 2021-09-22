@@ -2,7 +2,7 @@ from otree.api import (
     Currency as c, currency_range, BasePlayer
 )
 
-from _builtin import Page, WaitPage
+from _builtin import     Page, WaitPage
 from .models import Constants
 import random
 from numpy.random import choice
@@ -30,7 +30,7 @@ class Device(Page):
 
     def before_next_page(self):
 
-        if self.session.config['name'] == 'MS3':
+        if self.session.config['name'] == 'MS4':
             letters_and_digits = string.ascii_letters + string.digits
             result_str = ''.join((random.choice(letters_and_digits) for i in range(7))) + str(random.randint(1, 8))
             self.player.completion_code = result_str
@@ -65,22 +65,6 @@ class Device(Page):
                 self.participant.vars['draw'] = draw[0]
 
 
-########################################################################################################################
-# AttentionCheck ##########################################################################################################
-########################################################################################################################
-
-class AttentionCheck(Page):
-    def is_displayed(self):
-        return self.player.access_device != 0 and self.round_number == 1
-
-    form_model = 'player'
-    form_fields = ['attention_check_1', 'attention_check_2']
-
-    def vars_for_template(self):
-        return{
-            'choice': self.participant.vars['choice']
-        }
-
 
 ########################################################################################################################
 # DeadEnd ##############################################################################################################
@@ -92,7 +76,7 @@ class DeadEnd(Page):
     # this page is only displayed to people with mobile devices
     # which we do not want to partake and that are "trapped" on this page due to the missing {% next_button %}
     def is_displayed(self):
-        return self.player.access_device == 0 or self.player.attention_check_1 == 0 or self.player.attention_check_2 != "chair" and self.round_number == 1
+        return self.player.access_device == 0 and self.round_number == 1
 
 
 ########################################################################################################################
@@ -114,6 +98,7 @@ class InstruStart(Page):
                 'endowment_points': Constants.endowment_points,
                 'draw': self.participant.vars['draw'],
                 'feedback_3': self.participant.vars['feedback_3'],
+                'instru_page': self.player.instru_page,
 
                 }
 
@@ -820,9 +805,8 @@ class FinalInfo(Page):
 
 page_sequence = [
     Device,
-    AttentionCheck,
+    #AttentionCheck,
     DeadEnd,
-    InstruStart,
     InstruStart,
     InstruStart,
     InstruStart,

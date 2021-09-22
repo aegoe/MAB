@@ -29,7 +29,7 @@ idna==2.8
 incremental==17.5.0
 jmespath==0.9.3
 numpy==1.19.1
-otree>3.0.6
+otree==3.0.6
 otree-boto2-shim==0.3.2
 otree-core==0.0.0b1
 otreeutils==0.9.2

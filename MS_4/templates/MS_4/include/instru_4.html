@@ -1,15 +1,12 @@
 {% load otree %}
-{% block title %}
 <h4>Stage 2 and Final Payment</h4>
 <br>
-{% endblock %}
 
-{% block content %}
 
 <p> In the second stage, you will make your main investment decision that determines your bonus payoff. </p>
 
 <p> Based on what you learned during the sampling stage, you will make {% if choice %} three consecutive decisions on how to allocate one point between the three options.
-    {% elif not choice %} one decision on how to allocate your three points between the three options.</p>
+    {% elif not choice %} one decision on how to allocate your three points between the three options. {% endif %}</p>
 
 <p> After your main investment decision, you will proceed to a short questionnaire.</p>
 
@@ -21,4 +18,3 @@
 
 <button value="True" id="proceed" class="btn btn-primary btn-large">Proceed</button>
 
-{% endblock %}

@@ -42,7 +42,7 @@ mturk_hit_settings = {
 }
 
 SESSION_CONFIG_DEFAULTS = {
-    'real_world_currency_per_point': 0.05,
+    'real_world_currency_per_point': 0.1,
     'participation_fee': 0.5,
     'doc': "",
     'mturk_hit_settings': mturk_hit_settings,
@@ -64,16 +64,17 @@ SESSION_CONFIGS = [
     #
     # },
     {
-        'name': 'MAB_MainStudy_FreeSampling',
-        'display_name': "MAB_MainStudy_FreeSampling",
+        'name': 'MS4',
+        'display_name': "MS4",
         'num_demo_participants': 1,
-        'app_sequence': ['Pilot_Descr'],
+        'app_sequence': ['MS_4'],
         'choice': False,
         'safe': False,
         'testing': False,
         'variance': False,
-        'sampling': True,
+        'sampling': False,
         'feedback_3': False,
+        'incentive': False,
 
     },
 
