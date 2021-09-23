@@ -23,10 +23,11 @@ class Constants(BaseConstants):
     endowment_choice = 1
     endowment_points = 3
     num_priors = 20
-    choices = ['Option Resch', 'Option Schin', 'Option Taw']
-    choices2 = ['Option Resch', 'Option Schin', 'Option Taw']
-    choices3 = ['Option Resch', 'Option Schin', 'Option Taw']
-    choices4 = ['Option Resch', 'Option Schin', 'Option Taw']
+    choice_image = {'Option Resch' : 'https://i.imgur.com/kr0xYz1.png', 'Option Schin' : 'https://i.imgur.com/6kqKG77.png', 'Option Taw': 'https://i.imgur.com/1BZVMwB.png'}
+    #choices = ['Option Resch', 'Option Schin', 'Option Taw']
+    #choices2 = ['Option Resch', 'Option Schin', 'Option Taw']
+    #choices3 = ['Option Resch', 'Option Schin', 'Option Taw']
+    #choices4 = ['Option Resch', 'Option Schin', 'Option Taw']
 
     safe_option = 6
 

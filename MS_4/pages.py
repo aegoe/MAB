@@ -732,11 +732,21 @@ class Beliefs(Page):
 
     def vars_for_template(self):
         return {
+            'draw': self.participant.vars['draw'],
 
         }
 
     def before_next_page(self):
         self.player.belief_page += 1
+
+        print(self.player.rankingld)
+        print(self.player.rankinghd)
+        print(self.player.ranking)
+        print(self.player.rankingsd)
+
+        print(self.player.mean_1)
+        print(self.player.mean_2)
+        print(self.player.mean_3)
 
 
 ########################################################################################################################
@@ -753,32 +763,28 @@ class Questionnaire(Page):
             return ['q_risk']
         elif self.player.questionnaire_page == 3:
             return ['q_exploration_strategy', 'q_sampling_strategy']
-        elif self.player.questionnaire_page == 4 and self.participant.vars['choice']:
-            return ['q_mean_sequential', 'q_sd_sequential', 'q_ld_sequential', 'q_hd_sequential', 'q_descr_exp']
-        elif self.player.questionnaire_page == 4 and not self.participant.vars['choice']:
-            return ['q_mean_simultan', 'q_sd_simultan', 'q_ld_simultan', 'q_hd_simultan', 'q_descr_exp']
-        elif self.player.questionnaire_page == 5:
+        elif self.player.questionnaire_page == 4:
             return['q_function']
-        elif self.player.questionnaire_page == 6 and self.player.q_function==1:
+        elif self.player.questionnaire_page == 5 and self.player.q_function==1:
             return['q_function_yes']
-        elif self.player.questionnaire_page == 7 and self.player.q_function==1:
+        elif self.player.questionnaire_page == 6 and self.player.q_function==1:
             epo = [f'q_epo_{i}' for i in range(1, 14)]
             return epo
-        elif self.player.questionnaire_page == 8 and self.player.q_function==1:
+        elif self.player.questionnaire_page == 7 and self.player.q_function==1:
             return ['q_year', 'q_sex', 'q_employment', 'q_education',
                     'q_ethnicity']
-        elif self.player.questionnaire_page == 6 and self.player.q_function==2:
+        elif self.player.questionnaire_page == 5 and self.player.q_function==2:
             epo = [f'q_epo_{i}' for i in range(1, 14)]
             return epo
-        elif self.player.questionnaire_page == 7 and self.player.q_function==2:
+        elif self.player.questionnaire_page == 6 and self.player.q_function==2:
             return ['q_year', 'q_sex', 'q_employment', 'q_education',
                     'q_ethnicity']
 
     def is_displayed(self):
         if self.player.q_function == 1 or not self.player.q_function:
-            return self.round_number == 5 and self.player.questionnaire_page <=8
-        elif self.player.q_function == 2 or not self.player.q_function:
             return self.round_number == 5 and self.player.questionnaire_page <=7
+        elif self.player.q_function == 2 or not self.player.q_function:
+            return self.round_number == 5 and self.player.questionnaire_page <=6
 
 
     def vars_for_template(self):
@@ -814,6 +820,8 @@ class Disclose_Payoff(Page):
                'payoff_1_b': self.player.payoff_1_b,
                'payoff_2_b': self.player.payoff_2_b,
                'payoff_3_b': self.player.payoff_3_b,
+               'ranking': self.player.ranking,
+
                }
 
 

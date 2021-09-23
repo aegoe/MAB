@@ -6,9 +6,10 @@
     is a measure of how spread out the draws are in relation to the option's average. A low standard deviation means that most numbers are
 close to the average. A high standard deviation means that numbers are more widely dispersed.</p>
 
-<p>"Lowest Draw" refers to the coin which returned the lowest value from the {{Constants.num_priors}}-draw sample.</p>
+<p>"Lowest Draw" refers to the Coin with the lowest value for a particular option. </p>
 
-<p>"Highest Draw" refers to the coin which returned the highest value from the {{Constants.num_priors}}-draw sample.</p>
+<p>"Highest Draw" refers to the Coin with the highest value for a particular option.</p>
+
 
 <div class="card">
   <div class="card-header">
@@ -16,8 +17,8 @@ close to the average. A high standard deviation means that numbers are more wide
   </div>
   <div class="card-body">
 <ul id="items" class="list-group list-group-numbered" style="cursor: move">
-    {% for choice in Constants.choices %}
-    <li data-id="{{ choice }}" class="list-group-item">{{ choice }}</li>
+    {% for choice, value in Constants.choice_image.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
     {% endfor %}
 </ul>
 
@@ -34,6 +35,8 @@ close to the average. A high standard deviation means that numbers are more wide
 
 <input type="hidden" name="ranking" id="ranking">
 
+      {{ form.ranking.errors }}
+
 
 </div>
 </div>
@@ -44,8 +47,8 @@ close to the average. A high standard deviation means that numbers are more wide
   </div>
   <div class="card-body">
 <ul id="sd" class="list-group list-group-numbered" style="cursor: move">
-    {% for var in Constants.choices2 %}
-    <li data-id="{{ var }}" class="list-group-item">{{ var }}</li>
+    {% for choice, value in Constants.choice_image.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
     {% endfor %}
 </ul>
 
@@ -72,8 +75,8 @@ close to the average. A high standard deviation means that numbers are more wide
   </div>
   <div class="card-body">
 <ul id="ld" class="list-group list-group-numbered" style="cursor: move">
-    {% for var in Constants.choices3 %}
-    <li data-id="{{ var }}" class="list-group-item">{{ var }}</li>
+    {% for choice, value in Constants.choice_image.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
     {% endfor %}
 </ul>
 
@@ -100,8 +103,8 @@ close to the average. A high standard deviation means that numbers are more wide
   </div>
   <div class="card-body">
 <ul id="hd" class="list-group list-group-numbered" style="cursor: move">
-    {% for var in Constants.choices4 %}
-    <li data-id="{{ var }}" class="list-group-item">{{ var }}</li>
+    {% for choice, value in Constants.choice_image.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
     {% endfor %}
 </ul>
 
