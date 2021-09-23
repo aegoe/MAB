@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/Beliefs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MS_4/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MS_4/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/Decision2.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/Decision2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/Disclose_Payoff.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/Disclose_Payoff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/PriorsTransition.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/BeliefTransition.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/Questionnaire.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/Questionnaire.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/PriorsTransition.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pilot_Priors/templates/Pilot_Priors/BeliefTransition.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MS_4/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+            <state relative-caret-position="320">
+              <caret line="26" column="61" lean-forward="true" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
               <folding>
                 <element signature="e#0#134#0" expanded="true" />
               </folding>
@@ -53,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="264">
+              <caret line="12" column="60" lean-forward="true" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -62,21 +55,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="2">
+              <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
               <folding>
-                <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#1;n#div#3;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_4.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#2;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Sampling.html">
+        <entry file="file://$PROJECT_DIR$/MS_4/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1445">
-              <caret line="2246" column="24" selection-start-line="2246" selection-start-column="24" selection-end-line="2246" selection-end-column="24" />
+            <state relative-caret-position="3248">
+              <caret line="853" column="12" selection-start-line="853" selection-start-column="12" selection-end-line="853" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#71#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_1.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="506">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -94,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_3.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -103,7 +115,7 @@
         <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_3.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="594">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -113,20 +125,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
               <caret line="15" selection-start-line="15" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS_4/pages.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1295">
-              <caret line="721" column="41" selection-start-line="721" selection-start-column="41" selection-end-line="721" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#71#0" expanded="true" />
-                <element signature="e#8776#12095#0" />
-                <element signature="e#16454#29622#0" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -145,8 +143,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>str</find>
-      <find>60</find>
       <find>feedbac</find>
       <find>footer</find>
       <find>final</find>
@@ -175,6 +171,8 @@
       <find>function</find>
       <find>attention</find>
       <find>incen</find>
+      <find>ranki</find>
+      <find>rank</find>
     </findStrings>
     <replaceStrings>
       <replace>-9</replace>
@@ -214,7 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MS_3/templates/MS_3/include/Disclose_Payoff.html" />
         <option value="$PROJECT_DIR$/PS_MAIN/templates/PS_MAIN/include/decisionA1.html" />
         <option value="$PROJECT_DIR$/MS_3/templates/MS_3/include/instru_5.html" />
         <option value="$PROJECT_DIR$/MS_3/templates/MS_3/InstruStart.html" />
@@ -261,10 +258,11 @@
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_3.html" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/Beliefs.html" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_1.html" />
-        <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html" />
         <option value="$PROJECT_DIR$/MS_4/pages.py" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_3.html" />
+        <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html" />
         <option value="$PROJECT_DIR$/MS_4/models.py" />
+        <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_4.html" />
       </list>
     </option>
   </component>
@@ -272,7 +270,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1176" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -280,17 +278,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="MAB" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -355,6 +342,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="MAB" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -368,19 +366,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Program Files\oTree\MAB\MS_3\templates\MS_3" />
-      <recent name="C:\Program Files\oTree\MAB\Pilot_Priors\templates\Pilot_Priors" />
-      <recent name="C:\Program Files\oTree\MAB\Pilot\templates\Pilot" />
-      <recent name="C:\Program Files\oTree\MAB\Pilot" />
-      <recent name="C:\Program Files\oTree\MAB\_builtin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Program Files\oTree\MAB\MS_4\templates\MS_4\include" />
       <recent name="C:\Program Files\oTree\MAB\MS_3\templates\MS_3\include" />
       <recent name="C:\Program Files\oTree\MAB\MS_3\templates\MS_3" />
       <recent name="C:\Program Files\oTree\MAB\PS_MAIN\templates\PS_MAIN\include" />
       <recent name="C:\Program Files\oTree\MAB\PS_MAIN\templates\PS_MAIN" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Program Files\oTree\MAB\MS_3\templates\MS_3" />
+      <recent name="C:\Program Files\oTree\MAB\Pilot_Priors\templates\Pilot_Priors" />
+      <recent name="C:\Program Files\oTree\MAB\Pilot\templates\Pilot" />
+      <recent name="C:\Program Files\oTree\MAB\Pilot" />
+      <recent name="C:\Program Files\oTree\MAB\_builtin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -601,18 +599,19 @@
       <workItem from="1632120111566" duration="9769000" />
       <workItem from="1632206700634" duration="2339000" />
       <workItem from="1632298724616" duration="8926000" />
-      <workItem from="1632315623328" duration="11027000" />
+      <workItem from="1632315623328" duration="11162000" />
+      <workItem from="1632379414319" duration="9155000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="761542000" />
+    <option name="totallyTimeSpent" value="770832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15581644" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15741728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -626,7 +625,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026681" side_tool="true" weight="0.3631124" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733192" visible="true" weight="0.26801154" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49733192" visible="true" weight="0.30259365" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32756963" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -641,13 +640,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MS_3/templates/MS_3/ComprehensionQuestions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MS_3/templates/MS_3/include/instru_5.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -2713,33 +2705,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Beliefs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/questionnaire_2.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Sampling.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
+        <state relative-caret-position="49412">
           <caret line="2246" column="24" selection-start-line="2246" selection-start-column="24" selection-end-line="2246" selection-end-column="24" />
         </state>
       </provider>
@@ -2747,14 +2718,21 @@
     <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
@@ -2765,35 +2743,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_3.html">
+    <entry file="file://$PROJECT_DIR$/MS_4/pages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="3248">
+          <caret line="853" column="12" selection-start-line="853" selection-start-column="12" selection-end-line="853" selection-end-column="12" />
           <folding>
-            <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#1;n#!!top" expanded="true" />
+            <element signature="e#0#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/pages.py">
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1295">
-          <caret line="721" column="41" selection-start-line="721" selection-start-column="41" selection-end-line="721" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-            <element signature="e#8776#12095#0" />
-            <element signature="e#16454#29622#0" />
-          </folding>
+        <state relative-caret-position="264">
+          <caret line="12" column="60" lean-forward="true" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Beliefs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MS_4/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        <state relative-caret-position="320">
+          <caret line="26" column="61" lean-forward="true" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
           <folding>
             <element signature="e#0#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#3;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#2;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

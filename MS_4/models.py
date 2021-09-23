@@ -23,10 +23,10 @@ class Constants(BaseConstants):
     endowment_choice = 1
     endowment_points = 3
     num_priors = 20
-    choices = ['Option 1', 'Option 2', 'Option 3']
-    choices2 = ['Option 1', 'Option 2', 'Option 3']
-    choices3 = ['Option 1', 'Option 2', 'Option 3']
-    choices4 = ['Option 1', 'Option 2', 'Option 3']
+    choices = ['Option Resch', 'Option Schin', 'Option Taw']
+    choices2 = ['Option Resch', 'Option Schin', 'Option Taw']
+    choices3 = ['Option Resch', 'Option Schin', 'Option Taw']
+    choices4 = ['Option Resch', 'Option Schin', 'Option Taw']
 
     safe_option = 6
 
@@ -46,9 +46,9 @@ class Player(BasePlayer):
     endowment = models.IntegerField()
     incentive = models.BooleanField()
     sampling = models.BooleanField()
-    option_1_samp = models.IntegerField(initial=0, label="Option T", blank=True)
-    option_2_samp = models.IntegerField(initial=0, label="Option C", blank=True)
-    option_3_samp = models.IntegerField(initial=0, label="Option S", blank=True)
+    option_1_samp = models.IntegerField(initial=0, label="Option Resch", blank=True)
+    option_2_samp = models.IntegerField(initial=0, label="Option Schin", blank=True)
+    option_3_samp = models.IntegerField(initial=0, label="Option Taw", blank=True)
 
     payoff_1_samp = models.IntegerField()
     payoff_2_samp = models.IntegerField()
@@ -57,9 +57,9 @@ class Player(BasePlayer):
     urn_draws_2_samp = models.StringField()
     urn_draws_3_samp = models.StringField()
 
-    option_1 = models.IntegerField(initial=0, label="Option T")
-    option_2 = models.IntegerField(initial=0, label="Option C")
-    option_3 = models.IntegerField(initial=0, label="Option S")
+    option_1 = models.IntegerField(initial=0, label="Option Resch")
+    option_2 = models.IntegerField(initial=0, label="Option Schin")
+    option_3 = models.IntegerField(initial=0, label="Option Taw")
     option_safe = models.IntegerField(initial=0, label = "Hexagon")
 
     urn_draws_1 = models.StringField()
@@ -84,10 +84,10 @@ class Player(BasePlayer):
     decision_1_page = models.IntegerField(initial=1)
     decision_2_page = models.IntegerField(initial=1)
 
-    ranking = models.StringField()
-    rankingsd = models.StringField()
-    rankingld = models.StringField()
-    rankinghd = models.StringField()
+    ranking = models.StringField(blank=True)
+    rankingsd = models.StringField(blank=True)
+    rankingld = models.StringField(blank=True)
+    rankinghd = models.StringField(blank=True)
 
     payoff_a = models.CurrencyField()
     payoff_b = models.CurrencyField()
@@ -111,7 +111,17 @@ class Player(BasePlayer):
     payoff_3_b = models.IntegerField()
 
 
+    mean_1 = models.FloatField(
+        min=0, max=40, label="Mean: Option 1"
+    )
 
+    mean_2 = models.FloatField(
+        min=0, max=40, label="Mean: Option 2"
+    )
+
+    mean_3 = models.FloatField(
+        min=0, max=40, label="Mean: Option 3"
+    )
     #################################
     # Comprehension Questions #######
     #################################

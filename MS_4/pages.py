@@ -719,7 +719,11 @@ class Beliefs(Page):
 
     def get_form_fields(self):
         if self.player.belief_page == 3:
-            return ['ranking', 'rankingsd']
+            return ['ranking', 'rankingsd', 'rankingld', 'rankinghd']
+
+        elif self.player.belief_page == 4:
+            return ['mean_1', 'mean_2', 'mean_3']
+
         else:
             return[]
 
@@ -844,6 +848,7 @@ page_sequence = [
     Decision2,
     Decision2,
     BeliefTransition,
+    Beliefs,
     Beliefs,
     Beliefs,
     Beliefs,
