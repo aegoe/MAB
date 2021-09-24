@@ -10,6 +10,7 @@ close to the average. A high standard deviation means that numbers are more wide
 
 <p>"Highest Draw" refers to the Coin with the highest value for a particular option.</p>
 
+{% if draw == 'TSR' %}
 
 <div class="card">
   <div class="card-header">
@@ -123,4 +124,589 @@ close to the average. A high standard deviation means that numbers are more wide
 
 </div>
 </div>
+
+{% elif draw == 'STR' %}
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest mean) to bottom (lowest mean) according to their average payoff per draw.</b>
+  </div>
+  <div class="card-body">
+<ul id="items" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_str.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el = document.getElementById('items');
+    let sortable = Sortable.create(el, {
+        onChange: function (evt) {
+            document.getElementById('ranking').value = sortable.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="ranking" id="ranking">
+
+      {{ form.ranking.errors }}
+
+
+</div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest SD) to bottom (lowest SD) according to their standard deviation. </b>
+  </div>
+  <div class="card-body">
+<ul id="sd" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_str.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el2 = document.getElementById('sd');
+    let sortable2 = Sortable.create(el2, {
+        onChange: function (evt) {
+            document.getElementById('rankingsd').value = sortable2.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankingsd" id="rankingsd">
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest "Lowest Draw") to bottom (lowest "Lowest Draw") according to their lowest possible draw. </b>
+  </div>
+  <div class="card-body">
+<ul id="ld" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_str.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el3 = document.getElementById('ld');
+    let sortable3 = Sortable.create(el3, {
+        onChange: function (evt) {
+            document.getElementById('rankingld').value = sortable3.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankingld" id="rankingld">
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest "Highest Draw") to bottom (lowest "Highest Draw") according to their highest possible draw. </b>
+  </div>
+  <div class="card-body">
+<ul id="hd" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_str.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el4 = document.getElementById('hd');
+    let sortable4 = Sortable.create(el4, {
+        onChange: function (evt) {
+            document.getElementById('rankinghd').value = sortable4.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankinghd" id="rankinghd">
+
+</div>
+</div>
+
+
+{% elif draw == 'RTS' %}
+
+
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest mean) to bottom (lowest mean) according to their average payoff per draw.</b>
+  </div>
+  <div class="card-body">
+<ul id="items" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_rts.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el = document.getElementById('items');
+    let sortable = Sortable.create(el, {
+        onChange: function (evt) {
+            document.getElementById('ranking').value = sortable.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="ranking" id="ranking">
+
+      {{ form.ranking.errors }}
+
+
+</div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest SD) to bottom (lowest SD) according to their standard deviation. </b>
+  </div>
+  <div class="card-body">
+<ul id="sd" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_rts.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el2 = document.getElementById('sd');
+    let sortable2 = Sortable.create(el2, {
+        onChange: function (evt) {
+            document.getElementById('rankingsd').value = sortable2.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankingsd" id="rankingsd">
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest "Lowest Draw") to bottom (lowest "Lowest Draw") according to their lowest possible draw. </b>
+  </div>
+  <div class="card-body">
+<ul id="ld" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_rts.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el3 = document.getElementById('ld');
+    let sortable3 = Sortable.create(el3, {
+        onChange: function (evt) {
+            document.getElementById('rankingld').value = sortable3.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankingld" id="rankingld">
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest "Highest Draw") to bottom (lowest "Highest Draw") according to their highest possible draw. </b>
+  </div>
+  <div class="card-body">
+<ul id="hd" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_rts.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el4 = document.getElementById('hd');
+    let sortable4 = Sortable.create(el4, {
+        onChange: function (evt) {
+            document.getElementById('rankinghd').value = sortable4.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankinghd" id="rankinghd">
+
+</div>
+</div>
+
+
+{% elif draw == 'TRS' %}
+
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest mean) to bottom (lowest mean) according to their average payoff per draw.</b>
+  </div>
+  <div class="card-body">
+<ul id="items" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_trs.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el = document.getElementById('items');
+    let sortable = Sortable.create(el, {
+        onChange: function (evt) {
+            document.getElementById('ranking').value = sortable.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="ranking" id="ranking">
+
+      {{ form.ranking.errors }}
+
+
+</div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest SD) to bottom (lowest SD) according to their standard deviation. </b>
+  </div>
+  <div class="card-body">
+<ul id="sd" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_trs.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el2 = document.getElementById('sd');
+    let sortable2 = Sortable.create(el2, {
+        onChange: function (evt) {
+            document.getElementById('rankingsd').value = sortable2.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankingsd" id="rankingsd">
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest "Lowest Draw") to bottom (lowest "Lowest Draw") according to their lowest possible draw. </b>
+  </div>
+  <div class="card-body">
+<ul id="ld" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_trs.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el3 = document.getElementById('ld');
+    let sortable3 = Sortable.create(el3, {
+        onChange: function (evt) {
+            document.getElementById('rankingld').value = sortable3.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankingld" id="rankingld">
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest "Highest Draw") to bottom (lowest "Highest Draw") according to their highest possible draw. </b>
+  </div>
+  <div class="card-body">
+<ul id="hd" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_trs.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el4 = document.getElementById('hd');
+    let sortable4 = Sortable.create(el4, {
+        onChange: function (evt) {
+            document.getElementById('rankinghd').value = sortable4.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankinghd" id="rankinghd">
+
+</div>
+</div>
+
+
+{% elif draw == 'SRT' %}
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest mean) to bottom (lowest mean) according to their average payoff per draw.</b>
+  </div>
+  <div class="card-body">
+<ul id="items" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_srt.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el = document.getElementById('items');
+    let sortable = Sortable.create(el, {
+        onChange: function (evt) {
+            document.getElementById('ranking').value = sortable.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="ranking" id="ranking">
+
+      {{ form.ranking.errors }}
+
+
+</div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest SD) to bottom (lowest SD) according to their standard deviation. </b>
+  </div>
+  <div class="card-body">
+<ul id="sd" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_srt.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el2 = document.getElementById('sd');
+    let sortable2 = Sortable.create(el2, {
+        onChange: function (evt) {
+            document.getElementById('rankingsd').value = sortable2.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankingsd" id="rankingsd">
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest "Lowest Draw") to bottom (lowest "Lowest Draw") according to their lowest possible draw. </b>
+  </div>
+  <div class="card-body">
+<ul id="ld" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_srt.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el3 = document.getElementById('ld');
+    let sortable3 = Sortable.create(el3, {
+        onChange: function (evt) {
+            document.getElementById('rankingld').value = sortable3.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankingld" id="rankingld">
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest "Highest Draw") to bottom (lowest "Highest Draw") according to their highest possible draw. </b>
+  </div>
+  <div class="card-body">
+<ul id="hd" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_srt.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el4 = document.getElementById('hd');
+    let sortable4 = Sortable.create(el4, {
+        onChange: function (evt) {
+            document.getElementById('rankinghd').value = sortable4.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankinghd" id="rankinghd">
+
+</div>
+</div>
+
+{% elif draw == 'RST' %}
+
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest mean) to bottom (lowest mean) according to their average payoff per draw.</b>
+  </div>
+  <div class="card-body">
+<ul id="items" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_rst.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el = document.getElementById('items');
+    let sortable = Sortable.create(el, {
+        onChange: function (evt) {
+            document.getElementById('ranking').value = sortable.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="ranking" id="ranking">
+
+      {{ form.ranking.errors }}
+
+
+</div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest SD) to bottom (lowest SD) according to their standard deviation. </b>
+  </div>
+  <div class="card-body">
+<ul id="sd" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_rst.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el2 = document.getElementById('sd');
+    let sortable2 = Sortable.create(el2, {
+        onChange: function (evt) {
+            document.getElementById('rankingsd').value = sortable2.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankingsd" id="rankingsd">
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest "Lowest Draw") to bottom (lowest "Lowest Draw") according to their lowest possible draw. </b>
+  </div>
+  <div class="card-body">
+<ul id="ld" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_rst.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el3 = document.getElementById('ld');
+    let sortable3 = Sortable.create(el3, {
+        onChange: function (evt) {
+            document.getElementById('rankingld').value = sortable3.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankingld" id="rankingld">
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+    <b>Please rank the three options from top (highest "Highest Draw") to bottom (lowest "Highest Draw") according to their highest possible draw. </b>
+  </div>
+  <div class="card-body">
+<ul id="hd" class="list-group list-group-numbered" style="cursor: move">
+    {% for choice, value in Constants.choice_image_rst.items %}
+    <li data-id="{{ choice }}" class="list-group-item"> <img src="{{value}}" width="80px" alt=""> {{choice}} </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    let el4 = document.getElementById('hd');
+    let sortable4 = Sortable.create(el4, {
+        onChange: function (evt) {
+            document.getElementById('rankinghd').value = sortable4.toArray().join(',');
+        }
+    });
+
+</script>
+
+<input type="hidden" name="rankinghd" id="rankinghd">
+
+</div>
+</div>
+
+{% endif %}
+
 

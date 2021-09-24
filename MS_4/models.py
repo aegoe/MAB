@@ -24,6 +24,13 @@ class Constants(BaseConstants):
     endowment_points = 3
     num_priors = 20
     choice_image = {'Option Resch' : 'https://i.imgur.com/kr0xYz1.png', 'Option Schin' : 'https://i.imgur.com/6kqKG77.png', 'Option Taw': 'https://i.imgur.com/1BZVMwB.png'}
+    choice_image_str = {'Option Schin' : 'https://i.imgur.com/6kqKG77.png', 'Option Resch' : 'https://i.imgur.com/kr0xYz1.png', 'Option Taw': 'https://i.imgur.com/1BZVMwB.png'}
+    choice_image_rts = {'Option Taw': 'https://i.imgur.com/1BZVMwB.png', 'Option Resch' : 'https://i.imgur.com/kr0xYz1.png', 'Option Schin' : 'https://i.imgur.com/6kqKG77.png'}
+    choice_image_trs = {'Option Resch' : 'https://i.imgur.com/kr0xYz1.png', 'Option Taw': 'https://i.imgur.com/1BZVMwB.png', 'Option Schin' : 'https://i.imgur.com/6kqKG77.png'}
+    choice_image_srt = {'Option Schin' : 'https://i.imgur.com/6kqKG77.png', 'Option Taw': 'https://i.imgur.com/1BZVMwB.png', 'Option Resch' : 'https://i.imgur.com/kr0xYz1.png'}
+    choice_image_rst = {'Option Taw': 'https://i.imgur.com/1BZVMwB.png', 'Option Schin' : 'https://i.imgur.com/6kqKG77.png', 'Option Resch' : 'https://i.imgur.com/kr0xYz1.png'}
+
+
     #choices = ['Option Resch', 'Option Schin', 'Option Taw']
     #choices2 = ['Option Resch', 'Option Schin', 'Option Taw']
     #choices3 = ['Option Resch', 'Option Schin', 'Option Taw']
