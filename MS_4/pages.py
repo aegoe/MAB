@@ -170,7 +170,7 @@ class SamplingTransition(Page):
 class Sampling(Page):
     form_model = 'player'
     def is_displayed(self):
-        return self.round_number <= 5
+        return self.round_number <= 100
 
     def get_form_fields(self):
         return ['option_1_samp', 'option_2_samp', 'option_3_samp']
@@ -297,7 +297,7 @@ class Feedback_Sampling(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.round_number <= 5
+        return self.round_number <= 100
 
     def vars_for_template(self):
         return {'choice': self.participant.vars['choice'],
@@ -330,7 +330,7 @@ class Decision2Transition(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.round_number == 5
+        return self.round_number == 100
 
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
@@ -351,9 +351,9 @@ class Decision2(Page):
 
     def is_displayed(self):
         if not self.participant.vars['choice'] and self.player.decision_2_page == 1:
-            return self.round_number == 5
+            return self.round_number == 100
         elif self.participant.vars['choice'] and self.player.decision_2_page <= 3:
-            return self.round_number == 5
+            return self.round_number == 100
 
     def get_form_fields(self):
         if self.participant.vars['choice'] and not self.participant.vars['safe']:
@@ -684,7 +684,7 @@ class BeliefTransition(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.round_number == 5
+        return self.round_number == 100
 
     def vars_for_template(self):
         return {'choice': self.participant.vars['choice'],
@@ -727,7 +727,7 @@ class Beliefs(Page):
             return[]
 
     def is_displayed(self):
-        return self.round_number == 5
+        return self.round_number == 100
 
     def vars_for_template(self):
         return {
@@ -841,9 +841,9 @@ class Questionnaire(Page):
 
     def is_displayed(self):
         if self.player.q_function == 1 or not self.player.q_function:
-            return self.round_number == 5 and self.player.questionnaire_page <=7
+            return self.round_number == 100 and self.player.questionnaire_page <=7
         elif self.player.q_function == 2 or not self.player.q_function:
-            return self.round_number == 5 and self.player.questionnaire_page <=6
+            return self.round_number == 100 and self.player.questionnaire_page <=6
 
 
     def vars_for_template(self):
@@ -866,7 +866,7 @@ class Disclose_Payoff(Page):
     form_model ='player'
 
     def is_displayed(self):
-        return self.round_number == 5
+        return self.round_number == 100
 
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
@@ -890,7 +890,7 @@ class Disclose_Payoff(Page):
 
 class FinalInfo(Page):
     def is_displayed(self):
-        return self.round_number == 5
+        return self.round_number == 100
 
     def vars_for_template(self):
         return {'participation_fee': self.session.config['participation_fee'],

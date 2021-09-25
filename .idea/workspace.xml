@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_5.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MS_4/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MS_4/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/BeliefTransition.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/BeliefTransition.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/Beliefs.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/Beliefs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/Decision2Transition.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/Decision2Transition.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/Decision_Sampling.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/Disclose_Payoff.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/Disclose_Payoff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/Sampling.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/Sampling.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/Decision2.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/Decision2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/SamplingTransition.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/SamplingTransition.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/css/bandit_env.css" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/css/bandit_env.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MS_4/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="121" column="16" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="16" />
+            <state relative-caret-position="-158">
+              <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
               <folding>
                 <element signature="e#0#134#0" expanded="true" />
               </folding>
@@ -51,17 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14">
-              <caret line="1" column="15" selection-start-line="1" selection-end-line="2" />
+            <state relative-caret-position="440">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -78,16 +53,45 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MS_4/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2569">
-              <caret line="792" column="34" selection-start-line="792" selection-start-column="34" selection-end-line="792" selection-end-column="34" />
+            <state relative-caret-position="-589">
+              <caret line="892" column="39" selection-start-line="892" selection-start-column="39" selection-end-line="892" selection-end-column="39" />
               <folding>
                 <element signature="e#0#71#0" expanded="true" />
+                <element signature="e#8753#12072#0" />
+                <element signature="e#12111#13404#0" />
+                <element signature="e#13444#13895#0" />
+                <element signature="e#14288#29591#0" />
+                <element signature="e#30107#30972#0" />
+                <element signature="e#31000#34994#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/SamplingTransition.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" column="79" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Decision.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Decision2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="268" lean-forward="true" selection-start-line="268" selection-end-line="268" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/BeliefTransition.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
@@ -106,28 +110,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Disclose_Payoff.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="262" column="42" selection-start-line="262" selection-start-column="42" selection-end-line="262" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" selection-start-column="16" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/css/bandit_env.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4840">
-              <caret line="220" selection-start-line="220" selection-end-line="220" />
+            <state relative-caret-position="88">
+              <caret line="4" column="154" selection-start-line="4" selection-start-column="154" selection-end-line="4" selection-end-column="154" />
             </state>
           </provider>
         </entry>
@@ -146,8 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rts</find>
-      <find>&lt;button name = &quot;option_1_samp&quot; value=1&gt;Choose&lt;/button&gt;</find>
       <find>{% formfield player.option_3_samp %}</find>
       <find>{% formfield player.option_2_samp %}</find>
       <find>srt</find>
@@ -176,6 +160,8 @@
       <find>mean</find>
       <find>belief</find>
       <find>partici</find>
+      <find>priors</find>
+      <find>Mean</find>
     </findStrings>
     <replaceStrings>
       <replace>19.99</replace>
@@ -242,7 +228,6 @@
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/InstruStart.html" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/ComprehensionQuestions.html" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/Feedback_Sampling.html" />
-        <option value="$PROJECT_DIR$/MS_4/templates/MS_4/Decision2.html" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_3.html" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_1.html" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/Questionnaire.html" />
@@ -256,17 +241,18 @@
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_4.html" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_3.html" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_4.html" />
-        <option value="$PROJECT_DIR$/MS_4/templates/MS_4/SamplingTransition.html" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/Decision2Transition.html" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/css/bandit_env.css" />
-        <option value="$PROJECT_DIR$/MS_4/models.py" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/Beliefs.html" />
-        <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_5.html" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/Disclose_Payoff.html" />
-        <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html" />
-        <option value="$PROJECT_DIR$/MS_4/pages.py" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_2.html" />
         <option value="$PROJECT_DIR$/MS_4/templates/MS_4/BeliefTransition.html" />
+        <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html" />
+        <option value="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_5.html" />
+        <option value="$PROJECT_DIR$/MS_4/models.py" />
+        <option value="$PROJECT_DIR$/MS_4/pages.py" />
+        <option value="$PROJECT_DIR$/MS_4/templates/MS_4/SamplingTransition.html" />
+        <option value="$PROJECT_DIR$/MS_4/templates/MS_4/Decision2.html" />
       </list>
     </option>
   </component>
@@ -596,12 +582,12 @@
       <workItem from="1632315623328" duration="11162000" />
       <workItem from="1632379414319" duration="18873000" />
       <workItem from="1632465865698" duration="15663000" />
-      <workItem from="1632566765214" duration="5402000" />
+      <workItem from="1632566765214" duration="6872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="801615000" />
+    <option name="totallyTimeSpent" value="803085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -636,13 +622,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MS_3/templates/MS_3/include/questionnaire_4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="123" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PS_MAIN/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -1967,13 +1946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Decision2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46405">
-          <caret line="2117" column="24" selection-start-line="2117" selection-start-column="24" selection-end-line="2117" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/InstruStart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -2077,13 +2049,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/SamplingTransition.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Sampling.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="617">
@@ -2119,23 +2084,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="121" column="16" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Disclose_Payoff.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
@@ -2150,10 +2098,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html">
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
+        <state relative-caret-position="216">
+          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/BeliefTransition.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="99" selection-start-line="16" selection-start-column="99" selection-end-line="16" selection-end-column="99" />
         </state>
       </provider>
     </entry>
@@ -2164,27 +2119,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_2.html">
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        <state relative-caret-position="88">
+          <caret line="4" column="154" selection-start-line="4" selection-start-column="154" selection-end-line="4" selection-end-column="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-158">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#134#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MS_4/pages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2569">
-          <caret line="792" column="34" selection-start-line="792" selection-start-column="34" selection-end-line="792" selection-end-column="34" />
+        <state relative-caret-position="-589">
+          <caret line="892" column="39" selection-start-line="892" selection-start-column="39" selection-end-line="892" selection-end-column="39" />
           <folding>
             <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#8753#12072#0" />
+            <element signature="e#12111#13404#0" />
+            <element signature="e#13444#13895#0" />
+            <element signature="e#14288#29591#0" />
+            <element signature="e#30107#30972#0" />
+            <element signature="e#31000#34994#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/BeliefTransition.html">
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/SamplingTransition.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="99" selection-start-line="16" selection-start-column="99" selection-end-line="16" selection-end-column="99" />
+        <state relative-caret-position="286">
+          <caret line="13" column="79" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Decision.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Decision2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="268" lean-forward="true" selection-start-line="268" selection-end-line="268" />
         </state>
       </provider>
     </entry>

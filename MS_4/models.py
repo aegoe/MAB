@@ -13,7 +13,7 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'MS_3'
+    name_in_url = 'MS_4'
     num_rounds = 100
     num_rounds_choice = 3
     num_rounds_points = 1
@@ -22,7 +22,6 @@ class Constants(BaseConstants):
     players_per_group = None
     endowment_choice = 1
     endowment_points = 3
-    num_priors = 20
     choice_image = {'Option Resch' : 'https://i.imgur.com/kr0xYz1.png', 'Option Schin' : 'https://i.imgur.com/6kqKG77.png', 'Option Taw': 'https://i.imgur.com/1BZVMwB.png'}
     choice_image_str = {'Option Schin' : 'https://i.imgur.com/6kqKG77.png', 'Option Resch' : 'https://i.imgur.com/kr0xYz1.png', 'Option Taw': 'https://i.imgur.com/1BZVMwB.png'}
     choice_image_rts = {'Option Taw': 'https://i.imgur.com/1BZVMwB.png', 'Option Resch' : 'https://i.imgur.com/kr0xYz1.png', 'Option Schin' : 'https://i.imgur.com/6kqKG77.png'}
