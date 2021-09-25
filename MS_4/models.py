@@ -118,18 +118,21 @@ class Player(BasePlayer):
     payoff_2_b = models.IntegerField()
     payoff_3_b = models.IntegerField()
 
+    payoffbelief_1 = models.CurrencyField()
+    payoffbelief_2 = models.CurrencyField()
 
     mean_1 = models.FloatField(
-        min=0, max=40, label="Mean: Option 1"
+        min=0, max=40, label="Mean: Option 1", blank=False
     )
 
     mean_2 = models.FloatField(
-        min=0, max=40, label="Mean: Option 2"
+        min=0, max=40, label="Mean: Option 2", blank=False
     )
 
     mean_3 = models.FloatField(
-        min=0, max=40, label="Mean: Option 3"
+        min=0, max=40, label="Mean: Option 3", blank=False
     )
+
     #################################
     # Comprehension Questions #######
     #################################
@@ -149,10 +152,10 @@ class Player(BasePlayer):
 
     cq2_MS3 = models.IntegerField(
         choices=[
-            [999, 'each point invested, i.e. each draw, across all stages, rounds and the sampling phase'],
-            [9, 'each point invested in the first, but not the second investment decision'],
+            [999, 'each point invested, i.e. each draw, during the sampling stage and the main investment decision'],
+            [9, 'each point invested during the sampling stage'],
             [99, 'my performance in comparison to other workers'],
-            [1, 'each point invested in the first and the second investment decision'],
+            [1, 'each point invested in the main investment decision'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
@@ -164,12 +167,12 @@ class Player(BasePlayer):
         choices=[
             [999, 'No, I have to choose blindly'],
             [9, 'Yes, I will see exactly how much each option is worth beforehand'],
-            [99, 'Yes, I won\'t receive any prior statistics but will be able to sample through the options beforehand'],
-            [1, 'Yes, I will see information from 20 prior draws for each option'],
+            [1, 'Yes, I will be able to sample through the options beforehand'],
+            [99, 'Yes, I will see descriptive information based on 150 draws for each option'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
-        label='In this HIT you repeatedly choose between a number of options. In the first investment decision, will you have any prior information about the value of these options?',
+        label='In this HIT you repeatedly choose between a number of options. In the main investment decision, will you have any prior information about the value of these options?',
         initial=0
     )
 
@@ -185,7 +188,7 @@ class Player(BasePlayer):
         label='In this HIT you repeatedly choose between a number of options. In the second investment decision, will you have any prior information about the value of these options?',
         initial=0
     )
-        
+
     cq5_MS3 = models.IntegerField(
         choices=[
             [1, 'can differ in their composition of coins'],

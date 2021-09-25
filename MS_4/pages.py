@@ -127,9 +127,9 @@ class ComprehensionQuestions(Page):
 
     def get_form_fields(self):
         if self.participant.vars['choice'] :
-            return ['cq1_MS3', 'cq2_MS3', 'cq3_MS3','cq4_MS3','cq5_MS3']
+            return ['cq1_MS3', 'cq2_MS3', 'cq3_MS3','cq5_MS3']
         elif not self.participant.vars['choice']:
-            return ['cq1_MS3', 'cq2_MS3', 'cq3_MS3', 'cq4_MS3', 'cq5_MS3']
+            return ['cq1_MS3', 'cq2_MS3', 'cq3_MS3', 'cq5_MS3']
 
     def before_next_page(self):
         if self.participant.vars['choice']:
@@ -713,7 +713,6 @@ class BeliefTransition(Page):
         print(self.player.payoff_b)
 
 
-
 class Beliefs(Page):
     form_model = 'player'
 
@@ -736,6 +735,11 @@ class Beliefs(Page):
 
         }
 
+    def error_message(self, values):
+        if self.player.belief_page==4 and values['mean_1'] + values['mean_2'] + values['mean_3'] == 60:
+            return 'Please estimate the mean for all three options'
+
+
     def before_next_page(self):
         self.player.belief_page += 1
 
@@ -747,6 +751,61 @@ class Beliefs(Page):
         print(self.player.mean_1)
         print(self.player.mean_2)
         print(self.player.mean_3)
+
+        if self.player.belief_page==5:
+            if self.player.ranking == "Option Schin,Option Resch,Option Taw" and self.player.rankingsd == "Option Schin,Option Resch,Option Taw" and self.player.rankingld == "Option Taw,Option Resch,Option Schin" and self.player.rankinghd == "Option Schin,Option Resch,Option Taw":
+                self.player.payoffbelief_1 = 6
+            elif self.player.ranking == "Option Schin,Option Resch,Option Taw" and self.player.rankingsd == "Option Schin,Option Resch,Option Taw" and self.player.rankingld == "Option Taw,Option Resch,Option Schin":
+                self.player.payoffbelief_1 = 3
+            elif self.player.ranking == "Option Schin,Option Resch,Option Taw" and self.player.rankingsd == "Option Schin,Option Resch,Option Taw" and self.player.rankinghd == "Option Schin,Option Resch,Option Taw":
+                self.player.payoffbelief_1 = 3
+            elif self.player.ranking == "Option Schin,Option Resch,Option Taw" and self.player.rankinghd == "Option Schin,Option Resch,Option Taw" and self.player.rankingld == "Option Taw,Option Resch,Option Schin":
+                self.player.payoffbelief_1 = 3
+            elif self.player.rankinghd == "Option Schin,Option Resch,Option Taw" and self.player.rankingsd == "Option Schin,Option Resch,Option Taw" and self.player.rankingld == "Option Taw,Option Resch,Option Schin":
+                self.player.payoffbelief_1 = 3
+            else:
+                self.player.payoffbelief_1 = 0
+
+
+            if abs(6.5 - self.player.mean_1) <= 0.3255:
+                payoff_mean_lr = 3
+            elif abs(6.5 - self.player.mean_1) <= 0.65:
+                payoff_mean_lr = 1
+            elif abs(6.5 - self.player.mean_1) <= 0.975:
+                payoff_mean_lr = 0.5
+            else:
+                payoff_mean_lr = 0
+
+            if abs(7 - self.player.mean_2) <= 0.35:
+                payoff_mean_hr = 3
+            elif abs(7 - self.player.mean_2) <= 0.7:
+                payoff_mean_hr = 1
+            elif abs(7 - self.player.mean_2) <= 1.05:
+                payoff_mean_hr = 0.5
+            else:
+                payoff_mean_hr = 0
+
+            if abs(6 - self.player.mean_3) <= 0.3:
+                payoff_mean_s = 3
+            elif abs(6 - self.player.mean_3) <= 0.6:
+                payoff_mean_s = 1
+            elif abs(6 - self.player.mean_3) <= 0.9:
+                payoff_mean_s = 0.5
+            else:
+                payoff_mean_s = 0
+
+            self.player.payoffbelief_2 = payoff_mean_lr + payoff_mean_hr + payoff_mean_s
+            self.participant.payoff = self.participant.payoff + self.player.payoffbelief_1 + self.player.payoffbelief_2
+
+            print("Payoff Belief 1:",  self.player.payoffbelief_1)
+            print("Payoff Belief 2:", self.player.payoffbelief_2)
+            print ("Participant Payoff", self.participant.payoff)
+            print(payoff_mean_s)
+            print(payoff_mean_hr)
+            print(payoff_mean_lr)
+
+
+
 
 
 ########################################################################################################################
@@ -801,6 +860,8 @@ class Questionnaire(Page):
 
 
 
+
+
 class Disclose_Payoff(Page):
     form_model ='player'
 
@@ -821,6 +882,8 @@ class Disclose_Payoff(Page):
                'payoff_2_b': self.player.payoff_2_b,
                'payoff_3_b': self.player.payoff_3_b,
                'ranking': self.player.ranking,
+               'payoffbelief_1': self.player.payoffbelief_1,
+               'payoffbelief_2': self.player.payoffbelief_2,
 
                }
 
@@ -856,6 +919,7 @@ page_sequence = [
     Decision2,
     Decision2,
     BeliefTransition,
+    Beliefs,
     Beliefs,
     Beliefs,
     Beliefs,

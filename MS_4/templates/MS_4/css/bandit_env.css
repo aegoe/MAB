@@ -199,16 +199,22 @@ background-color: #F5F5F5 ;
 .button {
     padding: 14px 1px;
     background-color:transparent;
-    outline:none;
-    border:none;
+    border: none;
+    outline: none;
     text-align: left;
     font-size: 20px;
     transition-duration: 0.4s;
     cursor:pointer;
+    width: 30%;
 
 }
 
 .button:hover {
   background-color: white;
   color: blue;
+}
+
+button:focus {
+    border: none;
+    outline: none;
 }
