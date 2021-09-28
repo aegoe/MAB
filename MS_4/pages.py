@@ -65,6 +65,19 @@ class Device(Page):
                 self.participant.vars['draw'] = draw[0]
 
 
+class AttentionCheck(Page):
+    def is_displayed(self):
+        return self.player.access_device != 0 and self.round_number == 1
+
+    form_model = 'player'
+    form_fields = ['attention_check_1', 'attention_check_2']
+
+    def vars_for_template(self):
+        return{
+            'choice': self.participant.vars['choice']
+        }
+
+
 
 ########################################################################################################################
 # DeadEnd ##############################################################################################################
@@ -76,7 +89,7 @@ class DeadEnd(Page):
     # this page is only displayed to people with mobile devices
     # which we do not want to partake and that are "trapped" on this page due to the missing {% next_button %}
     def is_displayed(self):
-        return self.player.access_device == 0 and self.round_number == 1
+        return self.player.access_device == 0 or self.player.attention_check_1 == 0 or self.player.attention_check_2 != "chair" and self.round_number == 1
 
 
 ########################################################################################################################
@@ -902,7 +915,7 @@ class FinalInfo(Page):
 
 page_sequence = [
     Device,
-    #AttentionCheck,
+    AttentionCheck,
     DeadEnd,
     InstruStart,
     InstruStart,
