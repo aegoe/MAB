@@ -63,6 +63,7 @@ class Device(Page):
                 weights = [1/6, 1/6, 1/6, 1/6, 1/6, 1/6]
                 draw = choice(order, 1, p=weights)
                 self.participant.vars['draw'] = draw[0]
+                self.player.draw = self.participant.vars['draw']
 
 
 class AttentionCheck(Page):

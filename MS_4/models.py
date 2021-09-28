@@ -69,6 +69,8 @@ class Player(BasePlayer):
     option_3 = models.IntegerField(initial=0, label="Option Taw")
     option_safe = models.IntegerField(initial=0, label = "Hexagon")
 
+    draw = models.StringField()
+
     urn_draws_1 = models.StringField()
     urn_draws_2 = models.StringField()
     urn_draws_3 = models.StringField()

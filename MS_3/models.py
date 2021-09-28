@@ -99,6 +99,7 @@ class Player(BasePlayer):
     payoff_1_b = models.IntegerField()
     payoff_2_b = models.IntegerField()
     payoff_3_b = models.IntegerField()
+    draw = models.StringField()
 
 
 
