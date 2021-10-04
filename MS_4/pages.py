@@ -90,7 +90,7 @@ class DeadEnd(Page):
     # this page is only displayed to people with mobile devices
     # which we do not want to partake and that are "trapped" on this page due to the missing {% next_button %}
     def is_displayed(self):
-        return self.player.access_device == 0 or self.player.attention_check_1 == 0 or self.player.attention_check_2 != "chair" and self.round_number == 1
+        return self.player.access_device == 0 or self.player.attention_check_1 == 0 or self.player.attention_check_2 != "shoe" and self.round_number == 1
 
 
 ########################################################################################################################

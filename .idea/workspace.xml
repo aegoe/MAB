@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +19,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MS_4/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="944">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="301">
+              <caret line="258" column="10" selection-start-line="258" selection-start-column="6" selection-end-line="258" selection-end-column="10" />
               <folding>
                 <element signature="e#0#134#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/questionnaire_2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="57" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -52,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="389" column="6" lean-forward="true" selection-start-line="389" selection-start-column="6" selection-end-line="389" selection-end-column="6" />
+            <state relative-caret-position="126">
+              <caret line="394" column="24" selection-start-line="394" selection-start-column="24" selection-end-line="394" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -116,8 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;button class=&quot;button&quot; name = &quot;option_3_samp&quot; value=1&gt;Choose&lt;/button&gt;</find>
-      <find>rst</find>
       <find>&lt;button class=&quot;button&quot; name = &quot;option_3_samp&quot; value=1&gt;Choose Option S&lt;/button&gt;</find>
       <find>10.53</find>
       <find>1.79</find>
@@ -146,6 +153,8 @@
       <find>sampl</find>
       <find>option</find>
       <find>draw</find>
+      <find>max=&quot;40&quot;</find>
+      <find>expl</find>
     </findStrings>
     <replaceStrings>
       <replace>55</replace>
@@ -240,11 +249,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="2420" />
+    <option name="height" value="1320" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -582,17 +591,18 @@
       <workItem from="1632681300511" duration="794000" />
       <workItem from="1632688433251" duration="1215000" />
       <workItem from="1632739172456" duration="2380000" />
-      <workItem from="1632825721421" duration="2340000" />
+      <workItem from="1632825721421" duration="4197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="814025000" />
+    <option name="totallyTimeSpent" value="815882000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16862327" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16862327" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -606,7 +616,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026681" side_tool="true" weight="0.3631124" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49733192" visible="true" weight="0.34005764" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733192" visible="true" weight="0.34005764" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32756963" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1952,13 +1962,6 @@
     <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/questionnaire_1.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/questionnaire_2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Decision_Sampling.html" />
     <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_1.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -2237,20 +2240,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="394" column="24" selection-start-line="394" selection-start-column="24" selection-end-line="394" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MS_4/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="944">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="301">
+          <caret line="258" column="10" selection-start-line="258" selection-start-column="6" selection-end-line="258" selection-end-column="10" />
           <folding>
             <element signature="e#0#134#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/beliefs_4.html">
+    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/questionnaire_2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="389" column="6" lean-forward="true" selection-start-line="389" selection-start-column="6" selection-end-line="389" selection-end-column="6" />
+        <state relative-caret-position="154">
+          <caret line="7" column="57" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="57" />
         </state>
       </provider>
     </entry>
