@@ -40,7 +40,7 @@ class Device(Page):
             self.player.incentive = self.participant.vars['incentive'] = self.session.config['incentive']
 
             treatments = ['choice', 'no_choice']
-            weights_3 = [0.5, 0.5]
+            weights_3 = [1, 0]
             draw_3 = choice(treatments, 1, p=weights_3)
             self.participant.vars['draw_3'] = draw_3[0]
             if draw_3[0] == 'choice':
