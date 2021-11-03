@@ -43,7 +43,7 @@ mturk_hit_settings = {
 
 SESSION_CONFIG_DEFAULTS = {
     'real_world_currency_per_point': 0.1,
-    'participation_fee': 0.5,
+    'participation_fee': 1,
     'doc': "",
     'mturk_hit_settings': mturk_hit_settings,
 }
@@ -64,10 +64,10 @@ SESSION_CONFIGS = [
     #
     # },
     {
-        'name': 'MS4',
-        'display_name': "MS4",
+        'name': 'MS3b',
+        'display_name': "MS3b",
         'num_demo_participants': 1,
-        'app_sequence': ['MS_4'],
+        'app_sequence': ['MS_3b'],
         'choice': False,
         'safe': False,
         'testing': False,
