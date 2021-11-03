@@ -10,34 +10,34 @@
 
 {% if player.questionnaire_page == 1 %}
 
-{% include 'MS_3/include/questionnaire_transition.html' %}
+{% include 'MS_3b/include/questionnaire_transition.html' %}
 
 {% elif player.questionnaire_page == 2 %}
-    {% include 'MS_3/include/questionnaire_1.html' %}
+    {% include 'MS_3b/include/questionnaire_1.html' %}
 
 {% elif player.questionnaire_page == 3 %}
-    {% include 'MS_3/include/questionnaire_2.html' %}
+    {% include 'MS_3b/include/questionnaire_2.html' %}
 
 {% elif player.questionnaire_page == 4 %}
-    {% include 'MS_3/include/questionnaire_3.html' %}
+    {% include 'MS_3b/include/questionnaire_3.html' %}
 
 {% elif player.questionnaire_page == 5 %}
-    {% include 'MS_3/include/questionnaire_4.html' %}
+    {% include 'MS_3b/include/questionnaire_4.html' %}
 
 {% elif player.questionnaire_page == 6 and player.q_function == 1 %}
-    {% include 'MS_3/include/questionnaire_5.html' %}
+    {% include 'MS_3b/include/questionnaire_5.html' %}
 
 {% elif player.questionnaire_page == 7 and player.q_function == 1 %}
-    {% include 'MS_3/include/questionnaire_epo.html' %}
+    {% include 'MS_3b/include/questionnaire_epo.html' %}
 
 {% elif player.questionnaire_page == 8 and player.q_function == 1 %}
-    {% include 'MS_3/include/questionnaire_socio_1.html' %}
+    {% include 'MS_3b/include/questionnaire_socio_1.html' %}
 
 {% elif player.questionnaire_page == 6 and player.q_function == 2 %}
-    {% include 'MS_3/include/questionnaire_epo.html' %}
+    {% include 'MS_3b/include/questionnaire_epo.html' %}
 
 {% elif player.questionnaire_page == 7 and player.q_function == 2 %}
-    {% include 'MS_3/include/questionnaire_socio_1.html' %}
+    {% include 'MS_3b/include/questionnaire_socio_1.html' %}
 
 {% endif %}
 

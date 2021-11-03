@@ -70,6 +70,7 @@ class Player(BasePlayer):
     endowment_after_sampling = models.IntegerField()
 
     instru_page = models.IntegerField(initial=1)
+    instru_page2 = models.IntegerField(initial=1)
     questionnaire_page = models.IntegerField(initial=1)
     controls = models.IntegerField(initial=0)
     comprehension_page = models.IntegerField(initial=1)
@@ -107,25 +108,13 @@ class Player(BasePlayer):
     # Comprehension Questions #######
     #################################
 
+
     cq1_MS3 = models.IntegerField(
         choices=[
-            [9, 'No, options change between stages'],
-            [1, 'Yes'],
-            [99, 'No, options change for the sampling phase'],
-            [999, 'Yes, but there is an additional option in the last investment decision'],
-        ],
-        widget=widgets.RadioSelect,
-        blank=False,
-        label='In this HIT you repeatedly choose between a number of options. Do you get the same set of options in all rounds of the HIT?',
-        initial=0
-    )
-
-    cq2_MS3 = models.IntegerField(
-        choices=[
-            [999, 'each point invested, i.e. each draw, across all stages, rounds and the sampling phase'],
-            [9, 'each point invested in the first, but not the second investment decision'],
+            [1, 'my decisions about how to allocate points between the options'],
+            [9, 'nothing, they are fixed'],
             [99, 'my performance in comparison to other workers'],
-            [1, 'each point invested in the first and the second investment decision'],
+            [999, 'one random computer draw'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
@@ -133,36 +122,24 @@ class Player(BasePlayer):
         initial=0
     )
 
-    cq3_MS3 = models.IntegerField(
+    cq2_MS3 = models.IntegerField(
         choices=[
             [999, 'No, I have to choose blindly'],
             [9, 'Yes, I will see exactly how much each option is worth beforehand'],
-            [99, 'Yes, I won\'t receive any prior statistics but will be able to sample through the options beforehand'],
+            [99, 'Yes, I will be able to sample through the options beforehand'],
             [1, 'Yes, I will see information from 20 prior draws for each option'],
         ],
         widget=widgets.RadioSelect,
         blank=False,
-        label='In this HIT you repeatedly choose between a number of options. In the first investment decision, will you have any prior information about the value of these options?',
+        label='In this HIT you choose between three options. Will you have any prior information about the value of these options?',
         initial=0
     )
 
-    cq4_MS3 = models.IntegerField(
-        choices=[
-            [999, 'No, I have to choose blindly'],
-            [9, 'Yes, for my second investment decision, I will see exactly how much each option is worth beforehand'],
-            [1, 'Yes, I will have information from 20 prior draws and the information gathered during the sampling phase'],
-            [99, 'Yes, for my second investment decision, I will have the same information as I did for the first investment decision'],
-        ],
-        widget=widgets.RadioSelect,
-        blank=False,
-        label='In this HIT you repeatedly choose between a number of options. In the second investment decision, will you have any prior information about the value of these options?',
-        initial=0
-    )
         
-    cq5_MS3 = models.IntegerField(
+    cq3_MS3 = models.IntegerField(
         choices=[
-            [1, 'can differ in their composition of coins'],
             [999, 'contain the same coins'],
+            [1, 'can differ in their composition of coins'],
             [9, 'return a constant value'],
             [99, 'change over the course of the HIT'],
         ],

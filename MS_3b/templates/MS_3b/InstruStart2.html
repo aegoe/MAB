@@ -7,13 +7,13 @@
 
 {% block content %}
 
-{% elif player.instru_page2 == 1 %}
+{% if player.instru_page2 == 1 %}
 
-     {% include 'MS_3/include/instru_4.html' %}
+     {% include 'MS_3b/include/instru_4.html' %}
 
-{% elif player.instru_page == 2 %}
+{% elif player.instru_page2 == 2 %}
 
-     {% include 'MS_3/include/instru_5.html' %}
+     {% include 'MS_3b/include/instru_5.html' %}
 
 
 {% endif %}

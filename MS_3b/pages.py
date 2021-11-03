@@ -143,16 +143,16 @@ class ComprehensionQuestions(Page):
 
     def get_form_fields(self):
         if self.participant.vars['choice'] :
-            return ['cq1_MS3', 'cq2_MS3', 'cq3_MS3','cq4_MS3','cq5_MS3']
+            return ['cq1_MS3', 'cq2_MS3', 'cq3_MS3']
         elif not self.participant.vars['choice']:
-            return ['cq1_MS3', 'cq2_MS3', 'cq3_MS3', 'cq4_MS3', 'cq5_MS3']
+            return ['cq1_MS3', 'cq2_MS3', 'cq3_MS3']
 
     def before_next_page(self):
         if self.participant.vars['choice']:
-            if sum([self.player.cq1_MS3, self.player.cq2_MS3, self.player.cq3_MS3, self.player.cq4_MS3, self.player.cq5_MS3]) < 6:
+            if sum([self.player.cq1_MS3, self.player.cq2_MS3, self.player.cq3_MS3]) < 4:
                 self.player.controls = 1
         else:
-            if sum([self.player.cq1_MS3, self.player.cq2_MS3, self.player.cq3_MS3, self.player.cq4_MS3, self.player.cq5_MS3]) < 6:
+            if sum([self.player.cq1_MS3, self.player.cq2_MS3, self.player.cq3_MS3]) < 4:
                 self.player.controls = 1
 
         self.player.comprehension_page += 1
@@ -1264,14 +1264,14 @@ page_sequence = [
     Decision2,
     Decision2,
     PayoffTransition,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
+    Questionnaire,
     Disclose_Payoff,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
-    Questionnaire,
     FinalInfo,
 ]
