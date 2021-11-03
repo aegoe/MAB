@@ -42,7 +42,7 @@ mturk_hit_settings = {
 }
 
 SESSION_CONFIG_DEFAULTS = {
-    'real_world_currency_per_point': 0.1,
+    'real_world_currency_per_point': 0.05,
     'participation_fee': 1,
     'doc': "",
     'mturk_hit_settings': mturk_hit_settings,

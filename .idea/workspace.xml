@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_3b/templates/MS_3b/include/instru_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_3b/templates/MS_3b/include/instru_3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_3b/templates/MS_3b/include/instru_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/MS_3b/templates/MS_3b/include/instru_5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="103" column="28" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="28" />
+            <state relative-caret-position="446">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
             </state>
           </provider>
         </entry>
@@ -818,7 +812,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -851,20 +845,37 @@
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="MS_3" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_3b" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="MS_3" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_3b" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAB" type="462c0819:PsiDirectoryNode" />
-              <item name="MS_3" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_3b" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="MS_3" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_3b" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_3b" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_3b" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_3b" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_3b" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="instru_cq" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
@@ -1140,22 +1151,22 @@
       <workItem from="1633707748262" duration="1445000" />
       <workItem from="1633815352310" duration="68000" />
       <workItem from="1635797429305" duration="14000" />
-      <workItem from="1635930963536" duration="9057000" />
+      <workItem from="1635930963536" duration="9225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="827897000" />
+    <option name="totallyTimeSpent" value="828065000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1176" extended-state="7" />
+    <frame x="1912" y="-8" width="1936" height="1176" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1782284" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1782284" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49893278" weight="0.22286263" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" visible="true" weight="0.17002882" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.17002882" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995657" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1163,7 +1174,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5026681" side_tool="true" weight="0.3631124" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49733192" weight="0.24591738" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49733192" visible="true" weight="0.24591738" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.32756963" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32853025" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -2814,8 +2825,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="103" column="28" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="28" />
+        <state relative-caret-position="446">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
         </state>
       </provider>
     </entry>
