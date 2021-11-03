@@ -1,0 +1,285 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+<div class="page-header">
+    <p> Sampling Round {{player.round_number}}/100 </p>
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+{{ form.errors }}
+
+
+{% if draw == 'TSR' %}
+
+<div class="background">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <button class="button" name = "option_1_samp" value=1>Option Resch  <br/> Choose</button>
+        <button class="button" name = "option_2_samp" value=1>Option Schin <br/> Choose</button>
+        <button class="button" name = "option_3_samp" value=1>Option Taw <br/> Choose</button>
+
+
+ </div>
+
+
+<div class="footer">
+
+            You draw from an option by clicking on "Choose". {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+           {% elif not incentive %} You can use the sampling phase to learn more about the options. {% endif %}
+</div>
+
+
+
+
+
+{% elif draw == 'STR' %}
+
+<div class="background">
+
+       <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <button class="button" name = "option_2_samp" value=1>Option Schin <br/> Choose</button>
+        <button class="button" name = "option_1_samp" value=1>Option Resch  <br/> Choose</button>
+        <button class="button" name = "option_3_samp" value=1>Option Taw <br/> Choose</button>
+
+
+ </div>
+
+       <div class="footer">
+            You draw from an option by clicking on "Choose". {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+           {% elif not incentive %} You can use the sampling phase to learn more about the options. {% endif %}
+        </div>
+
+
+
+{% elif draw == 'RTS' %}
+
+<div class="background">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <button class="button" name = "option_3_samp" value=1>Option Taw <br/> Choose</button>
+        <button class="button" name = "option_1_samp" value=1>Option Resch  <br/> Choose</button>
+        <button class="button" name = "option_2_samp" value=1>Option Schin <br/> Choose</button>
+
+
+ </div>
+
+       <div class="footer">
+
+            You draw from an option by clicking on "Choose". {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+           {% elif not incentive %} You can use the sampling phase to learn more about the options. {% endif %}
+
+        </div>
+
+
+
+
+{% elif draw == 'TRS' %}
+
+<div class="background">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <button class="button" name = "option_1_samp" value=1>Option Resch  <br/> Choose</button>
+        <button class="button" name = "option_3_samp" value=1>Option Taw <br/> Choose</button>
+        <button class="button" name = "option_2_samp" value=1>Option Schin <br/> Choose</button>
+
+
+ </div>
+
+       <div class="footer">
+
+            You draw from an option by clicking on "Choose". {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+           {% elif not incentive %} You can use the sampling phase to learn more about the options. {% endif %}
+        </div>
+
+
+
+{% elif draw == 'SRT' %}
+
+<div class="background">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <button class="button" name = "option_2_samp" value=1>Option Schin <br/> Choose</button>
+        <button class="button" name = "option_3_samp" value=1>Option Taw <br/> Choose</button>
+        <button class="button" name = "option_1_samp" value=1>Option Resch  <br/> Choose</button>
+
+
+ </div>
+
+       <div class="footer">
+            You draw from an option by clicking on "Choose". {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+           {% elif not incentive %} You can use the sampling phase to learn more about the options. {% endif %}
+        </div>
+
+
+
+
+
+{% elif draw == 'RST' %}
+
+<div class="background">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <button class="button" name = "option_3_samp" value=1>Option Taw <br/> Choose</button>
+        <button class="button" name = "option_2_samp" value=1>Option Schin <br/> Choose</button>
+        <button class="button" name = "option_1_samp" value=1>Option Resch  <br/> Choose </button>
+
+
+ </div>
+
+       <div class="footer">
+            You draw from an option by clicking on "Choose". {% if incentive %} Payoff accumulated during the sampling stage will be converted into points for the second investment decision.
+           {% elif not incentive %} You can use the sampling phase to learn more about the options. {% endif %}
+
+        </div>
+
+
+{% endif %}
+
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+
+{% endblock %}
+
+
+
+
+{% block styles %}
+    <style type="text/css">
+        {% include 'MS_3b/css/bandit_env.css' %}
+        .page-header {
+            margin-bottom: 0px;
+        }
+    </style>
+{% endblock %}
+

@@ -1,0 +1,241 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+<div class="page-header">
+    <p>Draws & Earnings</p>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+{% if draw == 'TSR' %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Option Resch &nbsp;</th>
+            <th class="th"> Option Schin &nbsp;</th>
+            <th class="th"> Option Taw &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_samp}} &nbsp;</td>
+            <td class="td"> {{player.option_2_samp}} &nbsp;</td>
+            <td class="td"> {{player.option_3_samp}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_samp}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_samp}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_samp}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_samp}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_samp}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_samp}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+
+{% elif draw == 'STR' %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Option Schin &nbsp;</th>
+            <th class="th"> Option Resch &nbsp;</th>
+            <th class="th"> Option Taw &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_samp}} &nbsp;</td>
+            <td class="td"> {{player.option_1_samp}} &nbsp;</td>
+            <td class="td"> {{player.option_3_samp}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_samp}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_samp}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_samp}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_samp}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_samp}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_samp}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+
+{% elif draw == 'RTS' %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Option Taw &nbsp;</th>
+            <th class="th"> Option Resch &nbsp;</th>
+            <th class="th"> Option Schin &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_samp}} &nbsp;</td>
+            <td class="td"> {{player.option_1_samp}} &nbsp;</td>
+            <td class="td"> {{player.option_2_samp}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_samp}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_samp}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_samp}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_samp}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_samp}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_samp}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+
+
+{% elif draw == 'TRS' %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Option Resch &nbsp;</th>
+            <th class="th"> Option Taw &nbsp;</th>
+            <th class="th"> Option Schin &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_1_samp}} &nbsp;</td>
+            <td class="td"> {{player.option_3_samp}} &nbsp;</td>
+            <td class="td"> {{player.option_2_samp}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_1_samp}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_samp}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_samp}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_1_samp}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_samp}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_samp}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+
+{% elif draw == 'SRT' %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Option Schin &nbsp;</th>
+            <th class="th"> Option Taw &nbsp;</th>
+            <th class="th"> Option Resch &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_2_samp}} &nbsp;</td>
+            <td class="td"> {{player.option_3_samp}} &nbsp;</td>
+            <td class="td"> {{player.option_1_samp}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_2_samp}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_3_samp}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_samp}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_2_samp}} &nbsp;</td>
+            <td class="td"> {{player.payoff_3_samp}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_samp}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+
+{% elif draw == 'RST' %}
+
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th"> &nbsp; </th>
+            <th class="th"> Option Taw &nbsp;</th>
+            <th class="th"> Option Schin &nbsp;</th>
+            <th class="th"> Option Resch &nbsp;</th>
+        </tr>
+        <tr>
+            <td class="td"> <b>Draws: &nbsp;</b> </td>
+            <td class="td"> {{player.option_3_samp}} &nbsp;</td>
+            <td class="td"> {{player.option_2_samp}} &nbsp;</td>
+            <td class="td"> {{player.option_1_samp}} &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="td"> <b>Coins:&nbsp;</b> </td>
+            <td class="td"> {{player.urn_draws_3_samp}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_2_samp}} &nbsp;</td>
+            <td class="td"> {{player.urn_draws_1_samp}} &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Earnings:&nbsp;</b> </td>
+            <td class="td"> {{player.payoff_3_samp}} &nbsp;</td>
+            <td class="td"> {{player.payoff_2_samp}} &nbsp;</td>
+            <td class="td"> {{player.payoff_1_samp}} &nbsp;</td>
+        </tr>
+
+    </table>
+    </div>
+
+{% endif %}
+
+
+<br>
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">{{player.payoff}}</button>
+
+
+{% endblock %}
+
+{% block styles %}
+    <style type="text/css">
+        {% include 'MS_3b/css/feedback.css' %}
+    </style>
+{% endblock %}

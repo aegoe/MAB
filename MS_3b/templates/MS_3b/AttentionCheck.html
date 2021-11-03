@@ -1,0 +1,59 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Please fill out this form.
+{% endblock %}
+
+{% block content %}
+    <div class="alert alert-secondary" role="alert">
+        <b>Please read carefully:</b> In order to demonstrate that you have read these instructions, please select <q>other</q>
+        and type the word <q>shoe</q> as your answer to the question below. If you fail to do so you will not be able to
+        earn any money on this HIT.
+    </div>
+    <div class="card">
+        <div class="card-header">
+            How often do you complete HITs on MTurk?<br>
+            <i>Please choose one of the following answers</i>.
+        </div>
+        <div class="card-body">
+            <ul style="list-style: none; width: 240px;">
+                <li>{{ form.attention_check_1.0 }}</li>
+                <li>{{ form.attention_check_1.1 }}</li>
+                <li>{{ form.attention_check_1.2 }}</li>
+                <li>{{ form.attention_check_1.3 }}</li>
+                <li>{{ form.attention_check_1.4 }}</li>
+                <li>{{ form.attention_check_1.5 }}</li>
+                <li>{{ form.attention_check_1.6 }}</li>
+                <li>{{ form.attention_check_1.7 }} {{ form.attention_check_2 }}</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    {% next_button %}
+{% endblock %}
+
+
+{% block styles %}
+    <style type="text/css">
+        .alert-secondary {
+            background-color: rgba(0, 0, 0, .03);
+        }
+
+        .form-control {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 150px;
+            float: right;
+        }
+
+        textarea.form-control {
+            clear: both;
+            max-width: 150px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+    </style>
+{% endblock %}

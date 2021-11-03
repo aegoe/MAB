@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Instructions
+{% endblock %}
+
+{% block content %}
+
+{% elif player.instru_page2 == 1 %}
+
+     {% include 'MS_3/include/instru_4.html' %}
+
+{% elif player.instru_page == 2 %}
+
+     {% include 'MS_3/include/instru_5.html' %}
+
+
+{% endif %}
+
+
+{% endblock %}

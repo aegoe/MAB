@@ -1,0 +1,3630 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+<div class="page-header">
+    <p> Sampling Round
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+
+{% if not safe %}
+{% if draw == 'TSR' %}
+
+
+<div class="background">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_3_samp %}
+
+
+ </div>
+
+
+<div class="footer">
+
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+</div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+<br>
+
+<button type="button" class="collapsible"> Information table from prior draws </button>
+<div class="content">
+
+
+
+
+{% if draw == 'TSR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 </td>
+            <td class="td"> 0</td>
+            <td class="td"> 6 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0</td>
+            <td class="td"> 3 </td>
+            <td class="td"> 6 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 6</td>
+            <td class="td"> 3 </td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'TRS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 </td>
+            <td class="td"> 6</td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0 </td>
+            <td class="td"> 6</td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 </td>
+            <td class="td"> 0</td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+    </div>
+{% endif %}
+
+
+{% elif draw == 'STR' %}
+
+<div class="background">
+
+       <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+<button type="button" class="collapsible"> Information table from prior draws </button>
+<div class="content">
+
+
+{% if draw == 'TSR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 </td>
+            <td class="td"> 0</td>
+            <td class="td"> 6 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0</td>
+            <td class="td"> 3 </td>
+            <td class="td"> 6 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 6</td>
+            <td class="td"> 3 </td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'TRS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 </td>
+            <td class="td"> 6</td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0 </td>
+            <td class="td"> 6</td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 </td>
+            <td class="td"> 0</td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+    </div>
+{% endif %}
+
+
+{% elif draw == 'STR' %}
+
+<div class="background">
+
+       <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
+
+{% elif draw == 'RTS' %}
+
+<div class="background">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_2_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+
+<button type="button" class="collapsible"> Information table from prior draws </button>
+<div class="content">
+
+
+{% if draw == 'TSR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 </td>
+            <td class="td"> 0</td>
+            <td class="td"> 6 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0</td>
+            <td class="td"> 3 </td>
+            <td class="td"> 6 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 6</td>
+            <td class="td"> 3 </td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'TRS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 </td>
+            <td class="td"> 6</td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0 </td>
+            <td class="td"> 6</td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 </td>
+            <td class="td"> 0</td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+    </div>
+{% endif %}
+
+
+{% elif draw == 'STR' %}
+
+<div class="background">
+
+       <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+
+
+ </div>
+       <div class="footer">
+
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
+
+{% elif draw == 'TRS' %}
+
+<div class="background">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_2_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+
+<button type="button" class="collapsible"> Information table from prior draws </button>
+<div class="content">
+
+
+{% if draw == 'TSR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 </td>
+            <td class="td"> 0</td>
+            <td class="td"> 6 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0</td>
+            <td class="td"> 3 </td>
+            <td class="td"> 6 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 6</td>
+            <td class="td"> 3 </td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'TRS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 </td>
+            <td class="td"> 6</td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0 </td>
+            <td class="td"> 6</td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 </td>
+            <td class="td"> 0</td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+    </div>
+{% endif %}
+
+
+{% elif draw == 'STR' %}
+
+<div class="background">
+
+       <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+
+
+ </div>
+       <div class="footer">
+
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
+
+{% elif draw == 'SRT' %}
+
+<div class="background">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_1_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+
+<button type="button" class="collapsible"> Information table from prior draws </button>
+<div class="content">
+
+
+{% if draw == 'TSR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 </td>
+            <td class="td"> 0</td>
+            <td class="td"> 6 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0</td>
+            <td class="td"> 3 </td>
+            <td class="td"> 6 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 6</td>
+            <td class="td"> 3 </td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'TRS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 </td>
+            <td class="td"> 6</td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0 </td>
+            <td class="td"> 6</td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 </td>
+            <td class="td"> 0</td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+    </div>
+{% endif %}
+
+
+{% elif draw == 'STR' %}
+
+<div class="background">
+
+       <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+
+
+ </div>
+       <div class="footer">
+
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
+
+{% elif draw == 'RST' %}
+
+<div class="background">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        {% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position yield no information about the value of coins you get from each option.-->
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+<button type="button" class="collapsible"> Information table from prior draws </button>
+<div class="content">
+
+
+{% if draw == 'TSR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 </td>
+            <td class="td"> 0</td>
+            <td class="td"> 6 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+
+{% elif draw == 'STR' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th">Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0</td>
+            <td class="td"> 3 </td>
+            <td class="td"> 6 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RTS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 6</td>
+            <td class="td"> 3 </td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'TRS' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6.51 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 1.79 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 3 </td>
+            <td class="td"> 6</td>
+            <td class="td"> 0 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 10 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'SRT' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 0 </td>
+            <td class="td"> 6</td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+{% elif draw == 'RST' %}
+
+    <div class="table">
+    <table>
+        <tr>
+            <th class="th">  </th>
+            <th class="th"> Option S
+            <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option C
+            <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/>
+            </div></th>
+            <th class="th"> Option T
+            <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/>
+            </div></th>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Mean ({{Constants.num_priors}} draws): &nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 5.79 &nbsp;</td>
+            <td class="td"> 6.51 &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="td"> <b>SD ({{Constants.num_priors}} draws):&nbsp;</b> </td>
+            <td class="td"> 0 &nbsp;</td>
+            <td class="td"> 10.53 &nbsp;</td>
+            <td class="td"> 1.79 &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Lowest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 </td>
+            <td class="td"> 0</td>
+            <td class="td"> 3 </td>
+        </tr>
+
+        <tr>
+            <td class="td"> <b>Highest Draw:&nbsp;</b> </td>
+            <td class="td"> 6 &nbsp;</td>
+            <td class="td"> 40 &nbsp;</td>
+            <td class="td"> 10 &nbsp;</td>
+        </tr>
+
+    </table>
+
+    </div>
+
+    </div>
+{% endif %}
+
+
+{% elif draw == 'STR' %}
+
+<div class="background">
+
+       <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+
+
+ </div>
+       <div class="footer">
+
+{% if sampling %} Each round, you {% elif not sampling %} You {% endif %} will use your {% if choice %} {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} "Option S" guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
+{% endif %}
+
+
+{% endif %}
+
+
+{% if safe %}
+
+{% if draw == 'TSRH' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_safe %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% elif draw == 'STRH' %}
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_safe %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'RTSH' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_safe %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+    Coins drawn during these sampling rounds do not count towards your final payoff.
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'TRSH' %}
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_safe %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'SRTH' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_safe %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'RSTH' %}
+
+
+<div class="backgroundsafe">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_safe %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'HSTR' %}
+
+
+<div class="backgroundsafe">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_safe %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+
+{% elif draw == 'SHTR' %}
+
+<div class="backgroundsafe">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'THSR' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_3_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+
+{% elif draw == 'HTSR' %}
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_safe %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_3_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+
+
+{% elif draw == 'STHR' %}
+
+<div class="backgroundsafe">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_3_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'TSHR' %}
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_3_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'TRHS' %}
+
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_2_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'RTHS' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+
+
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_2_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'HTRS' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+
+
+        {% formfield player.option_safe %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_2_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'THRS' %}
+
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+
+
+
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_2_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'RHTS' %}
+
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_2_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% elif draw == 'HRTS' %}
+
+
+<div class="backgroundsafe">
+
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_safe %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_1_samp %}
+        {% formfield player.option_2_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'HRST' %}
+
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+
+        {% formfield player.option_safe %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% elif draw == 'RHST' %}
+
+
+<div class="backgroundsafe">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_1_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'SHRT' %}
+
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_1_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'HSRT' %}
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_safe %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_1_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+{% elif draw == 'RSHT' %}
+
+
+
+<div class="backgroundsafe">
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_1_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+
+
+{% elif draw == 'SRHT' %}
+
+
+
+<div class="backgroundsafe">
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/LjIPS6u.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+        <div class="box" >
+            <div class="imageholder">
+                <img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="120px"/>
+            </div>
+        </div>
+
+        {% formfield player.option_2_samp %}
+        {% formfield player.option_3_samp %}
+        {% formfield player.option_safe %}
+        {% formfield player.option_1_samp %}
+
+
+ </div>
+
+       <div class="footer">
+
+        Each round, you have the option to {% if choice %} use your {{Constants.endowment_choice}} point to draw from one option.
+           {% elif not choice %} use your {{Constants.endowment_points}} points to draw from one or more of the options above. Each point invested
+           equals one draw.{% endif %} {% if safe %} The 'Hexagon' option guarantees a return of {{ Constants.safe_option }} ECU per draw. {% endif %}
+           <!--The option's name and position do not yield any information about the value of coins you get from an option.-->
+
+        </div>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Submit</button>
+
+{% endif %}
+{% endif %}
+
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+
+/*
+
+$('.btn').onClick(function(e){
+  e.preventDefault();
+});
+*/
+
+
+/*
+function on_load() {
+    $('.outside').hide();
+    $('.inside').show();
+    $('.buy').hide();
+    $('.cart').show();
+    $('.cart-cheap').hide();
+    $('.alert').hide();
+    //to show the click next alert in instructions
+    $('.alert-secondary').show();
+}
+*/
+
+/*
+function on_load_2() {
+    // $('.inside').hide();
+    // $('.outside').show();
+    // $('.progress').hide();
+    // clearTimeout(timeout);
+}
+
+$(document).ready(function () {
+    on_load();
+    on_load_2();
+    $('._otree-content').find('input').val(0);
+});
+
+$('.otree-next-button').click(function () {
+    on_load();
+    on_load_2();
+    $('._otree-content').find('input').val(0);
+    $('.cart-outside').hide();
+    $('.buy-outside').show();
+});
+
+*/
+
+//prevent enter key from submitted the form
+$(document).keypress(
+    function (event) {
+        if (event.which == '13') {
+            event.preventDefault();
+        }
+    });
+
+/*$('#exampleModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})*/
+
+</script>
+
+{% endblock %}
+
+
+
+
+{% block styles %}
+    <style type="text/css">
+        {% include 'Pilot_Descr/css/bandit_env.css' %}
+        .page-header {
+            margin-bottom: 0px;
+        }
+    </style>
+{% endblock %}
+

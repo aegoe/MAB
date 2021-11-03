@@ -1,0 +1,23 @@
+{% load otree %}
+{% block title %}
+<h4>Stage 1</h4>
+<br>
+{% endblock %}
+
+{% block content %}
+
+<p> First, you learn about the three options by observing summary statistics based on {{Constants.num_priors}} prior draws from each of the three options.
+
+<p> You then proceed to your main investment decision and make {% if choice %} three consecutive decisions on how to allocate one point between the three options.
+    {% elif not choice %} one decision on how to allocate three points between the three options. {% endif %}   </p>
+
+<p> After submitting your decision, the computer will draw from the options in accordance with your allocation of points. </p>
+<p> Then, you will be immediately forwarded to the second stage. You receive feedback on investment at the end of this HIT. </p>
+
+<p> Click on the button below to proceed to the comprehension questions. </p>
+
+<br>
+
+<button value="True" id="proceed" class="btn btn-primary btn-large">Proceed</button>
+
+{% endblock %}
