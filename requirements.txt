@@ -1,6 +1,6 @@
 Automat==0.7.0	
 PyHamcrest==1.9.0	
-Twisted==20.3.0	
+Twisted==22.1.0	
 Django==2.2.12
 asgiref==3.2.7
 asn1crypto==0.24.0
