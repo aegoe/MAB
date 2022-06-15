@@ -40,7 +40,7 @@ class Device(Page):
             self.player.incentive = self.participant.vars['incentive'] = self.session.config['incentive']
 
             treatments = ['choice', 'no_choice']
-            weights_3 = [1, 0]
+            weights_3 = [0, 1]
             draw_3 = choice(treatments, 1, p=weights_3)
             self.participant.vars['draw_3'] = draw_3[0]
             if draw_3[0] == 'choice':
@@ -578,49 +578,38 @@ class Decision2(Page):
 
         elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
 
-            Urn_1 = ['3', '4', '5', '6', '7', '8', '9', '10']
-            Urn_2 = ['0', '1', '2', '3', '20', '25', '35', '40']
-            Urn_3 = ['6']
+            Urn_1 = ['-2', '-1', '1', '6', '8', '10', '12', '18']
+            Urn_2 = ['-2', '-1', '0', '1', '20', '25', '50', '80']
+            Urn_3 = ['0', '10']
 
-            weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
+            weights_1 = [0.05, 0.05, 0.1, 0.3, 0.3, 0.1, 0.05, 0.05]
             weights_2 = [0.25, 0.25, 0.15, 0.15, 0.05, 0.05, 0.05, 0.05]
-            weights_3 = [1]
+            weights_3 = [0.5, 0.5]
 
-            draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
-            draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
-            draws_3 = random.choices(Urn_3, weights=weights_3, k = self.player.option_3)
+            draws_1 = random.choices(Urn_1, weights=weights_1, k=self.player.option_1_samp)
+            draws_2 = random.choices(Urn_2, weights=weights_2, k=self.player.option_2_samp)
+            draws_3 = random.choices(Urn_3, weights=weights_3, k=self.player.option_3_samp)
 
             draws_1_str = str(draws_1)[1:-1]
             draws_2_str = str(draws_2)[1:-1]
             draws_3_str = str(draws_3)[1:-1]
 
-            draws_1_str = draws_1_str.replace("'","")
-            draws_2_str = draws_2_str.replace("'","")
-            draws_3_str = draws_3_str.replace("'","")
+            draws_1_str = draws_1_str.replace("'", "")
+            draws_2_str = draws_2_str.replace("'", "")
+            draws_3_str = draws_3_str.replace("'", "")
 
-            self.player.urn_draws_1 = draws_1_str
-            self.player.urn_draws_2 = draws_2_str
-            self.player.urn_draws_3 = draws_3_str
-
-            print(self.player.urn_draws_1)
-            print(draws_1)
-            print(draws_2)
-            print(draws_3)
+            self.player.urn_draws_1_samp = draws_1_str
+            self.player.urn_draws_2_samp = draws_2_str
+            self.player.urn_draws_3_samp = draws_3_str
 
             count_1 = Counter(draws_1)
             count_2 = Counter(draws_2)
             count_3 = Counter(draws_3)
 
-            print(count_1)
-            print(count_2)
-            print(count_3)
-
-
             data_counts = {}
             data_counts['count_1'] = count_1
             data_counts['count_2'] = count_2
             data_counts['count_3'] = count_3
-
 
             for i in data_counts.keys():
                 for k, v in data_counts[i].items():
@@ -630,20 +619,20 @@ class Decision2(Page):
                         data_counts[i][k] = v * 1
                     elif k == '2':
                         data_counts[i][k] = v * 2
-                    elif k == '3':
-                        data_counts[i][k] = v * 3
+                    elif k == '-1':
+                        data_counts[i][k] = v * -1
                     elif k == '4':
                         data_counts[i][k] = v * 4
-                    elif k == '5':
-                        data_counts[i][k] = v * 5
+                    elif k == '-2':
+                        data_counts[i][k] = v * -2
                     elif k == '6':
                         data_counts[i][k] = v * 6
-                    elif k == '7':
-                        data_counts[i][k] = v * 7
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
                     elif k == '8':
                         data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
+                    elif k == '18':
+                        data_counts[i][k] = v * 18
                     elif k == '10':
                         data_counts[i][k] = v * 10
                     elif k == '20':
@@ -652,8 +641,8 @@ class Decision2(Page):
                         data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
-                    elif k == '40':
-                        data_counts[i][k] = v * 40
+                    elif k == '80':
+                        data_counts[i][k] = v * 80
 
             self.player.payoff = 0
             for i in data_counts.keys():

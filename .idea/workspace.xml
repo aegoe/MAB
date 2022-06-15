@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="" />
+    <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,17 +28,61 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MS_4_IOE/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2671">
-              <caret line="362" column="22" selection-start-line="362" selection-start-column="22" selection-end-line="362" selection-end-column="22" />
+            <state relative-caret-position="30">
+              <caret line="541" column="56" selection-start-line="541" selection-start-column="56" selection-end-line="541" selection-end-column="56" />
               <folding>
                 <element signature="e#0#71#0" expanded="true" />
                 <element signature="e#7637#7967#0" />
-                <element signature="e#12615#13910#0" />
-                <element signature="e#13950#14403#0" />
-                <element signature="e#14796#30152#0" />
-                <element signature="e#16935#30152#0" />
+                <element signature="e#9234#12576#0" />
+                <element signature="e#37932#38898#0" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MS_4/pages.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4974">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#71#0" expanded="true" />
+                <element signature="e#812#3092#0" />
+                <element signature="e#7992#12549#0" />
+                <element signature="e#12588#13883#0" />
+                <element signature="e#13923#14376#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Questionnaire.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/BeliefTransition.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Beliefs.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Decision2Transition.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11" />
           </provider>
         </entry>
       </file>
@@ -55,51 +101,8 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Decision2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="301" column="28" selection-start-line="301" selection-start-column="28" selection-end-line="301" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Feedback.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14597" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Disclose_Payoff.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="274" column="28" selection-start-line="274" selection-start-column="28" selection-end-line="274" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/InstruStart.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/PayoffTransition.html">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Feedback_Sampling.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="238" column="28" selection-start-line="238" selection-start-column="28" selection-end-line="238" selection-end-column="28" />
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -186,7 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MS_3/templates/MS_3/Decision.html" />
         <option value="$PROJECT_DIR$/MS_3/templates/MS_3/include/instru_2.html" />
         <option value="$PROJECT_DIR$/MS_3/templates/MS_3/include/questionnaire_4.html" />
         <option value="$PROJECT_DIR$/MS_3/templates/MS_3/include/questionnaire_5.html" />
@@ -228,7 +230,6 @@
         <option value="$PROJECT_DIR$/Testing/Urns Testing.py" />
         <option value="$PROJECT_DIR$/MS_3/templates/MS_3/Sampling.html" />
         <option value="$PROJECT_DIR$/MS_3b/pages.py" />
-        <option value="$PROJECT_DIR$/MS_4_IOE/pages.py" />
         <option value="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Questionnaire.html" />
         <option value="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/ComprehensionQuestions.html" />
         <option value="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Decision2.html" />
@@ -237,6 +238,8 @@
         <option value="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/InstruStart.html" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Sampling.html" />
+        <option value="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Beliefs.html" />
+        <option value="$PROJECT_DIR$/MS_4_IOE/pages.py" />
       </list>
     </option>
   </component>
@@ -269,6 +272,11 @@
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
@@ -578,18 +586,18 @@
       <workItem from="1638184339694" duration="143000" />
       <workItem from="1638907351690" duration="1403000" />
       <workItem from="1639134033520" duration="2752000" />
-      <workItem from="1655221018111" duration="3558000" />
+      <workItem from="1655221018111" duration="4572000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="837182000" />
+    <option name="totallyTimeSpent" value="838196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18516542" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18516542" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -602,7 +610,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5032017" side_tool="true" weight="0.24591738" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4967983" visible="true" weight="0.24591738" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4967983" visible="true" weight="0.24591738" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.32756963" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32853025" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -617,32 +625,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MS_4_IOE/pages.py</url>
-          <line>309</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/ComprehensionQuestions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-594">
-          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -791,21 +774,6 @@
           <caret line="233" column="11" selection-start-line="233" selection-start-column="4" selection-end-line="233" selection-end-column="11" />
           <folding>
             <element signature="e#0#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/pages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-            <element signature="e#812#3092#0" />
-            <element signature="e#7992#12549#0" />
-            <element signature="e#12588#13883#0" />
-            <element signature="e#13923#14376#0" />
-            <element signature="e#14769#30076#0" />
           </folding>
         </state>
       </provider>
@@ -1458,16 +1426,6 @@
     <entry file="file://$PROJECT_DIR$/MS_4_IOE/venv/Lib/site-packages/h2/config.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Questionnaire.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/BeliefTransition.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/ComprehensionQuestions.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="626">
@@ -1538,17 +1496,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Decision2Transition.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/BeliefTransition.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Beliefs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Questionnaire.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4/pages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4974">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#812#3092#0" />
+            <element signature="e#7992#12549#0" />
+            <element signature="e#12588#13883#0" />
+            <element signature="e#13923#14376#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MS_4_IOE/pages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2671">
-          <caret line="362" column="22" selection-start-line="362" selection-start-column="22" selection-end-line="362" selection-end-column="22" />
+        <state relative-caret-position="30">
+          <caret line="541" column="56" selection-start-line="541" selection-start-column="56" selection-end-line="541" selection-end-column="56" />
           <folding>
             <element signature="e#0#71#0" expanded="true" />
             <element signature="e#7637#7967#0" />
-            <element signature="e#12615#13910#0" />
-            <element signature="e#13950#14403#0" />
-            <element signature="e#14796#30152#0" />
-            <element signature="e#16935#30152#0" />
+            <element signature="e#9234#12576#0" />
+            <element signature="e#37932#38898#0" />
           </folding>
         </state>
       </provider>
