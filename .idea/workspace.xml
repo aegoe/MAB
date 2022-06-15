@@ -2,67 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/_builtin/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/pages.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/AttentionCheck.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/BeliefTransition.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Beliefs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/ComprehensionQuestions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/DeadEnd.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/DeadEnd2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Decision.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Decision2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Decision2Transition.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/DecisionTransition.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Device.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Disclose_Payoff.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Feedback.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Feedback_Sampling.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/FinalInfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/HelpPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/InstruStart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/MyPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/PayoffTransition.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Priors.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Questionnaire.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Results.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Sampling.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/SamplingTransition.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/css/bandit_env.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/css/feedback.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/css/priors.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/beliefs_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/beliefs_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/beliefs_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/beliefs_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/beliefs_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/instru_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/instru_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/instru_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/instru_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/instru_cq/instru_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/instru_cq/instru_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/instru_cq/instru_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/instru_cq/instru_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/questionnaire_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/questionnaire_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/questionnaire_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/questionnaire_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/questionnaire_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/questionnaire_IMI.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/questionnaire_epo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/questionnaire_max.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/questionnaire_socio_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/include/questionnaire_transition.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MS_4_IOE/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MAB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MAB.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_3b/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/MS_3b/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+            <state relative-caret-position="-760">
+              <caret line="8" column="66" lean-forward="true" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -597,17 +537,17 @@
       <workItem from="1638184339694" duration="143000" />
       <workItem from="1638907351690" duration="1403000" />
       <workItem from="1639134033520" duration="2752000" />
-      <workItem from="1655221018111" duration="2259000" />
+      <workItem from="1655221018111" duration="3184000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="835883000" />
+    <option name="totallyTimeSpent" value="836808000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18516542" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18516542" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -620,7 +560,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5032017" side_tool="true" weight="0.24591738" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4967983" visible="true" weight="0.24591738" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4967983" visible="true" weight="0.24591738" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.32756963" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32853025" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1550,8 +1490,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+        <state relative-caret-position="-760">
+          <caret line="8" column="66" lean-forward="true" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
         </state>
       </provider>
     </entry>
