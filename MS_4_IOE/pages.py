@@ -2,7 +2,7 @@ from otree.api import (
     Currency as c, currency_range, BasePlayer
 )
 
-from _builtin import Page, WaitPage
+from _builtin import     Page, WaitPage
 from .models import Constants
 import random
 from numpy.random import choice
@@ -30,7 +30,7 @@ class Device(Page):
 
     def before_next_page(self):
 
-        if self.session.config['name'] == 'MS3b':
+        if self.session.config['name'] == 'MS4_IOE':
             letters_and_digits = string.ascii_letters + string.digits
             result_str = ''.join((random.choice(letters_and_digits) for i in range(7))) + str(random.randint(1, 8))
             self.player.completion_code = result_str
@@ -40,7 +40,7 @@ class Device(Page):
             self.player.incentive = self.participant.vars['incentive'] = self.session.config['incentive']
 
             treatments = ['choice', 'no_choice']
-            weights_3 = [0.5, 0.5]
+            weights_3 = [1, 0]
             draw_3 = choice(treatments, 1, p=weights_3)
             self.participant.vars['draw_3'] = draw_3[0]
             if draw_3[0] == 'choice':
@@ -66,10 +66,6 @@ class Device(Page):
                 self.player.draw = self.participant.vars['draw']
 
 
-########################################################################################################################
-# AttentionCheck ##########################################################################################################
-########################################################################################################################
-
 class AttentionCheck(Page):
     def is_displayed(self):
         return self.player.access_device != 0 and self.round_number == 1
@@ -77,10 +73,11 @@ class AttentionCheck(Page):
     form_model = 'player'
     form_fields = ['attention_check_1', 'attention_check_2']
 
-   # def vars_for_template(self):
-   #     return{
-   #         'choice': self.participant.vars['choice']
-   #     }
+    def vars_for_template(self):
+        return{
+            'choice': self.participant.vars['choice']
+        }
+
 
 
 ########################################################################################################################
@@ -115,6 +112,7 @@ class InstruStart(Page):
                 'endowment_points': Constants.endowment_points,
                 'draw': self.participant.vars['draw'],
                 'feedback_3': self.participant.vars['feedback_3'],
+                'instru_page': self.player.instru_page,
 
                 }
 
@@ -143,16 +141,16 @@ class ComprehensionQuestions(Page):
 
     def get_form_fields(self):
         if self.participant.vars['choice'] :
-            return ['cq1_MS3', 'cq2_MS3', 'cq3_MS3']
+            return ['cq1_MS3', 'cq2_MS3', 'cq3_MS3','cq5_MS3']
         elif not self.participant.vars['choice']:
-            return ['cq1_MS3', 'cq2_MS3', 'cq3_MS3']
+            return ['cq1_MS3', 'cq2_MS3', 'cq3_MS3', 'cq5_MS3']
 
     def before_next_page(self):
         if self.participant.vars['choice']:
-            if sum([self.player.cq1_MS3, self.player.cq2_MS3, self.player.cq3_MS3]) < 4:
+            if sum([self.player.cq1_MS3, self.player.cq2_MS3, self.player.cq3_MS3, self.player.cq4_MS3, self.player.cq5_MS3]) < 6:
                 self.player.controls = 1
         else:
-            if sum([self.player.cq1_MS3, self.player.cq2_MS3, self.player.cq3_MS3]) < 4:
+            if sum([self.player.cq1_MS3, self.player.cq2_MS3, self.player.cq3_MS3, self.player.cq4_MS3, self.player.cq5_MS3]) < 6:
                 self.player.controls = 1
 
         self.player.comprehension_page += 1
@@ -163,404 +161,6 @@ class DeadEnd2(Page):
         return self.player.in_round(1).controls !=1 and self.round_number == 1
 
 
-
-########################################################################################################################
-# PRIORS ###############################################################################################################
-########################################################################################################################
-
-class PriorsTransition(Page):
-    form_model = 'player'
-
-    def is_displayed(self):
-        return self.round_number == 1
-
-    def vars_for_template(self):
-        return{'choice': self.participant.vars['choice'],
-               }
-
-
-class Priors(Page):
-    form_model = 'player'
-
-    def is_displayed(self):
-        return self.round_number == 1
-
-    def vars_for_template(self):
-        return{'choice': self.participant.vars['choice'],
-               'draw': self.participant.vars['draw'],
-               'sampling': self.participant.vars['sampling'],
-
-               }
-
-
-
-########################################################################################################################
-# DECISION 1 ###########################################################################################################
-########################################################################################################################
-
-class Decision(Page):
-    form_model = 'player'
-
-    def is_displayed(self):
-        if not self.participant.vars['choice'] and self.player.decision_1_page == 1:
-            return self.round_number == 1
-        elif self.participant.vars['choice'] and self.player.decision_1_page <= 3:
-            return self.round_number == 1
-
-    def get_form_fields(self):
-        if self.participant.vars['choice'] and not self.participant.vars['safe']:
-            return ['option_1', 'option_2', 'option_3']
-
-        elif self.participant.vars['choice'] and self.participant.vars['safe']:
-            return ['option_1', 'option_2', 'option_3', 'option_safe']
-
-        elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
-            return ['option_1', 'option_2', 'option_3']
-
-        elif not self.participant.vars['choice'] and self.participant.vars['safe']:
-            return ['option_1', 'option_2', 'option_3', 'option_safe']
-
-    def error_message(self, values):
-        if self.participant.vars['choice'] and not self.participant.vars['safe']:
-            if values['option_1'] + values['option_2'] + values['option_3'] < 1:
-                return 'You have to use your point to choose an urn.'
-            elif values['option_1'] + values['option_2'] + values['option_3'] > 1:
-                return 'You can only choose one option per round.'
-
-        elif self.participant.vars['choice'] and self.participant.vars['safe']:
-            if values['option_1'] + values['option_2'] + values['option_3'] + values['option_safe'] < 1:
-                return 'You have to use your point to choose an urn.'
-            elif values['option_1'] + values['option_2'] + values['option_3'] + values['option_safe'] > 1:
-                return 'You can only choose one option per round.'
-
-        elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
-            if values['option_1'] + values['option_2'] + values['option_3'] < 3:
-                return 'You have to use all three points'
-            elif values['option_1'] + values['option_2'] + values['option_3'] > 3:
-                return 'You can only use three points per round'
-
-        elif not self.participant.vars['choice'] and self.participant.vars['safe']:
-            if values['option_1'] + values['option_2'] + values['option_3'] + values['option_safe'] < 3:
-                return 'You have to use all three points'
-            elif values['option_1'] + values['option_2'] + values['option_3'] + values['option_safe'] > 3:
-                return 'You can only use three points per round'
-
-    def vars_for_template(self):
-        return{'choice': self.participant.vars['choice'],
-               'safe_option': Constants.safe_option,
-               'endowment_choice': Constants.endowment_choice,
-               'endowment_points': Constants.endowment_points,
-               'safe': self.participant.vars['safe'],
-               'draw': self.participant.vars['draw'],
-               'payoff': self.participant.payoff,
-               }
-
-    def before_next_page(self):
-
-        if self.participant.vars['choice'] and not self.participant.vars['safe']:
-
-            Urn_1 = ['3', '4', '5', '6', '7', '8', '9', '10']
-            Urn_2 = ['0', '1', '2', '3', '20', '25', '35', '40']
-            Urn_3 = ['6']
-
-            weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
-            weights_2 = [0.25, 0.25, 0.15, 0.15, 0.05, 0.05, 0.05, 0.05]
-            weights_3 = [1]
-
-            draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
-            draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
-            draws_3 = random.choices(Urn_3, weights=weights_3, k = self.player.option_3)
-
-            draws_1_str = str(draws_1)[1:-1]
-            draws_2_str = str(draws_2)[1:-1]
-            draws_3_str = str(draws_3)[1:-1]
-
-            draws_1_str = draws_1_str.replace("'","")
-            draws_2_str = draws_2_str.replace("'","")
-            draws_3_str = draws_3_str.replace("'","")
-
-            self.player.urn_draws_1 = draws_1_str
-            self.player.urn_draws_2 = draws_2_str
-            self.player.urn_draws_3 = draws_3_str
-
-
-            count_1 = Counter(draws_1)
-            count_2 = Counter(draws_2)
-            count_3 = Counter(draws_3)
-
-            data_counts = {}
-            data_counts['count_1'] = count_1
-            data_counts['count_2'] = count_2
-            data_counts['count_3'] = count_3
-
-            for i in data_counts.keys():
-                for k, v in data_counts[i].items():
-                    if k == '0':
-                        data_counts[i][k] = v * 0
-                    elif k == '1':
-                        data_counts[i][k] = v * 1
-                    elif k == '2':
-                        data_counts[i][k] = v * 2
-                    elif k == '3':
-                        data_counts[i][k] = v * 3
-                    elif k == '4':
-                        data_counts[i][k] = v * 4
-                    elif k == '5':
-                        data_counts[i][k] = v * 5
-                    elif k == '6':
-                        data_counts[i][k] = v * 6
-                    elif k == '7':
-                        data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
-                    elif k == '35':
-                        data_counts[i][k] = v * 35
-                    elif k == '40':
-                        data_counts[i][k] = v * 40
-
-            self.player.payoff = 0
-            payoffs = 0
-            for i in data_counts.keys():
-                for values in data_counts[i].values():
-                    payoffs += values
-
-            self.player.payoff = payoffs
-
-            self.player.payoff_1 = 0
-            self.player.payoff_2 = 0
-            self.player.payoff_3 = 0
-
-            payoffs_1 = 0
-            payoffs_2 = 0
-            payoffs_3 = 0
-
-            for i in data_counts.keys():
-                for v in data_counts[i].values():
-                    if i == 'count_1':
-                        payoffs_1 += v
-                    if i == 'count_2':
-                        payoffs_2 += v
-                    if i == 'count_3':
-                        payoffs_3 += v
-
-            self.player.payoff_1 = payoffs_1
-            self.player.payoff_2 = payoffs_2
-            self.player.payoff_3 = payoffs_3
-
-            if self.player.decision_1_page == 1:
-                self.participant.vars['payoff_a1_1'] = self.player.payoff = payoffs
-                self.participant.vars['urndraws1_a1_1'] = self.player.urn_draws_1
-                self.participant.vars['urndraws2_a1_1'] = self.player.urn_draws_2
-                self.participant.vars['urndraws3_a1_1'] = self.player.urn_draws_3
-                self.participant.vars['option_1_a1_1'] = self.player.option_1
-                self.participant.vars['option_2_a1_1'] = self.player.option_2
-                self.participant.vars['option_3_a1_1'] = self.player.option_3
-
-                self.participant.vars['payoff_1_a_1'] = self.player.payoff_1
-                self.participant.vars['payoff_2_a_1'] = self.player.payoff_2
-                self.participant.vars['payoff_3_a_1'] = self.player.payoff_3
-
-                self.player.option_1 = 0
-                self.player.option_2 = 0
-                self.player.option_3 = 0
-
-            if self.player.decision_1_page == 2:
-                self.participant.vars['payoff_a1_2'] = self.player.payoff = payoffs
-                self.participant.vars['urndraws1_a1_2'] = self.player.urn_draws_1
-                self.participant.vars['urndraws2_a1_2'] = self.player.urn_draws_2
-                self.participant.vars['urndraws3_a1_2'] = self.player.urn_draws_3
-                self.participant.vars['option_1_a1_2'] = self.player.option_1
-                self.participant.vars['option_2_a1_2'] = self.player.option_2
-                self.participant.vars['option_3_a1_2'] = self.player.option_3
-
-                self.participant.vars['payoff_1_a_2'] = self.player.payoff_1
-                self.participant.vars['payoff_2_a_2'] = self.player.payoff_2
-                self.participant.vars['payoff_3_a_2'] = self.player.payoff_3
-
-                self.player.option_1 = 0
-                self.player.option_2 = 0
-                self.player.option_3 = 0
-
-            if self.player.decision_1_page == 3:
-                self.participant.vars['payoff_a1_3'] = self.player.payoff = payoffs
-                self.participant.vars['urndraws1_a1_3'] = self.player.urn_draws_1
-                self.participant.vars['urndraws2_a1_3'] = self.player.urn_draws_2
-                self.participant.vars['urndraws3_a1_3'] = self.player.urn_draws_3
-                self.participant.vars['option_1_a1_3'] = self.player.option_1
-                self.participant.vars['option_2_a1_3'] = self.player.option_2
-                self.participant.vars['option_3_a1_3'] = self.player.option_3
-
-                self.participant.vars['payoff_1_a_3'] = self.player.payoff_1
-                self.participant.vars['payoff_2_a_3'] = self.player.payoff_2
-                self.participant.vars['payoff_3_a_3'] = self.player.payoff_3
-
-                self.participant.vars['payoff_a1'] = self.participant.vars['payoff_a1_1'] + self.participant.vars[
-                    'payoff_a1_2'] + self.participant.vars['payoff_a1_3']
-                self.participant.vars['urndraws1_a1'] = self.participant.vars['urndraws1_a1_1'] + '  ' + \
-                                                        self.participant.vars['urndraws1_a1_2'] + '  ' + \
-                                                        self.participant.vars['urndraws1_a1_3']
-                self.participant.vars['urndraws2_a1'] = self.participant.vars['urndraws2_a1_1'] + '  ' + \
-                                                        self.participant.vars['urndraws2_a1_2'] + '  ' + \
-                                                        self.participant.vars['urndraws2_a1_3']
-                self.participant.vars['urndraws3_a1'] = self.participant.vars['urndraws3_a1_1'] + '  ' + \
-                                                        self.participant.vars['urndraws3_a1_2'] + '  ' + \
-                                                        self.participant.vars['urndraws3_a1_3']
-                self.participant.vars['option_1_a1'] = self.participant.vars['option_1_a1_1'] + self.participant.vars[
-                    'option_1_a1_2'] + self.participant.vars['option_1_a1_3']
-                self.participant.vars['option_2_a1'] = self.participant.vars['option_2_a1_1'] + self.participant.vars[
-                    'option_2_a1_2'] + self.participant.vars['option_2_a1_3']
-                self.participant.vars['option_3_a1'] = self.participant.vars['option_3_a1_1'] + self.participant.vars[
-                    'option_3_a1_2'] + self.participant.vars['option_3_a1_3']
-
-                self.participant.vars['payoff_1_a'] = self.participant.vars['payoff_1_a_1'] + self.participant.vars[
-                    'payoff_1_a_2'] + self.participant.vars['payoff_1_a_3']
-                self.participant.vars['payoff_2_a'] = self.participant.vars['payoff_2_a_1'] + self.participant.vars[
-                    'payoff_2_a_2'] + self.participant.vars['payoff_2_a_3']
-                self.participant.vars['payoff_3_a'] = self.participant.vars['payoff_3_a_1'] + self.participant.vars[
-                    'payoff_3_a_2'] + self.participant.vars['payoff_3_a_3']
-
-        elif not self.participant.vars['choice'] and not self.participant.vars['safe']:
-
-            Urn_1 = ['3', '4', '5', '6', '7', '8', '9', '10']
-            Urn_2 = ['0', '1', '2', '3', '20', '25', '35', '40']
-            Urn_3 = ['6']
-
-            weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
-            weights_2 = [0.25, 0.25, 0.15, 0.15, 0.05, 0.05, 0.05, 0.05]
-            weights_3 = [1]
-
-            draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
-            draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
-            draws_3 = random.choices(Urn_3, weights=weights_3, k = self.player.option_3)
-
-            draws_1_str = str(draws_1)[1:-1]
-            draws_2_str = str(draws_2)[1:-1]
-            draws_3_str = str(draws_3)[1:-1]
-
-            draws_1_str = draws_1_str.replace("'","")
-            draws_2_str = draws_2_str.replace("'","")
-            draws_3_str = draws_3_str.replace("'","")
-
-            self.player.urn_draws_1 = draws_1_str
-            self.player.urn_draws_2 = draws_2_str
-            self.player.urn_draws_3 = draws_3_str
-
-            print(self.player.urn_draws_1)
-            print(draws_1)
-            print(draws_2)
-            print(draws_3)
-
-            count_1 = Counter(draws_1)
-            count_2 = Counter(draws_2)
-            count_3 = Counter(draws_3)
-
-            print(count_1)
-            print(count_2)
-            print(count_3)
-
-
-            data_counts = {}
-            data_counts['count_1'] = count_1
-            data_counts['count_2'] = count_2
-            data_counts['count_3'] = count_3
-
-
-            for i in data_counts.keys():
-                for k, v in data_counts[i].items():
-                    if k == '0':
-                        data_counts[i][k] = v * 0
-                    elif k == '1':
-                        data_counts[i][k] = v * 1
-                    elif k == '2':
-                        data_counts[i][k] = v * 2
-                    elif k == '3':
-                        data_counts[i][k] = v * 3
-                    elif k == '4':
-                        data_counts[i][k] = v * 4
-                    elif k == '5':
-                        data_counts[i][k] = v * 5
-                    elif k == '6':
-                        data_counts[i][k] = v * 6
-                    elif k == '7':
-                        data_counts[i][k] = v * 7
-                    elif k == '8':
-                        data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
-                    elif k == '10':
-                        data_counts[i][k] = v * 10
-                    elif k == '20':
-                        data_counts[i][k] = v * 20
-                    elif k == '25':
-                        data_counts[i][k] = v * 25
-                    elif k == '35':
-                        data_counts[i][k] = v * 35
-                    elif k == '40':
-                        data_counts[i][k] = v * 40
-
-            self.player.payoff = 0
-            for i in data_counts.keys():
-                for values in data_counts[i].values():
-                    self.player.payoff += values
-
-
-            self.participant.vars['payoff_a1'] = self.player.payoff
-            self.participant.vars['urndraws1_a1'] = self.player.urn_draws_1
-            self.participant.vars['urndraws2_a1'] = self.player.urn_draws_2
-            self.participant.vars['urndraws3_a1'] = self.player.urn_draws_3
-
-            self.participant.vars['option_1_a1'] = self.player.option_1
-            self.participant.vars['option_2_a1'] = self.player.option_2
-            self.participant.vars['option_3_a1'] = self.player.option_3
-
-
-            self.player.payoff_1 = 0
-            self.player.payoff_2 = 0
-            self.player.payoff_3 = 0
-
-            for i in data_counts.keys():
-                for v in data_counts[i].values():
-                    if i == 'count_1':
-                        self.player.payoff_1 += v
-                    if i == 'count_2':
-                        self.player.payoff_2 += v
-                    if i == 'count_3':
-                        self.player.payoff_3 += v
-
-            self.participant.vars['payoff_1_a'] = self.player.payoff_1
-            self.participant.vars['payoff_2_a'] = self.player.payoff_2
-            self.participant.vars['payoff_3_a'] = self.player.payoff_3
-
-        self.player.decision_1_page += 1
-
-
-class InstruStart2(Page):
-
-    def is_displayed(self):
-        return self.round_number == 1
-
-    def vars_for_template(self):
-        return {'participation_fee': self.session.config['participation_fee'],
-                'conversion_factor': int(self.session.config['real_world_currency_per_point'] * 100),
-                'choice': self.participant.vars['choice'],
-                'safe': self.participant.vars['safe'],
-                'endowment_choice': Constants.endowment_choice,
-                'endowment_points': Constants.endowment_points,
-                'draw': self.participant.vars['draw'],
-                'feedback_3': self.participant.vars['feedback_3'],
-
-                }
-
-    def before_next_page(self):
-        self.player.instru_page2 += 1
 
 ########################################################################################################################
 # SAMPLING #############################################################################################################
@@ -610,13 +210,13 @@ class Sampling(Page):
 
     def before_next_page(self):
 
-        Urn_1 = ['3', '4', '5', '6', '7', '8', '9', '10']
-        Urn_2 = ['0', '1', '2', '3', '20', '25', '35', '40']
-        Urn_3 = ['6']
+        Urn_1 = ['-2', '-1', '0', '1', '2', '4', '8', '12']
+        Urn_2 = ['-2', '-1', '0', '1', '20', '25', '50', '80']
+        Urn_3 = ['0', '10']
 
         weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
         weights_2 = [0.25, 0.25, 0.15, 0.15, 0.05, 0.05, 0.05, 0.05]
-        weights_3 = [1]
+        weights_3 = [0.5, 0.5]
 
         draws_1 = random.choices(Urn_1, weights=weights_1, k=self.player.option_1_samp)
         draws_2 = random.choices(Urn_2, weights=weights_2, k=self.player.option_2_samp)
@@ -651,16 +251,16 @@ class Sampling(Page):
                     data_counts[i][k] = v * 1
                 elif k == '2':
                     data_counts[i][k] = v * 2
-                elif k == '3':
-                    data_counts[i][k] = v * 3
+                elif k == '-1':
+                    data_counts[i][k] = v * -1
                 elif k == '4':
                     data_counts[i][k] = v * 4
-                elif k == '5':
-                    data_counts[i][k] = v * 5
+                elif k == '-2':
+                    data_counts[i][k] = v * -2
                 elif k == '6':
                     data_counts[i][k] = v * 6
-                elif k == '7':
-                    data_counts[i][k] = v * 7
+                elif k == '50':
+                    data_counts[i][k] = v * 50
                 elif k == '8':
                     data_counts[i][k] = v * 8
                 elif k == '9':
@@ -673,8 +273,8 @@ class Sampling(Page):
                     data_counts[i][k] = v * 25
                 elif k == '35':
                     data_counts[i][k] = v * 35
-                elif k == '40':
-                    data_counts[i][k] = v * 40
+                elif k == '80':
+                    data_counts[i][k] = v * 80
 
         self.player.payoff = 0
         payoffs = 0
@@ -704,6 +304,7 @@ class Sampling(Page):
         self.player.payoff_1_samp = payoffs_1
         self.player.payoff_2_samp = payoffs_2
         self.player.payoff_3_samp = payoffs_3
+
 
 
 class Feedback_Sampling(Page):
@@ -808,30 +409,29 @@ class Decision2(Page):
 
         if self.participant.vars['choice'] and not self.participant.vars['safe']:
 
-            Urn_1 = ['3', '4', '5', '6', '7', '8', '9', '10']
-            Urn_2 = ['0', '1', '2', '3', '20', '25', '35', '40']
-            Urn_3 = ['6']
+            Urn_1 = ['-2', '-1', '0', '1', '2', '4', '8', '12']
+            Urn_2 = ['-2', '-1', '0', '1', '20', '25', '50', '80']
+            Urn_3 = ['0', '10']
 
             weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
             weights_2 = [0.25, 0.25, 0.15, 0.15, 0.05, 0.05, 0.05, 0.05]
-            weights_3 = [1]
+            weights_3 = [0.5, 0.5]
 
-            draws_1 = random.choices(Urn_1, weights=weights_1, k = self.player.option_1)
-            draws_2 = random.choices(Urn_2, weights=weights_2, k = self.player.option_2)
-            draws_3 = random.choices(Urn_3, weights=weights_3, k = self.player.option_3)
+            draws_1 = random.choices(Urn_1, weights=weights_1, k=self.player.option_1_samp)
+            draws_2 = random.choices(Urn_2, weights=weights_2, k=self.player.option_2_samp)
+            draws_3 = random.choices(Urn_3, weights=weights_3, k=self.player.option_3_samp)
 
             draws_1_str = str(draws_1)[1:-1]
             draws_2_str = str(draws_2)[1:-1]
             draws_3_str = str(draws_3)[1:-1]
 
-            draws_1_str = draws_1_str.replace("'","")
-            draws_2_str = draws_2_str.replace("'","")
-            draws_3_str = draws_3_str.replace("'","")
+            draws_1_str = draws_1_str.replace("'", "")
+            draws_2_str = draws_2_str.replace("'", "")
+            draws_3_str = draws_3_str.replace("'", "")
 
-            self.player.urn_draws_1 = draws_1_str
-            self.player.urn_draws_2 = draws_2_str
-            self.player.urn_draws_3 = draws_3_str
-
+            self.player.urn_draws_1_samp = draws_1_str
+            self.player.urn_draws_2_samp = draws_2_str
+            self.player.urn_draws_3_samp = draws_3_str
 
             count_1 = Counter(draws_1)
             count_2 = Counter(draws_2)
@@ -850,16 +450,16 @@ class Decision2(Page):
                         data_counts[i][k] = v * 1
                     elif k == '2':
                         data_counts[i][k] = v * 2
-                    elif k == '3':
-                        data_counts[i][k] = v * 3
+                    elif k == '-1':
+                        data_counts[i][k] = v * -1
                     elif k == '4':
                         data_counts[i][k] = v * 4
-                    elif k == '5':
-                        data_counts[i][k] = v * 5
+                    elif k == '-2':
+                        data_counts[i][k] = v * -2
                     elif k == '6':
                         data_counts[i][k] = v * 6
-                    elif k == '7':
-                        data_counts[i][k] = v * 7
+                    elif k == '50':
+                        data_counts[i][k] = v * 50
                     elif k == '8':
                         data_counts[i][k] = v * 8
                     elif k == '9':
@@ -872,8 +472,8 @@ class Decision2(Page):
                         data_counts[i][k] = v * 25
                     elif k == '35':
                         data_counts[i][k] = v * 35
-                    elif k == '40':
-                        data_counts[i][k] = v * 40
+                    elif k == '80':
+                        data_counts[i][k] = v * 80
 
             self.player.payoff = 0
             payoffs = 0
@@ -1091,7 +691,9 @@ class Decision2(Page):
         self.player.decision_2_page += 1
 
 
-class PayoffTransition(Page):
+#transition and introduction belief elicitation?
+
+class BeliefTransition(Page):
     form_model = 'player'
 
     def is_displayed(self):
@@ -1105,35 +707,118 @@ class PayoffTransition(Page):
                 }
 
     def before_next_page(self):
-        self.player.payoff_a = self.participant.vars['payoff_a1']
         self.player.payoff_b = self.participant.vars['payoff_b1']
-        self.player.urn_draws_1_a = self.participant.vars['urndraws1_a1']
         self.player.urn_draws_1_b = self.participant.vars['urndraws1_b1']
-        self.player.urn_draws_2_a = self.participant.vars['urndraws2_a1']
         self.player.urn_draws_2_b = self.participant.vars['urndraws2_b1']
-        self.player.urn_draws_3_a = self.participant.vars['urndraws3_a1']
         self.player.urn_draws_3_b = self.participant.vars['urndraws3_b1']
-        self.player.option_1_a = self.participant.vars['option_1_a1']
         self.player.option_1_b = self.participant.vars['option_1_b1']
-        self.player.option_2_a = self.participant.vars['option_2_a1']
         self.player.option_2_b = self.participant.vars['option_2_b1']
-        self.player.option_3_a = self.participant.vars['option_3_a1']
         self.player.option_3_b = self.participant.vars['option_3_b1']
-        self.player.payoff_1_a = self.participant.vars['payoff_1_a']
         self.player.payoff_1_b = self.participant.vars['payoff_1_b']
-        self.player.payoff_2_a = self.participant.vars['payoff_2_a']
         self.player.payoff_2_b = self.participant.vars['payoff_2_b']
-        self.player.payoff_3_a = self.participant.vars['payoff_3_a']
         self.player.payoff_3_b = self.participant.vars['payoff_3_b']
 
         print(self.player.payoff_b)
-        print(self.player.payoff_a)
 
-        self.participant.payoff = self.player.payoff_b + self.player.payoff_a
+        self.participant.payoff = self.player.payoff_b
 
         print(self.participant.payoff)
         print(self.player.payoff_b)
-        print(self.player.payoff_a)
+
+
+class Beliefs(Page):
+    form_model = 'player'
+
+    def get_form_fields(self):
+        if self.player.belief_page == 3:
+            return ['ranking', 'rankingsd', 'rankingld', 'rankinghd']
+
+        elif self.player.belief_page == 4:
+            return ['mean_1', 'mean_2', 'mean_3']
+
+        else:
+            return[]
+
+    def is_displayed(self):
+        return self.round_number == 100
+
+    def vars_for_template(self):
+        return {
+            'draw': self.participant.vars['draw'],
+
+        }
+
+    def error_message(self, values):
+        if self.player.belief_page==4 and values['mean_1'] + values['mean_2'] + values['mean_3'] == 60:
+            return 'Please estimate the mean for all three options'
+
+
+    def before_next_page(self):
+        self.player.belief_page += 1
+
+        print(self.player.rankingld)
+        print(self.player.rankinghd)
+        print(self.player.ranking)
+        print(self.player.rankingsd)
+
+        print(self.player.mean_1)
+        print(self.player.mean_2)
+        print(self.player.mean_3)
+
+        if self.player.belief_page==5:
+            if self.player.ranking == "Option Schin,Option Resch,Option Taw" and self.player.rankingsd == "Option Schin,Option Resch,Option Taw" and self.player.rankingld == "Option Taw,Option Resch,Option Schin" and self.player.rankinghd == "Option Schin,Option Resch,Option Taw":
+                self.player.payoffbelief_1 = 6
+            elif self.player.ranking == "Option Schin,Option Resch,Option Taw" and self.player.rankingsd == "Option Schin,Option Resch,Option Taw" and self.player.rankingld == "Option Taw,Option Resch,Option Schin":
+                self.player.payoffbelief_1 = 3
+            elif self.player.ranking == "Option Schin,Option Resch,Option Taw" and self.player.rankingsd == "Option Schin,Option Resch,Option Taw" and self.player.rankinghd == "Option Schin,Option Resch,Option Taw":
+                self.player.payoffbelief_1 = 3
+            elif self.player.ranking == "Option Schin,Option Resch,Option Taw" and self.player.rankinghd == "Option Schin,Option Resch,Option Taw" and self.player.rankingld == "Option Taw,Option Resch,Option Schin":
+                self.player.payoffbelief_1 = 3
+            elif self.player.rankinghd == "Option Schin,Option Resch,Option Taw" and self.player.rankingsd == "Option Schin,Option Resch,Option Taw" and self.player.rankingld == "Option Taw,Option Resch,Option Schin":
+                self.player.payoffbelief_1 = 3
+            else:
+                self.player.payoffbelief_1 = 0
+
+
+            if abs(6.5 - self.player.mean_1) <= 0.3255:
+                payoff_mean_lr = 3
+            elif abs(6.5 - self.player.mean_1) <= 0.65:
+                payoff_mean_lr = 1
+            elif abs(6.5 - self.player.mean_1) <= 0.975:
+                payoff_mean_lr = 0.5
+            else:
+                payoff_mean_lr = 0
+
+            if abs(7 - self.player.mean_2) <= 0.35:
+                payoff_mean_hr = 3
+            elif abs(7 - self.player.mean_2) <= 0.7:
+                payoff_mean_hr = 1
+            elif abs(7 - self.player.mean_2) <= 1.05:
+                payoff_mean_hr = 0.5
+            else:
+                payoff_mean_hr = 0
+
+            if abs(6 - self.player.mean_3) <= 0.3:
+                payoff_mean_s = 3
+            elif abs(6 - self.player.mean_3) <= 0.6:
+                payoff_mean_s = 1
+            elif abs(6 - self.player.mean_3) <= 0.9:
+                payoff_mean_s = 0.5
+            else:
+                payoff_mean_s = 0
+
+            self.player.payoffbelief_2 = payoff_mean_lr + payoff_mean_hr + payoff_mean_s
+            self.participant.payoff = self.participant.payoff + self.player.payoffbelief_1 + self.player.payoffbelief_2
+
+            print("Payoff Belief 1:",  self.player.payoffbelief_1)
+            print("Payoff Belief 2:", self.player.payoffbelief_2)
+            print ("Participant Payoff", self.participant.payoff)
+            print(payoff_mean_s)
+            print(payoff_mean_hr)
+            print(payoff_mean_lr)
+
+
+
 
 
 ########################################################################################################################
@@ -1141,7 +826,7 @@ class PayoffTransition(Page):
 ########################################################################################################################
 
 class Questionnaire(Page):
-    form_model ='player'
+    form_model = 'player'
 
     def get_form_fields(self):
         if self.player.questionnaire_page == 1:
@@ -1150,33 +835,28 @@ class Questionnaire(Page):
             return ['q_risk']
         elif self.player.questionnaire_page == 3:
             return ['q_exploration_strategy', 'q_sampling_strategy']
-        elif self.player.questionnaire_page == 4 and self.participant.vars['choice']:
-            return ['q_mean_sequential', 'q_sd_sequential', 'q_ld_sequential', 'q_hd_sequential', 'q_descr_exp']
-        elif self.player.questionnaire_page == 4 and not self.participant.vars['choice']:
-            return ['q_mean_simultan', 'q_sd_simultan', 'q_ld_simultan', 'q_hd_simultan', 'q_descr_exp']
-        elif self.player.questionnaire_page == 5:
+        elif self.player.questionnaire_page == 4:
             return['q_function']
-        elif self.player.questionnaire_page == 6 and self.player.q_function==1:
+        elif self.player.questionnaire_page == 5 and self.player.q_function==1:
             return['q_function_yes']
+        elif self.player.questionnaire_page == 6 and self.player.q_function==1:
+            epo = [f'q_epo_{i}' for i in range(1, 14)]
+            return epo
         elif self.player.questionnaire_page == 7 and self.player.q_function==1:
-            epo = [f'q_epo_{i}' for i in range(1, 14)]
-            return epo
-        elif self.player.questionnaire_page == 8 and self.player.q_function==1:
             return ['q_year', 'q_sex', 'q_employment', 'q_education',
                     'q_ethnicity']
+        elif self.player.questionnaire_page == 5 and self.player.q_function==2:
+            epo = [f'q_epo_{i}' for i in range(1, 14)]
+            return epo
         elif self.player.questionnaire_page == 6 and self.player.q_function==2:
-            epo = [f'q_epo_{i}' for i in range(1, 14)]
-            return epo
-        elif self.player.questionnaire_page == 7 and self.player.q_function==2:
             return ['q_year', 'q_sex', 'q_employment', 'q_education',
                     'q_ethnicity']
-
 
     def is_displayed(self):
         if self.player.q_function == 1 or not self.player.q_function:
-            return self.round_number == 100 and self.player.questionnaire_page <=8
-        elif self.player.q_function == 2 or not self.player.q_function:
             return self.round_number == 100 and self.player.questionnaire_page <=7
+        elif self.player.q_function == 2 or not self.player.q_function:
+            return self.round_number == 100 and self.player.questionnaire_page <=6
 
 
     def vars_for_template(self):
@@ -1193,43 +873,37 @@ class Questionnaire(Page):
 
 
 
+
+
 class Disclose_Payoff(Page):
     form_model ='player'
 
     def is_displayed(self):
         return self.round_number == 100
 
-
     def vars_for_template(self):
         return{'choice': self.participant.vars['choice'],
-               'urn_draws_1_a': self.player.urn_draws_1_a,
-               'urn_draws_2_a': self.player.urn_draws_2_a,
-               'urn_draws_3_a': self.player.urn_draws_3_a,
                'urn_draws_1_b': self.player.urn_draws_1_b,
                'urn_draws_2_b': self.player.urn_draws_2_b,
                'urn_draws_3_b': self.player.urn_draws_3_b,
-               'payoff_a': self.player.payoff_a,
                'payoff_b': self.player.payoff_b,
-               'option_1_a': self.player.option_1_a,
                'option_1_b': self.player.option_1_b,
-               'option_2_a': self.player.option_2_a,
                'option_2_b': self.player.option_2_b,
-               'option_3_a': self.player.option_3_a,
                'option_3_b': self.player.option_3_b,
                'draw': self.participant.vars['draw'],
-               'payoff_1_a': self.player.payoff_1_a,
                'payoff_1_b': self.player.payoff_1_b,
-               'payoff_2_a': self.player.payoff_2_a,
                'payoff_2_b': self.player.payoff_2_b,
-               'payoff_3_a': self.player.payoff_3_a,
                'payoff_3_b': self.player.payoff_3_b,
+               'ranking': self.player.ranking,
+               'payoffbelief_1': self.player.payoffbelief_1,
+               'payoffbelief_2': self.player.payoffbelief_2,
+
                }
 
 
 class FinalInfo(Page):
     def is_displayed(self):
         return self.round_number == 100
-
 
     def vars_for_template(self):
         return {'participation_fee': self.session.config['participation_fee'],
@@ -1246,16 +920,10 @@ page_sequence = [
     InstruStart,
     InstruStart,
     InstruStart,
+    InstruStart,
     ComprehensionQuestions,
     ComprehensionQuestions,
     DeadEnd2,
-    PriorsTransition,
-    Priors,
-    Decision,
-    Decision,
-    Decision,
-    InstruStart2,
-    InstruStart2,
     SamplingTransition,
     Sampling,
     Feedback_Sampling,
@@ -1263,7 +931,12 @@ page_sequence = [
     Decision2,
     Decision2,
     Decision2,
-    PayoffTransition,
+    BeliefTransition,
+    Beliefs,
+    Beliefs,
+    Beliefs,
+    Beliefs,
+    Beliefs,
     Questionnaire,
     Questionnaire,
     Questionnaire,

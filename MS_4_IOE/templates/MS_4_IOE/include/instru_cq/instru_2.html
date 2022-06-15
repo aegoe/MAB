@@ -1,0 +1,42 @@
+{% load otree %}
+<h4>The Task</h4>
+<br>
+
+
+
+<p>In this HIT, you will repeatedly choose between three different options that return Coins. Coins can differ in their ECU value. </p>
+
+<p>You can think of each option as a bag of coins (see image below). The coins are put in each bag before the game starts and for every point you invest in
+an option, a coin from the respective bag is drawn. Thus, one point equals one draw. After each draw, the coin is put back into the bag. Bags do not change over the
+course of the task. However, bags can differ in the composition of coins they contain.</p>
+
+
+{% if choice %}
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/qYlFQp6.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+{% elif not choice %}
+
+<div class="card">
+    <div class="card-header">Example: Decision Screen - Options Might Be Arranged Differently In Your Task</div>
+        <div class="card-body">
+            <img src='https://i.imgur.com/BolvkZk.png' alt="bla" width="800px"/>
+    </div>
+</div>
+<br>
+
+{% endif %}
+
+
+
+
+
+<br>
+
+

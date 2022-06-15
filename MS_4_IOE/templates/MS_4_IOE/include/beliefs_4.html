@@ -1,0 +1,415 @@
+{% load otree %}
+<h4>Mean Estimation</h4>
+<br>
+
+<p>Remember:</p>
+<p>"Mean" refers to an option's average payoff per draw.</p>
+
+<p><b>Please estimate the mean payoff for each of the three options.</b></p>
+
+{% if draw == 'TSR' %}
+
+<div class="card">
+  <div class="card-header">
+      Option Resch <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_1" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateDescription(this)">
+<p id="description"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let description = document.getElementById('description');
+    function updateDescription(input) {
+        let mean_1 = parseFloat(input.value);
+        description.innerText = `Mean: ${mean_1} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+      Option Schin <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_2" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateOption2(this)">
+<p id="Option2"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let Option2 = document.getElementById('Option2');
+    function updateOption2(input) {
+        let mean_2 = parseFloat(input.value);
+        Option2.innerText = `Mean: ${mean_2} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+      Option Taw <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_3" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateOption3(this)">
+<p id="Option3"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let Option3 = document.getElementById('Option3');
+    function updateOption3(input) {
+        let mean_3 = parseFloat(input.value);
+        Option3.innerText = `Mean: ${mean_3} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+{% elif draw == 'STR' %}
+
+
+<div class="card">
+  <div class="card-header">
+      Option Schin <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_2" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateOption2(this)">
+<p id="Option2"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let Option2 = document.getElementById('Option2');
+    function updateOption2(input) {
+        let mean_2 = parseFloat(input.value);
+        Option2.innerText = `Mean: ${mean_2} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+      Option Resch <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_1" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateDescription(this)">
+<p id="description"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let description = document.getElementById('description');
+    function updateDescription(input) {
+        let mean_1 = parseFloat(input.value);
+        description.innerText = `Mean: ${mean_1} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+      Option Taw <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_3" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateOption3(this)">
+<p id="Option3"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let Option3 = document.getElementById('Option3');
+    function updateOption3(input) {
+        let mean_3 = parseFloat(input.value);
+        Option3.innerText = `Mean: ${mean_3} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+
+{% elif draw == 'RTS' %}
+
+<div class="card">
+  <div class="card-header">
+      Option Taw <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_3" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateOption3(this)">
+<p id="Option3"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let Option3 = document.getElementById('Option3');
+    function updateOption3(input) {
+        let mean_3 = parseFloat(input.value);
+        Option3.innerText = `Mean: ${mean_3} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+      Option Resch <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_1" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateDescription(this)">
+<p id="description"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let description = document.getElementById('description');
+    function updateDescription(input) {
+        let mean_1 = parseFloat(input.value);
+        description.innerText = `Mean: ${mean_1} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+
+
+<div class="card">
+  <div class="card-header">
+      Option Schin <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_2" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateOption2(this)">
+<p id="Option2"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let Option2 = document.getElementById('Option2');
+    function updateOption2(input) {
+        let mean_2 = parseFloat(input.value);
+        Option2.innerText = `Mean: ${mean_2} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+{% elif draw == 'TRS' %}
+
+<div class="card">
+  <div class="card-header">
+      Option Resch <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_1" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateDescription(this)">
+<p id="description"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let description = document.getElementById('description');
+    function updateDescription(input) {
+        let mean_1 = parseFloat(input.value);
+        description.innerText = `Mean: ${mean_1} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+      Option Taw <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_3" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateOption3(this)">
+<p id="Option3"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let Option3 = document.getElementById('Option3');
+    function updateOption3(input) {
+        let mean_3 = parseFloat(input.value);
+        Option3.innerText = `Mean: ${mean_3} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+
+
+<div class="card">
+  <div class="card-header">
+      Option Schin <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_2" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateOption2(this)">
+<p id="Option2"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let Option2 = document.getElementById('Option2');
+    function updateOption2(input) {
+        let mean_2 = parseFloat(input.value);
+        Option2.innerText = `Mean: ${mean_2} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+{% elif draw == 'SRT' %}
+
+
+
+<div class="card">
+  <div class="card-header">
+      Option Schin <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_2" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateOption2(this)">
+<p id="Option2"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let Option2 = document.getElementById('Option2');
+    function updateOption2(input) {
+        let mean_2 = parseFloat(input.value);
+        Option2.innerText = `Mean: ${mean_2} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+      Option Taw <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_3" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateOption3(this)">
+<p id="Option3"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let Option3 = document.getElementById('Option3');
+    function updateOption3(input) {
+        let mean_3 = parseFloat(input.value);
+        Option3.innerText = `Mean: ${mean_3} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+      Option Resch <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_1" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateDescription(this)">
+<p id="description"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let description = document.getElementById('description');
+    function updateDescription(input) {
+        let mean_1 = parseFloat(input.value);
+        description.innerText = `Mean: ${mean_1} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+{% elif draw == 'RST' %}
+
+
+<div class="card">
+  <div class="card-header">
+      Option Taw <div class="imageholder"><img src='https://i.imgur.com/1BZVMwB.png' alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_3" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateOption3(this)">
+<p id="Option3"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let Option3 = document.getElementById('Option3');
+    function updateOption3(input) {
+        let mean_3 = parseFloat(input.value);
+        Option3.innerText = `Mean: ${mean_3} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+      Option Schin <div class="imageholder"><img src="https://i.imgur.com/6kqKG77.png" alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_2" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateOption2(this)">
+<p id="Option2"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let Option2 = document.getElementById('Option2');
+    function updateOption2(input) {
+        let mean_2 = parseFloat(input.value);
+        Option2.innerText = `Mean: ${mean_2} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+      Option Resch <div class="imageholder"><img src="https://i.imgur.com/kr0xYz1.png" alt="bla" width="100px"/> </div>
+  </div>
+<div class="card-body">
+<input type="range" name="mean_1" min="0" max="20" step="0.1" style="width: 250px;" oninput="updateDescription(this)">
+<p id="description"></p>
+<!-- by leaving the description blank initially, we prompt the user to move the slider,
+reducing the anchoring/default effect. -->
+
+<script>
+    let description = document.getElementById('description');
+    function updateDescription(input) {
+        let mean_1 = parseFloat(input.value);
+        description.innerText = `Mean: ${mean_1} ECU`
+    }
+</script>
+
+</div>
+</div>
+
+
+{% endif %}

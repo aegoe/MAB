@@ -1,0 +1,40 @@
+{% load otree %}
+
+
+{% if not choice %}
+
+<div class="card">
+        <div class="card-header">
+            Please explain your main investment decision.
+        </div>
+        <div class="card-body">
+            {% formfield player.q_exploration_strategy %}
+        </div>
+    </div>
+<br>
+
+{% elif choice %}
+
+<div class="card">
+        <div class="card-header">
+            Please explain your main investment decision.
+        </div>
+        <div class="card-body">
+            {% formfield player.q_exploration_strategy %}
+        </div>
+    </div>
+
+<br>
+
+{% endif %}
+
+
+<div class="card">
+        <div class="card-header">
+            Please explain your approach during the 100 sampling rounds.
+        </div>
+        <div class="card-body">
+            {% formfield player.q_sampling_strategy %}
+        </div>
+    </div>
+<br>

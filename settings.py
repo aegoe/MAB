@@ -49,25 +49,11 @@ SESSION_CONFIG_DEFAULTS = {
 }
 
 SESSION_CONFIGS = [
-    # {
-    #     'name': 'MS3',
-    #     'display_name': "MS3",
-    #     'num_demo_participants': 1,
-    #     'app_sequence': ['MS_3'],
-    #     'choice': False,
-    #     'safe': False,
-    #     'testing': False,
-    #     'variance': False,
-    #     'sampling': False,
-    #     'feedback_3': False,
-    #     'incentive': False,
-    #
-    # },
     {
-        'name': 'MS3b',
-        'display_name': "MS3b",
+        'name': 'MS4_IOE',
+        'display_name': "MS4_IOE",
         'num_demo_participants': 1,
-        'app_sequence': ['MS_3b'],
+        'app_sequence': ['MS_4_IOE'],
         'choice': False,
         'safe': False,
         'testing': False,
@@ -77,6 +63,20 @@ SESSION_CONFIGS = [
         'incentive': False,
 
     },
+    # {
+    #     'name': 'MS3b',
+    #     'display_name': "MS3b",
+    #     'num_demo_participants': 1,
+    #     'app_sequence': ['MS_3b'],
+    #     'choice': False,
+    #     'safe': False,
+    #     'testing': False,
+    #     'variance': False,
+    #     'sampling': False,
+    #     'feedback_3': False,
+    #     'incentive': False,
+    #
+    # },
 
 ]
 
