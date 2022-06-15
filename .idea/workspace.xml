@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d91cd063-815d-484e-be04-65330002b370" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,36 +14,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-760">
+            <state relative-caret-position="-616">
               <caret line="8" column="66" lean-forward="true" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Questionnaire.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MS_4_IOE/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+            <state relative-caret-position="2671">
+              <caret line="362" column="22" selection-start-line="362" selection-start-column="22" selection-end-line="362" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#71#0" expanded="true" />
+                <element signature="e#7637#7967#0" />
+                <element signature="e#12615#13910#0" />
+                <element signature="e#13950#14403#0" />
+                <element signature="e#14796#30152#0" />
+                <element signature="e#16935#30152#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/BeliefTransition.html">
+        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Sampling.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="951">
+              <caret line="285" lean-forward="true" selection-start-line="285" selection-end-line="285" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/SamplingTransition.html">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/ComprehensionQuestions.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -180,7 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MS_3/templates/MS_3/Priors.html" />
         <option value="$PROJECT_DIR$/MS_3/templates/MS_3/Decision.html" />
         <option value="$PROJECT_DIR$/MS_3/templates/MS_3/include/instru_2.html" />
         <option value="$PROJECT_DIR$/MS_3/templates/MS_3/include/questionnaire_4.html" />
@@ -231,6 +236,7 @@
         <option value="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Disclose_Payoff.html" />
         <option value="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/InstruStart.html" />
         <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Sampling.html" />
       </list>
     </option>
   </component>
@@ -263,6 +269,41 @@
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_4_IOE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_4_IOE" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_4_IOE" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_4_IOE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_4_IOE" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_4_IOE" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAB" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_4_IOE" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="MS_4_IOE" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="instru_cq" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MAB" type="b2602c69:ProjectViewProjectNode" />
@@ -537,15 +578,16 @@
       <workItem from="1638184339694" duration="143000" />
       <workItem from="1638907351690" duration="1403000" />
       <workItem from="1639134033520" duration="2752000" />
-      <workItem from="1655221018111" duration="3184000" />
+      <workItem from="1655221018111" duration="3558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="836808000" />
+    <option name="totallyTimeSpent" value="837182000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18516542" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -575,11 +617,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MS_4_IOE/pages.py</url>
+          <line>309</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/questionnaire_1.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/Decision_Sampling.html" />
     <entry file="file://$PROJECT_DIR$/MS_4/templates/MS_4/include/instru_cq/instru_1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
@@ -1409,22 +1458,6 @@
     <entry file="file://$PROJECT_DIR$/MS_4_IOE/venv/Lib/site-packages/h2/config.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS_4_IOE/pages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2302">
-          <caret line="407" column="31" selection-start-line="407" selection-start-column="31" selection-end-line="407" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-            <element signature="e#5762#7090#0" />
-            <element signature="e#7992#12549#0" />
-            <element signature="e#9230#12549#0" />
-            <element signature="e#12588#13883#0" />
-            <element signature="e#13923#14376#0" />
-            <element signature="e#16908#30076#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Questionnaire.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
@@ -1490,8 +1523,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-760">
+        <state relative-caret-position="-616">
           <caret line="8" column="66" lean-forward="true" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/SamplingTransition.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4_IOE/templates/MS_4_IOE/Sampling.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="951">
+          <caret line="285" lean-forward="true" selection-start-line="285" selection-end-line="285" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MS_4_IOE/pages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2671">
+          <caret line="362" column="22" selection-start-line="362" selection-start-column="22" selection-end-line="362" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#7637#7967#0" />
+            <element signature="e#12615#13910#0" />
+            <element signature="e#13950#14403#0" />
+            <element signature="e#14796#30152#0" />
+            <element signature="e#16935#30152#0" />
+          </folding>
         </state>
       </provider>
     </entry>

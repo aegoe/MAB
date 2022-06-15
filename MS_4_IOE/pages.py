@@ -210,11 +210,11 @@ class Sampling(Page):
 
     def before_next_page(self):
 
-        Urn_1 = ['-2', '-1', '0', '1', '2', '4', '8', '12']
+        Urn_1 = ['-2', '-1', '1', '6', '8', '10', '12', '18']
         Urn_2 = ['-2', '-1', '0', '1', '20', '25', '50', '80']
         Urn_3 = ['0', '10']
 
-        weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
+        weights_1 = [0.05, 0.05, 0.1, 0.3, 0.3, 0.1, 0.05, 0.05]
         weights_2 = [0.25, 0.25, 0.15, 0.15, 0.05, 0.05, 0.05, 0.05]
         weights_3 = [0.5, 0.5]
 
@@ -263,8 +263,8 @@ class Sampling(Page):
                     data_counts[i][k] = v * 50
                 elif k == '8':
                     data_counts[i][k] = v * 8
-                elif k == '9':
-                    data_counts[i][k] = v * 9
+                elif k == '18':
+                    data_counts[i][k] = v * 18
                 elif k == '10':
                     data_counts[i][k] = v * 10
                 elif k == '20':
@@ -409,11 +409,11 @@ class Decision2(Page):
 
         if self.participant.vars['choice'] and not self.participant.vars['safe']:
 
-            Urn_1 = ['-2', '-1', '0', '1', '2', '4', '8', '12']
+            Urn_1 = ['-2', '-1', '1', '6', '8', '10', '12', '18']
             Urn_2 = ['-2', '-1', '0', '1', '20', '25', '50', '80']
             Urn_3 = ['0', '10']
 
-            weights_1 = [0.05, 0.1, 0.15, 0.2, 0.2, 0.15, 0.1, 0.05]
+            weights_1 = [0.05, 0.05, 0.1, 0.3, 0.3, 0.1, 0.05, 0.05]
             weights_2 = [0.25, 0.25, 0.15, 0.15, 0.05, 0.05, 0.05, 0.05]
             weights_3 = [0.5, 0.5]
 
@@ -462,8 +462,8 @@ class Decision2(Page):
                         data_counts[i][k] = v * 50
                     elif k == '8':
                         data_counts[i][k] = v * 8
-                    elif k == '9':
-                        data_counts[i][k] = v * 9
+                    elif k == '18':
+                        data_counts[i][k] = v * 18
                     elif k == '10':
                         data_counts[i][k] = v * 10
                     elif k == '20':
